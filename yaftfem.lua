@@ -412,7 +412,7 @@ TextLabel_5.TextWrapped = true
 
 -- Scripts:
 
-local function UCMMZ_fake_script() -- Open.LocalScript 
+local function CZFQ_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	local ts = game:GetService("TweenService")
@@ -436,8 +436,8 @@ local function UCMMZ_fake_script() -- Open.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UCMMZ_fake_script)()
-local function NWXIRTI_fake_script() -- Frame.LocalScript 
+coroutine.wrap(CZFQ_fake_script)()
+local function ZCAT_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local ts = game:GetService("TweenService")
@@ -447,14 +447,27 @@ local function NWXIRTI_fake_script() -- Frame.LocalScript
 		Position = UDim2.fromScale(-0.392, 0.5)
 	}):Play()
 end
-coroutine.wrap(NWXIRTI_fake_script)()
-local function HXXV_fake_script() -- PCs.LocalScript 
+coroutine.wrap(ZCAT_fake_script)()
+local function LALYQK_fake_script() -- PCs.LocalScript 
 	local script = Instance.new('LocalScript', PCs)
 
 	local ts = game:GetService("TweenService")
 	local state = false
 	
-	
+	task.spawn(function()
+		while task.wait(1) do
+			if state then
+				for _, obj in ipairs(game.Workspace:GetDescendants()) do
+					if obj.Name == "ComputerTable" and not obj:FindFirstChild("PCHighlight") then
+						local hili = Instance.new("Highlight", obj)
+						hili.Name = "PCHighlight"
+						hili.OutlineTransparency = 1
+						hili.FillColor = obj:FindFirstChild("Screen").Color
+					end
+				end
+			end
+		end
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if state then
@@ -474,25 +487,31 @@ local function HXXV_fake_script() -- PCs.LocalScript
 			}):Play()
 			state = true
 			
-			for _, obj in ipairs(game.Workspace:GetDescendants()) do
-				if obj.Name == "ComputerTable" then
-					local hili = Instance.new("Highlight", obj)
-					hili.Name = "PCHighlight"
-					hili.OutlineTransparency = 1
-					hili.FillColor = obj:FindFirstChild("Screen").Color
-				end
-			end
+			
 		end
 	end)
 end
-coroutine.wrap(HXXV_fake_script)()
-local function SFIREKL_fake_script() -- Pods.LocalScript 
+coroutine.wrap(LALYQK_fake_script)()
+local function GJGNQCR_fake_script() -- Pods.LocalScript 
 	local script = Instance.new('LocalScript', Pods)
 
 	local ts = game:GetService("TweenService")
 	local state = false
 	
-	
+	task.spawn(function()
+		while task.wait(1) do
+			if state then
+				for _, obj in ipairs(game.Workspace:GetDescendants()) do
+					if obj.Name == "FreezePod" then
+						local hili = Instance.new("Highlight", obj)
+						hili.Name = "PodsHighlight"
+						hili.OutlineTransparency = 1
+						hili.FillColor = Color3.fromRGB(0, 200, 255)
+					end
+				end
+			end
+		end
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if state then
@@ -512,25 +531,31 @@ local function SFIREKL_fake_script() -- Pods.LocalScript
 			}):Play()
 			state = true
 	
-			for _, obj in ipairs(game.Workspace:GetDescendants()) do
-				if obj.Name == "FreezePod" then
-					local hili = Instance.new("Highlight", obj)
-					hili.Name = "PodsHighlight"
-					hili.OutlineTransparency = 1
-					hili.FillColor = Color3.fromRGB(0, 200, 255)
-				end
-			end
+			
 		end
 	end)
 end
-coroutine.wrap(SFIREKL_fake_script)()
-local function GQAJWGA_fake_script() -- Exits.LocalScript 
+coroutine.wrap(GJGNQCR_fake_script)()
+local function HGTM_fake_script() -- Exits.LocalScript 
 	local script = Instance.new('LocalScript', Exits)
 
 	local ts = game:GetService("TweenService")
 	local state = false
 	
-	
+	task.spawn(function()
+		while task.wait(1) do
+			if state then
+				for _, obj in ipairs(game.Workspace:GetDescendants()) do
+					if obj.Name == "ExitDoor" and not obj:FindFirstChild("ExitsHighlight") then
+						local hili = Instance.new("Highlight", obj)
+						hili.Name = "ExitsHighlight"
+						hili.OutlineTransparency = 1
+						hili.FillColor = Color3.fromRGB(255,255,0)
+					end
+				end
+			end
+		end
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if state then
@@ -539,6 +564,7 @@ local function GQAJWGA_fake_script() -- Exits.LocalScript
 			}):Play()
 			state = false
 			
+	
 			for _, obj in ipairs(game.Workspace:GetDescendants()) do
 				if obj.Name == "ExitsHighlight" then
 					obj:Destroy()
@@ -550,19 +576,12 @@ local function GQAJWGA_fake_script() -- Exits.LocalScript
 			}):Play()
 			state = true
 			
-			for _, obj in ipairs(game.Workspace:GetDescendants()) do
-				if obj.Name == "ExitDoor" then
-					local hili = Instance.new("Highlight", obj)
-					hili.Name = "ExitsHighlight"
-					hili.OutlineTransparency = 1
-					hili.FillColor = Color3.fromRGB(255,255,0)
-				end
-			end
+			
 		end
 	end)
 end
-coroutine.wrap(GQAJWGA_fake_script)()
-local function CTIMGUL_fake_script() -- Players.LocalScript 
+coroutine.wrap(HGTM_fake_script)()
+local function CKZRTKX_fake_script() -- Players.LocalScript 
 	local script = Instance.new('LocalScript', Players)
 
 	local ts = game:GetService("TweenService")
@@ -577,6 +596,38 @@ local function CTIMGUL_fake_script() -- Players.LocalScript
 			end
 		end
 	end
+	
+	task.spawn(function()
+		while task.wait(1) do
+			if state then
+				local player = game.Players:GetChildren()
+				for i=1, #player do
+					if player[i] ~= game.Players.LocalPlayer and player[i].Character ~= nil then
+						local character = player[i].Character
+						if not character:FindFirstChild("PlayerHighlight") then
+							local a = Instance.new("Highlight", character)
+							a.Name = "PlayerHighlight"
+							a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+							a.FillColor = Color3.fromRGB(0,255,0) 
+							a.OutlineColor = Color3.fromRGB(127,255,127)
+							spawn(function()
+								repeat
+									wait(0.1)
+									if player[i] == getBeast() then
+										a.FillColor = Color3.fromRGB(255,0,0)
+										a.OutlineColor = Color3.fromRGB(255,127,127)
+									else
+										a.FillColor = Color3.fromRGB(0,255,0)
+										a.OutlineColor = Color3.fromRGB(127,255,127)
+									end
+								until character == nil or a == nil
+							end)
+						end
+					end
+				end
+			end
+		end
+	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if state then
@@ -596,36 +647,12 @@ local function CTIMGUL_fake_script() -- Players.LocalScript
 			}):Play()
 			state = true
 			
-			local player = game.Players:GetChildren()
-			for i=1, #player do
-				if player[i] ~= game.Players.LocalPlayer and player[i].Character ~= nil then
-					local character = player[i].Character
-					if not character:findFirstChild("PlayerHighlight") then
-						local a = Instance.new("Highlight", character)
-						a.Name = "PlayerHighlight"
-						a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-						a.FillColor = Color3.fromRGB(0,255,0) 
-						a.OutlineColor = Color3.fromRGB(127,255,127)
-						spawn(function()
-							repeat
-								wait(0.1)
-								if player[i] == getBeast() then
-									a.FillColor = Color3.fromRGB(255,0,0)
-									a.OutlineColor = Color3.fromRGB(255,127,127)
-								else
-									a.FillColor = Color3.fromRGB(0,255,0)
-									a.OutlineColor = Color3.fromRGB(127,255,127)
-								end
-							until character == nil or a == nil
-						end)
-					end
-				end
-			end
+			
 		end
 	end)
 end
-coroutine.wrap(CTIMGUL_fake_script)()
-local function IETUS_fake_script() -- AntiFail.LocalScript 
+coroutine.wrap(CKZRTKX_fake_script)()
+local function IIIGU_fake_script() -- AntiFail.LocalScript 
 	local script = Instance.new('LocalScript', AntiFail)
 
 	local ts = game:GetService("TweenService")
@@ -660,8 +687,8 @@ local function IETUS_fake_script() -- AntiFail.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IETUS_fake_script)()
-local function JEONKI_fake_script() -- PlayerLight.LocalScript 
+coroutine.wrap(IIIGU_fake_script)()
+local function WQLPRJ_fake_script() -- PlayerLight.LocalScript 
 	local script = Instance.new('LocalScript', PlayerLight)
 
 	local ts = game:GetService("TweenService")
@@ -693,8 +720,8 @@ local function JEONKI_fake_script() -- PlayerLight.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JEONKI_fake_script)()
-local function XQSFYP_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(WQLPRJ_fake_script)()
+local function NLIG_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local ts = game:GetService("TweenService")
@@ -726,8 +753,8 @@ local function XQSFYP_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(XQSFYP_fake_script)()
-local function XPRCJCF_fake_script() -- UnlockAll.LocalScript 
+coroutine.wrap(NLIG_fake_script)()
+local function ZSDZLM_fake_script() -- UnlockAll.LocalScript 
 	local script = Instance.new('LocalScript', UnlockAll)
 
 	local walkspeed = script.Parent.Parent.WalkSpeed
@@ -737,4 +764,4 @@ local function XPRCJCF_fake_script() -- UnlockAll.LocalScript
 		walkspeed.TextBox.TextEditable = true
 	end)
 end
-coroutine.wrap(XPRCJCF_fake_script)()
+coroutine.wrap(ZSDZLM_fake_script)()
