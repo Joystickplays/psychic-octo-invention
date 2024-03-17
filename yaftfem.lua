@@ -231,7 +231,7 @@ TextLabel_3.TextWrapped = true
 
 -- Scripts:
 
-local function PSFVB_fake_script() -- Open.LocalScript 
+local function INYI_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	local ts = game:GetService("TweenService")
@@ -241,13 +241,13 @@ local function PSFVB_fake_script() -- Open.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if state then
-			ts:Create(script.Parent.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+			ts:Create(script.Parent.Parent, TweenInfo.new(1, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
 				Position = closed
 			}):Play()
 			state = false
 			script.Parent.Text = "Open menu"
 		else
-			ts:Create(script.Parent.Parent, TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			ts:Create(script.Parent.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 				Position = opened
 			}):Play()
 			state = true
@@ -255,8 +255,8 @@ local function PSFVB_fake_script() -- Open.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PSFVB_fake_script)()
-local function DLUL_fake_script() -- Frame.LocalScript 
+coroutine.wrap(INYI_fake_script)()
+local function BUBQ_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local ts = game:GetService("TweenService")
@@ -266,8 +266,8 @@ local function DLUL_fake_script() -- Frame.LocalScript
 		Position = UDim2.fromScale(-0.18, 0.5)
 	}):Play()
 end
-coroutine.wrap(DLUL_fake_script)()
-local function QZDTK_fake_script() -- PCs.LocalScript 
+coroutine.wrap(BUBQ_fake_script)()
+local function RSNB_fake_script() -- PCs.LocalScript 
 	local script = Instance.new('LocalScript', PCs)
 
 	local ts = game:GetService("TweenService")
@@ -304,8 +304,8 @@ local function QZDTK_fake_script() -- PCs.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QZDTK_fake_script)()
-local function LLSPQ_fake_script() -- Pods.LocalScript 
+coroutine.wrap(RSNB_fake_script)()
+local function XHPL_fake_script() -- Pods.LocalScript 
 	local script = Instance.new('LocalScript', Pods)
 
 	local ts = game:GetService("TweenService")
@@ -342,8 +342,8 @@ local function LLSPQ_fake_script() -- Pods.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LLSPQ_fake_script)()
-local function MDHUI_fake_script() -- Exits.LocalScript 
+coroutine.wrap(XHPL_fake_script)()
+local function QZJORN_fake_script() -- Exits.LocalScript 
 	local script = Instance.new('LocalScript', Exits)
 
 	local ts = game:GetService("TweenService")
@@ -380,8 +380,8 @@ local function MDHUI_fake_script() -- Exits.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MDHUI_fake_script)()
-local function EPAAVZ_fake_script() -- Players.LocalScript 
+coroutine.wrap(QZJORN_fake_script)()
+local function PJNX_fake_script() -- Players.LocalScript 
 	local script = Instance.new('LocalScript', Players)
 
 	local ts = game:GetService("TweenService")
@@ -420,7 +420,8 @@ local function EPAAVZ_fake_script() -- Players.LocalScript
 				if player[i] ~= game.Players.LocalPlayer and player[i].Character ~= nil then
 					local character = player[i].Character
 					if not character:findFirstChild("PlayerHighlight") then
-						local a = Instance.new("PlayerHighlight", character)
+						local a = Instance.new("Highlight", character)
+						a.Name = "PlayerHighlight"
 						a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
 						a.FillColor = Color3.fromRGB(0,255,0) 
 						a.OutlineColor = Color3.fromRGB(127,255,127)
@@ -442,4 +443,4 @@ local function EPAAVZ_fake_script() -- Players.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EPAAVZ_fake_script)()
+coroutine.wrap(PJNX_fake_script)()
