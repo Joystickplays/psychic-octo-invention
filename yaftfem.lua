@@ -48,6 +48,9 @@ local UICorner_11 = Instance.new("UICorner")
 local TextLabel_3 = Instance.new("TextLabel")
 local TextLabel_4 = Instance.new("TextLabel")
 local TextLabel_5 = Instance.new("TextLabel")
+local Notification = Instance.new("TextLabel")
+local UICorner_12 = Instance.new("UICorner")
+local UIPadding_10 = Instance.new("UIPadding")
 
 --Properties:
 
@@ -410,9 +413,32 @@ TextLabel_5.TextScaled = true
 TextLabel_5.TextSize = 14.000
 TextLabel_5.TextWrapped = true
 
+Notification.Name = "Notification"
+Notification.Parent = ScreenGui
+Notification.AnchorPoint = Vector2.new(0.5, 0.5)
+Notification.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Notification.BorderSizePixel = 0
+Notification.Position = UDim2.new(0.778999984, 0, -0.0879999995, 0)
+Notification.Size = UDim2.new(0, 293, 0, 50)
+Notification.Font = Enum.Font.Gotham
+Notification.Text = ""
+Notification.TextColor3 = Color3.fromRGB(255, 255, 255)
+Notification.TextScaled = true
+Notification.TextSize = 14.000
+Notification.TextWrapped = true
+
+UICorner_12.Parent = Notification
+
+UIPadding_10.Parent = Notification
+UIPadding_10.PaddingBottom = UDim.new(0, 10)
+UIPadding_10.PaddingLeft = UDim.new(0, 10)
+UIPadding_10.PaddingRight = UDim.new(0, 7)
+UIPadding_10.PaddingTop = UDim.new(0, 10)
+
 -- Scripts:
 
-local function CZFQ_fake_script() -- Open.LocalScript 
+local function YCCXEEF_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	local ts = game:GetService("TweenService")
@@ -436,8 +462,8 @@ local function CZFQ_fake_script() -- Open.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CZFQ_fake_script)()
-local function ZCAT_fake_script() -- Frame.LocalScript 
+coroutine.wrap(YCCXEEF_fake_script)()
+local function YSHJQZT_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local ts = game:GetService("TweenService")
@@ -447,8 +473,8 @@ local function ZCAT_fake_script() -- Frame.LocalScript
 		Position = UDim2.fromScale(-0.392, 0.5)
 	}):Play()
 end
-coroutine.wrap(ZCAT_fake_script)()
-local function LALYQK_fake_script() -- PCs.LocalScript 
+coroutine.wrap(YSHJQZT_fake_script)()
+local function VDGZWWO_fake_script() -- PCs.LocalScript 
 	local script = Instance.new('LocalScript', PCs)
 
 	local ts = game:GetService("TweenService")
@@ -491,8 +517,8 @@ local function LALYQK_fake_script() -- PCs.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LALYQK_fake_script)()
-local function GJGNQCR_fake_script() -- Pods.LocalScript 
+coroutine.wrap(VDGZWWO_fake_script)()
+local function ENLZKJB_fake_script() -- Pods.LocalScript 
 	local script = Instance.new('LocalScript', Pods)
 
 	local ts = game:GetService("TweenService")
@@ -535,8 +561,8 @@ local function GJGNQCR_fake_script() -- Pods.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GJGNQCR_fake_script)()
-local function HGTM_fake_script() -- Exits.LocalScript 
+coroutine.wrap(ENLZKJB_fake_script)()
+local function OUSAO_fake_script() -- Exits.LocalScript 
 	local script = Instance.new('LocalScript', Exits)
 
 	local ts = game:GetService("TweenService")
@@ -580,8 +606,8 @@ local function HGTM_fake_script() -- Exits.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HGTM_fake_script)()
-local function CKZRTKX_fake_script() -- Players.LocalScript 
+coroutine.wrap(OUSAO_fake_script)()
+local function GULO_fake_script() -- Players.LocalScript 
 	local script = Instance.new('LocalScript', Players)
 
 	local ts = game:GetService("TweenService")
@@ -651,8 +677,8 @@ local function CKZRTKX_fake_script() -- Players.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CKZRTKX_fake_script)()
-local function IIIGU_fake_script() -- AntiFail.LocalScript 
+coroutine.wrap(GULO_fake_script)()
+local function APRBVNP_fake_script() -- AntiFail.LocalScript 
 	local script = Instance.new('LocalScript', AntiFail)
 
 	local ts = game:GetService("TweenService")
@@ -687,8 +713,8 @@ local function IIIGU_fake_script() -- AntiFail.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IIIGU_fake_script)()
-local function WQLPRJ_fake_script() -- PlayerLight.LocalScript 
+coroutine.wrap(APRBVNP_fake_script)()
+local function VXUDBNE_fake_script() -- PlayerLight.LocalScript 
 	local script = Instance.new('LocalScript', PlayerLight)
 
 	local ts = game:GetService("TweenService")
@@ -720,8 +746,8 @@ local function WQLPRJ_fake_script() -- PlayerLight.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WQLPRJ_fake_script)()
-local function NLIG_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(VXUDBNE_fake_script)()
+local function CSGHOGK_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local ts = game:GetService("TweenService")
@@ -753,8 +779,8 @@ local function NLIG_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(NLIG_fake_script)()
-local function ZSDZLM_fake_script() -- UnlockAll.LocalScript 
+coroutine.wrap(CSGHOGK_fake_script)()
+local function XSPXJIN_fake_script() -- UnlockAll.LocalScript 
 	local script = Instance.new('LocalScript', UnlockAll)
 
 	local walkspeed = script.Parent.Parent.WalkSpeed
@@ -764,4 +790,32 @@ local function ZSDZLM_fake_script() -- UnlockAll.LocalScript
 		walkspeed.TextBox.TextEditable = true
 	end)
 end
-coroutine.wrap(ZSDZLM_fake_script)()
+coroutine.wrap(XSPXJIN_fake_script)()
+local function DWHLOIC_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	script.Parent.ScreenInsets = Enum.ScreenInsets.None
+	
+	script.Parent.Notification.Text = "Thank you for using YAFTFEM!"
+	task.wait(5)
+	script.Parent.Notification.Text = ""
+end
+coroutine.wrap(DWHLOIC_fake_script)()
+local function KICWZ_fake_script() -- Notification.LocalScript 
+	local script = Instance.new('LocalScript', Notification)
+
+	local ts = game:GetService("TweenService")
+	
+	while task.wait(1) do
+		if script.Parent.Text ~= "" then
+			ts:Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+				Position = UDim2.fromScale(0.779, 0.088)
+			}):Play()
+		else
+			ts:Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+				Position = UDim2.fromScale(0.779, -0.088)
+			}):Play()
+		end
+	end
+end
+coroutine.wrap(KICWZ_fake_script)()
