@@ -58,7 +58,7 @@ ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 BindableEvent.Parent = ScreenGui
-Bindable.Name = "ReloadESP"
+BindableEvent.Name = "ReloadESP"
 
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0, 0.5)
