@@ -51,11 +51,14 @@ local TextLabel_5 = Instance.new("TextLabel")
 local Notification = Instance.new("TextLabel")
 local UICorner_12 = Instance.new("UICorner")
 local UIPadding_10 = Instance.new("UIPadding")
-
+local BindableEvent = Instance.new("BindableEvent")
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BindableEvent.Parent = ScreenGui
+Bindable.Name = "ReloadESP"
 
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0, 0.5)
