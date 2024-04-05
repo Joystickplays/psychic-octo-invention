@@ -737,16 +737,29 @@ local function BOTJM_fake_script() -- AntiFail.LocalScript
 	local state = false
 	
 	task.spawn(function() -- never fail hacking
-		local mt = getrawmetatable(game)
-		local old = mt.__namecall
-		setreadonly(mt,false)
-		mt.__namecall = newcclosure(function(self, ...)
-			local args = {...}
-			if getnamecallmethod() == 'FireServer' and args[1] == 'SetPlayerMinigameResult' and state then
-				args[2] = true
-			end
-			return old(self, unpack(args))
-		end)
+		-- local mt = getrawmetatable(game)
+		-- local old = mt.__namecall
+		-- setreadonly(mt,false)
+		-- mt.__namecall = newcclosure(function(self, ...)
+		-- 	local args = {...}
+		-- 	if getnamecallmethod() == 'FireServer' and args[1] == 'SetPlayerMinigameResult' and state then
+		-- 		args[2] = true
+		-- 	end
+		-- 	return old(self, unpack(args))
+		-- end)
+			local OldFireServer
+			OldFireServer = hookfunction(Instance.new'RemoteEvent'.FireServer, newcclosure(function(Event, ...)
+			    if not checkcaller() then
+			        local Args = {...}
+			
+			        if Event == "SetPlayerMinigameResult" and state then
+					Args[1] = true
+				end
+			    end
+			
+			    return OldFireServer(Event, ...)
+			end))
+
 	end)
 	
 	
