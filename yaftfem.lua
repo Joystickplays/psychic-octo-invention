@@ -484,7 +484,7 @@ TextLabel_7.BorderSizePixel = 0
 TextLabel_7.Position = UDim2.new(0.496882856, 0, 0.432564527, 0)
 TextLabel_7.Size = UDim2.new(0, 146, 0, 16)
 TextLabel_7.Font = Enum.Font.Gotham
-TextLabel_7.Text = "A new game is about to start."
+TextLabel_7.Text = "A new game has started."
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextScaled = true
 TextLabel_7.TextSize = 14.000
@@ -701,27 +701,27 @@ local function WVXQ_fake_script() -- Players.LocalScript
 			state = true
 			_G.PlayersESP = true
 			
-			local player = game.Players:GetChildren()
-			for i=1, #player do
-				if player[i] ~= game.Players.LocalPlayer and player[i].Character ~= nil then
-					local character = player[i].Character
-					if not character:FindFirstChild("PlayerHighlight") then
-						local a = Instance.new("Highlight", character)
-						a.Name = "PlayerHighlight"
-						a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-						task.spawn(function()
-							repeat
-								task.wait(0.1)
-								if player[i] == getBeast() then
-									a.FillColor = Color3.fromRGB(255,0,0)
-								else
-									a.FillColor = Color3.fromRGB(0,255,0)
-								end
-							until character == nil or a == nil
-						end)
+			local players = game.Players:GetChildren()
+				for _, player in ipairs(players) do
+					if player ~= game.Players.LocalPlayer and player.Character ~= nil then
+						local character = player.Character
+						if not character:FindFirstChild("PlayerHighlight") then
+							local a = Instance.new("Highlight", character)
+							a.Name = "PlayerHighlight"
+							a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+							task.spawn(function()
+								repeat
+									task.wait(0.1)
+									if player == getBeast() then
+										a.FillColor = Color3.fromRGB(255,0,0)
+									else
+										a.FillColor = Color3.fromRGB(0,255,0)
+									end
+								until character == nil or a == nil
+							end)
+						end
 					end
 				end
-			end
 		end
 	end)
 end
@@ -894,8 +894,9 @@ local function PLASK_fake_script() -- TextButton_2.LocalScript
 	end
 	
 	local timeout = nil
-	game.ReplicatedStorage.CurrentMap.Changed:Connect(function()
-		
+	game.ReplicatedStorage.IsGameActive.Changed:Connect(function()
+
+		if game.ReplicatedStorage.IsGameActive.Value == false then return end
 		
 		ts:Create(script.Parent.Parent, TweenInfo.new(1.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
 			Position = open
