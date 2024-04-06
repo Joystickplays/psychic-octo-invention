@@ -736,17 +736,7 @@ local function BOTJM_fake_script() -- AntiFail.LocalScript
 	local ts = game:GetService("TweenService")
 	local state = false
 	
-	task.spawn(function() -- never fail hacking
-		-- local mt = getrawmetatable(game)
-		-- local old = mt.__namecall
-		-- setreadonly(mt,false)
-		-- mt.__namecall = newcclosure(function(self, ...)
-		-- 	local args = {...}
-		-- 	if getnamecallmethod() == 'FireServer' and args[1] == 'SetPlayerMinigameResult' and state then
-		-- 		args[2] = true
-		-- 	end
-		-- 	return old(self, unpack(args))
-		-- end)
+	task.spawn(function() 
 			local OldNameCall = nil
 
 			OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
@@ -755,7 +745,7 @@ local function BOTJM_fake_script() -- AntiFail.LocalScript
 			
 			    if NamecallMethod == "FireServer" and Args[1] == "SetPlayerMinigameResult" then
 			    	print("Minigame result - Intercepting result to true")
-				Args[1] = true
+				Args[2] = true
 			    end
 			
 			    return OldNameCall(Self, ...)
