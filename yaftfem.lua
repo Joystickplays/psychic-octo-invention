@@ -748,7 +748,7 @@ local function BOTJM_fake_script() -- AntiFail.LocalScript
 				Args[2] = true
 			    end
 			
-			    return OldNameCall(Self, ...)
+			    return OldNameCall(Self, unpack(Args))
 			end)
 
 	end)
