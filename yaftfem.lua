@@ -747,18 +747,19 @@ local function BOTJM_fake_script() -- AntiFail.LocalScript
 		-- 	end
 		-- 	return old(self, unpack(args))
 		-- end)
-			local OldFireServer
-			OldFireServer = hookfunction(Instance.new'RemoteEvent'.FireServer, newcclosure(function(Event, ...)
-			    if not checkcaller() then
-			        local Args = {...}
+			local OldNameCall = nil
+
+			OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+			    local Args = {...}
+			    local NamecallMethod = getnamecallmethod()
 			
-			        if Event == "SetPlayerMinigameResult" and state then
-					Args[1] = true
-				end
+			    if NamecallMethod == "FireServer" and Args[1] == "SetPlayerMinigameResult" then
+			    	print("Minigame result - Intercepting result to true")
+				Args[1] = true
 			    end
 			
-			    return OldFireServer(Event, ...)
-			end))
+			    return OldNameCall(Self, ...)
+			end)
 
 	end)
 	
