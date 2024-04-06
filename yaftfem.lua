@@ -739,7 +739,7 @@ local function BOTJM_fake_script() -- AntiFail.LocalScript
 			    local Args = {...}
 			    local NamecallMethod = getnamecallmethod()
 			
-			    if NamecallMethod == "FireServer" and Args[1] == "SetPlayerMinigameResult" then
+			    if NamecallMethod == "FireServer" and Args[1] == "SetPlayerMinigameResult" and state then
 			    	print("Minigame result - Intercepting result to true")
 				Args[2] = true
 			    end
