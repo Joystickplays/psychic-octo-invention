@@ -484,7 +484,7 @@ TextLabel_7.BorderSizePixel = 0
 TextLabel_7.Position = UDim2.new(0.496882856, 0, 0.432564527, 0)
 TextLabel_7.Size = UDim2.new(0, 146, 0, 16)
 TextLabel_7.Font = Enum.Font.Gotham
-TextLabel_7.Text = "A new game has started."
+TextLabel_7.Text = "A new game is about to start."
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextScaled = true
 TextLabel_7.TextSize = 14.000
@@ -671,11 +671,11 @@ local function WVXQ_fake_script() -- Players.LocalScript
 	local state = false
 	
 	function getBeast()
-		local player = game.Players:GetChildren()
-		for i=1, #player do
-			local character = player[i].Character
-			if player[i]:findFirstChild("TempPlayerStatsModule"):findFirstChild("IsBeast").Value == true or (character ~= nil and character:findFirstChild("BeastPowers")) then
-				return player[i]
+		local players = game.Players:GetChildren()
+		for _, player in ipairs(players) do
+			local character = player.Character
+			if character ~= nil and character:FindFirstChild("BeastPowers") then
+				return player
 			end
 		end
 	end
@@ -709,17 +709,13 @@ local function WVXQ_fake_script() -- Players.LocalScript
 						local a = Instance.new("Highlight", character)
 						a.Name = "PlayerHighlight"
 						a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-						a.FillColor = Color3.fromRGB(0,255,0) 
-						a.OutlineColor = Color3.fromRGB(127,255,127)
-						spawn(function()
+						task.spawn(function()
 							repeat
-								wait(0.1)
+								task.wait(0.1)
 								if player[i] == getBeast() then
 									a.FillColor = Color3.fromRGB(255,0,0)
-									a.OutlineColor = Color3.fromRGB(255,127,127)
 								else
 									a.FillColor = Color3.fromRGB(0,255,0)
-									a.OutlineColor = Color3.fromRGB(127,255,127)
 								end
 							until character == nil or a == nil
 						end)
@@ -888,21 +884,18 @@ local function PLASK_fake_script() -- TextButton_2.LocalScript
 	
 	
 	function getBeast()
-		local player = game.Players:GetChildren()
-		for i=1, #player do
-			local character = player[i].Character
-			if player[i]:findFirstChild("TempPlayerStatsModule"):findFirstChild("IsBeast").Value == true or (character ~= nil and character:findFirstChild("BeastPowers")) then
-				return player[i]
+		local players = game.Players:GetChildren()
+		for _, player in ipairs(players) do
+			local character = player.Character
+			if character ~= nil and character:FindFirstChild("BeastPowers") then
+				return player
 			end
 		end
 	end
 	
 	local timeout = nil
-	game.ReplicatedStorage.IsGameActive.Changed:Connect(function()
+	game.ReplicatedStorage.CurrentMap.Changed:Connect(function()
 		
-		if game.ReplicatedStorage.IsGameActive.Value == false then
-			return
-		end
 		
 		ts:Create(script.Parent.Parent, TweenInfo.new(1.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
 			Position = open
@@ -950,25 +943,21 @@ local function PLASK_fake_script() -- TextButton_2.LocalScript
 			end
 			
 			if _G.PlayersESP then
-				local player = game.Players:GetChildren()
-				for i=1, #player do
-					if player[i] ~= game.Players.LocalPlayer and player[i].Character ~= nil then
-						local character = player[i].Character
+				local players = game.Players:GetChildren()
+				for _, player in ipairs(players) do
+					if player ~= game.Players.LocalPlayer and player.Character ~= nil then
+						local character = player.Character
 						if not character:FindFirstChild("PlayerHighlight") then
 							local a = Instance.new("Highlight", character)
 							a.Name = "PlayerHighlight"
 							a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-							a.FillColor = Color3.fromRGB(0,255,0) 
-							a.OutlineColor = Color3.fromRGB(127,255,127)
-							spawn(function()
+							task.spawn(function()
 								repeat
-									wait(0.1)
-									if player[i] == getBeast() then
+									task.wait(0.1)
+									if player == getBeast() then
 										a.FillColor = Color3.fromRGB(255,0,0)
-										a.OutlineColor = Color3.fromRGB(255,127,127)
 									else
 										a.FillColor = Color3.fromRGB(0,255,0)
-										a.OutlineColor = Color3.fromRGB(127,255,127)
 									end
 								until character == nil or a == nil
 							end)
