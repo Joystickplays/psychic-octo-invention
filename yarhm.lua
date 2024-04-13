@@ -720,7 +720,7 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 	end
 
 	local module = {}
-	module["gameId"] = 0 -- 893973440 -- Restrict module to a certain game ID only. 0 allows all games.
+	module["gameId"] = 893973440 -- Restrict module to a certain game ID only. 0 allows all games.
 	if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
 		script.Enabled = false
 	end
