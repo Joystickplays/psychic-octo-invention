@@ -745,7 +745,7 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 
 	local module = {}
 	module["gameId"] = 372226183 -- Restrict module to a certain game ID only. 0 allows all games.
-	if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
+	if (module["gameId"] ~= game.gameId) and module["gameId"] ~= 0 then
 		script:Destroy()
 	end
 
