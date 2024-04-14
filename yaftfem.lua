@@ -1,772 +1,678 @@
--- YARHM by Imperial, version 1.1.1
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
-local Converted = {
-	["_YARHM"] = Instance.new("ScreenGui");
-	["_Open"] = Instance.new("TextButton");
-	["_UICorner"] = Instance.new("UICorner");
-	["_InitOpen"] = Instance.new("LocalScript");
-	["_OnClick"] = Instance.new("LocalScript");
-	["_Menu"] = Instance.new("Frame");
-	["_UICorner1"] = Instance.new("UICorner");
-	["_HubName"] = Instance.new("TextLabel");
-	["_HubDesc"] = Instance.new("TextLabel");
-	["_List"] = Instance.new("Frame");
-	["_UICorner2"] = Instance.new("UICorner");
-	["_AutoSetup"] = Instance.new("LocalScript");
-	["_ScrollingFrame"] = Instance.new("ScrollingFrame");
-	["_UIListLayout"] = Instance.new("UIListLayout");
-	["_UIPadding"] = Instance.new("UIPadding");
-	["_UIPadding1"] = Instance.new("UIPadding");
-	["_HubCredits"] = Instance.new("TextLabel");
-	["_Close"] = Instance.new("TextButton");
-	["_UICorner3"] = Instance.new("UICorner");
-	["_LocalScript"] = Instance.new("LocalScript");
-	["_Area"] = Instance.new("ScrollingFrame");
-	["_TextLabel"] = Instance.new("TextLabel");
-	["_TextLabel1"] = Instance.new("TextLabel");
-	["_Init"] = Instance.new("LocalScript");
-	["_ListButton"] = Instance.new("TextButton");
-	["_UICorner4"] = Instance.new("UICorner");
-	["_FUNCTIONS"] = Instance.new("ModuleScript");
-	["_Notifications"] = Instance.new("Frame");
-	["_UIListLayout1"] = Instance.new("UIListLayout");
-	["_UIPadding2"] = Instance.new("UIPadding");
-	["_Placeholder"] = Instance.new("Frame");
-	["_UICorner5"] = Instance.new("UICorner");
-	["_TextLabel2"] = Instance.new("TextLabel");
-	["_Flee the Facility"] = Instance.new("LocalScript");
-	["_Universal"] = Instance.new("LocalScript");
-	["_TextBoxPlaceholder"] = Instance.new("Frame");
-	["_UIListLayout2"] = Instance.new("UIListLayout");
-	["_TextButton"] = Instance.new("TextButton");
-	["_UICorner6"] = Instance.new("UICorner");
-	["_UIPadding3"] = Instance.new("UIPadding");
-	["_TextBox"] = Instance.new("TextBox");
-	["_UICorner7"] = Instance.new("UICorner");
-	["_Murder Mystery 2 (WIP)"] = Instance.new("LocalScript");
-}
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Open = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local Frame_2 = Instance.new("Frame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local PCs = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIPadding = Instance.new("UIPadding")
+local Pods = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIPadding_2 = Instance.new("UIPadding")
+local Exits = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIPadding_3 = Instance.new("UIPadding")
+local Players = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UIPadding_4 = Instance.new("UIPadding")
+local UIPadding_5 = Instance.new("UIPadding")
+local TextLabel_2 = Instance.new("TextLabel")
+local Frame_3 = Instance.new("Frame")
+local UIGridLayout_2 = Instance.new("UIGridLayout")
+local AntiFail = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIPadding_6 = Instance.new("UIPadding")
+local UIPadding_7 = Instance.new("UIPadding")
+local PlayerLight = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local UIPadding_8 = Instance.new("UIPadding")
+local WalkSpeed = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local UICorner_9 = Instance.new("UICorner")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local TextButton = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local UIPadding_9 = Instance.new("UIPadding")
+local UnlockAll = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local Notification = Instance.new("TextLabel")
+local UICorner_12 = Instance.new("UICorner")
+local UIPadding_10 = Instance.new("UIPadding")
+local ReloadESP = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
 
--- Properties:
+--Properties:
 
-Converted["_YARHM"].DisplayOrder = 999999999
-Converted["_YARHM"].ResetOnSpawn = false
-Converted["_YARHM"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Converted["_YARHM"].Name = "YARHM"
-Converted["_YARHM"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Converted["_Open"].Font = Enum.Font.Gotham
-Converted["_Open"].Text = "Triple-click this region to open YARHM."
-Converted["_Open"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Open"].TextSize = 14
-Converted["_Open"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_Open"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Open"].BackgroundTransparency = 1
-Converted["_Open"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Open"].BorderSizePixel = 0
-Converted["_Open"].Position = UDim2.new(0.499372631, 0, 0.06341701, 0)
-Converted["_Open"].Size = UDim2.new(0, 493, 0, 50)
-Converted["_Open"].Name = "Open"
-Converted["_Open"].Parent = Converted["_YARHM"]
+Frame.Parent = ScreenGui
+Frame.AnchorPoint = Vector2.new(0, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-0.0114322174, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 323, 0, 255)
 
-Converted["_UICorner"].Parent = Converted["_Open"]
+UICorner.Parent = Frame
 
-Converted["_Menu"].AnchorPoint = Vector2.new(0.5, 0)
-Converted["_Menu"].BackgroundColor3 = Color3.fromRGB(49.000004678964615, 49.000004678964615, 49.000004678964615)
-Converted["_Menu"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Menu"].BorderSizePixel = 0
-Converted["_Menu"].ClipsDescendants = true
-Converted["_Menu"].Position = UDim2.new(0.499372661, 0, 0.0410327986, 0)
-Converted["_Menu"].Size = UDim2.new(0, 441, 0, 268)
-Converted["_Menu"].Name = "Menu"
-Converted["_Menu"].Parent = Converted["_YARHM"]
+Open.Name = "Open"
+Open.Parent = Frame
+Open.AnchorPoint = Vector2.new(0.5, 0.5)
+Open.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(1.03400004, 0, 0.5, 0)
+Open.Rotation = 90.000
+Open.Size = UDim2.new(0.445820421, 0, 0.196078435, 0)
+Open.Font = Enum.Font.Gotham
+Open.Text = "Open menu"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextSize = 14.000
 
-Converted["_UICorner1"].Parent = Converted["_Menu"]
+UICorner_2.Parent = Open
 
-Converted["_HubName"].Font = Enum.Font.GothamBold
-Converted["_HubName"].Text = "YARHM"
-Converted["_HubName"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_HubName"].TextScaled = true
-Converted["_HubName"].TextSize = 14
-Converted["_HubName"].TextWrapped = true
-Converted["_HubName"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_HubName"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_HubName"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_HubName"].BackgroundTransparency = 1
-Converted["_HubName"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_HubName"].BorderSizePixel = 0
-Converted["_HubName"].Position = UDim2.new(0.186153606, 0, 0.112410031, 0)
-Converted["_HubName"].Size = UDim2.new(0.259631485, 0, 0.0824175924, 0)
-Converted["_HubName"].Name = "HubName"
-Converted["_HubName"].Parent = Converted["_Menu"]
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.50630033, 0, 0.598274529, 0)
+ScrollingFrame.Size = UDim2.new(0.866873085, 0, 0.650980413, 0)
+ScrollingFrame.ScrollBarThickness = 3
 
-Converted["_HubDesc"].Font = Enum.Font.GothamBold
-Converted["_HubDesc"].Text = "yet another random hub menu"
-Converted["_HubDesc"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_HubDesc"].TextSize = 14
-Converted["_HubDesc"].TextWrapped = true
-Converted["_HubDesc"].TextXAlignment = Enum.TextXAlignment.Right
-Converted["_HubDesc"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_HubDesc"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_HubDesc"].BackgroundTransparency = 1
-Converted["_HubDesc"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_HubDesc"].BorderSizePixel = 0
-Converted["_HubDesc"].Position = UDim2.new(0.708829343, 0, 0.116141364, 0)
-Converted["_HubDesc"].Size = UDim2.new(0.470515788, 0, 0.082417585, 0)
-Converted["_HubDesc"].Name = "HubDesc"
-Converted["_HubDesc"].Parent = Converted["_Menu"]
+TextLabel.Parent = ScrollingFrame
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0928807929, 0, 0.0293597486, 0)
+TextLabel.Size = UDim2.new(0, 51, 0, 24)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "ESP"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
 
-Converted["_List"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_List"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
-Converted["_List"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_List"].BorderSizePixel = 0
-Converted["_List"].Position = UDim2.new(0.151006237, 0, 0.621328413, 0)
-Converted["_List"].Size = UDim2.new(0.328798175, 0, 0.813432813, 0)
-Converted["_List"].Name = "List"
-Converted["_List"].Parent = Converted["_Menu"]
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 10)
 
-Converted["_UICorner2"].Parent = Converted["_List"]
+Frame_2.Parent = ScrollingFrame
+Frame_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.5, 0, 0.277108431, 0)
+Frame_2.Size = UDim2.new(1, 0, 0.144578308, 0)
 
-Converted["_ScrollingFrame"].ScrollBarThickness = 2
-Converted["_ScrollingFrame"].VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
-Converted["_ScrollingFrame"].Active = true
-Converted["_ScrollingFrame"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_ScrollingFrame"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_ScrollingFrame"].BackgroundTransparency = 1
-Converted["_ScrollingFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_ScrollingFrame"].BorderSizePixel = 0
-Converted["_ScrollingFrame"].Position = UDim2.new(0.478333294, 0, 0.510989845, 0)
-Converted["_ScrollingFrame"].Size = UDim2.new(1, 0, 1, 0)
-Converted["_ScrollingFrame"].Parent = Converted["_List"]
+UIGridLayout.Parent = Frame_2
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0.300000012, 0, 0.400000006, 0)
 
-Converted["_UIListLayout"].Padding = UDim.new(0, 3)
-Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout"].Parent = Converted["_ScrollingFrame"]
+PCs.Name = "PCs"
+PCs.Parent = Frame_2
+PCs.AnchorPoint = Vector2.new(0.5, 0.5)
+PCs.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+PCs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PCs.BorderSizePixel = 0
+PCs.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+PCs.Size = UDim2.new(0, 200, 0, 50)
+PCs.AutoButtonColor = false
+PCs.Font = Enum.Font.Gotham
+PCs.Text = "PCs"
+PCs.TextColor3 = Color3.fromRGB(255, 255, 255)
+PCs.TextScaled = true
+PCs.TextSize = 14.000
+PCs.TextWrapped = true
 
-Converted["_UIPadding"].PaddingLeft = UDim.new(0, 4)
-Converted["_UIPadding"].Parent = Converted["_ScrollingFrame"]
+UICorner_3.Parent = PCs
 
-Converted["_UIPadding1"].PaddingBottom = UDim.new(0, 10)
-Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 15)
-Converted["_UIPadding1"].PaddingRight = UDim.new(0, 10)
-Converted["_UIPadding1"].PaddingTop = UDim.new(0, 10)
-Converted["_UIPadding1"].Parent = Converted["_List"]
+UIPadding.Parent = PCs
+UIPadding.PaddingBottom = UDim.new(0, 3)
+UIPadding.PaddingLeft = UDim.new(0, 3)
+UIPadding.PaddingRight = UDim.new(0, 3)
+UIPadding.PaddingTop = UDim.new(0, 3)
 
-Converted["_HubCredits"].Font = Enum.Font.GothamBold
-Converted["_HubCredits"].Text = "made and open sourced by imperial"
-Converted["_HubCredits"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_HubCredits"].TextScaled = true
-Converted["_HubCredits"].TextSize = 14
-Converted["_HubCredits"].TextTransparency = 0.699999988079071
-Converted["_HubCredits"].TextWrapped = true
-Converted["_HubCredits"].TextXAlignment = Enum.TextXAlignment.Right
-Converted["_HubCredits"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_HubCredits"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_HubCredits"].BackgroundTransparency = 1
-Converted["_HubCredits"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_HubCredits"].BorderSizePixel = 0
-Converted["_HubCredits"].Position = UDim2.new(0.785926819, 0, 0.160157606, 0)
-Converted["_HubCredits"].Size = UDim2.new(0.316320807, 0, 0.0585099049, 0)
-Converted["_HubCredits"].Name = "HubCredits"
-Converted["_HubCredits"].Parent = Converted["_Menu"]
+Pods.Name = "Pods"
+Pods.Parent = Frame_2
+Pods.AnchorPoint = Vector2.new(0.5, 0.5)
+Pods.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Pods.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Pods.BorderSizePixel = 0
+Pods.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+Pods.Size = UDim2.new(0, 200, 0, 50)
+Pods.AutoButtonColor = false
+Pods.Font = Enum.Font.Gotham
+Pods.Text = "Pods"
+Pods.TextColor3 = Color3.fromRGB(255, 255, 255)
+Pods.TextScaled = true
+Pods.TextSize = 14.000
+Pods.TextWrapped = true
 
-Converted["_Close"].Font = Enum.Font.GothamBold
-Converted["_Close"].Text = "X"
-Converted["_Close"].TextColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Close"].TextSize = 14
-Converted["_Close"].Modal = true
-Converted["_Close"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_Close"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Close"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Close"].BorderSizePixel = 0
-Converted["_Close"].Position = UDim2.new(0.947494328, 0, 0.914238751, 0)
-Converted["_Close"].Size = UDim2.new(0.0680272132, 0, 0.111940302, 0)
-Converted["_Close"].ZIndex = 999999999
-Converted["_Close"].Name = "Close"
-Converted["_Close"].Parent = Converted["_Menu"]
+UICorner_4.Parent = Pods
 
-Converted["_UICorner3"].Parent = Converted["_Close"]
+UIPadding_2.Parent = Pods
+UIPadding_2.PaddingBottom = UDim.new(0, 3)
+UIPadding_2.PaddingLeft = UDim.new(0, 3)
+UIPadding_2.PaddingRight = UDim.new(0, 3)
+UIPadding_2.PaddingTop = UDim.new(0, 3)
 
-Converted["_Area"].AutomaticCanvasSize = Enum.AutomaticSize.Y
-Converted["_Area"].ScrollBarThickness = 0
-Converted["_Area"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_Area"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Area"].BackgroundTransparency = 1
-Converted["_Area"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Area"].BorderSizePixel = 0
-Converted["_Area"].Position = UDim2.new(0.659600496, 0, 0.60637325, 0)
-Converted["_Area"].Selectable = false
-Converted["_Area"].Size = UDim2.new(0.643815279, 0, 0.783582091, 0)
-Converted["_Area"].SelectionGroup = false
-Converted["_Area"].Name = "Area"
-Converted["_Area"].Parent = Converted["_Menu"]
+Exits.Name = "Exits"
+Exits.Parent = Frame_2
+Exits.AnchorPoint = Vector2.new(0.5, 0.5)
+Exits.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Exits.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exits.BorderSizePixel = 0
+Exits.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+Exits.Size = UDim2.new(0, 200, 0, 50)
+Exits.AutoButtonColor = false
+Exits.Font = Enum.Font.Gotham
+Exits.Text = "Exits"
+Exits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exits.TextScaled = true
+Exits.TextSize = 14.000
+Exits.TextWrapped = true
 
-Converted["_TextLabel"].Font = Enum.Font.GothamBold
-Converted["_TextLabel"].Text = "yet another random hub menu"
-Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel"].TextSize = 14
-Converted["_TextLabel"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel"].BackgroundTransparency = 1
-Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel"].BorderSizePixel = 0
-Converted["_TextLabel"].Position = UDim2.new(0.4923051, 0, 0.46438089, 0)
-Converted["_TextLabel"].Size = UDim2.new(0, 200, 0, 50)
-Converted["_TextLabel"].Parent = Converted["_Area"]
+UICorner_5.Parent = Exits
 
-Converted["_TextLabel1"].Font = Enum.Font.GothamBold
-Converted["_TextLabel1"].Text = "YARHM"
-Converted["_TextLabel1"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel1"].TextScaled = true
-Converted["_TextLabel1"].TextSize = 14
-Converted["_TextLabel1"].TextWrapped = true
-Converted["_TextLabel1"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_TextLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel1"].BackgroundTransparency = 1
-Converted["_TextLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel1"].BorderSizePixel = 0
-Converted["_TextLabel1"].Position = UDim2.new(0.491272807, 0, 0.363785654, 0)
-Converted["_TextLabel1"].Size = UDim2.new(0, 135, 0, 33)
-Converted["_TextLabel1"].Parent = Converted["_Area"]
+UIPadding_3.Parent = Exits
+UIPadding_3.PaddingBottom = UDim.new(0, 3)
+UIPadding_3.PaddingLeft = UDim.new(0, 3)
+UIPadding_3.PaddingRight = UDim.new(0, 3)
+UIPadding_3.PaddingTop = UDim.new(0, 3)
 
-Converted["_ListButton"].Font = Enum.Font.Gotham
-Converted["_ListButton"].Text = "Placeholder"
-Converted["_ListButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_ListButton"].TextSize = 14
-Converted["_ListButton"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_ListButton"].BackgroundColor3 = Color3.fromRGB(49.00000087916851, 49.00000087916851, 49.00000087916851)
-Converted["_ListButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_ListButton"].BorderSizePixel = 0
-Converted["_ListButton"].Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
-Converted["_ListButton"].Size = UDim2.new(1, 0, 0, 50)
-Converted["_ListButton"].Visible = false
-Converted["_ListButton"].Name = "ListButton"
-Converted["_ListButton"].Parent = Converted["_YARHM"]
+Players.Name = "Players"
+Players.Parent = Frame_2
+Players.AnchorPoint = Vector2.new(0.5, 0.5)
+Players.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Players.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Players.BorderSizePixel = 0
+Players.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+Players.Size = UDim2.new(0, 200, 0, 50)
+Players.AutoButtonColor = false
+Players.Font = Enum.Font.Gotham
+Players.Text = "Players"
+Players.TextColor3 = Color3.fromRGB(255, 255, 255)
+Players.TextScaled = true
+Players.TextSize = 14.000
+Players.TextWrapped = true
 
-Converted["_UICorner4"].Parent = Converted["_ListButton"]
+UICorner_6.Parent = Players
 
-Converted["_Notifications"].AnchorPoint = Vector2.new(0, 0.5)
-Converted["_Notifications"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Notifications"].BackgroundTransparency = 1
-Converted["_Notifications"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Notifications"].BorderSizePixel = 0
-Converted["_Notifications"].Position = UDim2.new(-0.00062737026, 0, 0.499319851, 0)
-Converted["_Notifications"].Size = UDim2.new(0, 242, 1, 0)
-Converted["_Notifications"].Name = "Notifications"
-Converted["_Notifications"].Parent = Converted["_YARHM"]
+UIPadding_4.Parent = Players
+UIPadding_4.PaddingBottom = UDim.new(0, 3)
+UIPadding_4.PaddingLeft = UDim.new(0, 3)
+UIPadding_4.PaddingRight = UDim.new(0, 3)
+UIPadding_4.PaddingTop = UDim.new(0, 3)
 
-Converted["_UIListLayout1"].Padding = UDim.new(0, 10)
-Converted["_UIListLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Center
-Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout1"].VerticalAlignment = Enum.VerticalAlignment.Bottom
-Converted["_UIListLayout1"].Parent = Converted["_Notifications"]
+UIPadding_5.Parent = Frame_2
+UIPadding_5.PaddingLeft = UDim.new(0, 3)
+UIPadding_5.PaddingRight = UDim.new(0, 3)
 
-Converted["_UIPadding2"].PaddingBottom = UDim.new(0, 10)
-Converted["_UIPadding2"].PaddingLeft = UDim.new(0, 10)
-Converted["_UIPadding2"].Parent = Converted["_Notifications"]
+TextLabel_2.Parent = ScrollingFrame
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0928807929, 0, 0.0293597486, 0)
+TextLabel_2.Size = UDim2.new(0, 51, 0, 24)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "Tools"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
 
-Converted["_Placeholder"].AnchorPoint = Vector2.new(0.5, 0)
-Converted["_Placeholder"].BackgroundColor3 = Color3.fromRGB(31.000001952052116, 31.000001952052116, 31.000001952052116)
-Converted["_Placeholder"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Placeholder"].BorderSizePixel = 0
-Converted["_Placeholder"].Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
-Converted["_Placeholder"].Visible = false
-Converted["_Placeholder"].Name = "Placeholder"
-Converted["_Placeholder"].Parent = Converted["_Notifications"]
+Frame_3.Parent = ScrollingFrame
+Frame_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BackgroundTransparency = 1.000
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.5, 0, 0.0397736803, 0)
+Frame_3.Size = UDim2.new(1, 0, 0.0586442873, 0)
 
-Converted["_UICorner5"].Parent = Converted["_Placeholder"]
+UIGridLayout_2.Parent = Frame_3
+UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_2.CellSize = UDim2.new(0.300000012, 0, 1, 0)
 
-Converted["_TextLabel2"].Font = Enum.Font.Gotham
-Converted["_TextLabel2"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel2"].TextScaled = true
-Converted["_TextLabel2"].TextSize = 14
-Converted["_TextLabel2"].TextWrapped = true
-Converted["_TextLabel2"].TextXAlignment = Enum.TextXAlignment.Left
-Converted["_TextLabel2"].AnchorPoint = Vector2.new(0.5, 0.5)
-Converted["_TextLabel2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel2"].BackgroundTransparency = 1
-Converted["_TextLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel2"].BorderSizePixel = 0
-Converted["_TextLabel2"].Position = UDim2.new(0.5, 0, 0.5, 0)
-Converted["_TextLabel2"].Size = UDim2.new(0.899999976, 0, 0.800000012, 0)
-Converted["_TextLabel2"].Parent = Converted["_Placeholder"]
+AntiFail.Name = "AntiFail"
+AntiFail.Parent = Frame_3
+AntiFail.AnchorPoint = Vector2.new(0.5, 0.5)
+AntiFail.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+AntiFail.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AntiFail.BorderSizePixel = 0
+AntiFail.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+AntiFail.Size = UDim2.new(0, 200, 0, 50)
+AntiFail.AutoButtonColor = false
+AntiFail.Font = Enum.Font.Gotham
+AntiFail.Text = "Anti PC Error"
+AntiFail.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiFail.TextScaled = true
+AntiFail.TextSize = 14.000
+AntiFail.TextWrapped = true
 
-Converted["_TextBoxPlaceholder"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextBoxPlaceholder"].BackgroundTransparency = 1
-Converted["_TextBoxPlaceholder"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextBoxPlaceholder"].BorderSizePixel = 0
-Converted["_TextBoxPlaceholder"].Size = UDim2.new(1, 0, 0, 50)
-Converted["_TextBoxPlaceholder"].Visible = false
-Converted["_TextBoxPlaceholder"].Name = "TextBoxPlaceholder"
-Converted["_TextBoxPlaceholder"].Parent = Converted["_YARHM"]
+UICorner_7.Parent = AntiFail
 
-Converted["_UIListLayout2"].Padding = UDim.new(0, 5)
-Converted["_UIListLayout2"].FillDirection = Enum.FillDirection.Horizontal
-Converted["_UIListLayout2"].HorizontalAlignment = Enum.HorizontalAlignment.Center
-Converted["_UIListLayout2"].Parent = Converted["_TextBoxPlaceholder"]
+UIPadding_6.Parent = AntiFail
+UIPadding_6.PaddingBottom = UDim.new(0, 3)
+UIPadding_6.PaddingLeft = UDim.new(0, 3)
+UIPadding_6.PaddingRight = UDim.new(0, 3)
+UIPadding_6.PaddingTop = UDim.new(0, 3)
 
-Converted["_TextButton"].Font = Enum.Font.Gotham
-Converted["_TextButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextButton"].TextScaled = true
-Converted["_TextButton"].TextSize = 14
-Converted["_TextButton"].TextWrapped = true
-Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
-Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextButton"].BorderSizePixel = 0
-Converted["_TextButton"].Position = UDim2.new(0.292333364, 0, 1.67999995, 0)
-Converted["_TextButton"].Size = UDim2.new(0, 50, 0, 50)
-Converted["_TextButton"].Parent = Converted["_TextBoxPlaceholder"]
+UIPadding_7.Parent = Frame_3
+UIPadding_7.PaddingLeft = UDim.new(0, 3)
+UIPadding_7.PaddingRight = UDim.new(0, 3)
 
-Converted["_UICorner6"].Parent = Converted["_TextButton"]
+PlayerLight.Name = "PlayerLight"
+PlayerLight.Parent = Frame_3
+PlayerLight.AnchorPoint = Vector2.new(0.5, 0.5)
+PlayerLight.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+PlayerLight.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerLight.BorderSizePixel = 0
+PlayerLight.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+PlayerLight.Size = UDim2.new(0, 200, 0, 50)
+PlayerLight.AutoButtonColor = false
+PlayerLight.Font = Enum.Font.Gotham
+PlayerLight.Text = "Flashlight"
+PlayerLight.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerLight.TextScaled = true
+PlayerLight.TextSize = 14.000
+PlayerLight.TextWrapped = true
 
-Converted["_UIPadding3"].PaddingBottom = UDim.new(0, 5)
-Converted["_UIPadding3"].PaddingLeft = UDim.new(0, 5)
-Converted["_UIPadding3"].PaddingRight = UDim.new(0, 5)
-Converted["_UIPadding3"].PaddingTop = UDim.new(0, 5)
-Converted["_UIPadding3"].Parent = Converted["_TextButton"]
+UICorner_8.Parent = PlayerLight
 
-Converted["_TextBox"].Font = Enum.Font.Gotham
-Converted["_TextBox"].PlaceholderText = "Placeholder"
-Converted["_TextBox"].Text = ""
-Converted["_TextBox"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextBox"].TextSize = 14
-Converted["_TextBox"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
-Converted["_TextBox"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextBox"].BorderSizePixel = 0
-Converted["_TextBox"].Size = UDim2.new(0.800000012, 0, 0, 50)
-Converted["_TextBox"].Parent = Converted["_TextBoxPlaceholder"]
+UIPadding_8.Parent = PlayerLight
+UIPadding_8.PaddingBottom = UDim.new(0, 3)
+UIPadding_8.PaddingLeft = UDim.new(0, 3)
+UIPadding_8.PaddingRight = UDim.new(0, 3)
+UIPadding_8.PaddingTop = UDim.new(0, 3)
 
-Converted["_UICorner7"].Parent = Converted["_TextBox"]
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = ScrollingFrame
+WalkSpeed.AnchorPoint = Vector2.new(0.5, 0.5)
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.BackgroundTransparency = 1.000
+WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeed.BorderSizePixel = 0
+WalkSpeed.Position = UDim2.new(0.496428579, 0, 0.650420964, 0)
+WalkSpeed.Size = UDim2.new(0.992857158, 0, 0, 45)
 
--- Fake Module Scripts:
+TextBox.Parent = WalkSpeed
+TextBox.AnchorPoint = Vector2.new(0.5, 0.5)
+TextBox.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+TextBox.BorderColor3 = Color3.fromRGB(48, 48, 48)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.357949644, 0, 0.489777982, 0)
+TextBox.Size = UDim2.new(0.718999982, 0, 1, 0)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.Gotham
+TextBox.PlaceholderText = "Input a Walkspeed..."
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
 
-local fake_module_scripts = {}
+UICorner_9.Parent = TextBox
 
-do -- Fake Module: StarterGui.YARHM.FUNCTIONS
-    local script = Instance.new("ModuleScript")
-    script.Name = "FUNCTIONS"
-    script.Parent = Converted["_YARHM"]
-    local function module_script()
-		local module = {}
-		
-		local ts = game:GetService("TweenService")
-		
-		function module.notification(s)
-			task.spawn(function()
-				local notif = script.Parent.Notifications.Placeholder:Clone()
-				notif.Parent = script.Parent.Notifications
-				notif.Visible = true
-				notif.Name = "notification"
-				notif.TextLabel.Text = s
-				ts:Create(notif, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
-					Size = UDim2.new(1,0,0,40)
-				}):Play()
-				task.wait(3)
-				local dismiss = ts:Create(notif, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
-					Size = UDim2.new(0,0,0,0)
-				})
-				dismiss:Play()
-				dismiss.Completed:Wait()
-				notif:Destroy()
-			end)
-		end
-		
-		return module
-		
-    end
-    fake_module_scripts[script] = module_script
-end
+UIListLayout_2.Parent = WalkSpeed
+UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 4)
 
--- Fake Local Scripts:
+TextButton.Parent = WalkSpeed
+TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+TextButton.Size = UDim2.new(0.200000003, 0, 1, 0)
+TextButton.Font = Enum.Font.Gotham
+TextButton.Text = "Set & Lock"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
 
-local function XMDK_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
-    local script = Instance.new("LocalScript")
-    script.Name = "InitOpen"
-    script.Parent = Converted["_Open"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+UICorner_10.Parent = TextButton
+
+UIPadding_9.Parent = TextButton
+UIPadding_9.PaddingBottom = UDim.new(0, 5)
+UIPadding_9.PaddingLeft = UDim.new(0, 5)
+UIPadding_9.PaddingRight = UDim.new(0, 5)
+UIPadding_9.PaddingTop = UDim.new(0, 5)
+
+UnlockAll.Name = "UnlockAll"
+UnlockAll.Parent = ScrollingFrame
+UnlockAll.AnchorPoint = Vector2.new(0.5, 0.5)
+UnlockAll.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+UnlockAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UnlockAll.BorderSizePixel = 0
+UnlockAll.Position = UDim2.new(0.474285722, 0, 0.683553517, 0)
+UnlockAll.Size = UDim2.new(0.927142859, 0, 0, 30)
+UnlockAll.Font = Enum.Font.GothamBold
+UnlockAll.Text = "Unlock all"
+UnlockAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+UnlockAll.TextSize = 14.000
+
+UICorner_11.Parent = UnlockAll
+
+TextLabel_3.Parent = ScrollingFrame
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.5, 0, 0.970130563, 0)
+TextLabel_3.Size = UDim2.new(1, 0, -0.00725013111, 50)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "Locking means your speed will stay the same no matter what. This means you will not be slow when crawling or jumping as beast."
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = Frame
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.257609218, 0, 0.146337226, 0)
+TextLabel_4.Size = UDim2.new(0.372752637, 0, 0.128215611, 0)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "YAFTFEM"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+TextLabel_5.Parent = Frame
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.306898832, 0, 0.213279441, 0)
+TextLabel_5.Size = UDim2.new(0.471331865, 0, 0.0641078278, 0)
+TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Text = "yet another flee the facility exploit menu"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+Notification.Name = "Notification"
+Notification.Parent = ScreenGui
+Notification.AnchorPoint = Vector2.new(0.5, 0.5)
+Notification.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Notification.BorderSizePixel = 0
+Notification.Position = UDim2.new(0.778999984, 0, -0.0879999995, 0)
+Notification.Size = UDim2.new(0, 293, 0, 50)
+Notification.Font = Enum.Font.Gotham
+Notification.Text = ""
+Notification.TextColor3 = Color3.fromRGB(255, 255, 255)
+Notification.TextScaled = true
+Notification.TextSize = 14.000
+Notification.TextWrapped = true
+
+UICorner_12.Parent = Notification
+
+UIPadding_10.Parent = Notification
+UIPadding_10.PaddingBottom = UDim.new(0, 10)
+UIPadding_10.PaddingLeft = UDim.new(0, 10)
+UIPadding_10.PaddingRight = UDim.new(0, 7)
+UIPadding_10.PaddingTop = UDim.new(0, 10)
+
+ReloadESP.Name = "ReloadESP"
+ReloadESP.Parent = ScreenGui
+ReloadESP.AnchorPoint = Vector2.new(0.5, 0.5)
+ReloadESP.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+ReloadESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ReloadESP.BorderSizePixel = 0
+ReloadESP.ClipsDescendants = true
+ReloadESP.Position = UDim2.new(1.5, 0, 0.5, 0)
+ReloadESP.Size = UDim2.new(0, 239, 0, 124)
+
+UICorner_13.Parent = ReloadESP
+
+TextLabel_6.Parent = ReloadESP
+TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.496882856, 0, 0.275306463, 0)
+TextLabel_6.Size = UDim2.new(0, 102, 0, 25)
+TextLabel_6.Font = Enum.Font.GothamBold
+TextLabel_6.Text = "Reload ESPs?"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+
+TextLabel_7.Parent = ReloadESP
+TextLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.496882856, 0, 0.432564527, 0)
+TextLabel_7.Size = UDim2.new(0, 146, 0, 16)
+TextLabel_7.Font = Enum.Font.Gotham
+TextLabel_7.Text = "A new game has started."
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+TextButton_2.Parent = ReloadESP
+TextButton_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton_2.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.50246644, 0, 0.732322454, 0)
+TextButton_2.Size = UDim2.new(0, 199, 0, 36)
+TextButton_2.Font = Enum.Font.Gotham
+TextButton_2.Text = "Reload ESPs"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 14.000
+
+UICorner_14.Parent = TextButton_2
+
+-- Scripts:
+
+local function PVDTSB_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
 
 	local ts = game:GetService("TweenService")
+	local closed = UDim2.fromScale(-0.392, 0.5)
+	local opened = UDim2.fromScale(-0.008, 0.5)
+	local state = false
 	
-	
-	local stroke = Instance.new("UIStroke")
-	stroke.Parent = script.Parent
-	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-	stroke.Color = Color3.fromRGB(255,255,255)
-	
-	
-	script.Parent.Position = UDim2.fromScale(0.5, -1)
-	ts:Create(script.Parent, TweenInfo.new(1.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
-		Position = UDim2.fromScale(0.5, 0.063)
-	}):Play()
-	
-	
-	task.wait(5)
-	ts:Create(script.Parent, TweenInfo.new(5), {
-		TextTransparency = 1
-	}):Play()
-	ts:Create(stroke, TweenInfo.new(5), {
-		Transparency = 1
-	}):Play()
-end
-local function RSYAYC_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
-    local script = Instance.new("LocalScript")
-    script.Name = "OnClick"
-    script.Parent = Converted["_Open"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local ts = game:GetService("TweenService")
-	
-	
-	local clickCount = 0
-	local lastClickTime = tick()
 	script.Parent.MouseButton1Click:Connect(function()
-		local currentTime = tick()
-		
-		script.Parent.TextTransparency = 0.5
-		ts:Create(script.Parent, TweenInfo.new(1),
-			{TextTransparency = 1}
-		):Play()
-		
-		-- Check if the time since the last click is within a certain threshold
-		if currentTime - lastClickTime < 0.5 then
-			clickCount = clickCount + 1
+		if state then
+			ts:Create(script.Parent.Parent, TweenInfo.new(1, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+				Position = closed
+			}):Play()
+			state = false
+			script.Parent.Text = "Open menu"
 		else
+			ts:Create(script.Parent.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				Position = opened
+			}):Play()
+			state = true
+			script.Parent.Text = "Close menu"
+		end
+	end)
+end
+coroutine.wrap(PVDTSB_fake_script)()
+local function JRHBJFN_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local ts = game:GetService("TweenService")
+	
+	script.Parent.Position = UDim2.fromScale(-0.500, 0.5)
+	ts:Create(script.Parent, TweenInfo.new(2, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+		Position = UDim2.fromScale(-0.392, 0.5)
+	}):Play()
+end
+coroutine.wrap(JRHBJFN_fake_script)()
+local function UCCJ_fake_script() -- PCs.LocalScript 
+	local script = Instance.new('LocalScript', PCs)
+
+	local ts = game:GetService("TweenService")
+	local state = false
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if state then
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+			}):Play()
+			state = false
+			_G.PCsESP = false
 			
-			clickCount = 1
-		end
-	
-		lastClickTime = currentTime
-	
-		if clickCount == 3 then
-			-- Triple-click detected
-	
-			ts:Create(_G.YARHM.Menu, TweenInfo.new(0.7, Enum.EasingStyle.Back, Enum.EasingDirection.Out), 
-				{Position = UDim2.fromScale(0.499, 0.041), Size = UDim2.fromOffset(441, 268)}
-			):Play()
+			for _, obj in ipairs(game.Workspace:GetDescendants()) do
+				if obj.Name == "PCHighlight" then
+					obj:Destroy()
+				end
+			end
+		else
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(32, 255, 7)
+			}):Play()
+			state = true
+			_G.PCsESP = true
+			
+			for _, obj in ipairs(game.Workspace:GetDescendants()) do
+				if obj.Name == "ComputerTable" and not obj:FindFirstChild("PCHighlight") then
+					local hili = Instance.new("Highlight", obj)
+					hili.Name = "PCHighlight"
+					hili.OutlineTransparency = 1
+					hili.FillColor = obj:FindFirstChild("Screen").Color
+				end
+			end
 		end
 	end)
-	
 end
-local function ZJWE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
-    local script = Instance.new("LocalScript")
-    script.Name = "AutoSetup"
-    script.Parent = Converted["_List"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(UCCJ_fake_script)()
+local function OQJA_fake_script() -- Pods.LocalScript 
+	local script = Instance.new('LocalScript', Pods)
 
 	local ts = game:GetService("TweenService")
-	local selected = Instance.new("ObjectValue")
-	selected.Parent = script.Parent
-	selected.Name = "Selected"
-	
-	local States = {}
-	
-	task.wait(1)
-	
-	AREA = script.Parent.Parent.Area
-	
-	local function calculateWidth(n)
-		if n <= 3 then
-			return 30
-		else
-			local base = 30
-			local additional = math.floor((n - 3) / 3) * 30
-			return base + additional
-		end
-	end
-	
-	local listlayout = Instance.new("UIListLayout")
-	listlayout.Parent = AREA
-	listlayout.Padding = UDim.new(0, 10)
-	listlayout.FillDirection = Enum.FillDirection.Vertical
-	listlayout.SortOrder = Enum.SortOrder.LayoutOrder
-	listlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-	
-	function loader(module)
-		local unloadtween = ts:Create(AREA, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-			Position = UDim2.fromScale(1.55, 0.606)
-		})
-	
-		unloadtween:Play()
-		unloadtween.Completed:Wait()
-	
-		AREA:ClearAllChildren()
-		local listlayout = Instance.new("UIListLayout")
-		listlayout.Parent = AREA
-		listlayout.Padding = UDim.new(0, 10)
-		listlayout.FillDirection = Enum.FillDirection.Vertical
-		listlayout.SortOrder = Enum.SortOrder.LayoutOrder
-		listlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-		for _, item in ipairs(module) do
-			if item["Type"] == "Text" then
-	
-				local text = Instance.new("TextLabel")
-				text.Parent = AREA
-	
-				text.BackgroundTransparency = 1
-				text.Text = item["Args"][1]
-				text.TextScaled = true
-				text.TextColor3 = Color3.fromRGB(255,255,255)
-				text.Font = Enum.Font.GothamBold
-				text.Size = UDim2.new(1,0,0,20)
-				text.TextXAlignment = Enum.TextXAlignment.Left
-				text.RichText = true
+	local state = false
 	
 	
-			elseif item["Type"] == "Button" then
-	
-				local button = Instance.new("TextButton")
-				button.Parent = AREA
-	
-				button.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-				button.Text = item["Args"][1]
-				button.TextScaled = true
-				button.TextColor3 = Color3.fromRGB(255,255,255)
-				button.Font = Enum.Font.GothamBold
-				button.Size = UDim2.new(1,0,0,25)
-	
-				local padding = Instance.new("UIPadding")
-				padding.Parent = button
-	
-				padding.PaddingTop = UDim.new(0, 5)
-				padding.PaddingBottom = UDim.new(0, 5)
-	
-	
-				Instance.new("UICorner", button)
-	
-				button.MouseButton1Click:Connect(function()
-					item["Args"][2](button)
-				end)
-			elseif item["Type"] == "ButtonGrid" then
-	
-	
-	
-	
-				local frame = Instance.new("Frame")
-				frame.Parent = AREA
-				frame.Size = UDim2.new(1, 0, 0, calculateWidth(#item["Args"][2]))
-				frame.BackgroundTransparency = 1
-	
-	
-				local gridlayout = Instance.new("UIGridLayout")
-				gridlayout.Parent = frame
-				gridlayout.CellSize = UDim2.new((1 / item["Args"][1]) - 0.03, 0, 0, 30) -- remove 0.03 because if not it would wrap on its own lol
-	
-				--print("------")
-				--print(item["Args"][2])
-				--print(States)
-				for buttonname, args in item["Args"][2] do
-					local button = Instance.new("TextButton")
-					button.Parent = frame
-	
-					--print(args)
-					button.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-					if States[buttonname .. module.Name] then
-						button.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
-					end
-					button.Text = string.gsub(buttonname, "_", " ")
-					button.TextScaled = true
-					button.TextColor3 = Color3.fromRGB(255,255,255)
-					button.Font = Enum.Font.GothamBold
-	
-					local padding = Instance.new("UIPadding")
-					padding.Parent = button
-	
-					padding.PaddingTop = UDim.new(0, 5)
-					padding.PaddingBottom = UDim.new(0, 5)
-	
-					Instance.new("UICorner", button)
-	
-					button.MouseButton1Click:Connect(function()
-						if item["Toggleable"] then
-							item["Args"][2][buttonname](button)
-							--print(States[buttonname .. module.Name])
-							if States[buttonname .. module.Name] then
-								ts:Create(button, TweenInfo.new(0.3), {
-									BackgroundColor3 = Color3.fromRGB(22, 22, 22)
-								}):Play()
-								States[buttonname .. module.Name] = false
-							else
-								ts:Create(button, TweenInfo.new(0.3), {
-									BackgroundColor3 = Color3.fromRGB(0, 200, 0)
-								}):Play()
-								States[buttonname .. module.Name] = true
-							end
-						else
-							item["Args"][2][buttonname](button)
-						end
-					end)
-				end
-	
-	
-			elseif item["Type"] == "Input" then
-				local cloneinput = _G.YARHM.TextBoxPlaceholder:Clone()
-				cloneinput.Parent = AREA
-				cloneinput.Visible = true
-				
-				cloneinput.TextBox.PlaceholderText = item["Args"][1]
-				cloneinput.TextButton.Text = item["Args"][2]
-				
-				cloneinput.TextButton.MouseButton1Click:Connect(function()
-					item["Args"][3](cloneinput.TextButton, cloneinput.TextBox.Text)
-				end)
-			end
-		end
-	
-		ts:Create(AREA, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Position = UDim2.fromScale(0.66, 0.606)
-		}):Play()
-	end
-	
-	
-	task.wait(1) -- magic number to wait modules to load lmao
-	for modulei, module in ipairs(_G.Modules) do
-		local success, err = pcall(function()
-			local listbutton = _G.YARHM.ListButton:Clone()
-			listbutton.Parent = script.Parent.ScrollingFrame
-			listbutton.Name = module.Name
-			listbutton.Text = module.Name
-			listbutton.Visible = true
-	
-			if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
-				listbutton.Interactable = false
-				listbutton.BackgroundColor3 = Color3.fromRGB(50,0,0)
-				listbutton.TextColor3 = Color3.fromRGB(255, 0, 0)
-			else
-				listbutton.MouseButton1Click:Connect(function()
-	
-					if selected.Value then
-						ts:Create(selected.Value, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-							BackgroundColor3 = Color3.fromRGB(49, 49, 49),
-							TextColor3 = Color3.fromRGB(255,255,255)
-						}):Play()
-					end
-	
-					selected.Value = listbutton
-	
-					ts:Create(selected.Value, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-						BackgroundColor3 = Color3.fromRGB(255,255,255),
-						TextColor3 = Color3.fromRGB(0,0,0)
-					}):Play()
-	
-					loader(_G.Modules[modulei])
-				end)
-			end
-	
-		end)
-		if not success then
-			warn("[YARHM] Error while requiring " .. module.Name .. "!")
-			warn(err)
-		end
-	end
-end
-local function JKGY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Close"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local ts = game:GetService("TweenService")
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		ts:Create(_G.YARHM.Menu, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
-			{Position = UDim2.fromScale(0.499, 0), Size = UDim2.fromOffset(441, 0)}
-		):Play()
+		if state then
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+			}):Play()
+			state = false
+			_G.PodsESP = false
+	
+			for _, obj in ipairs(game.Workspace:GetDescendants()) do
+				if obj.Name == "PodsHighlight" then
+					obj:Destroy()
+				end
+			end
+		else
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(32, 255, 7)
+			}):Play()
+			state = true
+			_G.PodsESP = true
+			
+			for _, obj in ipairs(game.Workspace:GetDescendants()) do
+				if obj.Name == "FreezePod" then
+					local hili = Instance.new("Highlight", obj)
+					hili.Name = "PodsHighlight"
+					hili.OutlineTransparency = 1
+					hili.FillColor = Color3.fromRGB(0, 200, 255)
+				end
+			end
+		end
 	end)
 end
-local function XCDC_fake_script() -- Fake Script: StarterGui.YARHM.Init
-    local script = Instance.new("LocalScript")
-    script.Name = "Init"
-    script.Parent = Converted["_YARHM"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
+coroutine.wrap(OQJA_fake_script)()
+local function ISPNFE_fake_script() -- Exits.LocalScript 
+	local script = Instance.new('LocalScript', Exits)
 
-	_G.YARHM = script.Parent
-	
-	script.Parent.SafeAreaCompatibility = Enum.SafeAreaCompatibility.None
-	script.Parent.ScreenInsets = Enum.ScreenInsets.None
-	
-	
-	script.Parent.Menu.Position = UDim2.fromScale(0.5, 0)
-	script.Parent.Menu.Size = UDim2.fromOffset(441,0)
-	
-	_G.Modules = {}
-	
-	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.1.1\n- MM2 disabled, WIP for now\n-Flee the Facility bug fixes")
-	
-end
-local function FVWP_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
-    local script = Instance.new("LocalScript")
-    script.Name = "Flee the Facility"
-    script.Parent = Converted["_YARHM"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local module = {}
-	module["gameId"] = 372226183  -- Restrict module to a certain game ID only. 0 allows all games.
-	
-	
-	module["Name"] = "Flee the Facility"
-	
 	local ts = game:GetService("TweenService")
+	local state = false
 	
-	local FUNCTIONS = require(_G.YARHM.FUNCTIONS)
 	
 	
-	module.players = false
-	module.pcs = false
-	module.pods = false
-	module.exits = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if state then
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+			}):Play()
+			state = false
+			_G.ExitsESP = false
+			
 	
-	module.antipcerror = false
-	module.flashlight = false
+			for _, obj in ipairs(game.Workspace:GetDescendants()) do
+				if obj.Name == "ExitsHighlight" then
+					obj:Destroy()
+				end
+			end
+		else
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(32, 255, 7)
+			}):Play()
+			state = true
+			_G.ExitsESP = true
+			
+			if state then
+				for _, obj in ipairs(game.Workspace:GetDescendants()) do
+					if obj.Name == "ExitDoor" and not obj:FindFirstChild("ExitsHighlight") then
+						local hili = Instance.new("Highlight", obj)
+						hili.Name = "ExitsHighlight"
+						hili.OutlineTransparency = 1
+						hili.FillColor = Color3.fromRGB(255,255,0)
+					end
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(ISPNFE_fake_script)()
+local function WVXQ_fake_script() -- Players.LocalScript 
+	local script = Instance.new('LocalScript', Players)
+
+	local ts = game:GetService("TweenService")
+	local state = false
 	
-	local esps = {}
-	
-	local function getBeast()
-		local listplayers = game.Players:GetChildren()
-		for _, player in ipairs(listplayers) do
+	function getBeast()
+		local players = game.Players:GetChildren()
+		for _, player in ipairs(players) do
 			local character = player.Character
 			if character ~= nil and character:FindFirstChild("BeastPowers") then
 				return player
@@ -774,434 +680,309 @@ local function FVWP_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 		end
 	end
 	
-	local function reloadESP()
 	
-	
-		for _, i in ipairs(workspace:GetChildren()) do
-			if i.Name == "PlayerHighlight" and not module.players then
-				i:Destroy()
-			end
-	
-			if i.Name == "PCHighlight" and not module.pcs then
-				i:Destroy()
-			end
-	
-			if i.Name == "PodsHighlight" and not module.pods then
-				i:Destroy()
-			end
-	
-			if i.Name == "ExitsHighlight" and not module.exits then
-				i:Destroy()
-			end
-		end
-	
-		if module.players then
-	
-	
-	
-			local listplayers = game.Players:GetChildren()
-			for _, player in ipairs(listplayers) do
-				if player ~= game.Players.LocalPlayer and player.Character ~= nil then
-					local character = player.Character
-					if not character:FindFirstChild("PlayerHighlight") then
-						local a = Instance.new("Highlight", workspace)
-						esps["PlayerHighlight"] = a
-						a.Name = "PlayerHighlight"
-						a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-						a.Adornee = character
-						task.spawn(function()
-							repeat
-								task.wait(0.1)
-								if player == getBeast() then
-									a.FillColor = Color3.fromRGB(255,0,0)
-								else
-									a.FillColor = Color3.fromRGB(0,255,0)
-								end
-							until character == nil or a == nil
-						end)
-					end
-				end
-			end
-	
-	
-		end
-	
-		if module.pcs then
-	
-	
-	
-	
-			for _, obj in ipairs(game.Workspace:GetDescendants()) do
-				if obj.Name == "ComputerTable" and not obj:FindFirstChild("PCHighlight") then
-					local hili = Instance.new("Highlight", workspace)
-					esps["PCHighlight"] = hili
-					hili.Name = "PCHighlight"
-					hili.OutlineTransparency = 1
-					hili.Adornee = obj
-					hili.FillColor = obj:FindFirstChild("Screen").Color
-				end
-			end
-	
-	
-		end
-	
-		if module.pods then
-	
-	
-	
-			for _, obj in ipairs(game.Workspace:GetDescendants()) do
-				if obj.Name == "FreezePod" then
-					local hili = Instance.new("Highlight", workspace)
-					esps["PodsHighlight"] = hili
-					hili.Name = "PodsHighlight"
-					hili.OutlineTransparency = 1
-					hili.Adornee = obj
-					hili.FillColor = Color3.fromRGB(0, 200, 255)
-				end
-			end
-	
-		end
-	
-	
-		if module.exits then
-	
-	
-	
-			for _, obj in ipairs(game.Workspace:GetDescendants()) do
-				if obj.Name == "ExitDoor" and not obj:FindFirstChild("ExitsHighlight") then
-					local hili = Instance.new("Highlight", workspace)
-					esps["ExitsHighlight"] = hili
-					hili.Name = "ExitsHighlight"
-					hili.OutlineTransparency = 1
-					hili.Adornee = obj
-					hili.FillColor = Color3.fromRGB(255,255,0)
-				end
-			end
-	
-		end
-	end
-	
-	game.ReplicatedStorage.IsGameActive.Changed:Connect(function()
-	
-		if game.ReplicatedStorage.IsGameActive.Value == false then return end
-		
-		FUNCTIONS.notification("A new game has started, reloading ESPs...")
-		reloadESP()
-	end)
-	
-	
-	module[1] = {
-		Type = "Text",
-		Args = {"ESPs"}
-	}
-	
-	module[2] = {
-		Type = "ButtonGrid",
-		Toggleable = true, -- Recolors buttons for you onclick, you still need to save the state yourself
-		Args = {3, { -- 3 is the number of columns
-			Players = function(Self)
-	
-				if module.players then
-					module.players = false
-					reloadESP()
-				else
-					module.players = true
-					reloadESP()
-				end
-	
-	
-			end,
-			PCs = function(Self)
-	
-				if module.pcs then
-					module.pcs = false
-					reloadESP()
-				else
-					module.pcs = true
-					reloadESP()
-				end
-	
-			end,
-			Pods = function(Self)
-	
-				if module.pods then
-					module.pods = false
-					reloadESP()
-				else
-					module.pods = true
-					reloadESP()
-				end
-				
-	
-			end,
-			Exits = function(Self)
-	
-				if module.exits then
-					module.exits = false
-					reloadESP()
-				else
-					module.exits = true
-					reloadESP()
-				end
-	
-			end,
-		}
-		} 
-	}
-	module[3] = { -- spacing, button grid doesnt correctly height himself for some reason
-		Type = "Text",
-		Args = {""}
-	}
-	
-	module[4] = {
-		Type = "Text",
-		Args = {"Tools"}
-	}
-	
-	
-	local root = game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-	
-	light = Instance.new("PointLight", root)
-	light.Brightness = 0
-	light.Range = 9999999999
-	
-	local wslock = false
-	local ws = 18
-	
-	local antifail = false
-	
-	task.spawn(function() 
-		local OldNameCall = nil
-	
-		OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
-			local Args = {...}
-			local NamecallMethod = getnamecallmethod()
-	
-			if NamecallMethod == "FireServer" and Args[1] == "SetPlayerMinigameResult" and antifail then
-				print("Minigame result - Intercepting result to true")
-				Args[2] = true
-			end
-	
-			return OldNameCall(Self, unpack(Args))
-		end)
-	
-	end)
-	
-	
-	module[5] = {
-		Type = "ButtonGrid",
-		Toggleable = true,
-		Args = {3, {
-			Anti_PC_Error = function()
-				if antifail then antifail = false else antifail = true end
-			end,
-			Flashlight = function()
-				if light.Brightness == 0 then
-					light.Brightness = 2.5
-				else
-					light.Brightness = 0
-				end
-			end,
-		}}
-	}
-	
-	task.spawn(function()
-		while task.wait(0.1) do
-			if wslock then
-				root.Parent:WaitForChild("Humanoid").WalkSpeed = ws
-			end
-		end
-	end)
-	
-	module[6] = {
-		Type = "Input",
-		Args = {"Input a walkspeed", "Set & Lock", function(Self, text)
-			if not tonumber(text) then
-				FUNCTIONS.notification("Input isn't a valid number.")
-				return
-			end
+	script.Parent.MouseButton1Click:Connect(function()
+		if state then
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+			}):Play()
+			state = false
+			_G.PlayersESP = false
 			
-			ws = tonumber(text)
-			wslock = true
-		end,}
-	}
-	
-	module[7] = {
-		Type = "Button",
-		Args = {"Unlock all", function()
-			wslock = false
-		end,}
-	}	
-	
-	module[8] = {
-		Type = "Text",
-		Args = {"Locking means your speed will stay the same no matter what. This means you will not be slow when crawling or jumping as beast."}
-	}
-	
-	
-	_G.Modules[2] = module
-end
-local function XSVONR_fake_script() -- Fake Script: StarterGui.YARHM.Universal
-    local script = Instance.new("LocalScript")
-    script.Name = "Universal"
-    script.Parent = Converted["_YARHM"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local module = {}
-	module["gameId"] = 0 -- Restrict module to a certain game ID only. 0 allows all games.
-	
-	
-	module["Name"] = "Universal"
-	
-	module[1] = {
-		Type = "Text",
-		Args = {"Universal module - Works on most games"}
-	}
-	
-	module[2] = {
-		Type = "Button",
-		Args = {"Infinite Yield", function(Self)
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-		end}
-	}
-	
-	_G.Modules[1] = module
-end
-local function RFBBJ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2 (WIP)
-    local script = Instance.new("LocalScript")
-    script.Name = "Murder Mystery 2 (WIP)"
-    script.Parent = Converted["_YARHM"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local module = {}
-	module["gameId"] = 69 -- 66654135 -- Restrict module to a certain game ID only. 0 allows all games.
-	
-	
-	local function findMurderer()
-		for _, i in ipairs(game.Players:GetDescendants()) do
-			if i.Name == "Knife" and i.Parent.Name == "Backpack" then
-				return i.Parent.Parent
+			for _, obj in ipairs(game.Workspace:GetDescendants()) do
+				if obj.Name == "PlayerHighlight" then
+					obj:Destroy()
+				end
 			end
-		end
-	
-		for _, i in ipairs(game.Players:GetPlayers()) do
-			if i.Character:FindFirstChild("Gun") then
-				return i
-			end
-		end
-	
-		return nil
-	end
-	
-	local function findSheriff()
-		for _, i in ipairs(game.Players:GetDescendants()) do
-			if i.Name == "Gun" and i.Parent.Name == "Backpack" then
-				return i.Parent.Parent
-			end
-		end
-	
-		for _, i in ipairs(game.Players:GetPlayers()) do
-			if i.Character:FindFirstChild("Gun") then
-				return i
-			end
-		end
-	
-		return nil
-	end
-	
-	
-	task.spawn(function()
-		while task.wait(3) do
-			if workspace:FindFirstChild("GunESP") then
-				workspace:FindFirstChild("GunESP").Adornee = findSheriff():FindFirstChild("Gun")
-			end
-		end
-	end)
-	
-	module["Name"] = "Murder Mystery 2"
-	
-	module[1] = {
-		Type = "Text",
-		Args = {"ESPs"}
-	}
-	
-	module[2] = {
-		Type = "ButtonGrid",
-		Toggleable = true,
-		Args = {2, {
-			Players = function()
-				if workspace:FindFirstChild("PlayerESP") then
-					for _, i in ipairs(game.Workspace:GetChildren()) do if i.Name=="PlayerESP" then i:Destroy() end end
-				else
-					local listplayers = game.Players:GetChildren()
-					for _, player in ipairs(listplayers) do
-						if player ~= game.Players.LocalPlayer and player.Character ~= nil then
-							local character = player.Character
-							if not character:FindFirstChild("PlayerESP") then
-								local a = Instance.new("Highlight", workspace)
-								a.Name = "PlayerESP"
-								a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-								a.Adornee = character
-								task.spawn(function()
-									repeat
-										task.wait(3)
-										if player == findMurderer() then
-											a.FillColor = Color3.fromRGB(255,0,0)
-										elseif player == findSheriff() then
-											a.FillColor = Color3.fromRGB(0, 150, 255)
-										else
-											a.FillColor = Color3.fromRGB(0,255,0)
-										end
-									until character == nil or a == nil
-								end)
-							end
+		else
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(32, 255, 7)
+			}):Play()
+			state = true
+			_G.PlayersESP = true
+			
+			local players = game.Players:GetChildren()
+				for _, player in ipairs(players) do
+					if player ~= game.Players.LocalPlayer and player.Character ~= nil then
+						local character = player.Character
+						if not character:FindFirstChild("PlayerHighlight") then
+							local a = Instance.new("Highlight", character)
+							a.Name = "PlayerHighlight"
+							a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+							task.spawn(function()
+								repeat
+									task.wait(0.1)
+									if player == getBeast() then
+										a.FillColor = Color3.fromRGB(255,0,0)
+									else
+										a.FillColor = Color3.fromRGB(0,255,0)
+									end
+								until character == nil or a == nil
+							end)
 						end
 					end
 				end
-			end,
+		end
+	end)
+end
+coroutine.wrap(WVXQ_fake_script)()
+local function BOTJM_fake_script() -- AntiFail.LocalScript 
+	local script = Instance.new('LocalScript', AntiFail)
+
+	local ts = game:GetService("TweenService")
+	local state = false
+	
+	task.spawn(function() 
+			local OldNameCall = nil
+
+			OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+			    local Args = {...}
+			    local NamecallMethod = getnamecallmethod()
 			
-			Dropped_Gun = function()
-				if workspace:FindFirstChild("GunESP") then
-					for _, i in ipairs(game.Workspace:GetChildren()) do if i.Name=="GunESP" then i:Destroy() end end
-				else
-					local gunesp = Instance.new("Highlight", workspace)
-					gunesp.Name = "GunESP"
-					gunesp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-					
-				end
-			end,
-		}}
-	}
-	
-	module[3] = {
-		Type = "Text",
-		Args = {"I don't know if dropped gun will show properly lol"}
-	}
-	_G.Modules[3] = module
+			    if NamecallMethod == "FireServer" and Args[1] == "SetPlayerMinigameResult" and state then
+			    	print("Minigame result - Intercepting result to true")
+				Args[2] = true
+			    end
+			
+			    return OldNameCall(Self, unpack(Args))
+			end)
+
+	end)
 	
 	
+	script.Parent.MouseButton1Click:Connect(function()
+		if state then
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+			}):Play()
+			state = false
+			
+		else
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(32, 255, 7)
+			}):Play()
+			state = true
+		end
+	end)
+end
+coroutine.wrap(BOTJM_fake_script)()
+local function QBMP_fake_script() -- PlayerLight.LocalScript 
+	local script = Instance.new('LocalScript', PlayerLight)
+
+	local ts = game:GetService("TweenService")
+	local state = false
+	
+	local light = nil
+	local root = game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if state then
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+			}):Play()
+			state = false
+			
+			if light then
+				light:Destroy()
+			end
+		else
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(32, 255, 7)
+			}):Play()
+			state = true
+			
+			light = Instance.new("PointLight", root)
+			light.Brightness = 2.5
+			light.Range = 9999999999
+		end
+	end)
+end
+coroutine.wrap(QBMP_fake_script)()
+local function UJXYY_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local ts = game:GetService("TweenService")
+	local humanoid = game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid")
+	
+	
+	task.spawn(function()
+		while task.wait(0.1) do
+			if script.Parent.Parent:GetAttribute("lock") then
+				humanoid.WalkSpeed = script.Parent.Parent.TextBox.Text
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not tonumber(script.Parent.Parent.TextBox.Text) then
+			script.Parent.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+			}):Play()
+			return
+		end
+		script.Parent.Parent.TextBox.TextEditable = false
+		script.Parent.Parent:SetAttribute("lock", true)
+		script.Parent.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		ts:Create(script.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+		}):Play()
+	end)
 	
 end
+coroutine.wrap(UJXYY_fake_script)()
+local function KGHOGF_fake_script() -- UnlockAll.LocalScript 
+	local script = Instance.new('LocalScript', UnlockAll)
 
-coroutine.wrap(XMDK_fake_script)()
-coroutine.wrap(RSYAYC_fake_script)()
-coroutine.wrap(ZJWE_fake_script)()
-coroutine.wrap(JKGY_fake_script)()
-coroutine.wrap(XCDC_fake_script)()
-coroutine.wrap(FVWP_fake_script)()
-coroutine.wrap(XSVONR_fake_script)()
-coroutine.wrap(RFBBJ_fake_script)()
+	local walkspeed = script.Parent.Parent.WalkSpeed
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		walkspeed:SetAttribute("lock", false)
+		walkspeed.TextBox.TextEditable = true
+	end)
+end
+coroutine.wrap(KGHOGF_fake_script)()
+local function BCQIPB_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	script.Parent.ScreenInsets = Enum.ScreenInsets.None
+	
+	script.Parent.Notification.Text = "Thank you for using YAFTFEM!"
+	task.wait(5)
+	script.Parent.Notification.Text = ""
+end
+coroutine.wrap(BCQIPB_fake_script)()
+local function QBJBRM_fake_script() -- Notification.LocalScript 
+	local script = Instance.new('LocalScript', Notification)
+
+	local ts = game:GetService("TweenService")
+	
+	while task.wait(1) do
+		if script.Parent.Text ~= "" then
+			ts:Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+				Position = UDim2.fromScale(0.779, 0.088)
+			}):Play()
+		else
+			ts:Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+				Position = UDim2.fromScale(0.779, -0.088)
+			}):Play()
+		end
+	end
+end
+coroutine.wrap(QBJBRM_fake_script)()
+local function PLASK_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	local ts = game:GetService("TweenService")
+	local open = UDim2.fromScale(0.76, 0.5)
+	local closed = UDim2.fromScale(1.5, 0.5)
+	
+	local stroke = Instance.new("UIStroke", script.Parent)
+	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	stroke.Color = Color3.fromRGB(255,255,255)
+	
+	
+	function getBeast()
+		local players = game.Players:GetChildren()
+		for _, player in ipairs(players) do
+			local character = player.Character
+			if character ~= nil and character:FindFirstChild("BeastPowers") then
+				return player
+			end
+		end
+	end
+	
+	local timeout = nil
+	game.ReplicatedStorage.IsGameActive.Changed:Connect(function()
+
+		if game.ReplicatedStorage.IsGameActive.Value == false then return end
+		
+		ts:Create(script.Parent.Parent, TweenInfo.new(1.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+			Position = open
+		}):Play()
+		script.Parent.UIStroke.Thickness = 50
+		script.Parent.UIStroke.Transparency = 1
+		timeout = ts:Create(script.Parent.UIStroke, TweenInfo.new(5, Enum.EasingStyle.Exponential, Enum.EasingDirection.In), {
+			Thickness = 0,
+			Transparency = 0
+		})
+		timeout:Play()
+		local timeoutcompletion = timeout.Completed:Connect(function()
+			
+			ts:Create(script.Parent.Parent, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+				Position = closed
+			}):Play()
+			
+			
+			for _, i in ipairs(game.Workspace:GetDescendants()) do
+				if (i.Name == "ExitsHighlight") or (i.Name == "PCHighlight") or (i.Name == "PlayerHighlight") or (i.Name == "PodsHighlight") then
+					i:Destroy()
+				end
+			end
+			
+			if _G.ExitsESP then
+				for _, obj in ipairs(game.Workspace:GetDescendants()) do
+					if obj.Name == "ExitDoor" and not obj:FindFirstChild("ExitsHighlight") then
+						local hili = Instance.new("Highlight", obj)
+						hili.Name = "ExitsHighlight"
+						hili.OutlineTransparency = 1
+						hili.FillColor = Color3.fromRGB(255,255,0)
+					end
+				end
+			end
+			
+			if _G.PCsESP then
+				for _, obj in ipairs(game.Workspace:GetDescendants()) do
+					if obj.Name == "ComputerTable" and not obj:FindFirstChild("PCHighlight") then
+						local hili = Instance.new("Highlight", obj)
+						hili.Name = "PCHighlight"
+						hili.OutlineTransparency = 1
+						hili.FillColor = obj:FindFirstChild("Screen").Color
+					end
+				end
+			end
+			
+			if _G.PlayersESP then
+				local players = game.Players:GetChildren()
+				for _, player in ipairs(players) do
+					if player ~= game.Players.LocalPlayer and player.Character ~= nil then
+						local character = player.Character
+						if not character:FindFirstChild("PlayerHighlight") then
+							local a = Instance.new("Highlight", character)
+							a.Name = "PlayerHighlight"
+							a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+							task.spawn(function()
+								repeat
+									task.wait(0.1)
+									if player == getBeast() then
+										a.FillColor = Color3.fromRGB(255,0,0)
+									else
+										a.FillColor = Color3.fromRGB(0,255,0)
+									end
+								until character == nil or a == nil
+							end)
+						end
+					end
+				end
+			end
+			
+			if _G.PodsESP then
+				for _, obj in ipairs(game.Workspace:GetDescendants()) do
+					if obj.Name == "FreezePod" then
+						local hili = Instance.new("Highlight", obj)
+						hili.Name = "PodsHighlight"
+						hili.OutlineTransparency = 1
+						hili.FillColor = Color3.fromRGB(0, 200, 255)
+					end
+				end
+			end
+			
+		end)
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		timeout:Cancel()
+	end)
+end
+coroutine.wrap(PLASK_fake_script)()
