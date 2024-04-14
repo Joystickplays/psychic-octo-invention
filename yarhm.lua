@@ -1084,7 +1084,7 @@ local function ESWLAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	end
 
 	local module = {}
-	module["gameId"] = 142823291 -- Restrict module to a certain game ID only. 0 allows all games.
+	module["gameId"] = 66654135 -- Restrict module to a certain game ID only. 0 allows all games.
 
 
 	local function findMurderer()
