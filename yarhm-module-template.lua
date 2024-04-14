@@ -1,8 +1,5 @@
 local module = {}
 module["gameId"] = 0 -- Restrict module to a certain game ID only. 0 allows all games
-if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
-	script.Enabled = false
-end
 
 module["Name"] = "Module name"
 
