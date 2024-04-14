@@ -1,347 +1,357 @@
---[[
+-- YARHM by Imperial, version 1.1.0
 
-		YARHM - open source because yes
+-- Instances:
 
-]]
+local Converted = {
+	["_YARHM"] = Instance.new("ScreenGui");
+	["_Open"] = Instance.new("TextButton");
+	["_UICorner"] = Instance.new("UICorner");
+	["_InitOpen"] = Instance.new("LocalScript");
+	["_OnClick"] = Instance.new("LocalScript");
+	["_Menu"] = Instance.new("Frame");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_HubName"] = Instance.new("TextLabel");
+	["_HubDesc"] = Instance.new("TextLabel");
+	["_List"] = Instance.new("Frame");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_AutoSetup"] = Instance.new("LocalScript");
+	["_ScrollingFrame"] = Instance.new("ScrollingFrame");
+	["_UIListLayout"] = Instance.new("UIListLayout");
+	["_UIPadding"] = Instance.new("UIPadding");
+	["_UIPadding1"] = Instance.new("UIPadding");
+	["_HubCredits"] = Instance.new("TextLabel");
+	["_Close"] = Instance.new("TextButton");
+	["_UICorner3"] = Instance.new("UICorner");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_Area"] = Instance.new("ScrollingFrame");
+	["_TextLabel"] = Instance.new("TextLabel");
+	["_TextLabel1"] = Instance.new("TextLabel");
+	["_Init"] = Instance.new("LocalScript");
+	["_ListButton"] = Instance.new("TextButton");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_FUNCTIONS"] = Instance.new("ModuleScript");
+	["_Notifications"] = Instance.new("Frame");
+	["_UIListLayout1"] = Instance.new("UIListLayout");
+	["_UIPadding2"] = Instance.new("UIPadding");
+	["_Placeholder"] = Instance.new("Frame");
+	["_UICorner5"] = Instance.new("UICorner");
+	["_TextLabel2"] = Instance.new("TextLabel");
+	["_Flee the Facility"] = Instance.new("LocalScript");
+	["_Universal"] = Instance.new("LocalScript");
+	["_TextBoxPlaceholder"] = Instance.new("Frame");
+	["_UIListLayout2"] = Instance.new("UIListLayout");
+	["_TextButton"] = Instance.new("TextButton");
+	["_UICorner6"] = Instance.new("UICorner");
+	["_UIPadding3"] = Instance.new("UIPadding");
+	["_TextBox"] = Instance.new("TextBox");
+	["_UICorner7"] = Instance.new("UICorner");
+	["_Murder Mystery 2"] = Instance.new("LocalScript");
+}
 
+-- Properties:
 
--- Instances
+Converted["_YARHM"].DisplayOrder = 999999999
+Converted["_YARHM"].ResetOnSpawn = false
+Converted["_YARHM"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_YARHM"].Name = "YARHM"
+Converted["_YARHM"].Parent = game.Players.LocalPlayer.PlayerGui
 
-local YARHM = Instance.new("ScreenGui")
-local Open = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local Menu = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local HubName = Instance.new("TextLabel")
-local HubDesc = Instance.new("TextLabel")
-local List = Instance.new("Frame")
-local UICorner_3 = Instance.new("UICorner")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local UIListLayout = Instance.new("UIListLayout")
-local UIPadding = Instance.new("UIPadding")
-local UIPadding_2 = Instance.new("UIPadding")
-local HubCredits = Instance.new("TextLabel")
-local Close = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local Area = Instance.new("ScrollingFrame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local ListButton = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local Notifications = Instance.new("Frame")
-local UIListLayout_2 = Instance.new("UIListLayout")
-local UIPadding_3 = Instance.new("UIPadding")
-local Placeholder = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextBoxPlaceholder = Instance.new("Frame")
-local UIListLayout_3 = Instance.new("UIListLayout")
-local TextButton = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
-local UIPadding_4 = Instance.new("UIPadding")
-local TextBox = Instance.new("TextBox")
-local UICorner_8 = Instance.new("UICorner")
+Converted["_Open"].Font = Enum.Font.Gotham
+Converted["_Open"].Text = "Triple-click this region to open YARHM."
+Converted["_Open"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Open"].TextSize = 14
+Converted["_Open"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_Open"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Open"].BackgroundTransparency = 1
+Converted["_Open"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Open"].BorderSizePixel = 0
+Converted["_Open"].Position = UDim2.new(0.499372631, 0, 0.06341701, 0)
+Converted["_Open"].Size = UDim2.new(0, 493, 0, 50)
+Converted["_Open"].Name = "Open"
+Converted["_Open"].Parent = Converted["_YARHM"]
 
--- Properties
+Converted["_UICorner"].Parent = Converted["_Open"]
 
-YARHM.Name = "YARHM"
-YARHM.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-YARHM.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-YARHM.DisplayOrder = 999999999
+Converted["_Menu"].AnchorPoint = Vector2.new(0.5, 0)
+Converted["_Menu"].BackgroundColor3 = Color3.fromRGB(49.000004678964615, 49.000004678964615, 49.000004678964615)
+Converted["_Menu"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Menu"].BorderSizePixel = 0
+Converted["_Menu"].ClipsDescendants = true
+Converted["_Menu"].Position = UDim2.new(0.499372661, 0, 0.0410327986, 0)
+Converted["_Menu"].Size = UDim2.new(0, 441, 0, 268)
+Converted["_Menu"].Name = "Menu"
+Converted["_Menu"].Parent = Converted["_YARHM"]
 
-Open.Name = "Open"
-Open.Parent = YARHM
-Open.AnchorPoint = Vector2.new(0.5, 0.5)
-Open.BackgroundColor3 = Color3.new(1, 1, 1)
-Open.BackgroundTransparency = 1
-Open.BorderColor3 = Color3.new(0, 0, 0)
-Open.BorderSizePixel = 0
-Open.Position = UDim2.new(0.499372631, 0, 0.06341701, 0)
-Open.Size = UDim2.new(0, 493, 0, 50)
-Open.Font = Enum.Font.Gotham
-Open.Text = "Triple-click this region to open YARHM."
-Open.TextColor3 = Color3.new(1, 1, 1)
-Open.TextSize = 14
+Converted["_UICorner1"].Parent = Converted["_Menu"]
 
-UICorner.Parent = Open
+Converted["_HubName"].Font = Enum.Font.GothamBold
+Converted["_HubName"].Text = "YARHM"
+Converted["_HubName"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_HubName"].TextScaled = true
+Converted["_HubName"].TextSize = 14
+Converted["_HubName"].TextWrapped = true
+Converted["_HubName"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_HubName"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_HubName"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_HubName"].BackgroundTransparency = 1
+Converted["_HubName"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HubName"].BorderSizePixel = 0
+Converted["_HubName"].Position = UDim2.new(0.186153606, 0, 0.112410031, 0)
+Converted["_HubName"].Size = UDim2.new(0.259631485, 0, 0.0824175924, 0)
+Converted["_HubName"].Name = "HubName"
+Converted["_HubName"].Parent = Converted["_Menu"]
 
-Menu.Name = "Menu"
-Menu.Parent = YARHM
-Menu.AnchorPoint = Vector2.new(0.5, 0)
-Menu.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.192157)
-Menu.BorderColor3 = Color3.new(0, 0, 0)
-Menu.BorderSizePixel = 0
-Menu.ClipsDescendants = true
-Menu.Position = UDim2.new(0.499372661, 0, 0.0410327986, 0)
-Menu.Size = UDim2.new(0, 441, 0, 268)
+Converted["_HubDesc"].Font = Enum.Font.GothamBold
+Converted["_HubDesc"].Text = "yet another random hub menu"
+Converted["_HubDesc"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_HubDesc"].TextSize = 14
+Converted["_HubDesc"].TextWrapped = true
+Converted["_HubDesc"].TextXAlignment = Enum.TextXAlignment.Right
+Converted["_HubDesc"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_HubDesc"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_HubDesc"].BackgroundTransparency = 1
+Converted["_HubDesc"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HubDesc"].BorderSizePixel = 0
+Converted["_HubDesc"].Position = UDim2.new(0.708829343, 0, 0.116141364, 0)
+Converted["_HubDesc"].Size = UDim2.new(0.470515788, 0, 0.082417585, 0)
+Converted["_HubDesc"].Name = "HubDesc"
+Converted["_HubDesc"].Parent = Converted["_Menu"]
 
-UICorner_2.Parent = Menu
+Converted["_List"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_List"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
+Converted["_List"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_List"].BorderSizePixel = 0
+Converted["_List"].Position = UDim2.new(0.151006237, 0, 0.621328413, 0)
+Converted["_List"].Size = UDim2.new(0.328798175, 0, 0.813432813, 0)
+Converted["_List"].Name = "List"
+Converted["_List"].Parent = Converted["_Menu"]
 
-HubName.Name = "HubName"
-HubName.Parent = Menu
-HubName.AnchorPoint = Vector2.new(0.5, 0.5)
-HubName.BackgroundColor3 = Color3.new(1, 1, 1)
-HubName.BackgroundTransparency = 1
-HubName.BorderColor3 = Color3.new(0, 0, 0)
-HubName.BorderSizePixel = 0
-HubName.Position = UDim2.new(0.186153606, 0, 0.112410031, 0)
-HubName.Size = UDim2.new(0.259631485, 0, 0.0824175924, 0)
-HubName.Font = Enum.Font.GothamBold
-HubName.Text = "YARHM"
-HubName.TextColor3 = Color3.new(1, 1, 1)
-HubName.TextScaled = true
-HubName.TextSize = 14
-HubName.TextWrapped = true
-HubName.TextXAlignment = Enum.TextXAlignment.Left
+Converted["_UICorner2"].Parent = Converted["_List"]
 
-HubDesc.Name = "HubDesc"
-HubDesc.Parent = Menu
-HubDesc.AnchorPoint = Vector2.new(0.5, 0.5)
-HubDesc.BackgroundColor3 = Color3.new(1, 1, 1)
-HubDesc.BackgroundTransparency = 1
-HubDesc.BorderColor3 = Color3.new(0, 0, 0)
-HubDesc.BorderSizePixel = 0
-HubDesc.Position = UDim2.new(0.708829343, 0, 0.116141364, 0)
-HubDesc.Size = UDim2.new(0.470515788, 0, 0.082417585, 0)
-HubDesc.Font = Enum.Font.GothamBold
-HubDesc.Text = "yet another random hub menu"
-HubDesc.TextColor3 = Color3.new(1, 1, 1)
-HubDesc.TextSize = 14
-HubDesc.TextWrapped = true
-HubDesc.TextXAlignment = Enum.TextXAlignment.Right
+Converted["_ScrollingFrame"].ScrollBarThickness = 2
+Converted["_ScrollingFrame"].VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+Converted["_ScrollingFrame"].Active = true
+Converted["_ScrollingFrame"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ScrollingFrame"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ScrollingFrame"].BackgroundTransparency = 1
+Converted["_ScrollingFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ScrollingFrame"].BorderSizePixel = 0
+Converted["_ScrollingFrame"].Position = UDim2.new(0.478333294, 0, 0.510989845, 0)
+Converted["_ScrollingFrame"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_ScrollingFrame"].Parent = Converted["_List"]
 
-List.Name = "List"
-List.Parent = Menu
-List.AnchorPoint = Vector2.new(0.5, 0.5)
-List.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
-List.BorderColor3 = Color3.new(0, 0, 0)
-List.BorderSizePixel = 0
-List.Position = UDim2.new(0.151006237, 0, 0.621328413, 0)
-List.Size = UDim2.new(0.328798175, 0, 0.813432813, 0)
+Converted["_UIListLayout"].Padding = UDim.new(0, 3)
+Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout"].Parent = Converted["_ScrollingFrame"]
 
-UICorner_3.Parent = List
+Converted["_UIPadding"].PaddingLeft = UDim.new(0, 4)
+Converted["_UIPadding"].Parent = Converted["_ScrollingFrame"]
 
-ScrollingFrame.Parent = List
-ScrollingFrame.Active = true
-ScrollingFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-ScrollingFrame.BackgroundColor3 = Color3.new(1, 1, 1)
-ScrollingFrame.BackgroundTransparency = 1
-ScrollingFrame.BorderColor3 = Color3.new(0, 0, 0)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0.478333294, 0, 0.510989845, 0)
-ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
-ScrollingFrame.ScrollBarThickness = 2
-ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+Converted["_UIPadding1"].PaddingBottom = UDim.new(0, 10)
+Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 15)
+Converted["_UIPadding1"].PaddingRight = UDim.new(0, 10)
+Converted["_UIPadding1"].PaddingTop = UDim.new(0, 10)
+Converted["_UIPadding1"].Parent = Converted["_List"]
 
-UIListLayout.Parent = ScrollingFrame
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 3)
+Converted["_HubCredits"].Font = Enum.Font.GothamBold
+Converted["_HubCredits"].Text = "made and open sourced by imperial"
+Converted["_HubCredits"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_HubCredits"].TextScaled = true
+Converted["_HubCredits"].TextSize = 14
+Converted["_HubCredits"].TextTransparency = 0.699999988079071
+Converted["_HubCredits"].TextWrapped = true
+Converted["_HubCredits"].TextXAlignment = Enum.TextXAlignment.Right
+Converted["_HubCredits"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_HubCredits"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_HubCredits"].BackgroundTransparency = 1
+Converted["_HubCredits"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HubCredits"].BorderSizePixel = 0
+Converted["_HubCredits"].Position = UDim2.new(0.785926819, 0, 0.160157606, 0)
+Converted["_HubCredits"].Size = UDim2.new(0.316320807, 0, 0.0585099049, 0)
+Converted["_HubCredits"].Name = "HubCredits"
+Converted["_HubCredits"].Parent = Converted["_Menu"]
 
-UIPadding.Parent = ScrollingFrame
-UIPadding.PaddingLeft = UDim.new(0, 4)
+Converted["_Close"].Font = Enum.Font.GothamBold
+Converted["_Close"].Text = "X"
+Converted["_Close"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Close"].TextSize = 14
+Converted["_Close"].Modal = true
+Converted["_Close"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_Close"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Close"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Close"].BorderSizePixel = 0
+Converted["_Close"].Position = UDim2.new(0.947494328, 0, 0.914238751, 0)
+Converted["_Close"].Size = UDim2.new(0.0680272132, 0, 0.111940302, 0)
+Converted["_Close"].ZIndex = 999999999
+Converted["_Close"].Name = "Close"
+Converted["_Close"].Parent = Converted["_Menu"]
 
-UIPadding_2.Parent = List
-UIPadding_2.PaddingBottom = UDim.new(0, 10)
-UIPadding_2.PaddingLeft = UDim.new(0, 15)
-UIPadding_2.PaddingRight = UDim.new(0, 10)
-UIPadding_2.PaddingTop = UDim.new(0, 10)
+Converted["_UICorner3"].Parent = Converted["_Close"]
 
-HubCredits.Name = "HubCredits"
-HubCredits.Parent = Menu
-HubCredits.AnchorPoint = Vector2.new(0.5, 0.5)
-HubCredits.BackgroundColor3 = Color3.new(1, 1, 1)
-HubCredits.BackgroundTransparency = 1
-HubCredits.BorderColor3 = Color3.new(0, 0, 0)
-HubCredits.BorderSizePixel = 0
-HubCredits.Position = UDim2.new(0.785926819, 0, 0.160157606, 0)
-HubCredits.Size = UDim2.new(0.316320807, 0, 0.0585099049, 0)
-HubCredits.Font = Enum.Font.GothamBold
-HubCredits.Text = "made and open sourced by imperial"
-HubCredits.TextColor3 = Color3.new(1, 1, 1)
-HubCredits.TextScaled = true
-HubCredits.TextSize = 14
-HubCredits.TextTransparency = 0.699999988079071
-HubCredits.TextWrapped = true
-HubCredits.TextXAlignment = Enum.TextXAlignment.Right
+Converted["_Area"].AutomaticCanvasSize = Enum.AutomaticSize.Y
+Converted["_Area"].ScrollBarThickness = 0
+Converted["_Area"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_Area"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Area"].BackgroundTransparency = 1
+Converted["_Area"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Area"].BorderSizePixel = 0
+Converted["_Area"].Position = UDim2.new(0.659600496, 0, 0.60637325, 0)
+Converted["_Area"].Selectable = false
+Converted["_Area"].Size = UDim2.new(0.643815279, 0, 0.783582091, 0)
+Converted["_Area"].SelectionGroup = false
+Converted["_Area"].Name = "Area"
+Converted["_Area"].Parent = Converted["_Menu"]
 
-Close.Name = "Close"
-Close.Parent = Menu
-Close.AnchorPoint = Vector2.new(0.5, 0.5)
-Close.BackgroundColor3 = Color3.new(1, 1, 1)
-Close.BorderColor3 = Color3.new(0, 0, 0)
-Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.947494328, 0, 0.914238751, 0)
-Close.Size = UDim2.new(0.0680272132, 0, 0.111940302, 0)
-Close.ZIndex = 999999999
-Close.Modal = true
-Close.Font = Enum.Font.GothamBold
-Close.Text = "X"
-Close.TextColor3 = Color3.new(0, 0, 0)
-Close.TextSize = 14
+Converted["_TextLabel"].Font = Enum.Font.GothamBold
+Converted["_TextLabel"].Text = "yet another random hub menu"
+Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].TextSize = 14
+Converted["_TextLabel"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].BackgroundTransparency = 1
+Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel"].BorderSizePixel = 0
+Converted["_TextLabel"].Position = UDim2.new(0.4923051, 0, 0.46438089, 0)
+Converted["_TextLabel"].Size = UDim2.new(0, 200, 0, 50)
+Converted["_TextLabel"].Parent = Converted["_Area"]
 
-UICorner_4.Parent = Close
+Converted["_TextLabel1"].Font = Enum.Font.GothamBold
+Converted["_TextLabel1"].Text = "YARHM"
+Converted["_TextLabel1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel1"].TextScaled = true
+Converted["_TextLabel1"].TextSize = 14
+Converted["_TextLabel1"].TextWrapped = true
+Converted["_TextLabel1"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_TextLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel1"].BackgroundTransparency = 1
+Converted["_TextLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel1"].BorderSizePixel = 0
+Converted["_TextLabel1"].Position = UDim2.new(0.491272807, 0, 0.363785654, 0)
+Converted["_TextLabel1"].Size = UDim2.new(0, 135, 0, 33)
+Converted["_TextLabel1"].Parent = Converted["_Area"]
 
-Area.Name = "Area"
-Area.Parent = Menu
-Area.AnchorPoint = Vector2.new(0.5, 0.5)
-Area.BackgroundColor3 = Color3.new(1, 1, 1)
-Area.BackgroundTransparency = 1
-Area.BorderColor3 = Color3.new(0, 0, 0)
-Area.BorderSizePixel = 0
-Area.Position = UDim2.new(0.659600496, 0, 0.60637325, 0)
-Area.Selectable = false
-Area.Size = UDim2.new(0.643815279, 0, 0.783582091, 0)
-Area.ScrollBarThickness = 0
+Converted["_ListButton"].Font = Enum.Font.Gotham
+Converted["_ListButton"].Text = "Placeholder"
+Converted["_ListButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ListButton"].TextSize = 14
+Converted["_ListButton"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ListButton"].BackgroundColor3 = Color3.fromRGB(49.00000087916851, 49.00000087916851, 49.00000087916851)
+Converted["_ListButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ListButton"].BorderSizePixel = 0
+Converted["_ListButton"].Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+Converted["_ListButton"].Size = UDim2.new(1, 0, 0, 50)
+Converted["_ListButton"].Visible = false
+Converted["_ListButton"].Name = "ListButton"
+Converted["_ListButton"].Parent = Converted["_YARHM"]
 
-TextLabel.Parent = Area
-TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.4923051, 0, 0.46438089, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.Font = Enum.Font.GothamBold
-TextLabel.Text = "yet another random hub menu"
-TextLabel.TextColor3 = Color3.new(1, 1, 1)
-TextLabel.TextSize = 14
+Converted["_UICorner4"].Parent = Converted["_ListButton"]
 
-TextLabel_2.Parent = Area
-TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_2.BackgroundTransparency = 1
-TextLabel_2.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.491272807, 0, 0.363785654, 0)
-TextLabel_2.Size = UDim2.new(0, 135, 0, 33)
-TextLabel_2.Font = Enum.Font.GothamBold
-TextLabel_2.Text = "YARHM"
-TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14
-TextLabel_2.TextWrapped = true
+Converted["_Notifications"].AnchorPoint = Vector2.new(0, 0.5)
+Converted["_Notifications"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Notifications"].BackgroundTransparency = 1
+Converted["_Notifications"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Notifications"].BorderSizePixel = 0
+Converted["_Notifications"].Position = UDim2.new(-0.00062737026, 0, 0.499319851, 0)
+Converted["_Notifications"].Size = UDim2.new(0, 242, 1, 0)
+Converted["_Notifications"].Name = "Notifications"
+Converted["_Notifications"].Parent = Converted["_YARHM"]
 
-ListButton.Name = "ListButton"
-ListButton.Parent = YARHM
-ListButton.AnchorPoint = Vector2.new(0.5, 0.5)
-ListButton.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.192157)
-ListButton.BorderColor3 = Color3.new(0, 0, 0)
-ListButton.BorderSizePixel = 0
-ListButton.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
-ListButton.Size = UDim2.new(1, 0, 0, 50)
-ListButton.Visible = false
-ListButton.Font = Enum.Font.Gotham
-ListButton.Text = "Placeholder"
-ListButton.TextColor3 = Color3.new(1, 1, 1)
-ListButton.TextSize = 14
+Converted["_UIListLayout1"].Padding = UDim.new(0, 10)
+Converted["_UIListLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout1"].VerticalAlignment = Enum.VerticalAlignment.Bottom
+Converted["_UIListLayout1"].Parent = Converted["_Notifications"]
 
-UICorner_5.Parent = ListButton
+Converted["_UIPadding2"].PaddingBottom = UDim.new(0, 10)
+Converted["_UIPadding2"].PaddingLeft = UDim.new(0, 10)
+Converted["_UIPadding2"].Parent = Converted["_Notifications"]
 
-Notifications.Name = "Notifications"
-Notifications.Parent = YARHM
-Notifications.AnchorPoint = Vector2.new(0, 0.5)
-Notifications.BackgroundColor3 = Color3.new(1, 1, 1)
-Notifications.BackgroundTransparency = 1
-Notifications.BorderColor3 = Color3.new(0, 0, 0)
-Notifications.BorderSizePixel = 0
-Notifications.Position = UDim2.new(-0.00062737026, 0, 0.499319851, 0)
-Notifications.Size = UDim2.new(0, 242, 1, 0)
+Converted["_Placeholder"].AnchorPoint = Vector2.new(0.5, 0)
+Converted["_Placeholder"].BackgroundColor3 = Color3.fromRGB(31.000001952052116, 31.000001952052116, 31.000001952052116)
+Converted["_Placeholder"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Placeholder"].BorderSizePixel = 0
+Converted["_Placeholder"].Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+Converted["_Placeholder"].Visible = false
+Converted["_Placeholder"].Name = "Placeholder"
+Converted["_Placeholder"].Parent = Converted["_Notifications"]
 
-UIListLayout_2.Parent = Notifications
-UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Bottom
-UIListLayout_2.Padding = UDim.new(0, 10)
+Converted["_UICorner5"].Parent = Converted["_Placeholder"]
 
-UIPadding_3.Parent = Notifications
-UIPadding_3.PaddingBottom = UDim.new(0, 10)
-UIPadding_3.PaddingLeft = UDim.new(0, 10)
+Converted["_TextLabel2"].Font = Enum.Font.Gotham
+Converted["_TextLabel2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel2"].TextScaled = true
+Converted["_TextLabel2"].TextSize = 14
+Converted["_TextLabel2"].TextWrapped = true
+Converted["_TextLabel2"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_TextLabel2"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_TextLabel2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel2"].BackgroundTransparency = 1
+Converted["_TextLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel2"].BorderSizePixel = 0
+Converted["_TextLabel2"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_TextLabel2"].Size = UDim2.new(0.899999976, 0, 0.800000012, 0)
+Converted["_TextLabel2"].Parent = Converted["_Placeholder"]
 
-Placeholder.Name = "Placeholder"
-Placeholder.Parent = Notifications
-Placeholder.AnchorPoint = Vector2.new(0.5, 0)
-Placeholder.BackgroundColor3 = Color3.new(0.121569, 0.121569, 0.121569)
-Placeholder.BorderColor3 = Color3.new(0, 0, 0)
-Placeholder.BorderSizePixel = 0
-Placeholder.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
-Placeholder.Visible = false
+Converted["_TextBoxPlaceholder"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBoxPlaceholder"].BackgroundTransparency = 1
+Converted["_TextBoxPlaceholder"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBoxPlaceholder"].BorderSizePixel = 0
+Converted["_TextBoxPlaceholder"].Size = UDim2.new(1, 0, 0, 50)
+Converted["_TextBoxPlaceholder"].Visible = false
+Converted["_TextBoxPlaceholder"].Name = "TextBoxPlaceholder"
+Converted["_TextBoxPlaceholder"].Parent = Converted["_YARHM"]
 
-UICorner_6.Parent = Placeholder
+Converted["_UIListLayout2"].Padding = UDim.new(0, 5)
+Converted["_UIListLayout2"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout2"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout2"].Parent = Converted["_TextBoxPlaceholder"]
 
-TextLabel_3.Parent = Placeholder
-TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_3.BackgroundTransparency = 1
-TextLabel_3.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_3.Size = UDim2.new(0.899999976, 0, 0.800000012, 0)
-TextLabel_3.Font = Enum.Font.Gotham
-TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14
-TextLabel_3.TextWrapped = true
-TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+Converted["_TextButton"].Font = Enum.Font.Gotham
+Converted["_TextButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextButton"].TextScaled = true
+Converted["_TextButton"].TextSize = 14
+Converted["_TextButton"].TextWrapped = true
+Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
+Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextButton"].BorderSizePixel = 0
+Converted["_TextButton"].Position = UDim2.new(0.292333364, 0, 1.67999995, 0)
+Converted["_TextButton"].Size = UDim2.new(0, 50, 0, 50)
+Converted["_TextButton"].Parent = Converted["_TextBoxPlaceholder"]
 
-TextBoxPlaceholder.Name = "TextBoxPlaceholder"
-TextBoxPlaceholder.Parent = YARHM
-TextBoxPlaceholder.BackgroundColor3 = Color3.new(1, 1, 1)
-TextBoxPlaceholder.BackgroundTransparency = 1
-TextBoxPlaceholder.BorderColor3 = Color3.new(0, 0, 0)
-TextBoxPlaceholder.BorderSizePixel = 0
-TextBoxPlaceholder.Size = UDim2.new(1, 0, 0, 50)
-TextBoxPlaceholder.Visible = false
+Converted["_UICorner6"].Parent = Converted["_TextButton"]
 
-UIListLayout_3.Parent = TextBoxPlaceholder
-UIListLayout_3.FillDirection = Enum.FillDirection.Horizontal
-UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout_3.Padding = UDim.new(0, 5)
+Converted["_UIPadding3"].PaddingBottom = UDim.new(0, 5)
+Converted["_UIPadding3"].PaddingLeft = UDim.new(0, 5)
+Converted["_UIPadding3"].PaddingRight = UDim.new(0, 5)
+Converted["_UIPadding3"].PaddingTop = UDim.new(0, 5)
+Converted["_UIPadding3"].Parent = Converted["_TextButton"]
 
-TextButton.Parent = TextBoxPlaceholder
-TextButton.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
-TextButton.BorderColor3 = Color3.new(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.292333364, 0, 1.67999995, 0)
-TextButton.Size = UDim2.new(0, 50, 0, 50)
-TextButton.Font = Enum.Font.Gotham
-TextButton.TextColor3 = Color3.new(1, 1, 1)
-TextButton.TextScaled = true
-TextButton.TextSize = 14
-TextButton.TextWrapped = true
+Converted["_TextBox"].Font = Enum.Font.Gotham
+Converted["_TextBox"].PlaceholderText = "Placeholder"
+Converted["_TextBox"].Text = ""
+Converted["_TextBox"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox"].TextSize = 14
+Converted["_TextBox"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
+Converted["_TextBox"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox"].BorderSizePixel = 0
+Converted["_TextBox"].Size = UDim2.new(0.800000012, 0, 0, 50)
+Converted["_TextBox"].Parent = Converted["_TextBoxPlaceholder"]
 
-UICorner_7.Parent = TextButton
+Converted["_UICorner7"].Parent = Converted["_TextBox"]
 
-UIPadding_4.Parent = TextButton
-UIPadding_4.PaddingBottom = UDim.new(0, 5)
-UIPadding_4.PaddingLeft = UDim.new(0, 5)
-UIPadding_4.PaddingRight = UDim.new(0, 5)
-UIPadding_4.PaddingTop = UDim.new(0, 5)
-
-TextBox.Parent = TextBoxPlaceholder
-TextBox.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
-TextBox.BorderColor3 = Color3.new(0, 0, 0)
-TextBox.BorderSizePixel = 0
-TextBox.Size = UDim2.new(0.800000012, 0, 0, 50)
-TextBox.Font = Enum.Font.Gotham
-TextBox.PlaceholderText = "Placeholder"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.new(1, 1, 1)
-TextBox.TextSize = 14
-
-UICorner_8.Parent = TextBox
-
--- Module Scripts
+-- Fake Module Scripts:
 
 local fake_module_scripts = {}
 
-do -- YARHM.FUNCTIONS
-	local script = Instance.new('ModuleScript', YARHM)
+do -- Fake Module: StarterGui.YARHM.FUNCTIONS
+	local script = Instance.new("ModuleScript")
 	script.Name = "FUNCTIONS"
+	script.Parent = Converted["_YARHM"]
 	local function module_script()
 		local module = {}
-		
+
 		local ts = game:GetService("TweenService")
-		
+
 		function module.notification(s)
 			task.spawn(function()
 				local notif = script.Parent.Notifications.Placeholder:Clone()
@@ -361,18 +371,19 @@ do -- YARHM.FUNCTIONS
 				notif:Destroy()
 			end)
 		end
-		
+
 		return module
-		
+
 	end
 	fake_module_scripts[script] = module_script
 end
 
+-- Fake Local Scripts:
 
--- Scripts
-
-local function CCIK_fake_script() -- Open.InitOpen 
-	local script = Instance.new('LocalScript', Open)
+local function LDIIHGM_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+	local script = Instance.new("LocalScript")
+	script.Name = "InitOpen"
+	script.Parent = Converted["_Open"]
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -383,20 +394,20 @@ local function CCIK_fake_script() -- Open.InitOpen
 	end
 
 	local ts = game:GetService("TweenService")
-	
-	
+
+
 	local stroke = Instance.new("UIStroke")
 	stroke.Parent = script.Parent
 	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	stroke.Color = Color3.fromRGB(255,255,255)
-	
-	
+
+
 	script.Parent.Position = UDim2.fromScale(0.5, -1)
 	ts:Create(script.Parent, TweenInfo.new(1.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
 		Position = UDim2.fromScale(0.5, 0.063)
 	}):Play()
-	
-	
+
+
 	task.wait(5)
 	ts:Create(script.Parent, TweenInfo.new(5), {
 		TextTransparency = 1
@@ -405,9 +416,10 @@ local function CCIK_fake_script() -- Open.InitOpen
 		Transparency = 1
 	}):Play()
 end
-coroutine.wrap(CCIK_fake_script)()
-local function QEYUAC_fake_script() -- Open.OnClick 
-	local script = Instance.new('LocalScript', Open)
+local function ANRYQVJ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+	local script = Instance.new("LocalScript")
+	script.Name = "OnClick"
+	script.Parent = Converted["_Open"]
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -418,41 +430,42 @@ local function QEYUAC_fake_script() -- Open.OnClick
 	end
 
 	local ts = game:GetService("TweenService")
-	
-	
+
+
 	local clickCount = 0
 	local lastClickTime = tick()
 	script.Parent.MouseButton1Click:Connect(function()
 		local currentTime = tick()
-		
+
 		script.Parent.TextTransparency = 0.5
 		ts:Create(script.Parent, TweenInfo.new(1),
 			{TextTransparency = 1}
 		):Play()
-		
+
 		-- Check if the time since the last click is within a certain threshold
 		if currentTime - lastClickTime < 0.5 then
 			clickCount = clickCount + 1
 		else
-			
+
 			clickCount = 1
 		end
-	
+
 		lastClickTime = currentTime
-	
+
 		if clickCount == 3 then
 			-- Triple-click detected
-	
+
 			ts:Create(_G.YARHM.Menu, TweenInfo.new(0.7, Enum.EasingStyle.Back, Enum.EasingDirection.Out), 
 				{Position = UDim2.fromScale(0.499, 0.041), Size = UDim2.fromOffset(441, 268)}
 			):Play()
 		end
 	end)
-	
+
 end
-coroutine.wrap(QEYUAC_fake_script)()
-local function MBAO_fake_script() -- List.AutoSetup 
-	local script = Instance.new('LocalScript', List)
+local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+	local script = Instance.new("LocalScript")
+	script.Name = "AutoSetup"
+	script.Parent = Converted["_List"]
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -466,13 +479,13 @@ local function MBAO_fake_script() -- List.AutoSetup
 	local selected = Instance.new("ObjectValue")
 	selected.Parent = script.Parent
 	selected.Name = "Selected"
-	
+
 	local States = {}
-	
+
 	task.wait(1)
-	
+
 	AREA = script.Parent.Parent.Area
-	
+
 	local function calculateWidth(n)
 		if n <= 3 then
 			return 30
@@ -482,22 +495,22 @@ local function MBAO_fake_script() -- List.AutoSetup
 			return base + additional
 		end
 	end
-	
+
 	local listlayout = Instance.new("UIListLayout")
 	listlayout.Parent = AREA
 	listlayout.Padding = UDim.new(0, 10)
 	listlayout.FillDirection = Enum.FillDirection.Vertical
 	listlayout.SortOrder = Enum.SortOrder.LayoutOrder
 	listlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-	
+
 	function loader(module)
 		local unloadtween = ts:Create(AREA, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
 			Position = UDim2.fromScale(1.55, 0.606)
 		})
-	
+
 		unloadtween:Play()
 		unloadtween.Completed:Wait()
-	
+
 		AREA:ClearAllChildren()
 		local listlayout = Instance.new("UIListLayout")
 		listlayout.Parent = AREA
@@ -507,10 +520,10 @@ local function MBAO_fake_script() -- List.AutoSetup
 		listlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		for _, item in ipairs(module) do
 			if item["Type"] == "Text" then
-	
+
 				local text = Instance.new("TextLabel")
 				text.Parent = AREA
-	
+
 				text.BackgroundTransparency = 1
 				text.Text = item["Args"][1]
 				text.TextScaled = true
@@ -519,54 +532,54 @@ local function MBAO_fake_script() -- List.AutoSetup
 				text.Size = UDim2.new(1,0,0,20)
 				text.TextXAlignment = Enum.TextXAlignment.Left
 				text.RichText = true
-	
-	
+
+
 			elseif item["Type"] == "Button" then
-	
+
 				local button = Instance.new("TextButton")
 				button.Parent = AREA
-	
+
 				button.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 				button.Text = item["Args"][1]
 				button.TextScaled = true
 				button.TextColor3 = Color3.fromRGB(255,255,255)
 				button.Font = Enum.Font.GothamBold
 				button.Size = UDim2.new(1,0,0,25)
-	
+
 				local padding = Instance.new("UIPadding")
 				padding.Parent = button
-	
+
 				padding.PaddingTop = UDim.new(0, 5)
 				padding.PaddingBottom = UDim.new(0, 5)
-	
-	
+
+
 				Instance.new("UICorner", button)
-	
+
 				button.MouseButton1Click:Connect(function()
 					item["Args"][2](button)
 				end)
 			elseif item["Type"] == "ButtonGrid" then
-	
-	
-	
-	
+
+
+
+
 				local frame = Instance.new("Frame")
 				frame.Parent = AREA
 				frame.Size = UDim2.new(1, 0, 0, calculateWidth(#item["Args"][2]))
 				frame.BackgroundTransparency = 1
-	
-	
+
+
 				local gridlayout = Instance.new("UIGridLayout")
 				gridlayout.Parent = frame
 				gridlayout.CellSize = UDim2.new((1 / item["Args"][1]) - 0.03, 0, 0, 30) -- remove 0.03 because if not it would wrap on its own lol
-	
+
 				--print("------")
 				--print(item["Args"][2])
 				--print(States)
 				for buttonname, args in item["Args"][2] do
 					local button = Instance.new("TextButton")
 					button.Parent = frame
-	
+
 					--print(args)
 					button.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 					if States[buttonname .. module.Name] then
@@ -576,15 +589,15 @@ local function MBAO_fake_script() -- List.AutoSetup
 					button.TextScaled = true
 					button.TextColor3 = Color3.fromRGB(255,255,255)
 					button.Font = Enum.Font.GothamBold
-	
+
 					local padding = Instance.new("UIPadding")
 					padding.Parent = button
-	
+
 					padding.PaddingTop = UDim.new(0, 5)
 					padding.PaddingBottom = UDim.new(0, 5)
-	
+
 					Instance.new("UICorner", button)
-	
+
 					button.MouseButton1Click:Connect(function()
 						if item["Toggleable"] then
 							item["Args"][2][buttonname](button)
@@ -605,28 +618,28 @@ local function MBAO_fake_script() -- List.AutoSetup
 						end
 					end)
 				end
-	
-	
+
+
 			elseif item["Type"] == "Input" then
 				local cloneinput = _G.YARHM.TextBoxPlaceholder:Clone()
 				cloneinput.Parent = AREA
 				cloneinput.Visible = true
-				
+
 				cloneinput.TextBox.PlaceholderText = item["Args"][1]
 				cloneinput.TextButton.Text = item["Args"][2]
-				
+
 				cloneinput.TextButton.MouseButton1Click:Connect(function()
 					item["Args"][3](cloneinput.TextButton, cloneinput.TextBox.Text)
 				end)
 			end
 		end
-	
+
 		ts:Create(AREA, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 			Position = UDim2.fromScale(0.66, 0.606)
 		}):Play()
 	end
-	
-	
+
+
 	task.wait(1) -- magic number to wait modules to load lmao
 	for modulei, module in ipairs(_G.Modules) do
 		local success, err = pcall(function()
@@ -635,26 +648,32 @@ local function MBAO_fake_script() -- List.AutoSetup
 			listbutton.Name = module.Name
 			listbutton.Text = module.Name
 			listbutton.Visible = true
-	
-			listbutton.MouseButton1Click:Connect(function()
-	
-				if selected.Value then
+
+			if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
+				listbutton.Interactable = false
+				listbutton.BackgroundColor3 = Color3.fromRGB(50,0,0)
+				listbutton.TextColor3 = Color3.fromRGB(255, 0, 0)
+			else
+				listbutton.MouseButton1Click:Connect(function()
+
+					if selected.Value then
+						ts:Create(selected.Value, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+							BackgroundColor3 = Color3.fromRGB(49, 49, 49),
+							TextColor3 = Color3.fromRGB(255,255,255)
+						}):Play()
+					end
+
+					selected.Value = listbutton
+
 					ts:Create(selected.Value, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-						BackgroundColor3 = Color3.fromRGB(49, 49, 49),
-						TextColor3 = Color3.fromRGB(255,255,255)
+						BackgroundColor3 = Color3.fromRGB(255,255,255),
+						TextColor3 = Color3.fromRGB(0,0,0)
 					}):Play()
-				end
-	
-				selected.Value = listbutton
-	
-				ts:Create(selected.Value, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-					BackgroundColor3 = Color3.fromRGB(255,255,255),
-					TextColor3 = Color3.fromRGB(0,0,0)
-				}):Play()
-	
-				loader(_G.Modules[modulei])
-			end)
-	
+
+					loader(_G.Modules[modulei])
+				end)
+			end
+
 		end)
 		if not success then
 			warn("[YARHM] Error while requiring " .. module.Name .. "!")
@@ -662,9 +681,10 @@ local function MBAO_fake_script() -- List.AutoSetup
 		end
 	end
 end
-coroutine.wrap(MBAO_fake_script)()
-local function OOWB_fake_script() -- Close.LocalScript 
-	local script = Instance.new('LocalScript', Close)
+local function CAETUW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+	local script = Instance.new("LocalScript")
+	script.Name = "LocalScript"
+	script.Parent = Converted["_Close"]
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -675,16 +695,17 @@ local function OOWB_fake_script() -- Close.LocalScript
 	end
 
 	local ts = game:GetService("TweenService")
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		ts:Create(_G.YARHM.Menu, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
 			{Position = UDim2.fromScale(0.499, 0), Size = UDim2.fromOffset(441, 0)}
 		):Play()
 	end)
 end
-coroutine.wrap(OOWB_fake_script)()
-local function IPECYGM_fake_script() -- YARHM.Init 
-	local script = Instance.new('LocalScript', YARHM)
+local function OXGTOH_fake_script() -- Fake Script: StarterGui.YARHM.Init
+	local script = Instance.new("LocalScript")
+	script.Name = "Init"
+	script.Parent = Converted["_YARHM"]
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -695,21 +716,24 @@ local function IPECYGM_fake_script() -- YARHM.Init
 	end
 
 	_G.YARHM = script.Parent
-	
+
 	script.Parent.SafeAreaCompatibility = Enum.SafeAreaCompatibility.None
 	script.Parent.ScreenInsets = Enum.ScreenInsets.None
-	
-	
+
+
 	script.Parent.Menu.Position = UDim2.fromScale(0.5, 0)
 	script.Parent.Menu.Size = UDim2.fromOffset(441,0)
-	
+
 	_G.Modules = {}
-	
+
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
+	require(script.Parent.FUNCTIONS).notification("v1.1.0\n- Added Murder Mystery 2")
+
 end
-coroutine.wrap(IPECYGM_fake_script)()
-local function DFGHA_fake_script() -- YARHM.Flee the Facility 
-	local script = Instance.new('LocalScript', YARHM)
+local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+	local script = Instance.new("LocalScript")
+	script.Name = "Flee the Facility"
+	script.Parent = Converted["_YARHM"]
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -722,26 +746,26 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 	local module = {}
 	module["gameId"] = 893973440 -- Restrict module to a certain game ID only. 0 allows all games.
 	if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
-		script.Enabled = false
+		script:Destroy()
 	end
-	
+
 	module["Name"] = "Flee the Facility"
-	
+
 	local ts = game:GetService("TweenService")
-	
-	local FUNCTIONS = require(script.Parent.FUNCTIONS)
-	
-	
+
+	local FUNCTIONS = require(_G.YARHM.FUNCTIONS)
+
+
 	module.players = false
 	module.pcs = false
 	module.pods = false
 	module.exits = false
-	
+
 	module.antipcerror = false
 	module.flashlight = false
-	
+
 	local esps = {}
-	
+
 	local function getBeast()
 		local listplayers = game.Players:GetChildren()
 		for _, player in ipairs(listplayers) do
@@ -751,32 +775,32 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 			end
 		end
 	end
-	
+
 	local function reloadESP()
-	
-	
+
+
 		for _, i in ipairs(workspace:GetChildren()) do
 			if i.Name == "PlayerHighlight" and not module.players then
 				i:Destroy()
 			end
-	
+
 			if i.Name == "PCHighlight" and not module.pcs then
 				i:Destroy()
 			end
-	
+
 			if i.Name == "PodsHighlight" and not module.pods then
 				i:Destroy()
 			end
-	
+
 			if i.Name == "ExitsHighlight" and not module.exits then
 				i:Destroy()
 			end
 		end
-	
+
 		if module.players then
-	
-	
-	
+
+
+
 			local listplayers = game.Players:GetChildren()
 			for _, player in ipairs(listplayers) do
 				if player ~= game.Players.LocalPlayer and player.Character ~= nil then
@@ -800,15 +824,15 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 					end
 				end
 			end
-	
-	
+
+
 		end
-	
+
 		if module.pcs then
-	
-	
-	
-	
+
+
+
+
 			for _, obj in ipairs(game.Workspace:GetDescendants()) do
 				if obj.Name == "ComputerTable" and not obj:FindFirstChild("PCHighlight") then
 					local hili = Instance.new("Highlight", workspace)
@@ -819,14 +843,14 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 					hili.FillColor = obj:FindFirstChild("Screen").Color
 				end
 			end
-	
-	
+
+
 		end
-	
+
 		if module.pods then
-	
-	
-	
+
+
+
 			for _, obj in ipairs(game.Workspace:GetDescendants()) do
 				if obj.Name == "FreezePod" then
 					local hili = Instance.new("Highlight", workspace)
@@ -837,14 +861,14 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 					hili.FillColor = Color3.fromRGB(0, 200, 255)
 				end
 			end
-	
+
 		end
-	
-	
+
+
 		if module.exits then
-	
-	
-	
+
+
+
 			for _, obj in ipairs(game.Workspace:GetDescendants()) do
 				if obj.Name == "ExitDoor" and not obj:FindFirstChild("ExitsHighlight") then
 					local hili = Instance.new("Highlight", workspace)
@@ -855,24 +879,24 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 					hili.FillColor = Color3.fromRGB(255,255,0)
 				end
 			end
-	
+
 		end
 	end
-	
-	
-	
-	
+
+
+
+
 	module[1] = {
 		Type = "Text",
 		Args = {"ESPs"}
 	}
-	
+
 	module[2] = {
 		Type = "ButtonGrid",
 		Toggleable = true, -- Recolors buttons for you onclick, you still need to save the state yourself
 		Args = {3, { -- 3 is the number of columns
 			Players = function(Self)
-	
+
 				if module.players then
 					module.players = false
 					reloadESP()
@@ -880,11 +904,11 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 					module.players = true
 					reloadESP()
 				end
-	
-	
+
+
 			end,
 			PCs = function(Self)
-	
+
 				if module.pcs then
 					module.pcs = false
 					reloadESP()
@@ -892,10 +916,10 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 					module.pcs = true
 					reloadESP()
 				end
-	
+
 			end,
 			Pods = function(Self)
-	
+
 				if module.pods then
 					module.pods = false
 					reloadESP()
@@ -903,11 +927,11 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 					module.pods = true
 					reloadESP()
 				end
-				
-	
+
+
 			end,
 			Exits = function(Self)
-	
+
 				if module.exits then
 					module.exits = false
 					reloadESP()
@@ -915,7 +939,7 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 					module.exits = true
 					reloadESP()
 				end
-	
+
 			end,
 		}
 		} 
@@ -924,42 +948,42 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 		Type = "Text",
 		Args = {""}
 	}
-	
+
 	module[4] = {
 		Type = "Text",
 		Args = {"Tools"}
 	}
-	
-	
+
+
 	local root = game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-	
+
 	light = Instance.new("PointLight", root)
 	light.Brightness = 0
 	light.Range = 9999999999
-	
+
 	local wslock = false
 	local ws = 18
-	
+
 	local antifail = false
-	
+
 	task.spawn(function() 
 		local OldNameCall = nil
-	
+
 		OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
 			local Args = {...}
 			local NamecallMethod = getnamecallmethod()
-	
+
 			if NamecallMethod == "FireServer" and Args[1] == "SetPlayerMinigameResult" and antifail then
 				print("Minigame result - Intercepting result to true")
 				Args[2] = true
 			end
-	
+
 			return OldNameCall(Self, unpack(Args))
 		end)
-	
+
 	end)
-	
-	
+
+
 	module[5] = {
 		Type = "ButtonGrid",
 		Toggleable = true,
@@ -976,7 +1000,7 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 			end,
 		}}
 	}
-	
+
 	task.spawn(function()
 		while task.wait(0.1) do
 			if wslock then
@@ -984,7 +1008,7 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 			end
 		end
 	end)
-	
+
 	module[6] = {
 		Type = "Input",
 		Args = {"Input a walkspeed", "Set & Lock", function(Self, text)
@@ -992,30 +1016,31 @@ local function DFGHA_fake_script() -- YARHM.Flee the Facility
 				FUNCTIONS.notification("Input isn't a valid number.")
 				return
 			end
-			
+
 			ws = tonumber(text)
 			wslock = true
 		end,}
 	}
-	
+
 	module[7] = {
 		Type = "Button",
 		Args = {"Unlock all", function()
 			wslock = false
 		end,}
 	}	
-	
+
 	module[8] = {
 		Type = "Text",
 		Args = {"Locking means your speed will stay the same no matter what. This means you will not be slow when crawling or jumping as beast."}
 	}
-	
-	
+
+
 	_G.Modules[2] = module
 end
-coroutine.wrap(DFGHA_fake_script)()
-local function TULHK_fake_script() -- YARHM.Universal 
-	local script = Instance.new('LocalScript', YARHM)
+local function RHSLRSW_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+	local script = Instance.new("LocalScript")
+	script.Name = "Universal"
+	script.Parent = Converted["_YARHM"]
 	local req = require
 	local require = function(obj)
 		local fake = fake_module_scripts[obj]
@@ -1027,24 +1052,152 @@ local function TULHK_fake_script() -- YARHM.Universal
 
 	local module = {}
 	module["gameId"] = 0 -- Restrict module to a certain game ID only. 0 allows all games.
-	if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
-		script.Enabled = true
-	end
-	
+
+
 	module["Name"] = "Universal"
-	
+
 	module[1] = {
 		Type = "Text",
 		Args = {"Universal module - Works on most games"}
 	}
-	
+
 	module[2] = {
 		Type = "Button",
 		Args = {"Infinite Yield", function(Self)
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 		end}
 	}
-	
+
 	_G.Modules[1] = module
 end
-coroutine.wrap(TULHK_fake_script)()
+local function ESWLAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+	local script = Instance.new("LocalScript")
+	script.Name = "Murder Mystery 2"
+	script.Parent = Converted["_YARHM"]
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local module = {}
+	module["gameId"] = 142823291 -- Restrict module to a certain game ID only. 0 allows all games.
+
+
+	local function findMurderer()
+		for _, i in ipairs(game.Players:GetDescendants()) do
+			if i.Name == "Knife" and i.Parent.Name == "Backpack" then
+				return i.Parent.Parent
+			end
+		end
+
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i.Character:FindFirstChild("Gun") then
+				return i
+			end
+		end
+
+		return nil
+	end
+
+	local function findSheriff()
+		for _, i in ipairs(game.Players:GetDescendants()) do
+			if i.Name == "Gun" and i.Parent.Name == "Backpack" then
+				return i.Parent.Parent
+			end
+		end
+
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i.Character:FindFirstChild("Gun") then
+				return i
+			end
+		end
+
+		return nil
+	end
+
+
+	task.spawn(function()
+		while task.wait(3) do
+			if workspace:FindFirstChild("GunESP") then
+				workspace:FindFirstChild("GunESP").Adornee = findSheriff():FindFirstChild("Gun")
+			end
+		end
+	end)
+
+	module["Name"] = "Murder Mystery 2"
+
+	module[1] = {
+		Type = "Text",
+		Args = {"ESPs"}
+	}
+
+	module[2] = {
+		Type = "ButtonGrid",
+		Toggleable = true,
+		Args = {2, {
+			Players = function()
+				if workspace:FindFirstChild("PlayerESP") then
+					for _, i in ipairs(game.Workspace:GetChildren()) do if i.Name=="PlayerESP" then i:Destroy() end end
+				else
+					local listplayers = game.Players:GetChildren()
+					for _, player in ipairs(listplayers) do
+						if player ~= game.Players.LocalPlayer and player.Character ~= nil then
+							local character = player.Character
+							if not character:FindFirstChild("PlayerESP") then
+								local a = Instance.new("Highlight", workspace)
+								a.Name = "PlayerESP"
+								a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+								a.Adornee = character
+								task.spawn(function()
+									repeat
+										task.wait(3)
+										if player == findMurderer() then
+											a.FillColor = Color3.fromRGB(255,0,0)
+										elseif player == findSheriff() then
+											a.FillColor = Color3.fromRGB(0, 150, 255)
+										else
+											a.FillColor = Color3.fromRGB(0,255,0)
+										end
+									until character == nil or a == nil
+								end)
+							end
+						end
+					end
+				end
+			end,
+
+			Dropped_Gun = function()
+				if workspace:FindFirstChild("GunESP") then
+					for _, i in ipairs(game.Workspace:GetChildren()) do if i.Name=="GunESP" then i:Destroy() end end
+				else
+					local gunesp = Instance.new("Highlight", workspace)
+					gunesp.Name = "GunESP"
+					gunesp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+
+				end
+			end,
+		}}
+	}
+
+	module[3] = {
+		Type = "Text",
+		Args = {"I don't know if dropped gun will show properly lol"}
+	}
+	_G.Modules[3] = module
+
+
+
+end
+
+coroutine.wrap(LDIIHGM_fake_script)()
+coroutine.wrap(ANRYQVJ_fake_script)()
+coroutine.wrap(YFWSE_fake_script)()
+coroutine.wrap(CAETUW_fake_script)()
+coroutine.wrap(OXGTOH_fake_script)()
+coroutine.wrap(CLLG_fake_script)()
+coroutine.wrap(RHSLRSW_fake_script)()
+coroutine.wrap(ESWLAA_fake_script)()
