@@ -744,7 +744,7 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	end
 
 	local module = {}
-	module["gameId"] = 893973440 -- Restrict module to a certain game ID only. 0 allows all games.
+	module["gameId"] = 372226183 -- Restrict module to a certain game ID only. 0 allows all games.
 	if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
 		script:Destroy()
 	end
@@ -1185,7 +1185,7 @@ local function ESWLAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 
 	module[3] = {
 		Type = "Text",
-		Args = {"I don't know if dropped gun will show properly lol"}
+		Args = {"PLEASE DON'T USE YET, VERY VERY BUGGY AND LAGGY FOR NOW"}
 	}
 	_G.Modules[3] = module
 
