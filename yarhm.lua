@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.1.0
+-- YARHM by Imperial, version 1.1.1
 
 -- Instances:
 
@@ -45,7 +45,7 @@ local Converted = {
 	["_UIPadding3"] = Instance.new("UIPadding");
 	["_TextBox"] = Instance.new("TextBox");
 	["_UICorner7"] = Instance.new("UICorner");
-	["_Murder Mystery 2"] = Instance.new("LocalScript");
+	["_Murder Mystery 2 (WIP)"] = Instance.new("LocalScript");
 }
 
 -- Properties:
@@ -54,7 +54,7 @@ Converted["_YARHM"].DisplayOrder = 999999999
 Converted["_YARHM"].ResetOnSpawn = false
 Converted["_YARHM"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_YARHM"].Name = "YARHM"
-Converted["_YARHM"].Parent = game.Players.LocalPlayer.PlayerGui
+Converted["_YARHM"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Converted["_Open"].Font = Enum.Font.Gotham
 Converted["_Open"].Text = "Triple-click this region to open YARHM."
@@ -344,14 +344,14 @@ Converted["_UICorner7"].Parent = Converted["_TextBox"]
 local fake_module_scripts = {}
 
 do -- Fake Module: StarterGui.YARHM.FUNCTIONS
-	local script = Instance.new("ModuleScript")
-	script.Name = "FUNCTIONS"
-	script.Parent = Converted["_YARHM"]
-	local function module_script()
+    local script = Instance.new("ModuleScript")
+    script.Name = "FUNCTIONS"
+    script.Parent = Converted["_YARHM"]
+    local function module_script()
 		local module = {}
-
+		
 		local ts = game:GetService("TweenService")
-
+		
 		function module.notification(s)
 			task.spawn(function()
 				local notif = script.Parent.Notifications.Placeholder:Clone()
@@ -371,43 +371,43 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 				notif:Destroy()
 			end)
 		end
-
+		
 		return module
-
-	end
-	fake_module_scripts[script] = module_script
+		
+    end
+    fake_module_scripts[script] = module_script
 end
 
 -- Fake Local Scripts:
 
-local function LDIIHGM_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
-	local script = Instance.new("LocalScript")
-	script.Name = "InitOpen"
-	script.Parent = Converted["_Open"]
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function XMDK_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+    local script = Instance.new("LocalScript")
+    script.Name = "InitOpen"
+    script.Parent = Converted["_Open"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local ts = game:GetService("TweenService")
-
-
+	
+	
 	local stroke = Instance.new("UIStroke")
 	stroke.Parent = script.Parent
 	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	stroke.Color = Color3.fromRGB(255,255,255)
-
-
+	
+	
 	script.Parent.Position = UDim2.fromScale(0.5, -1)
 	ts:Create(script.Parent, TweenInfo.new(1.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
 		Position = UDim2.fromScale(0.5, 0.063)
 	}):Play()
-
-
+	
+	
 	task.wait(5)
 	ts:Create(script.Parent, TweenInfo.new(5), {
 		TextTransparency = 1
@@ -416,76 +416,76 @@ local function LDIIHGM_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitO
 		Transparency = 1
 	}):Play()
 end
-local function ANRYQVJ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
-	local script = Instance.new("LocalScript")
-	script.Name = "OnClick"
-	script.Parent = Converted["_Open"]
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function RSYAYC_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+    local script = Instance.new("LocalScript")
+    script.Name = "OnClick"
+    script.Parent = Converted["_Open"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local ts = game:GetService("TweenService")
-
-
+	
+	
 	local clickCount = 0
 	local lastClickTime = tick()
 	script.Parent.MouseButton1Click:Connect(function()
 		local currentTime = tick()
-
+		
 		script.Parent.TextTransparency = 0.5
 		ts:Create(script.Parent, TweenInfo.new(1),
 			{TextTransparency = 1}
 		):Play()
-
+		
 		-- Check if the time since the last click is within a certain threshold
 		if currentTime - lastClickTime < 0.5 then
 			clickCount = clickCount + 1
 		else
-
+			
 			clickCount = 1
 		end
-
+	
 		lastClickTime = currentTime
-
+	
 		if clickCount == 3 then
 			-- Triple-click detected
-
+	
 			ts:Create(_G.YARHM.Menu, TweenInfo.new(0.7, Enum.EasingStyle.Back, Enum.EasingDirection.Out), 
 				{Position = UDim2.fromScale(0.499, 0.041), Size = UDim2.fromOffset(441, 268)}
 			):Play()
 		end
 	end)
-
+	
 end
-local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
-	local script = Instance.new("LocalScript")
-	script.Name = "AutoSetup"
-	script.Parent = Converted["_List"]
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function ZJWE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+    local script = Instance.new("LocalScript")
+    script.Name = "AutoSetup"
+    script.Parent = Converted["_List"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local ts = game:GetService("TweenService")
 	local selected = Instance.new("ObjectValue")
 	selected.Parent = script.Parent
 	selected.Name = "Selected"
-
+	
 	local States = {}
-
+	
 	task.wait(1)
-
+	
 	AREA = script.Parent.Parent.Area
-
+	
 	local function calculateWidth(n)
 		if n <= 3 then
 			return 30
@@ -495,22 +495,22 @@ local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 			return base + additional
 		end
 	end
-
+	
 	local listlayout = Instance.new("UIListLayout")
 	listlayout.Parent = AREA
 	listlayout.Padding = UDim.new(0, 10)
 	listlayout.FillDirection = Enum.FillDirection.Vertical
 	listlayout.SortOrder = Enum.SortOrder.LayoutOrder
 	listlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-
+	
 	function loader(module)
 		local unloadtween = ts:Create(AREA, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
 			Position = UDim2.fromScale(1.55, 0.606)
 		})
-
+	
 		unloadtween:Play()
 		unloadtween.Completed:Wait()
-
+	
 		AREA:ClearAllChildren()
 		local listlayout = Instance.new("UIListLayout")
 		listlayout.Parent = AREA
@@ -520,10 +520,10 @@ local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 		listlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		for _, item in ipairs(module) do
 			if item["Type"] == "Text" then
-
+	
 				local text = Instance.new("TextLabel")
 				text.Parent = AREA
-
+	
 				text.BackgroundTransparency = 1
 				text.Text = item["Args"][1]
 				text.TextScaled = true
@@ -532,54 +532,54 @@ local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 				text.Size = UDim2.new(1,0,0,20)
 				text.TextXAlignment = Enum.TextXAlignment.Left
 				text.RichText = true
-
-
+	
+	
 			elseif item["Type"] == "Button" then
-
+	
 				local button = Instance.new("TextButton")
 				button.Parent = AREA
-
+	
 				button.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 				button.Text = item["Args"][1]
 				button.TextScaled = true
 				button.TextColor3 = Color3.fromRGB(255,255,255)
 				button.Font = Enum.Font.GothamBold
 				button.Size = UDim2.new(1,0,0,25)
-
+	
 				local padding = Instance.new("UIPadding")
 				padding.Parent = button
-
+	
 				padding.PaddingTop = UDim.new(0, 5)
 				padding.PaddingBottom = UDim.new(0, 5)
-
-
+	
+	
 				Instance.new("UICorner", button)
-
+	
 				button.MouseButton1Click:Connect(function()
 					item["Args"][2](button)
 				end)
 			elseif item["Type"] == "ButtonGrid" then
-
-
-
-
+	
+	
+	
+	
 				local frame = Instance.new("Frame")
 				frame.Parent = AREA
 				frame.Size = UDim2.new(1, 0, 0, calculateWidth(#item["Args"][2]))
 				frame.BackgroundTransparency = 1
-
-
+	
+	
 				local gridlayout = Instance.new("UIGridLayout")
 				gridlayout.Parent = frame
 				gridlayout.CellSize = UDim2.new((1 / item["Args"][1]) - 0.03, 0, 0, 30) -- remove 0.03 because if not it would wrap on its own lol
-
+	
 				--print("------")
 				--print(item["Args"][2])
 				--print(States)
 				for buttonname, args in item["Args"][2] do
 					local button = Instance.new("TextButton")
 					button.Parent = frame
-
+	
 					--print(args)
 					button.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 					if States[buttonname .. module.Name] then
@@ -589,15 +589,15 @@ local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 					button.TextScaled = true
 					button.TextColor3 = Color3.fromRGB(255,255,255)
 					button.Font = Enum.Font.GothamBold
-
+	
 					local padding = Instance.new("UIPadding")
 					padding.Parent = button
-
+	
 					padding.PaddingTop = UDim.new(0, 5)
 					padding.PaddingBottom = UDim.new(0, 5)
-
+	
 					Instance.new("UICorner", button)
-
+	
 					button.MouseButton1Click:Connect(function()
 						if item["Toggleable"] then
 							item["Args"][2][buttonname](button)
@@ -618,28 +618,28 @@ local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 						end
 					end)
 				end
-
-
+	
+	
 			elseif item["Type"] == "Input" then
 				local cloneinput = _G.YARHM.TextBoxPlaceholder:Clone()
 				cloneinput.Parent = AREA
 				cloneinput.Visible = true
-
+				
 				cloneinput.TextBox.PlaceholderText = item["Args"][1]
 				cloneinput.TextButton.Text = item["Args"][2]
-
+				
 				cloneinput.TextButton.MouseButton1Click:Connect(function()
 					item["Args"][3](cloneinput.TextButton, cloneinput.TextBox.Text)
 				end)
 			end
 		end
-
+	
 		ts:Create(AREA, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 			Position = UDim2.fromScale(0.66, 0.606)
 		}):Play()
 	end
-
-
+	
+	
 	task.wait(1) -- magic number to wait modules to load lmao
 	for modulei, module in ipairs(_G.Modules) do
 		local success, err = pcall(function()
@@ -648,32 +648,32 @@ local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 			listbutton.Name = module.Name
 			listbutton.Text = module.Name
 			listbutton.Visible = true
-
+	
 			if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
 				listbutton.Interactable = false
 				listbutton.BackgroundColor3 = Color3.fromRGB(50,0,0)
 				listbutton.TextColor3 = Color3.fromRGB(255, 0, 0)
 			else
 				listbutton.MouseButton1Click:Connect(function()
-
+	
 					if selected.Value then
 						ts:Create(selected.Value, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 							BackgroundColor3 = Color3.fromRGB(49, 49, 49),
 							TextColor3 = Color3.fromRGB(255,255,255)
 						}):Play()
 					end
-
+	
 					selected.Value = listbutton
-
+	
 					ts:Create(selected.Value, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 						BackgroundColor3 = Color3.fromRGB(255,255,255),
 						TextColor3 = Color3.fromRGB(0,0,0)
 					}):Play()
-
+	
 					loader(_G.Modules[modulei])
 				end)
 			end
-
+	
 		end)
 		if not success then
 			warn("[YARHM] Error while requiring " .. module.Name .. "!")
@@ -681,91 +681,89 @@ local function YFWSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 		end
 	end
 end
-local function CAETUW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
-	local script = Instance.new("LocalScript")
-	script.Name = "LocalScript"
-	script.Parent = Converted["_Close"]
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function JKGY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Close"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local ts = game:GetService("TweenService")
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		ts:Create(_G.YARHM.Menu, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
 			{Position = UDim2.fromScale(0.499, 0), Size = UDim2.fromOffset(441, 0)}
 		):Play()
 	end)
 end
-local function OXGTOH_fake_script() -- Fake Script: StarterGui.YARHM.Init
-	local script = Instance.new("LocalScript")
-	script.Name = "Init"
-	script.Parent = Converted["_YARHM"]
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function XCDC_fake_script() -- Fake Script: StarterGui.YARHM.Init
+    local script = Instance.new("LocalScript")
+    script.Name = "Init"
+    script.Parent = Converted["_YARHM"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	_G.YARHM = script.Parent
-
+	
 	script.Parent.SafeAreaCompatibility = Enum.SafeAreaCompatibility.None
 	script.Parent.ScreenInsets = Enum.ScreenInsets.None
-
-
+	
+	
 	script.Parent.Menu.Position = UDim2.fromScale(0.5, 0)
 	script.Parent.Menu.Size = UDim2.fromOffset(441,0)
-
+	
 	_G.Modules = {}
-
+	
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.1.0\n- Added Murder Mystery 2")
-
+	require(script.Parent.FUNCTIONS).notification("v1.1.1\n- MM2 disabled, WIP for now\n-Flee the Facility bug fixes")
+	
 end
-local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
-	local script = Instance.new("LocalScript")
-	script.Name = "Flee the Facility"
-	script.Parent = Converted["_YARHM"]
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function FVWP_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+    local script = Instance.new("LocalScript")
+    script.Name = "Flee the Facility"
+    script.Parent = Converted["_YARHM"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local module = {}
-	module["gameId"] = 372226183 -- Restrict module to a certain game ID only. 0 allows all games.
-	if (module["gameId"] ~= game.gameId) and module["gameId"] ~= 0 then
-		script:Destroy()
-	end
-
+	module["gameId"] = 372226183  -- Restrict module to a certain game ID only. 0 allows all games.
+	
+	
 	module["Name"] = "Flee the Facility"
-
+	
 	local ts = game:GetService("TweenService")
-
+	
 	local FUNCTIONS = require(_G.YARHM.FUNCTIONS)
-
-
+	
+	
 	module.players = false
 	module.pcs = false
 	module.pods = false
 	module.exits = false
-
+	
 	module.antipcerror = false
 	module.flashlight = false
-
+	
 	local esps = {}
-
+	
 	local function getBeast()
 		local listplayers = game.Players:GetChildren()
 		for _, player in ipairs(listplayers) do
@@ -775,32 +773,32 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 			end
 		end
 	end
-
+	
 	local function reloadESP()
-
-
+	
+	
 		for _, i in ipairs(workspace:GetChildren()) do
 			if i.Name == "PlayerHighlight" and not module.players then
 				i:Destroy()
 			end
-
+	
 			if i.Name == "PCHighlight" and not module.pcs then
 				i:Destroy()
 			end
-
+	
 			if i.Name == "PodsHighlight" and not module.pods then
 				i:Destroy()
 			end
-
+	
 			if i.Name == "ExitsHighlight" and not module.exits then
 				i:Destroy()
 			end
 		end
-
+	
 		if module.players then
-
-
-
+	
+	
+	
 			local listplayers = game.Players:GetChildren()
 			for _, player in ipairs(listplayers) do
 				if player ~= game.Players.LocalPlayer and player.Character ~= nil then
@@ -824,15 +822,15 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 					end
 				end
 			end
-
-
+	
+	
 		end
-
+	
 		if module.pcs then
-
-
-
-
+	
+	
+	
+	
 			for _, obj in ipairs(game.Workspace:GetDescendants()) do
 				if obj.Name == "ComputerTable" and not obj:FindFirstChild("PCHighlight") then
 					local hili = Instance.new("Highlight", workspace)
@@ -843,14 +841,14 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 					hili.FillColor = obj:FindFirstChild("Screen").Color
 				end
 			end
-
-
+	
+	
 		end
-
+	
 		if module.pods then
-
-
-
+	
+	
+	
 			for _, obj in ipairs(game.Workspace:GetDescendants()) do
 				if obj.Name == "FreezePod" then
 					local hili = Instance.new("Highlight", workspace)
@@ -861,14 +859,14 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 					hili.FillColor = Color3.fromRGB(0, 200, 255)
 				end
 			end
-
+	
 		end
-
-
+	
+	
 		if module.exits then
-
-
-
+	
+	
+	
 			for _, obj in ipairs(game.Workspace:GetDescendants()) do
 				if obj.Name == "ExitDoor" and not obj:FindFirstChild("ExitsHighlight") then
 					local hili = Instance.new("Highlight", workspace)
@@ -879,24 +877,30 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 					hili.FillColor = Color3.fromRGB(255,255,0)
 				end
 			end
-
+	
 		end
 	end
-
-
-
-
+	
+	game.ReplicatedStorage.IsGameActive.Changed:Connect(function()
+	
+		if game.ReplicatedStorage.IsGameActive.Value == false then return end
+		
+		FUNCTIONS.notification("A new game has started, reloading ESPs...")
+		reloadESP()
+	end)
+	
+	
 	module[1] = {
 		Type = "Text",
 		Args = {"ESPs"}
 	}
-
+	
 	module[2] = {
 		Type = "ButtonGrid",
 		Toggleable = true, -- Recolors buttons for you onclick, you still need to save the state yourself
 		Args = {3, { -- 3 is the number of columns
 			Players = function(Self)
-
+	
 				if module.players then
 					module.players = false
 					reloadESP()
@@ -904,11 +908,11 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 					module.players = true
 					reloadESP()
 				end
-
-
+	
+	
 			end,
 			PCs = function(Self)
-
+	
 				if module.pcs then
 					module.pcs = false
 					reloadESP()
@@ -916,10 +920,10 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 					module.pcs = true
 					reloadESP()
 				end
-
+	
 			end,
 			Pods = function(Self)
-
+	
 				if module.pods then
 					module.pods = false
 					reloadESP()
@@ -927,11 +931,11 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 					module.pods = true
 					reloadESP()
 				end
-
-
+				
+	
 			end,
 			Exits = function(Self)
-
+	
 				if module.exits then
 					module.exits = false
 					reloadESP()
@@ -939,7 +943,7 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 					module.exits = true
 					reloadESP()
 				end
-
+	
 			end,
 		}
 		} 
@@ -948,42 +952,42 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 		Type = "Text",
 		Args = {""}
 	}
-
+	
 	module[4] = {
 		Type = "Text",
 		Args = {"Tools"}
 	}
-
-
+	
+	
 	local root = game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-
+	
 	light = Instance.new("PointLight", root)
 	light.Brightness = 0
 	light.Range = 9999999999
-
+	
 	local wslock = false
 	local ws = 18
-
+	
 	local antifail = false
-
+	
 	task.spawn(function() 
 		local OldNameCall = nil
-
+	
 		OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
 			local Args = {...}
 			local NamecallMethod = getnamecallmethod()
-
+	
 			if NamecallMethod == "FireServer" and Args[1] == "SetPlayerMinigameResult" and antifail then
 				print("Minigame result - Intercepting result to true")
 				Args[2] = true
 			end
-
+	
 			return OldNameCall(Self, unpack(Args))
 		end)
-
+	
 	end)
-
-
+	
+	
 	module[5] = {
 		Type = "ButtonGrid",
 		Toggleable = true,
@@ -1000,15 +1004,15 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 			end,
 		}}
 	}
-
+	
 	task.spawn(function()
 		while task.wait(0.1) do
 			if wslock then
-				root.Parent:WaitForChild("Humanoid").Walkspeed = ws
+				root.Parent:WaitForChild("Humanoid").WalkSpeed = ws
 			end
 		end
 	end)
-
+	
 	module[6] = {
 		Type = "Input",
 		Args = {"Input a walkspeed", "Set & Lock", function(Self, text)
@@ -1016,110 +1020,110 @@ local function CLLG_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 				FUNCTIONS.notification("Input isn't a valid number.")
 				return
 			end
-
+			
 			ws = tonumber(text)
 			wslock = true
 		end,}
 	}
-
+	
 	module[7] = {
 		Type = "Button",
 		Args = {"Unlock all", function()
 			wslock = false
 		end,}
 	}	
-
+	
 	module[8] = {
 		Type = "Text",
 		Args = {"Locking means your speed will stay the same no matter what. This means you will not be slow when crawling or jumping as beast."}
 	}
-
-
+	
+	
 	_G.Modules[2] = module
 end
-local function RHSLRSW_fake_script() -- Fake Script: StarterGui.YARHM.Universal
-	local script = Instance.new("LocalScript")
-	script.Name = "Universal"
-	script.Parent = Converted["_YARHM"]
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function XSVONR_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+    local script = Instance.new("LocalScript")
+    script.Name = "Universal"
+    script.Parent = Converted["_YARHM"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local module = {}
 	module["gameId"] = 0 -- Restrict module to a certain game ID only. 0 allows all games.
-
-
+	
+	
 	module["Name"] = "Universal"
-
+	
 	module[1] = {
 		Type = "Text",
 		Args = {"Universal module - Works on most games"}
 	}
-
+	
 	module[2] = {
 		Type = "Button",
 		Args = {"Infinite Yield", function(Self)
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 		end}
 	}
-
+	
 	_G.Modules[1] = module
 end
-local function ESWLAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
-	local script = Instance.new("LocalScript")
-	script.Name = "Murder Mystery 2"
-	script.Parent = Converted["_YARHM"]
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function RFBBJ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2 (WIP)
+    local script = Instance.new("LocalScript")
+    script.Name = "Murder Mystery 2 (WIP)"
+    script.Parent = Converted["_YARHM"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
 	local module = {}
-	module["gameId"] = 66654135 -- Restrict module to a certain game ID only. 0 allows all games.
-
-
+	module["gameId"] = 69 -- 66654135 -- Restrict module to a certain game ID only. 0 allows all games.
+	
+	
 	local function findMurderer()
 		for _, i in ipairs(game.Players:GetDescendants()) do
 			if i.Name == "Knife" and i.Parent.Name == "Backpack" then
 				return i.Parent.Parent
 			end
 		end
-
+	
 		for _, i in ipairs(game.Players:GetPlayers()) do
 			if i.Character:FindFirstChild("Gun") then
 				return i
 			end
 		end
-
+	
 		return nil
 	end
-
+	
 	local function findSheriff()
 		for _, i in ipairs(game.Players:GetDescendants()) do
 			if i.Name == "Gun" and i.Parent.Name == "Backpack" then
 				return i.Parent.Parent
 			end
 		end
-
+	
 		for _, i in ipairs(game.Players:GetPlayers()) do
 			if i.Character:FindFirstChild("Gun") then
 				return i
 			end
 		end
-
+	
 		return nil
 	end
-
-
+	
+	
 	task.spawn(function()
 		while task.wait(3) do
 			if workspace:FindFirstChild("GunESP") then
@@ -1127,14 +1131,14 @@ local function ESWLAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 			end
 		end
 	end)
-
+	
 	module["Name"] = "Murder Mystery 2"
-
+	
 	module[1] = {
 		Type = "Text",
 		Args = {"ESPs"}
 	}
-
+	
 	module[2] = {
 		Type = "ButtonGrid",
 		Toggleable = true,
@@ -1169,7 +1173,7 @@ local function ESWLAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 					end
 				end
 			end,
-
+			
 			Dropped_Gun = function()
 				if workspace:FindFirstChild("GunESP") then
 					for _, i in ipairs(game.Workspace:GetChildren()) do if i.Name=="GunESP" then i:Destroy() end end
@@ -1177,27 +1181,27 @@ local function ESWLAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 					local gunesp = Instance.new("Highlight", workspace)
 					gunesp.Name = "GunESP"
 					gunesp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-
+					
 				end
 			end,
 		}}
 	}
-
+	
 	module[3] = {
 		Type = "Text",
-		Args = {"PLEASE DON'T USE YET, VERY VERY BUGGY AND LAGGY FOR NOW"}
+		Args = {"I don't know if dropped gun will show properly lol"}
 	}
 	_G.Modules[3] = module
-
-
-
+	
+	
+	
 end
 
-coroutine.wrap(LDIIHGM_fake_script)()
-coroutine.wrap(ANRYQVJ_fake_script)()
-coroutine.wrap(YFWSE_fake_script)()
-coroutine.wrap(CAETUW_fake_script)()
-coroutine.wrap(OXGTOH_fake_script)()
-coroutine.wrap(CLLG_fake_script)()
-coroutine.wrap(RHSLRSW_fake_script)()
-coroutine.wrap(ESWLAA_fake_script)()
+coroutine.wrap(XMDK_fake_script)()
+coroutine.wrap(RSYAYC_fake_script)()
+coroutine.wrap(ZJWE_fake_script)()
+coroutine.wrap(JKGY_fake_script)()
+coroutine.wrap(XCDC_fake_script)()
+coroutine.wrap(FVWP_fake_script)()
+coroutine.wrap(XSVONR_fake_script)()
+coroutine.wrap(RFBBJ_fake_script)()
