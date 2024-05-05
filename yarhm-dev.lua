@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.2.0
+-- YARHM by Imperial, version 1.3.0
 
 -- Instances:
 
@@ -51,6 +51,9 @@ local Converted = {
 -- Properties:
 
 Converted["_YARHM"].DisplayOrder = 999999999
+Converted["_YARHM"].IgnoreGuiInset = true
+Converted["_YARHM"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+Converted["_YARHM"].ResetOnSpawn = false
 Converted["_YARHM"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_YARHM"].Name = "YARHM"
 Converted["_YARHM"].Parent = game:GetService("CoreGui")
@@ -379,7 +382,7 @@ end
 
 -- Fake Local Scripts:
 
-local function TSFB_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function TDLRZZV_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -415,7 +418,7 @@ local function TSFB_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
 		Transparency = 1
 	}):Play()
 end
-local function RQUV_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function YDZN_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -461,7 +464,7 @@ local function RQUV_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function IKYI_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function CJBL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -674,7 +677,7 @@ local function IKYI_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 		end
 	end
 end
-local function SUZAGEM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function ITAMO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -695,7 +698,7 @@ local function SUZAGEM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close
 		):Play()
 	end)
 end
-local function LVDU_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function USYL_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -712,6 +715,7 @@ local function LVDU_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	
 	script.Parent.SafeAreaCompatibility = Enum.SafeAreaCompatibility.None
 	script.Parent.ScreenInsets = Enum.ScreenInsets.None
+	script.Parent.ResetOnSpawn = false
 	
 	
 	script.Parent.Menu.Position = UDim2.fromScale(0.5, 0)
@@ -720,9 +724,9 @@ local function LVDU_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.2.0\n- MM2 should work properly")
+	require(script.Parent.FUNCTIONS).notification("v1.3.0\n- Fixed MM2 Bugs\n- Added Sheriff aimbot for MM2")
 end
-local function QRXD_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function MDYBCC_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -958,6 +962,9 @@ local function QRXD_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	
 	local antifail = false
 	
+	
+	
+	
 	task.spawn(function() 
 		if game:GetService("RunService"):IsStudio() then return end -- :)
 		
@@ -1031,7 +1038,7 @@ local function QRXD_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	
 	_G.Modules[2] = module
 end
-local function FJOM_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function IOLZAB_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1066,7 +1073,7 @@ local function FJOM_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function GRKJVA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function IIYQVP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1082,6 +1089,8 @@ local function GRKJVA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	local module = {}
 	module["gameId"] = 0 -- 66654135 -- Restrict module to a certain game ID only. 0 allows all games.
 	
+	local playerESP = false
+	local sheriffAimbot = false
 	
 	local function findMurderer()
 		for _, i in ipairs(game.Players:GetPlayers()) do
@@ -1117,18 +1126,41 @@ local function GRKJVA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	
 	
 	workspace.ChildAdded:Connect(function(ch)
-		if workspace:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
-			workspace:FindFirstChild("GunESP").Adornee = ch
-			workspace:FindFirstChild("GunESP").Enabled = true
-			require(script.Parent.FUNCTIONS).notification("Gun has been dropped! Find a green highlight.")
+		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
+			script.Parent:FindFirstChild("GunESP").Adornee = ch
+			script.Parent:FindFirstChild("GunESP").Enabled = true
+			require(script.Parent.FUNCTIONS).notification("Gun has been dropped! Find a yellow highlight.")
 		end
 	end)
 	
 	workspace.ChildRemoved:Connect(function(ch)
-		if workspace:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
-			workspace:FindFirstChild("GunESP").Enabled = false
+		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
+			script.Parent:FindFirstChild("GunESP").Enabled = false
 			require(script.Parent.FUNCTIONS).notification("Someone has took the dropped gun.")
 		end
+	end)
+	
+	task.spawn(function() 
+		if game:GetService("RunService"):IsStudio() then return end -- :)
+	
+		local OldNameCall = nil
+	
+		OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+			local Args = {...}
+			local NamecallMethod = getnamecallmethod()
+	
+			if NamecallMethod == "InvokeServer" and Args[1] == 1 and sheriffAimbot then
+				if not findMurderer() then
+					print("No murderer to be shot!")
+				else
+					print("Shot - Intercepting shot to murderer")
+					Args[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position
+				end
+			end
+	
+			return OldNameCall(Self, unpack(Args))
+		end)
+	
 	end)
 	
 	module["Name"] = "Murder Mystery 2"
@@ -1143,21 +1175,25 @@ local function GRKJVA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 		Toggleable = true,
 		Args = {2, {
 			Players = function()
-				if workspace:FindFirstChild("PlayerESP") then
-					for _, i in ipairs(game.Workspace:GetChildren()) do if i.Name=="PlayerESP" then i:Destroy() end end
+				if script.Parent:FindFirstChild("PlayerESP") then
+					playerESP = false
+					for _, i in ipairs(script.Parent:GetChildren()) do if i.Name=="PlayerESP" then i:Destroy() end end
 				else
+					playerESP = true
 					local listplayers = game.Players:GetChildren()
 					for _, player in ipairs(listplayers) do
-						if player ~= game.Players.LocalPlayer and player.Character ~= nil then
+						if  player.Character ~= nil then
 							local character = player.Character
 							if not character:FindFirstChild("PlayerESP") then
-								local a = Instance.new("Highlight", workspace)
+								local a = Instance.new("Highlight", script.Parent)
 								a.Name = "PlayerESP"
 								a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
 								a.Adornee = character
+								a.FillColor = Color3.fromRGB(255, 255, 255)
 								task.spawn(function()
 									repeat
-										task.wait(3)
+										print("applying color")
+										task.wait(1.5)
 										if player == findMurderer() then
 											a.FillColor = Color3.fromRGB(255,0,0)
 										elseif player == findSheriff() then
@@ -1165,7 +1201,11 @@ local function GRKJVA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 										else
 											a.FillColor = Color3.fromRGB(0,255,0)
 										end
-									until character == nil or a == nil
+										if a then
+											if not player then break end
+											a.Adornee = player.Character or player.CharactedAdded:Wait()
+										end
+									until not playerESP or not player
 								end)
 							end
 						end
@@ -1174,12 +1214,12 @@ local function GRKJVA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 			end,
 	
 			Dropped_Gun = function()
-				if workspace:FindFirstChild("GunESP") then
+				if script.Parent:FindFirstChild("GunESP") then
 					for _, i in ipairs(game.Workspace:GetChildren()) do if i.Name=="GunESP" then i:Destroy() end end
 				else
-					local gunesp = Instance.new("Highlight", workspace)
+					local gunesp = Instance.new("Highlight", script.Parent)
 					gunesp.OutlineTransparency = 1
-					gunesp.FillColor = Color3.fromRGB(0, 255, 0)
+					gunesp.FillColor = Color3.fromRGB(255, 255, 0)
 					gunesp.Name = "GunESP"
 					gunesp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
 					gunesp.Enabled = false
@@ -1188,7 +1228,16 @@ local function GRKJVA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 						gunesp.Enabled = true
 						require(script.Parent.FUNCTIONS).notification("Gun has been dropped! Find a green highlight.")
 					end
-					
+	
+				end
+			end,
+			
+			Sheriff_Aimbot = function()
+				if sheriffAimbot then
+					sheriffAimbot = false
+				else
+					sheriffAimbot = true
+					require(script.Parent.FUNCTIONS).notification("This will correct your shot to shoot murderer directly.")
 				end
 			end,
 		}}
@@ -1202,11 +1251,11 @@ local function GRKJVA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	
 end
 
-coroutine.wrap(TSFB_fake_script)()
-coroutine.wrap(RQUV_fake_script)()
-coroutine.wrap(IKYI_fake_script)()
-coroutine.wrap(SUZAGEM_fake_script)()
-coroutine.wrap(LVDU_fake_script)()
-coroutine.wrap(QRXD_fake_script)()
-coroutine.wrap(FJOM_fake_script)()
-coroutine.wrap(GRKJVA_fake_script)()
+coroutine.wrap(TDLRZZV_fake_script)()
+coroutine.wrap(YDZN_fake_script)()
+coroutine.wrap(CJBL_fake_script)()
+coroutine.wrap(ITAMO_fake_script)()
+coroutine.wrap(USYL_fake_script)()
+coroutine.wrap(MDYBCC_fake_script)()
+coroutine.wrap(IOLZAB_fake_script)()
+coroutine.wrap(IIYQVP_fake_script)()
