@@ -1148,8 +1148,7 @@ local function IIYQVP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 			OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
 			local Args = {...}
 			local NamecallMethod = getnamecallmethod()
-     if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Gun") then return OldNameCall(Self, unpack(Args)) end
-	
+     
 			if NamecallMethod == "InvokeServer" and Self == game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun and sheriffAimbot then
 				if not findMurderer() then
 					print("No murderer to be shot!")
