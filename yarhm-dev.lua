@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.3.0
+-- YARHM by Imperial, version 1.4.0
 
 -- Instances:
 
@@ -46,6 +46,10 @@ local Converted = {
 	["_TextBox"] = Instance.new("TextBox");
 	["_UICorner7"] = Instance.new("UICorner");
 	["_Murder Mystery 2"] = Instance.new("LocalScript");
+	["_FloatingButton"] = Instance.new("TextButton");
+	["_UICorner8"] = Instance.new("UICorner");
+	["_UIPadding4"] = Instance.new("UIPadding");
+	["_FloatingButtons"] = Instance.new("Frame");
 }
 
 -- Properties:
@@ -143,6 +147,7 @@ Converted["_ScrollingFrame"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_ScrollingFrame"].Parent = Converted["_List"]
 
 Converted["_UIListLayout"].Padding = UDim.new(0, 3)
+Converted["_UIListLayout"].HorizontalAlignment = Enum.HorizontalAlignment.Center
 Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout"].Parent = Converted["_ScrollingFrame"]
 
@@ -341,6 +346,41 @@ Converted["_TextBox"].Parent = Converted["_TextBoxPlaceholder"]
 
 Converted["_UICorner7"].Parent = Converted["_TextBox"]
 
+Converted["_FloatingButton"].Font = Enum.Font.Unknown
+Converted["_FloatingButton"].Text = "Shoot into murderer"
+Converted["_FloatingButton"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_FloatingButton"].TextScaled = true
+Converted["_FloatingButton"].TextSize = 14
+Converted["_FloatingButton"].TextWrapped = true
+Converted["_FloatingButton"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_FloatingButton"].BackgroundColor3 = Color3.fromRGB(31.000001952052116, 31.000001952052116, 31.000001952052116)
+Converted["_FloatingButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_FloatingButton"].BorderSizePixel = 0
+Converted["_FloatingButton"].Position = UDim2.new(0, 50, 0, 50)
+Converted["_FloatingButton"].Size = UDim2.new(0, 200, 0, 50)
+Converted["_FloatingButton"].Visible = false
+Converted["_FloatingButton"].Name = "FloatingButton"
+Converted["_FloatingButton"].Parent = Converted["_YARHM"]
+
+Converted["_UICorner8"].Parent = Converted["_FloatingButton"]
+
+Converted["_UIPadding4"].PaddingBottom = UDim.new(0, 5)
+Converted["_UIPadding4"].PaddingLeft = UDim.new(0, 5)
+Converted["_UIPadding4"].PaddingRight = UDim.new(0, 5)
+Converted["_UIPadding4"].PaddingTop = UDim.new(0, 5)
+Converted["_UIPadding4"].Parent = Converted["_FloatingButton"]
+
+Converted["_FloatingButtons"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_FloatingButtons"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_FloatingButtons"].BackgroundTransparency = 1
+Converted["_FloatingButtons"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_FloatingButtons"].BorderSizePixel = 0
+Converted["_FloatingButtons"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_FloatingButtons"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_FloatingButtons"].ZIndex = 0
+Converted["_FloatingButtons"].Name = "FloatingButtons"
+Converted["_FloatingButtons"].Parent = Converted["_YARHM"]
+
 -- Fake Module Scripts:
 
 local fake_module_scripts = {}
@@ -382,7 +422,7 @@ end
 
 -- Fake Local Scripts:
 
-local function TDLRZZV_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function RMIVQI_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -418,7 +458,7 @@ local function TDLRZZV_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitO
 		Transparency = 1
 	}):Play()
 end
-local function YDZN_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function YFWFO_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -464,7 +504,7 @@ local function YDZN_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function CJBL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function TMMNH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -483,6 +523,9 @@ local function CJBL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 	selected.Name = "Selected"
 	
 	local States = {}
+	
+	local FloatingButtonConnectionsMouse = {}
+	local FloatingButtonConnectionsTouch = {}
 	
 	task.wait(1)
 	
@@ -557,8 +600,88 @@ local function CJBL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 	
 				Instance.new("UICorner", button)
 	
+				local hold = false
+	
 				button.MouseButton1Click:Connect(function()
 					item["Args"][2](button)
+				end)
+				
+				button.MouseButton1Down:Connect(function()
+					hold = true
+					task.spawn(function()
+						task.wait(0.5)
+						if not hold then return end
+						if not _G.YARHM.FloatingButtons:FindFirstChild(item["Args"][1]) then
+							
+							
+							local newFloatingButton = _G.YARHM.FloatingButton:Clone()
+							newFloatingButton.Parent = _G.YARHM.FloatingButtons
+							newFloatingButton.Name = item["Args"][1]
+							newFloatingButton.Text = item["Args"][1]
+							newFloatingButton.Visible = true
+							
+							newFloatingButton.MouseButton1Click:Connect(function()
+								item["Args"][2](newFloatingButton)
+							end)
+	
+							newFloatingButton.Size = UDim2.fromOffset(0, 0)
+							ts:Create(newFloatingButton, TweenInfo.new(1, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+								Size = UDim2.fromOffset(200, 50)
+							}):Play()
+							
+							local UserInputService = game:GetService("UserInputService")
+	
+							local gui = newFloatingButton
+	
+							local dragging
+							local dragInput
+							local dragStart
+							local startPos
+	
+							local function update(input)
+								local delta = input.Position - dragStart
+								ts:Create(gui, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+									Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+								}):Play()
+							end
+	
+							gui.InputBegan:Connect(function(input)
+								if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+									dragging = true
+									dragStart = input.Position
+									startPos = gui.Position
+	
+									input.Changed:Connect(function()
+										if input.UserInputState == Enum.UserInputState.End then
+											dragging = false
+										end
+									end)
+								end
+							end)
+	
+							gui.InputChanged:Connect(function(input)
+								if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+									dragInput = input
+								end
+							end)
+	
+							UserInputService.InputChanged:Connect(function(input)
+								if input == dragInput and dragging then
+									update(input)
+								end
+							end)
+	
+						else
+							_G.YARHM.FloatingButtons:FindFirstChild(item["Args"][1]):Destroy()
+						end
+					end)
+				end)
+				
+				button.MouseButton1Up:Connect(function()
+					hold = false
+				end)
+				button.MouseLeave:Connect(function()
+					hold = false
 				end)
 			elseif item["Type"] == "ButtonGrid" then
 	
@@ -669,6 +792,28 @@ local function CJBL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 	
 				loader(_G.Modules[modulei])
 			end)
+			
+			
+			
+			listbutton.MouseButton1Down:Connect(function()
+				ts:Create(listbutton, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+					Size = UDim2.new(1,-10,0, 40)
+				}):Play()
+			end)
+			
+			listbutton.MouseButton1Up:Connect(function()
+				ts:Create(listbutton, TweenInfo.new(1.2, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+					Size = UDim2.new(1,0,0,50),
+					
+				}):Play()
+			end)
+			
+			listbutton.MouseLeave:Connect(function()
+				ts:Create(listbutton, TweenInfo.new(0.7, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+					Size = UDim2.new(1,0,0,50),
+	
+				}):Play()
+			end)
 	
 		end)
 		if not success then
@@ -677,7 +822,7 @@ local function CJBL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 		end
 	end
 end
-local function ITAMO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function GSEDFUH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -698,7 +843,7 @@ local function ITAMO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.L
 		):Play()
 	end)
 end
-local function USYL_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function WLILNT_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -724,9 +869,9 @@ local function USYL_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.3.0\n- Fixed MM2 Bugs\n- Added Sheriff aimbot for MM2")
+	require(script.Parent.FUNCTIONS).notification("v1.4.0\n- Fixed MM2 Bugs\n- Removed Sheriff aimbot for now, replaced with Shoot murderer button\n- Long-pressing buttons will make them a floating button")
 end
-local function MDYBCC_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function TREDJBA_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -963,8 +1108,6 @@ local function MDYBCC_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fa
 	local antifail = false
 	
 	
-	
-	
 	task.spawn(function() 
 		if game:GetService("RunService"):IsStudio() then return end -- :)
 		
@@ -1038,7 +1181,7 @@ local function MDYBCC_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fa
 	
 	_G.Modules[2] = module
 end
-local function IOLZAB_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function LWBQIJV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1059,6 +1202,8 @@ local function IOLZAB_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	module["Name"] = "Universal"
 	
+	local ts = game:GetService("TweenService")
+	
 	module[1] = {
 		Type = "Text",
 		Args = {"Universal module - Works on most games"}
@@ -1071,9 +1216,50 @@ local function IOLZAB_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 		end}
 	}
 	
+	module[3] = {
+		Type = "Text",
+		Args = {"---"}
+	}
+	
+	module[4] = {
+		Type = "Button",
+		Args = {"Move YARHM trigger to the bottom", function(Self)
+			_G.YARHM.Open.UIStroke.Transparency = 0
+			_G.YARHM.Open.TextTransparency = 0
+			ts:Create(_G.YARHM.Open, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+				Position = UDim2.fromScale(0.5, 0.903)
+			}):Play()
+			
+			ts:Create(_G.YARHM.Open.UIStroke, TweenInfo.new(1), {
+				Transparency = 1
+			}):Play()
+			ts:Create(_G.YARHM.Open, TweenInfo.new(1), {
+				TextTransparency = 1
+			}):Play()
+		end}
+	}
+	
+	module[5] = {
+		Type = "Button",
+		Args = {"Move YARHM trigger to the top", function(Self)
+			_G.YARHM.Open.UIStroke.Transparency = 0
+			_G.YARHM.Open.TextTransparency = 0
+			ts:Create(_G.YARHM.Open, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+				Position = UDim2.fromScale(0.5, 0.063)
+			}):Play()
+	
+			ts:Create(_G.YARHM.Open.UIStroke, TweenInfo.new(1), {
+				Transparency = 1
+			}):Play()
+			ts:Create(_G.YARHM.Open, TweenInfo.new(1), {
+				TextTransparency = 1
+			}):Play()
+		end}
+	}
+	
 	_G.Modules[1] = module
 end
-local function IIYQVP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function WQYULQ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1140,30 +1326,77 @@ local function IIYQVP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 		end
 	end)
 	
-	task.spawn(function() 
-		if game:GetService("RunService"):IsStudio() then return end -- :)
+	--task.spawn(function() 
+	--	if game:GetService("RunService"):IsStudio() then return end -- :)
 	
-		local OldNameCall = nil
+	--	local OldNameCall = nil
 	
-			OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
-			local Args = {...}
-			local NamecallMethod = getnamecallmethod()
-     
-			if NamecallMethod == "InvokeServer" and Self == game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun and sheriffAimbot then
-				if not findMurderer() then
-					print("No murderer to be shot!")
-				else
-					print("Shot - Intercepting shot to murderer")
-					Args[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position
-				end
-			end
+	--	OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+	--		local Args = {...}
+	--		local NamecallMethod = getnamecallmethod()
 	
-			return OldNameCall(Self, unpack(Args))
-		end)
+	--		if NamecallMethod == "InvokeServer" and Args[1] == 1 and sheriffAimbot then
+	--			if not findMurderer() then
+	--				print("No murderer to be shot!")
+	--			else
+	--				print("Shot - Intercepting shot to murderer")
+	--				Args[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position
+	--			end
+	--		end
 	
-	end)
+	--		return OldNameCall(Self, unpack(Args))
+	--	end)
+	
+	--end)
+	
+	-- I honestly don't know what went wrong so if any of you experts know why this stuff aint working make a pull request :praying_hands_emoji:
+	
 	
 	module["Name"] = "Murder Mystery 2"
+	
+	workspace.ChildAdded:Connect(function(ch)
+		if ch.Name == "Normal" and ch:FindFirstChild("Map") and playerESP then
+			require(script.Parent.FUNCTIONS).notification("Map has loaded, waiting for roles...")
+			repeat
+				task.wait(1)
+			until findMurderer()
+			local listplayers = game.Players:GetChildren()
+			for _, player in ipairs(listplayers) do
+				if  player.Character ~= nil then
+					local character = player.Character
+					if not character:FindFirstChild("PlayerESP") then
+						local a = Instance.new("Highlight", script.Parent)
+						a.Name = "PlayerESP"
+						a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+						a.Adornee = character
+						a.FillColor = Color3.fromRGB(255, 255, 255)
+						task.spawn(function()
+							task.wait(1.5)
+							if player == findMurderer() then
+								a.FillColor = Color3.fromRGB(255,0,0)
+							elseif player == findSheriff() then
+								a.FillColor = Color3.fromRGB(0, 150, 255)
+							else
+								a.FillColor = Color3.fromRGB(0,255,0)
+							end
+							if a then
+								if not player then return end
+								a.Adornee = player.Character or player.CharactedAdded:Wait()
+							end
+						end)
+					end
+				end
+			end
+			require(script.Parent.FUNCTIONS).notification("Player ESP reloaded.")
+		end
+	end)
+	
+	workspace.ChildRemoved:Connect(function(ch)
+		if ch.Name == "Normal" and ch:FindFirstChild("Map") and playerESP then
+			require(script.Parent.FUNCTIONS).notification("Game ended, removing Player ESPs.")
+			for _, v in ipairs(script.Parent:GetChildren()) do if v.Name == "PlayerESP" then v:Destroy() end end
+		end
+	end)
 	
 	module[1] = {
 		Type = "Text",
@@ -1191,21 +1424,18 @@ local function IIYQVP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 								a.Adornee = character
 								a.FillColor = Color3.fromRGB(255, 255, 255)
 								task.spawn(function()
-									repeat
-										print("applying color")
-										task.wait(1.5)
-										if player == findMurderer() then
-											a.FillColor = Color3.fromRGB(255,0,0)
-										elseif player == findSheriff() then
-											a.FillColor = Color3.fromRGB(0, 150, 255)
-										else
-											a.FillColor = Color3.fromRGB(0,255,0)
-										end
-										if a then
-											if not player then break end
-											a.Adornee = player.Character or player.CharactedAdded:Wait()
-										end
-									until not playerESP or not player
+									task.wait(1.5)
+									if player == findMurderer() then
+										a.FillColor = Color3.fromRGB(255,0,0)
+									elseif player == findSheriff() then
+										a.FillColor = Color3.fromRGB(0, 150, 255)
+									else
+										a.FillColor = Color3.fromRGB(0,255,0)
+									end
+									if a then
+										if not player then return end
+										a.Adornee = player.Character or player.CharactedAdded:Wait()
+									end
 								end)
 							end
 						end
@@ -1232,30 +1462,59 @@ local function IIYQVP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 				end
 			end,
 			
-			Sheriff_Aimbot = function()
-				if sheriffAimbot then
-					sheriffAimbot = false
-				else
-					sheriffAimbot = true
-					require(script.Parent.FUNCTIONS).notification("This will correct your shot to shoot murderer directly.")
-				end
-			end,
+			--Sheriff_Aimbot = function()
+			--	if sheriffAimbot then
+			--		sheriffAimbot = false
+			--	else
+			--		sheriffAimbot = true
+			--		require(script.Parent.FUNCTIONS).notification("This will correct your shot to shoot murderer directly.")
+			--	end
+			--end,
 		}}
 	}
 	
 	module[3] = {
-		Type = "Text",
-		Args = {"IF you have Dropped gun ESP enabled, you will recieve notifications whenever the gun is dropped or taken"}
+		Type = "Button",
+		Args = {"Shoot murderer", function(Self)
+			if not findSheriff() then require(script.Parent.FUNCTIONS).notification("The game hasn't started yet.") return end
+			if not findMurderer() then
+				require(script.Parent.FUNCTIONS).notification("No murderer to shoot.")
+				return
+			end
+			
+			if game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+				require(script.Parent.FUNCTIONS).notification("Hold out your gun before doing this.")
+				return
+			end
+			local args = {
+				[1] = 1,
+				[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position,
+				[3] = "AH"
+			}
+	
+			game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+		end,}
 	}
+	
+	module[4] = {
+		Type = "Text",
+		Args = {"If you have Dropped gun ESP enabled, you will receive notifications whenever the gun is dropped or taken."}
+	}
+	
+	module[5] = {
+		Type = "Text",
+		Args = {"Shoot murderer button will only kill the murderer if nothing's on the way between you and murderer"}
+	}
+	
 	_G.Modules[3] = module
 	
 end
 
-coroutine.wrap(TDLRZZV_fake_script)()
-coroutine.wrap(YDZN_fake_script)()
-coroutine.wrap(CJBL_fake_script)()
-coroutine.wrap(ITAMO_fake_script)()
-coroutine.wrap(USYL_fake_script)()
-coroutine.wrap(MDYBCC_fake_script)()
-coroutine.wrap(IOLZAB_fake_script)()
-coroutine.wrap(IIYQVP_fake_script)()
+coroutine.wrap(RMIVQI_fake_script)()
+coroutine.wrap(YFWFO_fake_script)()
+coroutine.wrap(TMMNH_fake_script)()
+coroutine.wrap(GSEDFUH_fake_script)()
+coroutine.wrap(WLILNT_fake_script)()
+coroutine.wrap(TREDJBA_fake_script)()
+coroutine.wrap(LWBQIJV_fake_script)()
+coroutine.wrap(WQYULQ_fake_script)()
