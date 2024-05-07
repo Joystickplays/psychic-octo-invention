@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.4.0
+-- YARHM by Imperial, version 1.4.1
 
 -- Instances:
 
@@ -422,7 +422,7 @@ end
 
 -- Fake Local Scripts:
 
-local function RMIVQI_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function VHDMUAR_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -458,7 +458,7 @@ local function RMIVQI_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOp
 		Transparency = 1
 	}):Play()
 end
-local function YFWFO_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function KQHXJ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -504,7 +504,7 @@ local function YFWFO_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function TMMNH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function VHODWR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -822,7 +822,7 @@ local function TMMNH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 		end
 	end
 end
-local function GSEDFUH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function FTWAS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -843,7 +843,7 @@ local function GSEDFUH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close
 		):Play()
 	end)
 end
-local function WLILNT_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function HHAAHPD_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -869,9 +869,9 @@ local function WLILNT_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.4.0\n- Fixed MM2 Bugs\n- Removed Sheriff aimbot for now, replaced with Shoot murderer button\n- Long-pressing buttons will make them a floating button")
+	require(script.Parent.FUNCTIONS).notification("v1.4.1\n- Fixed MM2 Bugs\n- Removed Sheriff aimbot for now, replaced with Shoot murderer button\n- Long-pressing buttons will make them a floating button")
 end
-local function TREDJBA_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function LRBEWJ_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1181,7 +1181,7 @@ local function TREDJBA_fake_script() -- Fake Script: StarterGui.YARHM.Flee the F
 	
 	_G.Modules[2] = module
 end
-local function LWBQIJV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function NNIBGL_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1259,7 +1259,7 @@ local function LWBQIJV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function WQYULQ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function OFOP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1355,7 +1355,7 @@ local function WQYULQ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	module["Name"] = "Murder Mystery 2"
 	
 	workspace.ChildAdded:Connect(function(ch)
-		if ch.Name == "Normal" and ch:FindFirstChild("Map") and playerESP then
+		if ch.Name == "Normal" and playerESP then
 			require(script.Parent.FUNCTIONS).notification("Map has loaded, waiting for roles...")
 			repeat
 				task.wait(1)
@@ -1392,7 +1392,7 @@ local function WQYULQ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	end)
 	
 	workspace.ChildRemoved:Connect(function(ch)
-		if ch.Name == "Normal" and ch:FindFirstChild("Map") and playerESP then
+		if ch.Name == "Normal" and playerESP then
 			require(script.Parent.FUNCTIONS).notification("Game ended, removing Player ESPs.")
 			for _, v in ipairs(script.Parent:GetChildren()) do if v.Name == "PlayerESP" then v:Destroy() end end
 		end
@@ -1482,7 +1482,7 @@ local function WQYULQ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 				return
 			end
 			
-			if game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+			if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
 				require(script.Parent.FUNCTIONS).notification("Hold out your gun before doing this.")
 				return
 			end
@@ -1510,11 +1510,11 @@ local function WQYULQ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	
 end
 
-coroutine.wrap(RMIVQI_fake_script)()
-coroutine.wrap(YFWFO_fake_script)()
-coroutine.wrap(TMMNH_fake_script)()
-coroutine.wrap(GSEDFUH_fake_script)()
-coroutine.wrap(WLILNT_fake_script)()
-coroutine.wrap(TREDJBA_fake_script)()
-coroutine.wrap(LWBQIJV_fake_script)()
-coroutine.wrap(WQYULQ_fake_script)()
+coroutine.wrap(VHDMUAR_fake_script)()
+coroutine.wrap(KQHXJ_fake_script)()
+coroutine.wrap(VHODWR_fake_script)()
+coroutine.wrap(FTWAS_fake_script)()
+coroutine.wrap(HHAAHPD_fake_script)()
+coroutine.wrap(LRBEWJ_fake_script)()
+coroutine.wrap(NNIBGL_fake_script)()
+coroutine.wrap(OFOP_fake_script)()
