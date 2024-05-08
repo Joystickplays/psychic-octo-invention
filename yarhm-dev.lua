@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.5.0
+-- YARHM by Imperial, version 1.5.1
 
 -- Instances:
 
@@ -451,7 +451,7 @@ end
 
 -- Fake Local Scripts:
 
-local function ISFKD_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function NIJLG_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -487,7 +487,7 @@ local function ISFKD_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpe
 		Transparency = 1
 	}):Play()
 end
-local function WGKRCLB_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function DBMBPD_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -533,7 +533,7 @@ local function WGKRCLB_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnCli
 	end)
 	
 end
-local function SJJU_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function DFGLB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -851,7 +851,7 @@ local function SJJU_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 		end
 	end
 end
-local function BVASG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function GGHR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -872,7 +872,7 @@ local function BVASG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.L
 		):Play()
 	end)
 end
-local function IJFHWAH_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function RBWLA_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -900,7 +900,7 @@ local function IJFHWAH_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
 	require(script.Parent.FUNCTIONS).notification("v1.5.0\n- Fixed MM2 Bugs\n- Shoot offset option added to MM2 module")
 end
-local function DRFBZK_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function MSIARE_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1210,7 +1210,7 @@ local function DRFBZK_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fa
 	
 	_G.Modules[2] = module
 end
-local function PTTHMKF_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function CAGLDJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1288,7 +1288,7 @@ local function PTTHMKF_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function MICMZ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1348,6 +1348,7 @@ local function MICMZ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 			local bguiclone = script.Parent.DroppedGunBGUI:Clone()
 			bguiclone.Parent = script.Parent
 			bguiclone.Adornee = workspace:FindFirstChild("GunDrop")
+			bguiclone.Enabled = true
 			bguiclone.Name = "DGBGUIClone"
 			require(script.Parent.FUNCTIONS).notification("Gun has been dropped! Find a yellow highlight.")
 		end
@@ -1494,6 +1495,7 @@ local function MICMZ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 						local bguiclone = script.Parent.DroppedGunBGUI:Clone()
 						bguiclone.Parent = script.Parent
 						bguiclone.Adornee = workspace:FindFirstChild("GunDrop")
+						bguiclone.Enabled = true
 						bguiclone.Name = "DGBGUIClone"
 						require(script.Parent.FUNCTIONS).notification("Gun has been dropped! Find a yellow highlight.")
 					end
@@ -1570,11 +1572,11 @@ local function MICMZ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	
 end
 
-coroutine.wrap(ISFKD_fake_script)()
-coroutine.wrap(WGKRCLB_fake_script)()
-coroutine.wrap(SJJU_fake_script)()
-coroutine.wrap(BVASG_fake_script)()
-coroutine.wrap(IJFHWAH_fake_script)()
-coroutine.wrap(DRFBZK_fake_script)()
-coroutine.wrap(PTTHMKF_fake_script)()
-coroutine.wrap(MICMZ_fake_script)()
+coroutine.wrap(NIJLG_fake_script)()
+coroutine.wrap(DBMBPD_fake_script)()
+coroutine.wrap(DFGLB_fake_script)()
+coroutine.wrap(GGHR_fake_script)()
+coroutine.wrap(RBWLA_fake_script)()
+coroutine.wrap(MSIARE_fake_script)()
+coroutine.wrap(CAGLDJ_fake_script)()
+coroutine.wrap(MEYQQRC_fake_script)()
