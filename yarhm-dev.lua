@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.5.1
+-- YARHM by Imperial, version 1.5.2
 
 -- Instances:
 
@@ -1430,6 +1430,7 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 		if ch.Name == "Normal" and playerESP then
 			require(script.Parent.FUNCTIONS).notification("Game ended, removing Player ESPs.")
 			for _, v in ipairs(script.Parent:GetChildren()) do if v.Name == "PlayerESP" then v:Destroy() end end
+			for _, v in ipairs(script.Parent:GetChildren()) do if v.Name == "DGBGUIClone" then v:Destroy() end end
 		end
 	end)
 	
