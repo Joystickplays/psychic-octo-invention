@@ -1277,6 +1277,7 @@ local function OFOP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	
 	local playerESP = false
 	local sheriffAimbot = false
+	local shootOffset = 1
 	
 	local function findMurderer()
 		for _, i in ipairs(game.Players:GetPlayers()) do
@@ -1488,23 +1489,35 @@ local function OFOP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 			end
 			local args = {
 				[1] = 1,
-				[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position,
+				[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
 				[3] = "AH"
 			}
 	
 			game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 		end,}
 	}
+
+        module[4] = {
+		Type = "Input",
+		Args = {"Shoot offset", "Set", function(Self, text)
+				if not tonumber(text) then require(script.Parent.FUNCTIONS).notification("Not a valid number.") return end
+				shootOffset = tonumber(text)
+			end}
 	
-	module[4] = {
+	module[5] = {
 		Type = "Text",
 		Args = {"If you have Dropped gun ESP enabled, you will receive notifications whenever the gun is dropped or taken."}
 	}
 	
-	module[5] = {
+	module[6] = {
 		Type = "Text",
-		Args = {"Shoot murderer button will only kill the murderer if nothing's on the way between you and murderer"}
+		Args = {"Shoot murderer button will only kill the murderer if nothing's on the way between you and murderer."}
 	}
+
+        module[7] = {
+			Type = "Text",
+			Args = "Shoot offset will slightly offset the shoot direction to the murderer's walking direction incase the shot got laggy and the murderer already moved away."
+		}
 	
 	_G.Modules[3] = module
 	
