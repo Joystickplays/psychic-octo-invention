@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.6.0
+-- YARHM by Imperial, version 1.6.1
 
 -- Instances:
 
@@ -465,7 +465,7 @@ end
 
 -- Fake Local Scripts:
 
-local function KWDNIXE_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function RCED_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -501,7 +501,7 @@ local function KWDNIXE_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitO
 		Transparency = 1
 	}):Play()
 end
-local function NGJF_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function EORSE_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -547,7 +547,7 @@ local function NGJF_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function WQLDUON_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function GJOGX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -865,7 +865,7 @@ local function WQLDUON_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.
 		end
 	end
 end
-local function SWHPW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function YBLAJR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -886,7 +886,7 @@ local function SWHPW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.L
 		):Play()
 	end)
 end
-local function GXTSCC_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function KRZWO_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -916,7 +916,7 @@ local function GXTSCC_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
 	require(script.Parent.FUNCTIONS).notification("v1.6.0\n- Fixed MM2 Bugs\n- Added coins auto-collect in MM2 module")
 end
-local function WJXIYH_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function OEXGO_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1226,7 +1226,7 @@ local function WJXIYH_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fa
 	
 	_G.Modules[2] = module
 end
-local function DLJIL_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function ISEXI_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1304,7 +1304,7 @@ local function DLJIL_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function HQHR_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function UJAVOGG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1554,7 +1554,7 @@ local function HQHR_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	
 	module[3] = {
 		Type = "Text",
-		Args = "Tools"
+		Args = {"Tools"}
 	}
 	
 	module[4] = {
@@ -1620,11 +1620,11 @@ local function HQHR_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	
 end
 
-coroutine.wrap(KWDNIXE_fake_script)()
-coroutine.wrap(NGJF_fake_script)()
-coroutine.wrap(WQLDUON_fake_script)()
-coroutine.wrap(SWHPW_fake_script)()
-coroutine.wrap(GXTSCC_fake_script)()
-coroutine.wrap(WJXIYH_fake_script)()
-coroutine.wrap(DLJIL_fake_script)()
-coroutine.wrap(HQHR_fake_script)()
+coroutine.wrap(RCED_fake_script)()
+coroutine.wrap(EORSE_fake_script)()
+coroutine.wrap(GJOGX_fake_script)()
+coroutine.wrap(YBLAJR_fake_script)()
+coroutine.wrap(KRZWO_fake_script)()
+coroutine.wrap(OEXGO_fake_script)()
+coroutine.wrap(ISEXI_fake_script)()
+coroutine.wrap(UJAVOGG_fake_script)()
