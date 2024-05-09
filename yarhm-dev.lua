@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.5.2
+-- YARHM by Imperial, version 1.6.0
 
 -- Instances:
 
@@ -26,6 +26,8 @@ local Converted = {
 	["_Area"] = Instance.new("ScrollingFrame");
 	["_TextLabel"] = Instance.new("TextLabel");
 	["_TextLabel1"] = Instance.new("TextLabel");
+	["_UIStroke"] = Instance.new("UIStroke");
+	["_UIGradient"] = Instance.new("UIGradient");
 	["_Init"] = Instance.new("LocalScript");
 	["_ListButton"] = Instance.new("TextButton");
 	["_UICorner4"] = Instance.new("UICorner");
@@ -45,14 +47,14 @@ local Converted = {
 	["_UIPadding3"] = Instance.new("UIPadding");
 	["_TextBox"] = Instance.new("TextBox");
 	["_UICorner7"] = Instance.new("UICorner");
-	["_Murder Mystery 2"] = Instance.new("LocalScript");
 	["_FloatingButton"] = Instance.new("TextButton");
 	["_UICorner8"] = Instance.new("UICorner");
 	["_UIPadding4"] = Instance.new("UIPadding");
 	["_FloatingButtons"] = Instance.new("Frame");
 	["_DroppedGunBGUI"] = Instance.new("BillboardGui");
 	["_TextLabel3"] = Instance.new("TextLabel");
-	["_UIStroke"] = Instance.new("UIStroke");
+	["_UIStroke1"] = Instance.new("UIStroke");
+	["_Murder Mystery 2"] = Instance.new("LocalScript");
 }
 
 -- Properties:
@@ -130,8 +132,8 @@ Converted["_List"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_List"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
 Converted["_List"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_List"].BorderSizePixel = 0
-Converted["_List"].Position = UDim2.new(0.151006237, 0, 0.621328413, 0)
-Converted["_List"].Size = UDim2.new(0.328798175, 0, 0.813432813, 0)
+Converted["_List"].Position = UDim2.new(0.15770267, 0, 0.607306004, 0)
+Converted["_List"].Size = UDim2.new(0.315405339, 0, 0.785387993, 0)
 Converted["_List"].Name = "List"
 Converted["_List"].Parent = Converted["_Menu"]
 
@@ -158,7 +160,7 @@ Converted["_UIPadding"].PaddingLeft = UDim.new(0, 4)
 Converted["_UIPadding"].Parent = Converted["_ScrollingFrame"]
 
 Converted["_UIPadding1"].PaddingBottom = UDim.new(0, 10)
-Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 15)
+Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 10)
 Converted["_UIPadding1"].PaddingRight = UDim.new(0, 10)
 Converted["_UIPadding1"].PaddingTop = UDim.new(0, 10)
 Converted["_UIPadding1"].Parent = Converted["_List"]
@@ -239,6 +241,18 @@ Converted["_TextLabel1"].BorderSizePixel = 0
 Converted["_TextLabel1"].Position = UDim2.new(0.491272807, 0, 0.363785654, 0)
 Converted["_TextLabel1"].Size = UDim2.new(0, 135, 0, 33)
 Converted["_TextLabel1"].Parent = Converted["_Area"]
+
+Converted["_UIStroke"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke"].Thickness = 2
+Converted["_UIStroke"].Parent = Converted["_Menu"]
+
+Converted["_UIGradient"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)),
+	ColorSequenceKeypoint.new(0.4982699155807495, Color3.fromRGB(192.00000375509262, 192.00000375509262, 192.00000375509262)),
+	ColorSequenceKeypoint.new(0.6449925303459167, Color3.fromRGB(175.2659296989441, 175.2659296989441, 175.2659296989441)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(129.00000751018524, 129.00000751018524, 129.00000751018524))
+}
+Converted["_UIGradient"].Parent = Converted["_UIStroke"]
 
 Converted["_ListButton"].Font = Enum.Font.Gotham
 Converted["_ListButton"].Text = "Placeholder"
@@ -408,7 +422,7 @@ Converted["_TextLabel3"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_TextLabel3"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_TextLabel3"].Parent = Converted["_DroppedGunBGUI"]
 
-Converted["_UIStroke"].Parent = Converted["_TextLabel3"]
+Converted["_UIStroke1"].Parent = Converted["_TextLabel3"]
 
 -- Fake Module Scripts:
 
@@ -451,7 +465,7 @@ end
 
 -- Fake Local Scripts:
 
-local function NIJLG_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function KWDNIXE_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -487,7 +501,7 @@ local function NIJLG_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpe
 		Transparency = 1
 	}):Play()
 end
-local function DBMBPD_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function NGJF_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -533,7 +547,7 @@ local function DBMBPD_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClic
 	end)
 	
 end
-local function DFGLB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function WQLDUON_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -851,7 +865,7 @@ local function DFGLB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 		end
 	end
 end
-local function GGHR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function SWHPW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -872,7 +886,7 @@ local function GGHR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.Lo
 		):Play()
 	end)
 end
-local function RBWLA_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function GXTSCC_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -887,6 +901,8 @@ local function RBWLA_fake_script() -- Fake Script: StarterGui.YARHM.Init
 
 	_G.YARHM = script.Parent
 	
+	
+	
 	script.Parent.SafeAreaCompatibility = Enum.SafeAreaCompatibility.None
 	script.Parent.ScreenInsets = Enum.ScreenInsets.None
 	script.Parent.ResetOnSpawn = false
@@ -898,9 +914,9 @@ local function RBWLA_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.5.0\n- Fixed MM2 Bugs\n- Shoot offset option added to MM2 module")
+	require(script.Parent.FUNCTIONS).notification("v1.6.0\n- Fixed MM2 Bugs\n- Added coins auto-collect in MM2 module")
 end
-local function MSIARE_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function WJXIYH_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1210,7 +1226,7 @@ local function MSIARE_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fa
 	
 	_G.Modules[2] = module
 end
-local function CAGLDJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function DLJIL_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1288,7 +1304,7 @@ local function CAGLDJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function HQHR_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1306,6 +1322,7 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	
 	local playerESP = false
 	local sheriffAimbot = false
+	local coinAutoCollect = false
 	local shootOffset = 3.5
 	
 	local function findMurderer()
@@ -1341,25 +1358,7 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	end
 	
 	
-	workspace.ChildAdded:Connect(function(ch)
-		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
-			script.Parent:FindFirstChild("GunESP").Adornee = ch
-			script.Parent:FindFirstChild("GunESP").Enabled = true
-			local bguiclone = script.Parent.DroppedGunBGUI:Clone()
-			bguiclone.Parent = script.Parent
-			bguiclone.Adornee = workspace:FindFirstChild("GunDrop")
-			bguiclone.Enabled = true
-			bguiclone.Name = "DGBGUIClone"
-			require(script.Parent.FUNCTIONS).notification("Gun has been dropped! Find a yellow highlight.")
-		end
-	end)
 	
-	workspace.ChildRemoved:Connect(function(ch)
-		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
-			script.Parent:FindFirstChild("GunESP").Enabled = false
-			require(script.Parent.FUNCTIONS).notification("Someone has took the dropped gun.")
-		end
-	end)
 	
 	--task.spawn(function() 
 	--	if game:GetService("RunService"):IsStudio() then return end -- :)
@@ -1389,6 +1388,7 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	
 	module["Name"] = "Murder Mystery 2"
 	
+	-- Player ESP
 	workspace.ChildAdded:Connect(function(ch)
 		if ch.Name == "Normal" and playerESP then
 			require(script.Parent.FUNCTIONS).notification("Map has loaded, waiting for roles...")
@@ -1430,7 +1430,43 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 		if ch.Name == "Normal" and playerESP then
 			require(script.Parent.FUNCTIONS).notification("Game ended, removing Player ESPs.")
 			for _, v in ipairs(script.Parent:GetChildren()) do if v.Name == "PlayerESP" then v:Destroy() end end
-			for _, v in ipairs(script.Parent:GetChildren()) do if v.Name == "DGBGUIClone" then v:Destroy() end end
+		end
+	end)
+	
+	-- Dropped Gun ESP
+	workspace.ChildAdded:Connect(function(ch)
+		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
+			script.Parent:FindFirstChild("GunESP").Adornee = ch
+			script.Parent:FindFirstChild("GunESP").Enabled = true
+			local bguiclone = script.Parent.DroppedGunBGUI:Clone()
+			bguiclone.Parent = script.Parent
+			bguiclone.Adornee = workspace:FindFirstChild("GunDrop")
+			bguiclone.Enabled = true
+			bguiclone.Name = "DGBGUIClone"
+			require(script.Parent.FUNCTIONS).notification("Gun has been dropped! Find a yellow highlight.")
+		end
+	end)
+	
+	workspace.ChildRemoved:Connect(function(ch)
+		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
+			script.Parent:FindFirstChild("GunESP").Enabled = false
+			if script.Parent:FindFirstChild("DBGUIClone") then
+				script.Parent:FindFirstChild("DBGUIClone"):Destroy()
+			end
+			require(script.Parent.FUNCTIONS).notification("Someone has took the dropped gun.")
+		end
+	end)
+	
+	
+	-- Coin autocollect
+	workspace.ChildAdded:Connect(function(ch)
+		if ch.Name == "Normal" and coinAutoCollect then
+			repeat task.wait(1) until ch:FindFirstChild("CoinContainer")
+			ch:FindFirstChild("CoinContainer").ChildAdded:Connect(function(ch1)
+				if ch1.Name == "Coin_Server" then
+					game.Players.LocalPlayer.Character:MoveTo(Vector3.new(ch1:GetPivot().X, ch1:GetPivot().Y, ch1:GetPivot().Z))
+				end
+			end)
 		end
 	end)
 	
@@ -1447,6 +1483,7 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 				if script.Parent:FindFirstChild("PlayerESP") then
 					playerESP = false
 					for _, i in ipairs(script.Parent:GetChildren()) do if i.Name=="PlayerESP" then i:Destroy() end end
+					for _, i in ipairs(script.Parent:GetChildren()) do if i.Name=="DGBGUIClone" then i:Destroy() end end	
 				else
 					playerESP = true
 					local listplayers = game.Players:GetChildren()
@@ -1516,6 +1553,11 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	}
 	
 	module[3] = {
+		Type = "Text",
+		Args = "Tools"
+	}
+	
+	module[4] = {
 		Type = "Button",
 		Args = {"Shoot murderer", function(Self)
 			if findSheriff() ~= game.Players.LocalPlayer then require(script.Parent.FUNCTIONS).notification("You don't have the gun.") return end
@@ -1543,11 +1585,6 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 		end,}
 	}
 	
-	module[4] = {
-		Type = "Text",
-		Args = {"If you have Dropped gun ESP enabled, you will receive notifications whenever the gun is dropped or taken."}
-	}
-	
 	module[5] = {
 		Type = "Input",
 		Args = {"Shoot position offset", "Set", function(Self, text)
@@ -1569,15 +1606,25 @@ local function MEYQQRC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 		Args = {"The automatic murderer's shots can miss when the murderer moves. Shoot offset adjusts for the murderer's movement. Recommended is 3."}
 	}
 	
+	module[7] = {
+		Type = "ButtonGrid",
+		Toggleable = true,
+		Args = {1, {
+			Coins_Autocollect = function()
+				coinAutoCollect = not coinAutoCollect
+			end,
+		}}
+	}
+	
 	_G.Modules[3] = module
 	
 end
 
-coroutine.wrap(NIJLG_fake_script)()
-coroutine.wrap(DBMBPD_fake_script)()
-coroutine.wrap(DFGLB_fake_script)()
-coroutine.wrap(GGHR_fake_script)()
-coroutine.wrap(RBWLA_fake_script)()
-coroutine.wrap(MSIARE_fake_script)()
-coroutine.wrap(CAGLDJ_fake_script)()
-coroutine.wrap(MEYQQRC_fake_script)()
+coroutine.wrap(KWDNIXE_fake_script)()
+coroutine.wrap(NGJF_fake_script)()
+coroutine.wrap(WQLDUON_fake_script)()
+coroutine.wrap(SWHPW_fake_script)()
+coroutine.wrap(GXTSCC_fake_script)()
+coroutine.wrap(WJXIYH_fake_script)()
+coroutine.wrap(DLJIL_fake_script)()
+coroutine.wrap(HQHR_fake_script)()
