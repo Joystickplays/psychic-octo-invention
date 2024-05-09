@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.6.1
+-- YARHM by Imperial, version 1.6.2
 
 -- Instances:
 
@@ -465,7 +465,7 @@ end
 
 -- Fake Local Scripts:
 
-local function RCED_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function QIDXCBT_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -501,7 +501,7 @@ local function RCED_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
 		Transparency = 1
 	}):Play()
 end
-local function EORSE_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function ISJHOX_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -547,7 +547,7 @@ local function EORSE_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function GJOGX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function HFJDYYF_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -865,7 +865,7 @@ local function GJOGX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 		end
 	end
 end
-local function YBLAJR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function QOZMY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -886,7 +886,7 @@ local function YBLAJR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.
 		):Play()
 	end)
 end
-local function KRZWO_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function FWKOZ_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -914,9 +914,9 @@ local function KRZWO_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.6.0\n- Fixed MM2 Bugs\n- Added coins auto-collect in MM2 module")
+	require(script.Parent.FUNCTIONS).notification("v1.6\n- Fixed MM2 Bugs\n- Added coins auto-collect in MM2 module")
 end
-local function OEXGO_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function ZALA_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1226,7 +1226,7 @@ local function OEXGO_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fac
 	
 	_G.Modules[2] = module
 end
-local function ISEXI_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function UYUK_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1304,7 +1304,7 @@ local function ISEXI_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function UJAVOGG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function TGMQXBK_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1459,16 +1459,33 @@ local function UJAVOGG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	
 	
 	-- Coin autocollect
-	workspace.ChildAdded:Connect(function(ch)
-		if ch.Name == "Normal" and coinAutoCollect then
-			repeat task.wait(1) until ch:FindFirstChild("CoinContainer")
-			ch:FindFirstChild("CoinContainer").ChildAdded:Connect(function(ch1)
-				if ch1.Name == "Coin_Server" then
-					game.Players.LocalPlayer.Character:MoveTo(Vector3.new(ch1:GetPivot().X, ch1:GetPivot().Y, ch1:GetPivot().Z))
+	task.spawn(
+		function()
+			while task.wait(0.1) do
+				if not coinAutoCollect then continue end
+				
+				if workspace:FindFirstChild("Normal") then
+					if workspace:FindFirstChild("Normal"):FindFirstChild("CoinContainer") then
+						local coin = workspace.Normal.CoinContainer:FindFirstChild("Coin_Server")
+						if not coin then continue end
+						local coinPosition = coin.Position
+						local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+						local rayDirection = coinPosition - characterRootPart.Position
+	
+						local raycastParams = RaycastParams.new()
+						raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+						raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+						
+						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
+						
+						if not hit or hit.Instance == coin then -- Check if nothing collides or if it collides with the coin
+							game.Players.LocalPlayer.Character:MoveTo(Vector3.new(coin:GetPivot().X, coin:GetPivot().Y, coin:GetPivot().Z))
+						end
+					end
 				end
-			end)
+			end
 		end
-	end)
+	)
 	
 	module[1] = {
 		Type = "Text",
@@ -1610,7 +1627,7 @@ local function UJAVOGG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 		Type = "ButtonGrid",
 		Toggleable = true,
 		Args = {1, {
-			Coins_Autocollect = function()
+			Coins_Magnet = function()
 				coinAutoCollect = not coinAutoCollect
 			end,
 		}}
@@ -1620,11 +1637,11 @@ local function UJAVOGG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	
 end
 
-coroutine.wrap(RCED_fake_script)()
-coroutine.wrap(EORSE_fake_script)()
-coroutine.wrap(GJOGX_fake_script)()
-coroutine.wrap(YBLAJR_fake_script)()
-coroutine.wrap(KRZWO_fake_script)()
-coroutine.wrap(OEXGO_fake_script)()
-coroutine.wrap(ISEXI_fake_script)()
-coroutine.wrap(UJAVOGG_fake_script)()
+coroutine.wrap(QIDXCBT_fake_script)()
+coroutine.wrap(ISJHOX_fake_script)()
+coroutine.wrap(HFJDYYF_fake_script)()
+coroutine.wrap(QOZMY_fake_script)()
+coroutine.wrap(FWKOZ_fake_script)()
+coroutine.wrap(ZALA_fake_script)()
+coroutine.wrap(UYUK_fake_script)()
+coroutine.wrap(TGMQXBK_fake_script)()
