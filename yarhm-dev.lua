@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.8.0
+-- YARHM by Imperial, version 1.8.1
 
 -- Instances:
 
@@ -87,6 +87,7 @@ local Converted = {
 	["_UIPadding8"] = Instance.new("UIPadding");
 	["_UIStroke7"] = Instance.new("UIStroke");
 	["_LocalScript3"] = Instance.new("LocalScript");
+	["_MM2 Autoplay"] = Instance.new("LocalScript");
 }
 
 -- Properties:
@@ -523,7 +524,7 @@ Converted["_AddCustomModule1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_AddCustomModule1"].BorderSizePixel = 0
 Converted["_AddCustomModule1"].ClipsDescendants = true
 Converted["_AddCustomModule1"].Position = UDim2.new(0.5, 0, -0.310000002, 0)
-Converted["_AddCustomModule1"].Size = UDim2.new(0.566838026, 0, 0.542510092, 0)
+Converted["_AddCustomModule1"].Size = UDim2.new(0, 440, 0, 268)
 Converted["_AddCustomModule1"].Name = "AddCustomModule"
 Converted["_AddCustomModule1"].Parent = Converted["_YARHM"]
 
@@ -568,7 +569,6 @@ Converted["_TextLabel4"].Size = UDim2.new(0.619047642, 0, 0.125920027, 0)
 Converted["_TextLabel4"].Parent = Converted["_AddCustomModule1"]
 
 Converted["_TextBox1"].ClearTextOnFocus = false
-Converted["_TextBox1"].CursorPosition = -1
 Converted["_TextBox1"].Font = Enum.Font.Gotham
 Converted["_TextBox1"].PlaceholderText = "Custom module link"
 Converted["_TextBox1"].Text = ""
@@ -997,7 +997,7 @@ end
 
 -- Fake Local Scripts:
 
-local function IQLA_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function RCEC_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1033,7 +1033,7 @@ local function IQLA_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
 		Transparency = 1
 	}):Play()
 end
-local function ZGKKXH_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function MYDNE_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1079,7 +1079,7 @@ local function ZGKKXH_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClic
 	end)
 	
 end
-local function IODKLOQ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function RGCES_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1127,7 +1127,7 @@ local function IODKLOQ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.
 	task.wait(1) -- magic number to wait modules to load lmao
 	require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
 end
-local function GZNSK_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function DPQS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1148,7 +1148,7 @@ local function GZNSK_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.L
 		):Play()
 	end)
 end
-local function VCYRH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function XZHWSF_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1172,7 +1172,7 @@ local function VCYRH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCust
 		}):Play()
 	end)
 end
-local function BOIWZ_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function MTHSO_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1202,7 +1202,7 @@ local function BOIWZ_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
 	require(script.Parent.FUNCTIONS).notification("v1.8\n- Added a way to add custom module through raw link\n- Changed how the general UI looked")
 end
-local function FTGE_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function LHJHHS_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1512,7 +1512,7 @@ local function FTGE_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	
 	_G.Modules[2] = module
 end
-local function HKDW_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function FKBHNHV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1590,7 +1590,7 @@ local function HKDW_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function LKWQGQB_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function DTBAVMP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -2011,7 +2011,7 @@ local function LKWQGQB_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	_G.Modules[3] = module
 	
 end
-local function IRXPOR_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function DQWPX_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2036,7 +2036,7 @@ local function IRXPOR_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		
 		local lastmodule = _G.Modules[#_G.Modules]
 		require(script.Parent.Parent.Parent.FUNCTIONS).notification("Module is loading...")
-		coroutine.wrap(loadstring(game:HttpGet(script.Parent.Parent.TextBox.Text))())
+		coroutine.wrap(loadstring(game:HttpGet(script.Parent.Parent.TextBox.Text)))
 		task.wait(5)
 		if _G.Modules[#_G.Modules] ~= lastmodule then
 			local newmodule = _G.Modules[#_G.Modules]
@@ -2047,7 +2047,7 @@ local function IRXPOR_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		end
 	end)
 end
-local function YWRR_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function QWDBM_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2071,15 +2071,409 @@ local function YWRR_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 		}):Play()
 	end)
 end
+local function LVWERM_fake_script() -- Fake Script: StarterGui.YARHM.MM2 Autoplay
+    local script = Instance.new("LocalScript")
+    script.Name = "MM2 Autoplay"
+    script.Parent = Converted["_YARHM"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
 
-coroutine.wrap(IQLA_fake_script)()
-coroutine.wrap(ZGKKXH_fake_script)()
-coroutine.wrap(IODKLOQ_fake_script)()
-coroutine.wrap(GZNSK_fake_script)()
-coroutine.wrap(VCYRH_fake_script)()
-coroutine.wrap(BOIWZ_fake_script)()
-coroutine.wrap(FTGE_fake_script)()
-coroutine.wrap(HKDW_fake_script)()
-coroutine.wrap(LKWQGQB_fake_script)()
-coroutine.wrap(IRXPOR_fake_script)()
-coroutine.wrap(YWRR_fake_script)()
+	local module = {}
+	module["Name"] = "MM2 Autoplay"
+	script = _G.YARHM:WaitForChild(module["Name"])
+	
+	
+	local autoplay = true
+	
+	local phs = game:GetService("PathfindingService")
+	
+	local fu = require(script.Parent.FUNCTIONS)
+	
+	local function findMurderer()
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i.Backpack:FindFirstChild("Knife") then
+				return i
+			end
+		end
+	
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i.Character:FindFirstChild("Knife") then
+				return i
+			end
+		end
+	
+		return nil
+	end
+	
+	local function findSheriff()
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i.Backpack:FindFirstChild("Gun") then
+				return i
+			end
+		end
+	
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i.Character:FindFirstChild("Gun") then
+				return i
+			end
+		end
+	
+		return nil
+	end
+	
+	
+	
+	
+	
+	
+	-- Player ESP
+	workspace.ChildAdded:Connect(function(ch)
+		if ch.Name == "Normal" and playerESP then
+			fu.notification("Map has loaded, waiting for roles...")
+			repeat
+				task.wait(1)
+			until findMurderer()
+			local listplayers = game.Players:GetChildren()
+			for _, player in ipairs(listplayers) do
+				if  player.Character ~= nil then
+					local character = player.Character
+					if not character:FindFirstChild("PlayerESP") then
+						local a = Instance.new("Highlight", script.Parent)
+						a.Name = "PlayerESP"
+						a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+						a.Adornee = character
+						a.FillColor = Color3.fromRGB(255, 255, 255)
+						task.spawn(function()
+							task.wait(1.5)
+							if player == findMurderer() then
+								a.FillColor = Color3.fromRGB(255,0,0)
+							elseif player == findSheriff() then
+								a.FillColor = Color3.fromRGB(0, 150, 255)
+							else
+								a.FillColor = Color3.fromRGB(0,255,0)
+							end
+							if a then
+								if not player then return end
+								a.Adornee = player.Character or player.CharactedAdded:Wait()
+							end
+						end)
+					end
+				end
+			end
+			fu.notification("Player ESP reloaded.")
+		end
+	end)
+	
+	workspace.ChildRemoved:Connect(function(ch)
+		if ch.Name == "Normal" and playerESP then
+			fu.notification("Game ended, removing Player ESPs.")
+			for _, v in ipairs(script.Parent:GetChildren()) do if v.Name == "PlayerESP" then v:Destroy() end end
+		end
+	end)
+	
+	-- Dropped Gun ESP
+	workspace.ChildAdded:Connect(function(ch)
+		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
+			script.Parent:FindFirstChild("GunESP").Adornee = ch
+			script.Parent:FindFirstChild("GunESP").Enabled = true
+			local bguiclone = script.Parent.DroppedGunBGUI:Clone()
+			bguiclone.Parent = script.Parent
+			bguiclone.Adornee = workspace:FindFirstChild("GunDrop")
+			bguiclone.Enabled = true
+			bguiclone.Name = "DGBGUIClone"
+			fu.notification("Gun has been dropped! Find a yellow highlight.")
+		end
+	end)
+	
+	workspace.ChildRemoved:Connect(function(ch)
+		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
+			script.Parent:FindFirstChild("GunESP").Enabled = false
+			if script.Parent:FindFirstChild("DBGUIClone") then
+				script.Parent:FindFirstChild("DBGUIClone"):Destroy()
+			end
+			fu.notification("Someone has took the dropped gun.")
+		end
+	end)
+	
+	
+	-- Coin autocollect
+	task.spawn(
+		function()
+			while task.wait(0.1) do
+				if not coinAutoCollect then continue end
+				
+				if workspace:FindFirstChild("Normal") then
+					if workspace:FindFirstChild("Normal"):FindFirstChild("CoinContainer") then
+						local coin = workspace.Normal.CoinContainer:FindFirstChild("Coin_Server")
+						if not coin then continue end
+						local coinPosition = coin.Position
+						local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+						local rayDirection = coinPosition * 3
+	
+						local raycastParams = RaycastParams.new()
+						raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+						raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+						
+						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
+						
+						if not hit or hit.Instance == coin then -- Check if nothing collides or if it collides with the coin
+							game.Players.LocalPlayer.Character:MoveTo(Vector3.new(coin:GetPivot().X, coin:GetPivot().Y, coin:GetPivot().Z))
+						end
+					end
+				end
+			end
+		end
+	)
+	
+	-- Auto shoot
+	task.spawn(function()
+		game:GetService("Players").LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(function(ch)
+			if ch.Name == "Gun" and autoShooting then
+				repeat
+					task.wait(1)
+					local murderer = findMurderer()
+					if not murderer then continue end
+					local murdererPosition = murderer.Position
+					local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+					local rayDirection = murdererPosition * 3
+	
+					local raycastParams = RaycastParams.new()
+					raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+					raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+	
+					local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
+	
+					if not hit or hit.Instance == murderer then -- Check if nothing collides or if it collides with the murderer
+						print("Attempting to shoot murderer.")
+						if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+							local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+							if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+								game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+							else
+								fu.notification("You don't have the gun..?")
+								return
+							end
+						end
+						local args = {
+							[1] = 1,
+							[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
+							[3] = "AH"
+						}
+	
+						game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+					end
+				until findSheriff() ~= game.Players.LocalPlayer or not game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") or not autoShooting
+			end
+		end)
+	end)
+	
+	module[1] = {
+		Type = "Text",
+		Args = {"ESPs"}
+	}
+	
+	module[2] = {
+		Type = "ButtonGrid",
+		Toggleable = true,
+		Args = {2, {
+			Players = function()
+				if script.Parent:FindFirstChild("PlayerESP") then
+					playerESP = false
+					for _, i in ipairs(script.Parent:GetChildren()) do if i.Name=="PlayerESP" then i:Destroy() end end
+					for _, i in ipairs(script.Parent:GetChildren()) do if i.Name=="DGBGUIClone" then i:Destroy() end end	
+				else
+					playerESP = true
+					local listplayers = game.Players:GetChildren()
+					for _, player in ipairs(listplayers) do
+						if  player.Character ~= nil then
+							local character = player.Character
+							if not character:FindFirstChild("PlayerESP") then
+								local a = Instance.new("Highlight", script.Parent)
+								a.Name = "PlayerESP"
+								a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+								a.Adornee = character
+								a.FillColor = Color3.fromRGB(255, 255, 255)
+								task.spawn(function()
+									task.wait(1.5)
+									if player == findMurderer() then
+										a.FillColor = Color3.fromRGB(255,0,0)
+									elseif player == findSheriff() then
+										a.FillColor = Color3.fromRGB(0, 150, 255)
+									else
+										a.FillColor = Color3.fromRGB(0,255,0)
+									end
+									if a then
+										if not player then return end
+										a.Adornee = player.Character or player.CharactedAdded:Wait()
+									end
+								end)
+							end
+						end
+					end
+				end
+			end,
+	
+			Dropped_Gun = function()
+				if script.Parent:FindFirstChild("GunESP") then
+					for _, i in ipairs(script.Parent:GetChildren()) do if i.Name=="GunESP" then i:Destroy() end end
+					for _, i in ipairs(script.Parent:GetChildren()) do if i.Name=="DGBGUIClone" then i:Destroy() end end
+				else
+					local gunesp = Instance.new("Highlight", script.Parent)
+					gunesp.OutlineTransparency = 1
+					gunesp.FillColor = Color3.fromRGB(255, 255, 0)
+					gunesp.Name = "GunESP"
+					gunesp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+					gunesp.Enabled = false
+					if workspace:FindFirstChild("GunDrop") then
+						gunesp.Adornee = workspace:FindFirstChild("GunDrop")
+						gunesp.Enabled = true
+						local bguiclone = script.Parent.DroppedGunBGUI:Clone()
+						bguiclone.Parent = script.Parent
+						bguiclone.Adornee = workspace:FindFirstChild("GunDrop")
+						bguiclone.Enabled = true
+						bguiclone.Name = "DGBGUIClone"
+						fu.notification("Gun has been dropped! Find a yellow highlight.")
+					end
+	
+				end
+			end,
+			
+			--Sheriff_Aimbot = function()
+			--	if sheriffAimbot then
+			--		sheriffAimbot = false
+			--	else
+			--		sheriffAimbot = true
+			--		fu.notification("This will correct your shot to shoot murderer directly.")
+			--	end
+			--end,
+		}}
+	}
+	
+	module[3] = {
+		Type = "Text",
+		Args = {"Tools"}
+	}
+	
+	module[4] = {
+		Type = "Button",
+		Args = {"Shoot murderer", function(Self)
+			if findSheriff() ~= game.Players.LocalPlayer then fu.notification("You're not sheriff/hero.") return end
+			if not findMurderer() then
+				fu.notification("No murderer to shoot.")
+				return
+			end
+			
+			if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+					game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+				else
+					fu.notification("You don't have the gun..?")
+					return
+				end
+			end
+			local args = {
+				[1] = 1,
+				[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
+				[3] = "AH"
+			}
+	
+			game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+		end,}
+	}
+	
+	module[5] = {
+		Type = "Input",
+		Args = {"Shoot position offset", "Set", function(Self, text)
+			if not tonumber(text) then fu.notification("Not a valid number.") return end
+			
+			if tonumber(text) > 10 then
+				fu.notification("An offset with a multiplier of 10 might not at all shoot the murderer!")
+			end
+			if tonumber(text) < 0 then
+				fu.notification("An offset with a negative multiplier will make a shot BEHIND the murderer's walk direction.")
+			end
+			shootOffset = tonumber(text)
+			fu.notification("Offset has been set.")
+		end,}
+	}
+	
+	module[6] = {
+		Type = "Text",
+		Args = {"The automatic murderer's shots can miss when the murderer moves. Shoot offset adjusts for the murderer's movement. Recommended is 3."}
+	}
+	
+	module[7] = {
+		Type = "ButtonGrid",
+		Toggleable = true,
+		Args = {1, {
+			Coins_Magnet = function()
+				coinAutoCollect = not coinAutoCollect
+				if coinAutoCollect then
+					fu.notification("Coins magnet is currently buggy right now. Use at your own risk.")
+				end
+			end,
+			Auto_Shoot_murderer = function()
+				autoShooting = not autoShooting
+			end,
+		}}
+	}
+	
+	module[8] = {Type="Text", Args={""}}
+	
+	module[9] = {
+		Type = "Text",
+		Args = {"The tools below can be <font color='#FF0000'> detected,</font> both game-wise and player-wise. Use at your own risk.", "center"}
+	}
+	
+	module[10] = {
+		Type = "Button",
+		Args = {"Fast-move to dropped gun", function(Self)
+			if not workspace:FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") return end
+			fu.notification("Attempting a pathfind to gun..")
+			
+			local pathToGun = phs:CreatePath({
+				AgentRadius = 3,
+				AgentHeight = game.Players.LocalPlayer.Character:GetExtentsSize().Y,
+				AgentCanJump = true
+			})
+			local completed, err = pcall(function()
+				pathToGun:ComputeAsync(game.Players.LocalPlayer.Character.PrimaryPart.Position, Vector3.new(workspace:FindFirstChild("GunDrop"):GetPivot().X, workspace:FindFirstChild("GunDrop"):GetPivot().Y, workspace:FindFirstChild("GunDrop"):GetPivot().Z))
+			end)
+			
+			if completed and pathToGun.Status == Enum.PathStatus.Success then
+				fu.notification("Found a path. Moving.")
+				for _, waypoint in pathToGun:GetWaypoints() do
+					task.wait(0.1)
+					game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), TweenInfo.new(0.1, Enum.EasingStyle.Linear), {
+						CFrame = CFrame.new(waypoint.Position + Vector3.new(0, 3, 0))	
+					}):Play()
+				end
+			else
+				fu.notification("Couldn't find a proper path to gun. Try moving a little closer to the gun.")
+			end
+		end,}
+	}
+	
+	_G.Modules[3] = module
+	
+end
+
+coroutine.wrap(RCEC_fake_script)()
+coroutine.wrap(MYDNE_fake_script)()
+coroutine.wrap(RGCES_fake_script)()
+coroutine.wrap(DPQS_fake_script)()
+coroutine.wrap(XZHWSF_fake_script)()
+coroutine.wrap(MTHSO_fake_script)()
+coroutine.wrap(LHJHHS_fake_script)()
+coroutine.wrap(FKBHNHV_fake_script)()
+coroutine.wrap(DTBAVMP_fake_script)()
+coroutine.wrap(DQWPX_fake_script)()
+coroutine.wrap(QWDBM_fake_script)()
+coroutine.wrap(LVWERM_fake_script)()
