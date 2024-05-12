@@ -19,3 +19,4 @@ module[2] = {
 
 
 _G.Modules[#_G.Modules] = module
+return module
