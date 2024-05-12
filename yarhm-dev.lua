@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.8.2
+-- YARHM by Imperial, version 1.8.3
 
 -- Instances:
 
@@ -41,7 +41,6 @@ local Converted = {
 	["_Init"] = Instance.new("LocalScript");
 	["_ListButton"] = Instance.new("TextButton");
 	["_UICorner5"] = Instance.new("UICorner");
-	["_UIStroke3"] = Instance.new("UIStroke");
 	["_FUNCTIONS"] = Instance.new("ModuleScript");
 	["_Notifications"] = Instance.new("Frame");
 	["_UIListLayout1"] = Instance.new("UIListLayout");
@@ -64,11 +63,11 @@ local Converted = {
 	["_FloatingButtons"] = Instance.new("Frame");
 	["_DroppedGunBGUI"] = Instance.new("BillboardGui");
 	["_TextLabel3"] = Instance.new("TextLabel");
-	["_UIStroke4"] = Instance.new("UIStroke");
+	["_UIStroke3"] = Instance.new("UIStroke");
 	["_Murder Mystery 2"] = Instance.new("LocalScript");
 	["_AddCustomModule1"] = Instance.new("Frame");
 	["_UICorner10"] = Instance.new("UICorner");
-	["_UIStroke5"] = Instance.new("UIStroke");
+	["_UIStroke4"] = Instance.new("UIStroke");
 	["_UIGradient4"] = Instance.new("UIGradient");
 	["_UIGradient5"] = Instance.new("UIGradient");
 	["_UIScale1"] = Instance.new("UIScale");
@@ -80,12 +79,12 @@ local Converted = {
 	["_Add"] = Instance.new("TextButton");
 	["_UICorner12"] = Instance.new("UICorner");
 	["_UIPadding7"] = Instance.new("UIPadding");
-	["_UIStroke6"] = Instance.new("UIStroke");
+	["_UIStroke5"] = Instance.new("UIStroke");
 	["_LocalScript2"] = Instance.new("LocalScript");
 	["_Cancel"] = Instance.new("TextButton");
 	["_UICorner13"] = Instance.new("UICorner");
 	["_UIPadding8"] = Instance.new("UIPadding");
-	["_UIStroke7"] = Instance.new("UIStroke");
+	["_UIStroke6"] = Instance.new("UIStroke");
 	["_LocalScript3"] = Instance.new("LocalScript");
 	["_MM2 Autoplay"] = Instance.new("LocalScript");
 }
@@ -360,10 +359,6 @@ Converted["_ListButton"].Parent = Converted["_YARHM"]
 
 Converted["_UICorner5"].Parent = Converted["_ListButton"]
 
-Converted["_UIStroke3"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke3"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke3"].Parent = Converted["_ListButton"]
-
 Converted["_Notifications"].AnchorPoint = Vector2.new(0, 0.5)
 Converted["_Notifications"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Notifications"].BackgroundTransparency = 1
@@ -516,7 +511,7 @@ Converted["_TextLabel3"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_TextLabel3"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_TextLabel3"].Parent = Converted["_DroppedGunBGUI"]
 
-Converted["_UIStroke4"].Parent = Converted["_TextLabel3"]
+Converted["_UIStroke3"].Parent = Converted["_TextLabel3"]
 
 Converted["_AddCustomModule1"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_AddCustomModule1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -530,9 +525,9 @@ Converted["_AddCustomModule1"].Parent = Converted["_YARHM"]
 
 Converted["_UICorner10"].Parent = Converted["_AddCustomModule1"]
 
-Converted["_UIStroke5"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke5"].Thickness = 2
-Converted["_UIStroke5"].Parent = Converted["_AddCustomModule1"]
+Converted["_UIStroke4"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke4"].Thickness = 2
+Converted["_UIStroke4"].Parent = Converted["_AddCustomModule1"]
 
 Converted["_UIGradient4"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(53.00000064074993, 53.00000064074993, 53.00000064074993)),
@@ -542,7 +537,7 @@ Converted["_UIGradient4"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(1, Color3.fromRGB(48.000000938773155, 48.000000938773155, 48.000000938773155))
 }
 Converted["_UIGradient4"].Rotation = 62
-Converted["_UIGradient4"].Parent = Converted["_UIStroke5"]
+Converted["_UIGradient4"].Parent = Converted["_UIStroke4"]
 
 Converted["_UIGradient5"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)),
@@ -630,9 +625,9 @@ Converted["_UIPadding7"].PaddingRight = UDim.new(0, 5)
 Converted["_UIPadding7"].PaddingTop = UDim.new(0, 5)
 Converted["_UIPadding7"].Parent = Converted["_Add"]
 
-Converted["_UIStroke6"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke6"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke6"].Parent = Converted["_Add"]
+Converted["_UIStroke5"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke5"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke5"].Parent = Converted["_Add"]
 
 Converted["_Cancel"].Font = Enum.Font.Gotham
 Converted["_Cancel"].Text = "Cancel"
@@ -657,9 +652,9 @@ Converted["_UIPadding8"].PaddingRight = UDim.new(0, 5)
 Converted["_UIPadding8"].PaddingTop = UDim.new(0, 5)
 Converted["_UIPadding8"].Parent = Converted["_Cancel"]
 
-Converted["_UIStroke7"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke7"].Color = Color3.fromRGB(255, 0, 0)
-Converted["_UIStroke7"].Parent = Converted["_Cancel"]
+Converted["_UIStroke6"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke6"].Color = Color3.fromRGB(255, 0, 0)
+Converted["_UIStroke6"].Parent = Converted["_Cancel"]
 
 -- Fake Module Scripts:
 
@@ -997,7 +992,7 @@ end
 
 -- Fake Local Scripts:
 
-local function QMLGPX_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function KIKJRUW_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1033,7 +1028,7 @@ local function QMLGPX_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOp
 		Transparency = 1
 	}):Play()
 end
-local function PQTWQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function ZKMMMMY_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1079,7 +1074,7 @@ local function PQTWQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function ANHWAB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function PGAST_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1127,7 +1122,7 @@ local function ANHWAB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.A
 	task.wait(1) -- magic number to wait modules to load lmao
 	require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
 end
-local function GZGLLC_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function MOLGL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1148,7 +1143,7 @@ local function GZGLLC_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.
 		):Play()
 	end)
 end
-local function YKBD_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function VUGRIYU_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1172,7 +1167,7 @@ local function YKBD_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCusto
 		}):Play()
 	end)
 end
-local function YPKLYK_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function XSZO_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1202,7 +1197,7 @@ local function YPKLYK_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
 	require(script.Parent.FUNCTIONS).notification("v1.8\n- Added a way to add custom module through raw link\n- Changed how the general UI looked")
 end
-local function QMGF_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function KQDPTTD_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1512,7 +1507,7 @@ local function QMGF_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	
 	_G.Modules[2] = module
 end
-local function NMUMZR_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function LWOTAD_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1590,7 +1585,7 @@ local function NMUMZR_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function CAXO_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function GIDDC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -2011,7 +2006,7 @@ local function CAXO_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	_G.Modules[3] = module
 	
 end
-local function AGVTWI_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function FFCXWCQ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2026,6 +2021,7 @@ local function AGVTWI_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 
 	local ts = game:GetService("TweenService")
 	
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		ts:Create(script.Parent.Parent.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 			Scale = 1
@@ -2034,9 +2030,13 @@ local function AGVTWI_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 			Position = UDim2.fromScale(0.5, -0.32)
 		}):Play()
 		
+		
 		local lastmodule = _G.Modules[#_G.Modules]
 		require(script.Parent.Parent.Parent.FUNCTIONS).notification("Module is loading...")
-		coroutine.wrap(loadstring(game:HttpGet(script.Parent.Parent.TextBox.Text)))
+		local newmodule = loadstring(game:HttpGet(script.Parent.Parent.TextBox.Text))()
+		if newmodule["BG_TASK"] then
+			coroutine.wrap(newmodule["BG_TASK"])()
+		end
 		task.wait(5)
 		if _G.Modules[#_G.Modules] ~= lastmodule then
 			local newmodule = _G.Modules[#_G.Modules]
@@ -2047,7 +2047,7 @@ local function AGVTWI_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		end
 	end)
 end
-local function THEBCB_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function TDJSDXT_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2071,7 +2071,7 @@ local function THEBCB_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		}):Play()
 	end)
 end
-local function ECANW_fake_script() -- Fake Script: StarterGui.YARHM.MM2 Autoplay
+local function JAXB_fake_script() -- Fake Script: StarterGui.YARHM.MM2 Autoplay
     local script = Instance.new("LocalScript")
     script.Name = "MM2 Autoplay"
     script.Parent = Converted["_YARHM"]
@@ -2465,15 +2465,15 @@ local function ECANW_fake_script() -- Fake Script: StarterGui.YARHM.MM2 Autoplay
 	
 end
 
-coroutine.wrap(QMLGPX_fake_script)()
-coroutine.wrap(PQTWQ_fake_script)()
-coroutine.wrap(ANHWAB_fake_script)()
-coroutine.wrap(GZGLLC_fake_script)()
-coroutine.wrap(YKBD_fake_script)()
-coroutine.wrap(YPKLYK_fake_script)()
-coroutine.wrap(QMGF_fake_script)()
-coroutine.wrap(NMUMZR_fake_script)()
-coroutine.wrap(CAXO_fake_script)()
-coroutine.wrap(AGVTWI_fake_script)()
-coroutine.wrap(THEBCB_fake_script)()
-coroutine.wrap(ECANW_fake_script)()
+coroutine.wrap(KIKJRUW_fake_script)()
+coroutine.wrap(ZKMMMMY_fake_script)()
+coroutine.wrap(PGAST_fake_script)()
+coroutine.wrap(MOLGL_fake_script)()
+coroutine.wrap(VUGRIYU_fake_script)()
+coroutine.wrap(XSZO_fake_script)()
+coroutine.wrap(KQDPTTD_fake_script)()
+coroutine.wrap(LWOTAD_fake_script)()
+coroutine.wrap(GIDDC_fake_script)()
+coroutine.wrap(FFCXWCQ_fake_script)()
+coroutine.wrap(TDJSDXT_fake_script)()
+coroutine.wrap(JAXB_fake_script)()
