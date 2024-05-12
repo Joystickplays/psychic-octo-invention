@@ -1,4 +1,4 @@
--- YARHM by Imperial, version 1.7.1
+-- YARHM by Imperial, version 1.7.2
 
 -- Instances:
 
@@ -465,7 +465,7 @@ end
 
 -- Fake Local Scripts:
 
-local function VTMHSS_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function WSFVVH_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -501,7 +501,7 @@ local function VTMHSS_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOp
 		Transparency = 1
 	}):Play()
 end
-local function FRIF_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function NDGVXZF_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -547,7 +547,7 @@ local function FRIF_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function SVFV_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function RXRX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -865,7 +865,7 @@ local function SVFV_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 		end
 	end
 end
-local function ZAJMQJV_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function TWBC_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -886,7 +886,7 @@ local function ZAJMQJV_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close
 		):Play()
 	end)
 end
-local function FAPDOC_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function GKHA_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -916,7 +916,7 @@ local function FAPDOC_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
 	require(script.Parent.FUNCTIONS).notification("v1.7\n- Added automatic shoot murderer in MM2 module\n- Added teleport to dropped gun (DETECTABLE)")
 end
-local function CKFH_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function UIDBH_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1226,7 +1226,7 @@ local function CKFH_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	
 	_G.Modules[2] = module
 end
-local function TXKBON_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function YKPB_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1304,7 +1304,7 @@ local function TXKBON_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function CYEKCJH_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function RSARX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1696,7 +1696,7 @@ local function CYEKCJH_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	module[10] = {
 		Type = "Button",
 		Args = {"Teleport to dropped gun", function(Self)
-			if not workspace:FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") end
+			if not workspace:FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") return end
 			fu.notification("Attempting a pathfind to gun..")
 			
 			local pathToGun = phs:CreatePath({
@@ -1724,11 +1724,11 @@ local function CYEKCJH_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	
 end
 
-coroutine.wrap(VTMHSS_fake_script)()
-coroutine.wrap(FRIF_fake_script)()
-coroutine.wrap(SVFV_fake_script)()
-coroutine.wrap(ZAJMQJV_fake_script)()
-coroutine.wrap(FAPDOC_fake_script)()
-coroutine.wrap(CKFH_fake_script)()
-coroutine.wrap(TXKBON_fake_script)()
-coroutine.wrap(CYEKCJH_fake_script)()
+coroutine.wrap(WSFVVH_fake_script)()
+coroutine.wrap(NDGVXZF_fake_script)()
+coroutine.wrap(RXRX_fake_script)()
+coroutine.wrap(TWBC_fake_script)()
+coroutine.wrap(GKHA_fake_script)()
+coroutine.wrap(UIDBH_fake_script)()
+coroutine.wrap(YKPB_fake_script)()
+coroutine.wrap(RSARX_fake_script)()
