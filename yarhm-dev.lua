@@ -1965,7 +1965,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 			Auto_Shoot_murderer = function()
 				autoShooting = not autoShooting
 				if findSheriff() == game.Players.LocalPlayer then
-					local hidebug = Instance.new("Highlight", game.Players.LocalPlayer.PlayerGui)
+					local hidebug = Instance.new("Highlight", _G.YARHM)
 					fu.notification("Have the gun.")
 					repeat
 						fu.notification("Iteration.")
