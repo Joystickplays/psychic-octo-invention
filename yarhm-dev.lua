@@ -1969,7 +1969,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 					fu.notification("Have the gun.")
 					repeat
 						fu.notification("Iteration.")
-						task.wait(1)
+						task.wait(0.1)
 						local murderer = findMurderer()
 						if not murderer then fu.notification("No murderer.") continue end
 						local murdererPosition = murderer.Character.HumanoidRootPart.Position
@@ -1984,7 +1984,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
 						fu.notification(hit.Instance.Name)
 						hidebug.Adornee = hit.Instance
-						if not hit or hit.Instance == murderer.Character then -- Check if nothing collides or if it collides with the murderer
+						if not hit or hit.Instance.Parent == murderer.Character then -- Check if nothing collides or if it collides with the murderer
 							fu.notification("Raycast hit murderer. Shooting.")
 							if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
 								local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
