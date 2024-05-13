@@ -1775,6 +1775,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	-- Auto shoot
 	game:GetService("Players").LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(function(ch)
 		if ch.Name == "Gun" and autoShooting then
+			
 			fu.notification("Have the gun.")
 			repeat
 				fu.notification("Iteration.")
@@ -1964,6 +1965,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 			Auto_Shoot_murderer = function()
 				autoShooting = not autoShooting
 				if findSheriff() == game.Players.LocalPlayer then
+					local hidebug = Instance.new("Highlight", game.Players.LocalPlayer.PlayerGui)
 					fu.notification("Have the gun.")
 					repeat
 						fu.notification("Iteration.")
@@ -1981,6 +1983,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 						fu.notification("Raycasting.")
 						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
 						fu.notification(hit.Instance.Name)
+						hidebug.Adornee = hit.Instance
 						if not hit or hit.Instance == murderer.Character then -- Check if nothing collides or if it collides with the murderer
 							fu.notification("Raycast hit murderer. Shooting.")
 							if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
