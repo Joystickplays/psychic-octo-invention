@@ -1773,48 +1773,44 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	)
 	
 	-- Auto shoot
-	game:GetService("Players").LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(function(ch)
-		if ch.Name == "Gun" and autoShooting then
-			
-			fu.notification("Have the gun.")
+	task.spawn(function()
+			while task.wait(1) do
+		if findSheriff() == game.Players.LocalPlayer and autoShooting then
 			repeat
-				fu.notification("Iteration.")
-				task.wait(1)
-				local murderer = findMurderer()
-				if not murderer then fu.notification("No murderer.") continue end
-				local murdererPosition = murderer.Character.HumanoidRootPart.Position
-				local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-				local rayDirection = murdererPosition * 3
+						task.wait(0.1)
+						local murderer = findMurderer()
+						if not murderer then fu.notification("No murderer.") continue end
+						local murdererPosition = murderer.Character.HumanoidRootPart.Position
+						local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+						local rayDirection = murdererPosition - characterRootPart.Position
 	
-				local raycastParams = RaycastParams.new()
-				raycastParams.FilterType = Enum.RaycastFilterType.Exclude
-				raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+						local raycastParams = RaycastParams.new()
+						raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+						raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
 	
-				fu.notification("Raycasting.")
-				local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
+						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
+						if not hit or hit.Instance.Parent == murderer.Character then -- Check if nothing collides or if it collides with the murderer
+							fe.notification("Auto-shooting!")
+								if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+								local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+								if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+									game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+								else
+									fu.notification("You don't have the gun..?")
+									return
+								end
+							end
+							local args = {
+								[1] = 1,
+								[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
+								[3] = "AH"
+							}
 	
-				if not hit or hit.Instance == murderer.Character then -- Check if nothing collides or if it collides with the murderer
-					fu.notification("Raycast hit murderer. Shooting.")
-					if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
-						local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
-						if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
-							game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
-						else
-							fu.notification("You don't have the gun..?")
-							return
+							game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 						end
-					end
-					local args = {
-						[1] = 1,
-						[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
-						[3] = "AH"
-					}
-	
-					game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
-				end
-			until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
-			fu.notification("Broke the loop.")	
+					until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
 		end
+			end
 	end)
 	
 	module[1] = {
@@ -1964,11 +1960,8 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 			end,
 			Auto_Shoot_murderer = function()
 				autoShooting = not autoShooting
-				if findSheriff() == game.Players.LocalPlayer then
-					local hidebug = Instance.new("Highlight", _G.YARHM)
-					fu.notification("Have the gun.")
+				if findSheriff() == game.Players.LocalPlayer and autoShooting then
 					repeat
-						fu.notification("Iteration.")
 						task.wait(0.1)
 						local murderer = findMurderer()
 						if not murderer then fu.notification("No murderer.") continue end
@@ -1980,13 +1973,10 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 						raycastParams.FilterType = Enum.RaycastFilterType.Exclude
 						raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
 	
-						fu.notification("Raycasting.")
 						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
-						fu.notification(hit.Instance.Name)
-						hidebug.Adornee = hit.Instance
 						if not hit or hit.Instance.Parent == murderer.Character then -- Check if nothing collides or if it collides with the murderer
-							fu.notification("Raycast hit murderer. Shooting.")
-							if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+							fe.notification("Auto-shooting!")
+								if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
 								local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
 								if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
 									game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
@@ -2004,7 +1994,6 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 							game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 						end
 					until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
-					fu.notification("Broke the loop.")	
 				end
 			end,
 		}}
