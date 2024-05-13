@@ -1972,7 +1972,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 						if not murderer then fu.notification("No murderer.") continue end
 						local murdererPosition = murderer.Character.HumanoidRootPart.Position
 						local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-						local rayDirection = murdererPosition * 3
+						local rayDirection = murdererPosition
 	
 						local raycastParams = RaycastParams.new()
 						raycastParams.FilterType = Enum.RaycastFilterType.Exclude
@@ -1980,7 +1980,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	
 						fu.notification("Raycasting.")
 						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
-	
+						fu.notification(hit.Instance)
 						if not hit or hit.Instance == murderer.Character then -- Check if nothing collides or if it collides with the murderer
 							fu.notification("Raycast hit murderer. Shooting.")
 							if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
