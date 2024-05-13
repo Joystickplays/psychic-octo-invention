@@ -1,5 +1,4 @@
--- YARHM by Imperial, version 1.8.8
-
+-- YARHM by Imperial, version 1.8.9
 -- Instances:
 
 local Converted = {
@@ -992,7 +991,7 @@ end
 
 -- Fake Local Scripts:
 
-local function IIALXID_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function LVIQBF_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1028,7 +1027,7 @@ local function IIALXID_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitO
 		Transparency = 1
 	}):Play()
 end
-local function PSIE_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function IILEQQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1074,7 +1073,7 @@ local function PSIE_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function WTKOE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function SVFG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1122,7 +1121,7 @@ local function WTKOE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 	task.wait(1) -- magic number to wait modules to load lmao
 	require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
 end
-local function TBSQWDO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function MJFBA_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1143,7 +1142,7 @@ local function TBSQWDO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close
 		):Play()
 	end)
 end
-local function MPNKZA_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function LEVAM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1167,7 +1166,7 @@ local function MPNKZA_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCus
 		}):Play()
 	end)
 end
-local function LNXZRHO_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function HNKFZUO_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1197,7 +1196,7 @@ local function LNXZRHO_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
 	require(script.Parent.FUNCTIONS).notification("v1.8\n- Added a way to add custom module through raw link\n- Changed how the general UI looked")
 end
-local function FRGWDV_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function AJIP_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1507,7 +1506,7 @@ local function FRGWDV_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fa
 	
 	_G.Modules[2] = module
 end
-local function IJUXE_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function IDFAB_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1585,7 +1584,7 @@ local function IJUXE_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function MYQTG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function RDRL_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1776,6 +1775,7 @@ local function MYQTG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	task.spawn(function()
 		game:GetService("Players").LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(function(ch)
 			if ch.Name == "Gun" and autoShooting then
+				fu.notification("Have the gun.")
 				repeat
 					fu.notification("Iteration.")
 					task.wait(1)
@@ -1811,7 +1811,8 @@ local function MYQTG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	
 						game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 					end
-				until findSheriff() ~= game.Players.LocalPlayer or not game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") or not autoShooting
+				until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
+				fu.notification("Broke the loop.")	
 			end
 		end)
 	end)
@@ -2006,7 +2007,7 @@ local function MYQTG_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	_G.Modules[3] = module
 	
 end
-local function RXVH_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function ATXSFS_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2047,7 +2048,7 @@ local function RXVH_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 		end
 	end)
 end
-local function USVHIN_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function RCTH_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2072,14 +2073,14 @@ local function USVHIN_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 	end)
 end
 
-coroutine.wrap(IIALXID_fake_script)()
-coroutine.wrap(PSIE_fake_script)()
-coroutine.wrap(WTKOE_fake_script)()
-coroutine.wrap(TBSQWDO_fake_script)()
-coroutine.wrap(MPNKZA_fake_script)()
-coroutine.wrap(LNXZRHO_fake_script)()
-coroutine.wrap(FRGWDV_fake_script)()
-coroutine.wrap(IJUXE_fake_script)()
-coroutine.wrap(MYQTG_fake_script)()
-coroutine.wrap(RXVH_fake_script)()
-coroutine.wrap(USVHIN_fake_script)()
+coroutine.wrap(LVIQBF_fake_script)()
+coroutine.wrap(IILEQQ_fake_script)()
+coroutine.wrap(SVFG_fake_script)()
+coroutine.wrap(MJFBA_fake_script)()
+coroutine.wrap(LEVAM_fake_script)()
+coroutine.wrap(HNKFZUO_fake_script)()
+coroutine.wrap(AJIP_fake_script)()
+coroutine.wrap(IDFAB_fake_script)()
+coroutine.wrap(RDRL_fake_script)()
+coroutine.wrap(ATXSFS_fake_script)()
+coroutine.wrap(RCTH_fake_script)()
