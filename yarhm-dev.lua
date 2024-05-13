@@ -1,4 +1,5 @@
--- YARHM by Imperial, version 1.8.9
+-- YARHM by Imperial, version 1.8.10
+
 -- Instances:
 
 local Converted = {
@@ -991,7 +992,7 @@ end
 
 -- Fake Local Scripts:
 
-local function LVIQBF_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function RPHVUVZ_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1027,7 +1028,7 @@ local function LVIQBF_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOp
 		Transparency = 1
 	}):Play()
 end
-local function IILEQQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function PPCR_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1073,7 +1074,7 @@ local function IILEQQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClic
 	end)
 	
 end
-local function SVFG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function EGRMQR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1121,7 +1122,7 @@ local function SVFG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 	task.wait(1) -- magic number to wait modules to load lmao
 	require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
 end
-local function MJFBA_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function RLIHN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1142,7 +1143,7 @@ local function MJFBA_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.L
 		):Play()
 	end)
 end
-local function LEVAM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function CFGL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1166,7 +1167,7 @@ local function LEVAM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCust
 		}):Play()
 	end)
 end
-local function HNKFZUO_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function PFZG_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1196,7 +1197,7 @@ local function HNKFZUO_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
 	require(script.Parent.FUNCTIONS).notification("v1.8\n- Added a way to add custom module through raw link\n- Changed how the general UI looked")
 end
-local function AJIP_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function RUYOL_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1506,7 +1507,7 @@ local function AJIP_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	
 	_G.Modules[2] = module
 end
-local function IDFAB_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function DYEICZ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1584,7 +1585,7 @@ local function IDFAB_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function RDRL_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function CPIK_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1772,49 +1773,47 @@ local function RDRL_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	)
 	
 	-- Auto shoot
-	task.spawn(function()
-		game:GetService("Players").LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(function(ch)
-			if ch.Name == "Gun" and autoShooting then
-				fu.notification("Have the gun.")
-				repeat
-					fu.notification("Iteration.")
-					task.wait(1)
-					local murderer = findMurderer()
-					if not murderer then fu.notification("No murderer.") continue end
-					local murdererPosition = murderer.Character.Position
-					local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-					local rayDirection = murdererPosition * 3
+	game:GetService("Players").LocalPlayer:WaitForChild("Backpack").ChildAdded:Connect(function(ch)
+		if ch.Name == "Gun" and autoShooting then
+			fu.notification("Have the gun.")
+			repeat
+				fu.notification("Iteration.")
+				task.wait(1)
+				local murderer = findMurderer()
+				if not murderer then fu.notification("No murderer.") continue end
+				local murdererPosition = murderer.Character.Position
+				local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+				local rayDirection = murdererPosition * 3
 	
-					local raycastParams = RaycastParams.new()
-					raycastParams.FilterType = Enum.RaycastFilterType.Exclude
-					raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
-					
-					fu.notification("Raycasting.")
-					local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
-					
-					if not hit or hit.Instance == murderer.Character then -- Check if nothing collides or if it collides with the murderer
-						fu.notification("Raycast hit murderer. Shooting.")
-						if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
-							local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
-							if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
-								game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
-							else
-								fu.notification("You don't have the gun..?")
-								return
-							end
+				local raycastParams = RaycastParams.new()
+				raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+				raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+	
+				fu.notification("Raycasting.")
+				local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
+	
+				if not hit or hit.Instance == murderer.Character then -- Check if nothing collides or if it collides with the murderer
+					fu.notification("Raycast hit murderer. Shooting.")
+					if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+						local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+						if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+							game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+						else
+							fu.notification("You don't have the gun..?")
+							return
 						end
-						local args = {
-							[1] = 1,
-							[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
-							[3] = "AH"
-						}
-	
-						game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 					end
-				until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
-				fu.notification("Broke the loop.")	
-			end
-		end)
+					local args = {
+						[1] = 1,
+						[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
+						[3] = "AH"
+					}
+	
+					game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+				end
+			until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
+			fu.notification("Broke the loop.")	
+		end
 	end)
 	
 	module[1] = {
@@ -1964,6 +1963,46 @@ local function RDRL_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 			end,
 			Auto_Shoot_murderer = function()
 				autoShooting = not autoShooting
+				if findSheriff() == game.Players.LocalPlayer then
+					fu.notification("Have the gun.")
+					repeat
+						fu.notification("Iteration.")
+						task.wait(1)
+						local murderer = findMurderer()
+						if not murderer then fu.notification("No murderer.") continue end
+						local murdererPosition = murderer.Character.Position
+						local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+						local rayDirection = murdererPosition * 3
+	
+						local raycastParams = RaycastParams.new()
+						raycastParams.FilterType = Enum.RaycastFilterType.Exclude
+						raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+	
+						fu.notification("Raycasting.")
+						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
+	
+						if not hit or hit.Instance == murderer.Character then -- Check if nothing collides or if it collides with the murderer
+							fu.notification("Raycast hit murderer. Shooting.")
+							if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+								local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+								if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+									game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+								else
+									fu.notification("You don't have the gun..?")
+									return
+								end
+							end
+							local args = {
+								[1] = 1,
+								[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
+								[3] = "AH"
+							}
+	
+							game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+						end
+					until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
+					fu.notification("Broke the loop.")	
+				end
 			end,
 		}}
 	}
@@ -1972,7 +2011,7 @@ local function RDRL_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	
 	module[9] = {
 		Type = "Text",
-		Args = {"The tools below can be <font color='#FF0000'> detected,</font> both game-wise and player-wise. Use at your own risk.", "center"}
+		Args = {"The tools below can be <font color='#FF0000'>detected,</font> both game-wise and player-wise. Use at your own risk.", "center"}
 	}
 	
 	module[10] = {
@@ -2007,7 +2046,7 @@ local function RDRL_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	_G.Modules[3] = module
 	
 end
-local function ATXSFS_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function ZXVOCDT_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2048,7 +2087,7 @@ local function ATXSFS_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		end
 	end)
 end
-local function RCTH_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function ECDSXX_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2073,14 +2112,14 @@ local function RCTH_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 	end)
 end
 
-coroutine.wrap(LVIQBF_fake_script)()
-coroutine.wrap(IILEQQ_fake_script)()
-coroutine.wrap(SVFG_fake_script)()
-coroutine.wrap(MJFBA_fake_script)()
-coroutine.wrap(LEVAM_fake_script)()
-coroutine.wrap(HNKFZUO_fake_script)()
-coroutine.wrap(AJIP_fake_script)()
-coroutine.wrap(IDFAB_fake_script)()
-coroutine.wrap(RDRL_fake_script)()
-coroutine.wrap(ATXSFS_fake_script)()
-coroutine.wrap(RCTH_fake_script)()
+coroutine.wrap(RPHVUVZ_fake_script)()
+coroutine.wrap(PPCR_fake_script)()
+coroutine.wrap(EGRMQR_fake_script)()
+coroutine.wrap(RLIHN_fake_script)()
+coroutine.wrap(CFGL_fake_script)()
+coroutine.wrap(PFZG_fake_script)()
+coroutine.wrap(RUYOL_fake_script)()
+coroutine.wrap(DYEICZ_fake_script)()
+coroutine.wrap(CPIK_fake_script)()
+coroutine.wrap(ZXVOCDT_fake_script)()
+coroutine.wrap(ECDSXX_fake_script)()
