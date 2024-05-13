@@ -1980,7 +1980,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	
 						fu.notification("Raycasting.")
 						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
-						fu.notification(hit.Instance)
+						fu.notification(hit.Instance.Name)
 						if not hit or hit.Instance == murderer.Character then -- Check if nothing collides or if it collides with the murderer
 							fu.notification("Raycast hit murderer. Shooting.")
 							if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
