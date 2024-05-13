@@ -1974,7 +1974,7 @@ local function HVHAX_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 						if not murderer then fu.notification("No murderer.") continue end
 						local murdererPosition = murderer.Character.HumanoidRootPart.Position
 						local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
-						local rayDirection = murdererPosition
+						local rayDirection = murdererPosition - characterRootPart.Position
 	
 						local raycastParams = RaycastParams.new()
 						raycastParams.FilterType = Enum.RaycastFilterType.Exclude
