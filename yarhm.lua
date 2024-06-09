@@ -1,5 +1,4 @@
--- YARHM by Imperial, version 1.8.14
-
+-- YARHM by Imperial, v1.9.0
 -- Instances:
 
 local Converted = {
@@ -26,16 +25,17 @@ local Converted = {
 	["_Close"] = Instance.new("TextButton");
 	["_UICorner3"] = Instance.new("UICorner");
 	["_LocalScript"] = Instance.new("LocalScript");
+	["_UIStroke1"] = Instance.new("UIStroke");
 	["_Area"] = Instance.new("ScrollingFrame");
 	["_TextLabel"] = Instance.new("TextLabel");
 	["_TextLabel1"] = Instance.new("TextLabel");
-	["_UIStroke1"] = Instance.new("UIStroke");
+	["_UIStroke2"] = Instance.new("UIStroke");
 	["_UIGradient2"] = Instance.new("UIGradient");
 	["_UIGradient3"] = Instance.new("UIGradient");
 	["_AddCustomModule"] = Instance.new("TextButton");
 	["_UICorner4"] = Instance.new("UICorner");
 	["_UIPadding2"] = Instance.new("UIPadding");
-	["_UIStroke2"] = Instance.new("UIStroke");
+	["_UIStroke3"] = Instance.new("UIStroke");
 	["_LocalScript1"] = Instance.new("LocalScript");
 	["_UIScale"] = Instance.new("UIScale");
 	["_Init"] = Instance.new("LocalScript");
@@ -63,11 +63,11 @@ local Converted = {
 	["_FloatingButtons"] = Instance.new("Frame");
 	["_DroppedGunBGUI"] = Instance.new("BillboardGui");
 	["_TextLabel3"] = Instance.new("TextLabel");
-	["_UIStroke3"] = Instance.new("UIStroke");
+	["_UIStroke4"] = Instance.new("UIStroke");
 	["_Murder Mystery 2"] = Instance.new("LocalScript");
 	["_AddCustomModule1"] = Instance.new("Frame");
 	["_UICorner10"] = Instance.new("UICorner");
-	["_UIStroke4"] = Instance.new("UIStroke");
+	["_UIStroke5"] = Instance.new("UIStroke");
 	["_UIGradient4"] = Instance.new("UIGradient");
 	["_UIGradient5"] = Instance.new("UIGradient");
 	["_UIScale1"] = Instance.new("UIScale");
@@ -79,12 +79,12 @@ local Converted = {
 	["_Add"] = Instance.new("TextButton");
 	["_UICorner12"] = Instance.new("UICorner");
 	["_UIPadding7"] = Instance.new("UIPadding");
-	["_UIStroke5"] = Instance.new("UIStroke");
+	["_UIStroke6"] = Instance.new("UIStroke");
 	["_LocalScript2"] = Instance.new("LocalScript");
 	["_Cancel"] = Instance.new("TextButton");
 	["_UICorner13"] = Instance.new("UICorner");
 	["_UIPadding8"] = Instance.new("UIPadding");
-	["_UIStroke6"] = Instance.new("UIStroke");
+	["_UIStroke7"] = Instance.new("UIStroke");
 	["_LocalScript3"] = Instance.new("LocalScript");
 }
 
@@ -234,21 +234,24 @@ Converted["_HubCredits"].Name = "HubCredits"
 Converted["_HubCredits"].Parent = Converted["_Menu"]
 
 Converted["_Close"].Font = Enum.Font.GothamBold
-Converted["_Close"].Text = "X"
-Converted["_Close"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Close"].Text = "^"
+Converted["_Close"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Close"].TextSize = 14
 Converted["_Close"].Modal = true
 Converted["_Close"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_Close"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Close"].BackgroundTransparency = 0.30000001192092896
 Converted["_Close"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Close"].BorderSizePixel = 0
-Converted["_Close"].Position = UDim2.new(0.947494328, 0, 0.914238751, 0)
-Converted["_Close"].Size = UDim2.new(0.0680272132, 0, 0.111940302, 0)
+Converted["_Close"].Position = UDim2.new(0.914614439, 0, 0.914238751, 0)
+Converted["_Close"].Size = UDim2.new(0.133786857, 0, 0.111940302, 0)
 Converted["_Close"].ZIndex = 999999999
 Converted["_Close"].Name = "Close"
 Converted["_Close"].Parent = Converted["_Menu"]
 
 Converted["_UICorner3"].Parent = Converted["_Close"]
+
+Converted["_UIStroke1"].Parent = Converted["_Close"]
 
 Converted["_Area"].AutomaticCanvasSize = Enum.AutomaticSize.Y
 Converted["_Area"].ScrollBarThickness = 0
@@ -292,9 +295,9 @@ Converted["_TextLabel1"].Position = UDim2.new(0.491272807, 0, 0.363785654, 0)
 Converted["_TextLabel1"].Size = UDim2.new(0, 135, 0, 33)
 Converted["_TextLabel1"].Parent = Converted["_Area"]
 
-Converted["_UIStroke1"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke1"].Thickness = 2
-Converted["_UIStroke1"].Parent = Converted["_Menu"]
+Converted["_UIStroke2"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke2"].Thickness = 2
+Converted["_UIStroke2"].Parent = Converted["_Menu"]
 
 Converted["_UIGradient2"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(53.00000064074993, 53.00000064074993, 53.00000064074993)),
@@ -304,7 +307,7 @@ Converted["_UIGradient2"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(1, Color3.fromRGB(48.000000938773155, 48.000000938773155, 48.000000938773155))
 }
 Converted["_UIGradient2"].Rotation = 62
-Converted["_UIGradient2"].Parent = Converted["_UIStroke1"]
+Converted["_UIGradient2"].Parent = Converted["_UIStroke2"]
 
 Converted["_UIGradient3"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)),
@@ -314,7 +317,7 @@ Converted["_UIGradient3"].Rotation = 68
 Converted["_UIGradient3"].Parent = Converted["_Menu"]
 
 Converted["_AddCustomModule"].Font = Enum.Font.Gotham
-Converted["_AddCustomModule"].Text = "Add custom module"
+Converted["_AddCustomModule"].Text = "Add module"
 Converted["_AddCustomModule"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_AddCustomModule"].TextScaled = true
 Converted["_AddCustomModule"].TextSize = 14
@@ -336,9 +339,9 @@ Converted["_UIPadding2"].PaddingRight = UDim.new(0, 5)
 Converted["_UIPadding2"].PaddingTop = UDim.new(0, 5)
 Converted["_UIPadding2"].Parent = Converted["_AddCustomModule"]
 
-Converted["_UIStroke2"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke2"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke2"].Parent = Converted["_AddCustomModule"]
+Converted["_UIStroke3"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke3"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke3"].Parent = Converted["_AddCustomModule"]
 
 Converted["_UIScale"].Parent = Converted["_Menu"]
 
@@ -511,7 +514,7 @@ Converted["_TextLabel3"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_TextLabel3"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_TextLabel3"].Parent = Converted["_DroppedGunBGUI"]
 
-Converted["_UIStroke3"].Parent = Converted["_TextLabel3"]
+Converted["_UIStroke4"].Parent = Converted["_TextLabel3"]
 
 Converted["_AddCustomModule1"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_AddCustomModule1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -525,9 +528,9 @@ Converted["_AddCustomModule1"].Parent = Converted["_YARHM"]
 
 Converted["_UICorner10"].Parent = Converted["_AddCustomModule1"]
 
-Converted["_UIStroke4"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke4"].Thickness = 2
-Converted["_UIStroke4"].Parent = Converted["_AddCustomModule1"]
+Converted["_UIStroke5"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke5"].Thickness = 2
+Converted["_UIStroke5"].Parent = Converted["_AddCustomModule1"]
 
 Converted["_UIGradient4"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(53.00000064074993, 53.00000064074993, 53.00000064074993)),
@@ -537,7 +540,7 @@ Converted["_UIGradient4"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(1, Color3.fromRGB(48.000000938773155, 48.000000938773155, 48.000000938773155))
 }
 Converted["_UIGradient4"].Rotation = 62
-Converted["_UIGradient4"].Parent = Converted["_UIStroke4"]
+Converted["_UIGradient4"].Parent = Converted["_UIStroke5"]
 
 Converted["_UIGradient5"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)),
@@ -549,7 +552,7 @@ Converted["_UIGradient5"].Parent = Converted["_AddCustomModule1"]
 Converted["_UIScale1"].Parent = Converted["_AddCustomModule1"]
 
 Converted["_TextLabel4"].Font = Enum.Font.Gotham
-Converted["_TextLabel4"].Text = "Add a custom module"
+Converted["_TextLabel4"].Text = "Add a module"
 Converted["_TextLabel4"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_TextLabel4"].TextScaled = true
 Converted["_TextLabel4"].TextSize = 14
@@ -588,7 +591,7 @@ Converted["_UIPadding6"].PaddingTop = UDim.new(0, 10)
 Converted["_UIPadding6"].Parent = Converted["_TextBox1"]
 
 Converted["_TextLabel5"].Font = Enum.Font.Gotham
-Converted["_TextLabel5"].Text = "Only add custom modules you trust!"
+Converted["_TextLabel5"].Text = "Only add modules you trust!"
 Converted["_TextLabel5"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_TextLabel5"].TextScaled = true
 Converted["_TextLabel5"].TextSize = 14
@@ -625,9 +628,9 @@ Converted["_UIPadding7"].PaddingRight = UDim.new(0, 5)
 Converted["_UIPadding7"].PaddingTop = UDim.new(0, 5)
 Converted["_UIPadding7"].Parent = Converted["_Add"]
 
-Converted["_UIStroke5"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke5"].Color = Color3.fromRGB(255, 255, 255)
-Converted["_UIStroke5"].Parent = Converted["_Add"]
+Converted["_UIStroke6"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke6"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke6"].Parent = Converted["_Add"]
 
 Converted["_Cancel"].Font = Enum.Font.Gotham
 Converted["_Cancel"].Text = "Cancel"
@@ -652,9 +655,9 @@ Converted["_UIPadding8"].PaddingRight = UDim.new(0, 5)
 Converted["_UIPadding8"].PaddingTop = UDim.new(0, 5)
 Converted["_UIPadding8"].Parent = Converted["_Cancel"]
 
-Converted["_UIStroke6"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-Converted["_UIStroke6"].Color = Color3.fromRGB(255, 0, 0)
-Converted["_UIStroke6"].Parent = Converted["_Cancel"]
+Converted["_UIStroke7"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke7"].Color = Color3.fromRGB(255, 0, 0)
+Converted["_UIStroke7"].Parent = Converted["_Cancel"]
 
 -- Fake Module Scripts:
 
@@ -777,7 +780,7 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 		
 								local function update(input)
 									local delta = input.Position - dragStart
-									ts:Create(gui, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+									ts:Create(gui, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
 										Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 									}):Play()
 								end
@@ -992,7 +995,7 @@ end
 
 -- Fake Local Scripts:
 
-local function GICVX_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function SKXKFQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1028,7 +1031,7 @@ local function GICVX_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpe
 		Transparency = 1
 	}):Play()
 end
-local function ZNDKBAA_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function FIDHLMR_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1042,8 +1045,10 @@ local function ZNDKBAA_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnCli
     end
 
 	local ts = game:GetService("TweenService")
-	
-	
+	repeat task.wait() until _G.YARHM
+	ts:Create(_G.YARHM.Menu, TweenInfo.new(0.7, Enum.EasingStyle.Back, Enum.EasingDirection.Out), 
+		{Position = UDim2.fromScale(0.499, 0.041), Size = UDim2.fromOffset(441, 268)}
+	):Play()
 	local clickCount = 0
 	local lastClickTime = tick()
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1074,7 +1079,7 @@ local function ZNDKBAA_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnCli
 	end)
 	
 end
-local function VNSWJ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function ECOJW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1122,7 +1127,7 @@ local function VNSWJ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 	task.wait(1) -- magic number to wait modules to load lmao
 	require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
 end
-local function TTVRS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function QQRSE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1139,11 +1144,11 @@ local function TTVRS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.L
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		ts:Create(_G.YARHM.Menu, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), 
-			{Position = UDim2.fromScale(0.499, 0), Size = UDim2.fromOffset(441, 0)}
+			{Position = UDim2.fromScale(0.499, -0.1), Size = UDim2.fromOffset(441, 0)}
 		):Play()
 	end)
 end
-local function TZEK_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function VSJS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1159,15 +1164,15 @@ local function TZEK_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCusto
 	local ts = game:GetService("TweenService")
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		ts:Create(script.Parent.Parent.UIScale, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+		ts:Create(script.Parent.Parent.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 			Scale = 0.9
 		}):Play()
-		ts:Create(script.Parent.Parent.Parent.AddCustomModule, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+		ts:Create(script.Parent.Parent.Parent.AddCustomModule, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 			Position = UDim2.fromScale(0.5, 0.5)
 		}):Play()
 	end)
 end
-local function GIGHQO_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function UKTFF_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1195,9 +1200,9 @@ local function GIGHQO_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.8\n- Added a way to add custom module through raw link\n- Changed how the general UI looked")
+	require(script.Parent.FUNCTIONS).notification("v1.9\n- A Discord server! Join now.\n- YARHM now opens on its own on startup\n- Added Kill murderer and kill closest player")
 end
-local function RMKEEKN_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function QRYRY_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1507,7 +1512,7 @@ local function RMKEEKN_fake_script() -- Fake Script: StarterGui.YARHM.Flee the F
 	
 	_G.Modules[2] = module
 end
-local function CSGP_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function VAGIL_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1526,28 +1531,44 @@ local function CSGP_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 		script.Enabled = true
 	end
 	
+	local fu = require(_G.YARHM.FUNCTIONS)
+	
+	
 	module["Name"] = "Universal"
 	
 	local ts = game:GetService("TweenService")
 	
 	module[1] = {
 		Type = "Text",
-		Args = {"Universal module - Works on most games"}
+		Args = {"Welcome to YARHM! The open, free script hub."}
 	}
 	
 	module[2] = {
+		Type = "Text",
+		Args = {"To close this hub, press the ^ below. To open YARHM again, triple-click the upper region of your screen."}
+	}
+	
+	module[3] = {
+		Type = "Button",
+		Args = {"Join our Discord", function(Self)
+			if setclipboard then setclipboard("https://discord.gg/2jbYxvDkxr") end
+			fu.notification('Discord link has been copied to clipboard!')
+		end,}
+	}
+	
+	module[4] = {
 		Type = "Button",
 		Args = {"Infinite Yield", function(Self)
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 		end}
 	}
 	
-	module[3] = {
+	module[5] = {
 		Type = "Text",
 		Args = {"---"}
 	}
 	
-	module[4] = {
+	module[6] = {
 		Type = "Button",
 		Args = {"Move YARHM trigger to the bottom", function(Self)
 			_G.YARHM.Open.UIStroke.Transparency = 0
@@ -1565,7 +1586,7 @@ local function CSGP_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 		end}
 	}
 	
-	module[5] = {
+	module[7] = {
 		Type = "Button",
 		Args = {"Move YARHM trigger to the top", function(Self)
 			_G.YARHM.Open.UIStroke.Transparency = 0
@@ -1585,7 +1606,7 @@ local function CSGP_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function ARPZ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1609,7 +1630,7 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	
 	local phs = game:GetService("PathfindingService")
 	
-	local fu = require(script.Parent.FUNCTIONS)
+	local fu = require(_G.YARHM.FUNCTIONS)
 	
 	local function findMurderer()
 		for _, i in ipairs(game.Players:GetPlayers()) do
@@ -1641,6 +1662,38 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 		end
 	
 		return nil
+	end
+	
+	local function findNearestPlayer()
+		local Players = game:GetService("Players")
+		local localPlayer = Players.LocalPlayer
+	
+		local nearestPlayer = nil
+		local shortestDistance = math.huge -- Initialize with a very large distance
+	
+		-- Iterate through all players
+		for _, player in ipairs(Players:GetPlayers()) do
+			-- Skip the local player and any players who have left the game
+			if player ~= localPlayer and player.Character then 
+	
+				-- Get the positions of both players' HumanoidRootParts
+				local localRootPart = localPlayer.Character:FindFirstChild("HumanoidRootPart")
+				local otherRootPart = player.Character:FindFirstChild("HumanoidRootPart")
+	
+				-- Ensure both players have a HumanoidRootPart for accurate distance calculation
+				if localRootPart and otherRootPart then
+					local distance = (localRootPart.Position - otherRootPart.Position).Magnitude
+	
+					-- Update nearest player if a closer one is found
+					if distance < shortestDistance then
+						shortestDistance = distance
+						nearestPlayer = player
+					end
+				end
+			end
+		end
+	
+		return nearestPlayer
 	end
 	
 	
@@ -1812,12 +1865,13 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 		end
 	end)
 	
-	module[1] = {
+	table.insert(module, {
 		Type = "Text",
 		Args = {"ESPs"}
-	}
+	})
 	
-	module[2] = {
+	
+	table.insert(module, {
 		Type = "ButtonGrid",
 		Toggleable = true,
 		Args = {2, {
@@ -1881,7 +1935,7 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	
 				end
 			end,
-			
+	
 			--Sheriff_Aimbot = function()
 			--	if sheriffAimbot then
 			--		sheriffAimbot = false
@@ -1891,14 +1945,14 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 			--	end
 			--end,
 		}}
-	}
+	})
 	
-	module[3] = {
+	table.insert(module, {
 		Type = "Text",
 		Args = {"Tools"}
-	}
+	})
 	
-	module[4] = {
+	table.insert(module, {
 		Type = "Button",
 		Args = {"Shoot murderer", function(Self)
 			if findSheriff() ~= game.Players.LocalPlayer then fu.notification("You're not sheriff/hero.") return end
@@ -1906,7 +1960,7 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 				fu.notification("No murderer to shoot.")
 				return
 			end
-			
+	
 			if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
 				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
 				if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
@@ -1924,13 +1978,109 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	
 			game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 		end,}
-	}
+	})
 	
-	module[5] = {
+	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"Kill murderer immediately (DETECTABLE)", function()
+			if findSheriff() ~= game.Players.LocalPlayer then fu.notification("You're not sheriff/hero.") return end
+			if not findMurderer() then
+				fu.notification("No murderer to shoot.")
+				return
+			end
+	
+			if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
+				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
+					game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+				else
+					fu.notification("You don't have the gun..?")
+					return
+				end
+			end
+			
+			local Murderer = findMurderer()
+	
+			if Murderer and Murderer.Character then
+	
+				-- Get the HumanoidRootParts
+				local localRootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+				local nearestRootPart = Murderer.Character:FindFirstChild("HumanoidRootPart")
+	
+				if localRootPart and nearestRootPart then
+					-- Calculate the look vector of the nearest player
+					local lookVector = nearestRootPart.CFrame.LookVector
+	
+					-- Calculate the offset position behind the nearest player
+					local offsetPosition = nearestRootPart.Position - (lookVector) -- 7 studs behind
+	
+					-- Teleport the local player to the offset position
+					localRootPart.CFrame = CFrame.new(offsetPosition) * CFrame.Angles(0, nearestRootPart.CFrame.Y, 0)
+				end
+			else
+				fu.notification("Can't find a murderer!?")
+			end
+			local args = {
+				[1] = 1,
+				[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
+				[3] = "AH"
+			}
+	
+			game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))	
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"Kill closest player as murderer (DETECTABLE)", function()
+			if findMurderer() ~= game.Players.LocalPlayer then fu.notification("You're not murderer") return end
+	
+			if not game.Players.LocalPlayer.Character:FindFirstChild("Knife") then
+				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Knife") then
+					game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Knife"))
+				else
+					fu.notification("You don't have the knife..?")
+					return
+				end
+			end
+	
+			local NearestPlayer = findNearestPlayer()
+	
+			if NearestPlayer and NearestPlayer.Character then
+	
+				-- Get the HumanoidRootParts
+				local localRootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+				local nearestRootPart = NearestPlayer.Character:FindFirstChild("HumanoidRootPart")
+	
+				if localRootPart and nearestRootPart then
+					-- Calculate the look vector of the nearest player
+					local lookVector = nearestRootPart.CFrame.LookVector
+	
+					-- Calculate the offset position behind the nearest player
+					local offsetPosition = nearestRootPart.Position - (lookVector) 
+	
+					-- Teleport the local player to the offset position
+					localRootPart.CFrame = CFrame.new(offsetPosition) * CFrame.Angles(0, nearestRootPart.CFrame.Y, 0)
+				end
+			else
+				fu.notification("Can't find a player!?")
+			end
+			local args = {
+				[1] = "Slash"
+			}
+	
+			game:GetService("Players").LocalPlayer.Character.Knife.Stab:FireServer(unpack(args))
+	
+		end,}
+	})
+	
+	table.insert(module, {
 		Type = "Input",
 		Args = {"Shoot position offset", "Set", function(Self, text)
 			if not tonumber(text) then fu.notification("Not a valid number.") return end
-			
+	
 			if tonumber(text) > 10 then
 				fu.notification("An offset with a multiplier of 10 might not at all shoot the murderer!")
 			end
@@ -1940,14 +2090,14 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 			shootOffset = tonumber(text)
 			fu.notification("Offset has been set.")
 		end,}
-	}
+	})
 	
-	module[6] = {
+	table.insert(module, {
 		Type = "Text",
 		Args = {"The automatic murderer's shots can miss when the murderer moves. Shoot offset adjusts for the murderer's movement. Recommended is 3."}
-	}
+	})
 	
-	module[7] = {
+	table.insert(module, {
 		Type = "ButtonGrid",
 		Toggleable = true,
 		Args = {1, {
@@ -1997,21 +2147,21 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 				end
 			end,
 		}}
-	}
+	})
 	
-	module[8] = {Type="Text", Args={""}}
+	table.insert(module, {Type="Text", Args={""}})
 	
-	module[9] = {
+	table.insert(module, {
 		Type = "Text",
 		Args = {"The tools below can be <font color='#FF0000'>detected,</font> both game-wise and player-wise. Use at your own risk.", "center"}
-	}
+	})
 	
-	module[10] = {
+	table.insert(module, {
 		Type = "Button",
 		Args = {"Fast-move to dropped gun", function(Self)
 			if not workspace:FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") return end
 			fu.notification("Attempting a pathfind to gun..")
-			
+	
 			local pathToGun = phs:CreatePath({
 				AgentRadius = 3,
 				AgentHeight = game.Players.LocalPlayer.Character:GetExtentsSize().Y,
@@ -2020,12 +2170,12 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 			local completed, err = pcall(function()
 				pathToGun:ComputeAsync(game.Players.LocalPlayer.Character.PrimaryPart.Position, Vector3.new(workspace:FindFirstChild("GunDrop"):GetPivot().X, workspace:FindFirstChild("GunDrop"):GetPivot().Y, workspace:FindFirstChild("GunDrop"):GetPivot().Z))
 			end)
-			
+	
 			if completed and pathToGun.Status == Enum.PathStatus.Success then
 				fu.notification("Found a path. Moving.")
 				for _, waypoint in pathToGun:GetWaypoints() do
-					task.wait(0.1)
-					game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), TweenInfo.new(0.1, Enum.EasingStyle.Linear), {
+					task.wait(0.05)
+					game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), TweenInfo.new(0.05, Enum.EasingStyle.Linear), {
 						CFrame = CFrame.new(waypoint.Position + Vector3.new(0, 3, 0))	
 					}):Play()
 				end
@@ -2033,12 +2183,13 @@ local function LOAOODV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 				fu.notification("Couldn't find a proper path to gun. Try moving a little closer to the gun.")
 			end
 		end,}
-	}
+	})
 	
-	_G.Modules[3] = module
+	
+	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function INPG_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function AOYRRU_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2079,7 +2230,7 @@ local function INPG_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 		end
 	end)
 end
-local function BOCLRJC_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function WPVL_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2104,14 +2255,14 @@ local function BOCLRJC_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomM
 	end)
 end
 
-coroutine.wrap(GICVX_fake_script)()
-coroutine.wrap(ZNDKBAA_fake_script)()
-coroutine.wrap(VNSWJ_fake_script)()
-coroutine.wrap(TTVRS_fake_script)()
-coroutine.wrap(TZEK_fake_script)()
-coroutine.wrap(GIGHQO_fake_script)()
-coroutine.wrap(RMKEEKN_fake_script)()
-coroutine.wrap(CSGP_fake_script)()
-coroutine.wrap(LOAOODV_fake_script)()
-coroutine.wrap(INPG_fake_script)()
-coroutine.wrap(BOCLRJC_fake_script)()
+coroutine.wrap(SKXKFQ_fake_script)()
+coroutine.wrap(FIDHLMR_fake_script)()
+coroutine.wrap(ECOJW_fake_script)()
+coroutine.wrap(QQRSE_fake_script)()
+coroutine.wrap(VSJS_fake_script)()
+coroutine.wrap(UKTFF_fake_script)()
+coroutine.wrap(QRYRY_fake_script)()
+coroutine.wrap(VAGIL_fake_script)()
+coroutine.wrap(ARPZ_fake_script)()
+coroutine.wrap(AOYRRU_fake_script)()
+coroutine.wrap(WPVL_fake_script)()
