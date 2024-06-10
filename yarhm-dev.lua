@@ -1766,7 +1766,7 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 	
 	local fu = require(_G.YARHM.FUNCTIONS)
 	
-	local fadeEvent = game.ReplicatedStorage:WaitForChild("Gameplay"):WaitForChild("Fade", 5)
+	local fadeEvent = game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("Fade", 5)
 	if fadeEvent then
 		fadeEvent.OnClientEvent:Connect(function(data)
 			playerData = data
