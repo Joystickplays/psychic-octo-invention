@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.10.2
+-- YARHM by Imperial, v1.10.3
 
 -- Instances:
 
@@ -1069,7 +1069,7 @@ end
 
 -- Fake Local Scripts:
 
-local function UDFECT_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function CGUR_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1105,7 +1105,7 @@ local function UDFECT_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOp
 		Transparency = 1
 	}):Play()
 end
-local function LZLDXO_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function FGKQL_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1153,7 +1153,7 @@ local function LZLDXO_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClic
 	end)
 	
 end
-local function GZCG_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function ZZDOVOG_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1176,7 +1176,7 @@ local function GZCG_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
 	local initialSize = nil
 	
 	-- Define the minimum width (50 pixels) and maximum width (initial width)
-	local MIN_WIDTH = 50
+	local MIN_WIDTH = 100
 	local MAX_WIDTH = guiObject.Size.X.Offset
 	
 	local function onInputBegan(input, gameProcessed)
@@ -1223,7 +1223,7 @@ local function GZCG_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function KUXCY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function LCOYQT_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1271,7 +1271,7 @@ local function KUXCY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 	task.wait(1) -- magic number to wait modules to load lmao
 	require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
 end
-local function VWKJB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function SDZO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1292,7 +1292,7 @@ local function VWKJB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.L
 		):Play()
 	end)
 end
-local function ZVFMG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function JWMDZB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1316,7 +1316,7 @@ local function ZVFMG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCust
 		}):Play()
 	end)
 end
-local function AOME_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function OFFFI_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1347,7 +1347,7 @@ local function AOME_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("v1.10\n- God mode\n- Customizable trigger area sizing\n- Auto-shooting improved\n- Fix coins magnet\n- Keybinding of floating buttons is possible, right-click to set one")
 	
 end
-local function VQEO_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function OKQMKZ_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1657,7 +1657,7 @@ local function VQEO_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	
 	_G.Modules[2] = module
 end
-local function IZEKTJN_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function PGBRO_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1751,7 +1751,7 @@ local function IZEKTJN_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function CTKXTBX_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+local function WXMMTD_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -1766,7 +1766,7 @@ local function CTKXTBX_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBu
 
 	
 end
-local function KNGXRIO_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function NANUVQ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -2415,7 +2415,7 @@ local function KNGXRIO_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mys
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function QDMNZI_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function XSMEU_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2456,7 +2456,7 @@ local function QDMNZI_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		end
 	end)
 end
-local function LWSD_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function KWCMDI_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2481,16 +2481,16 @@ local function LWSD_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 	end)
 end
 
-coroutine.wrap(UDFECT_fake_script)()
-coroutine.wrap(LZLDXO_fake_script)()
-coroutine.wrap(GZCG_fake_script)()
-coroutine.wrap(KUXCY_fake_script)()
-coroutine.wrap(VWKJB_fake_script)()
-coroutine.wrap(ZVFMG_fake_script)()
-coroutine.wrap(AOME_fake_script)()
-coroutine.wrap(VQEO_fake_script)()
-coroutine.wrap(IZEKTJN_fake_script)()
-coroutine.wrap(CTKXTBX_fake_script)()
-coroutine.wrap(KNGXRIO_fake_script)()
-coroutine.wrap(QDMNZI_fake_script)()
-coroutine.wrap(LWSD_fake_script)()
+coroutine.wrap(CGUR_fake_script)()
+coroutine.wrap(FGKQL_fake_script)()
+coroutine.wrap(ZZDOVOG_fake_script)()
+coroutine.wrap(LCOYQT_fake_script)()
+coroutine.wrap(SDZO_fake_script)()
+coroutine.wrap(JWMDZB_fake_script)()
+coroutine.wrap(OFFFI_fake_script)()
+coroutine.wrap(OKQMKZ_fake_script)()
+coroutine.wrap(PGBRO_fake_script)()
+coroutine.wrap(WXMMTD_fake_script)()
+coroutine.wrap(NANUVQ_fake_script)()
+coroutine.wrap(XSMEU_fake_script)()
+coroutine.wrap(KWCMDI_fake_script)()
