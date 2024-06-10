@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.10.1
+-- YARHM by Imperial, v1.10.2
 
 -- Instances:
 
@@ -9,6 +9,7 @@ local Converted = {
 	["_InitOpen"] = Instance.new("LocalScript");
 	["_OnClick"] = Instance.new("LocalScript");
 	["_Resizer"] = Instance.new("LocalScript");
+	["_UIPadding"] = Instance.new("UIPadding");
 	["_Menu"] = Instance.new("Frame");
 	["_UICorner1"] = Instance.new("UICorner");
 	["_HubName"] = Instance.new("TextLabel");
@@ -18,8 +19,8 @@ local Converted = {
 	["_AutoSetup"] = Instance.new("LocalScript");
 	["_ScrollingFrame"] = Instance.new("ScrollingFrame");
 	["_UIListLayout"] = Instance.new("UIListLayout");
-	["_UIPadding"] = Instance.new("UIPadding");
 	["_UIPadding1"] = Instance.new("UIPadding");
+	["_UIPadding2"] = Instance.new("UIPadding");
 	["_UIGradient"] = Instance.new("UIGradient");
 	["_UIStroke"] = Instance.new("UIStroke");
 	["_UIGradient1"] = Instance.new("UIGradient");
@@ -36,7 +37,7 @@ local Converted = {
 	["_UIGradient3"] = Instance.new("UIGradient");
 	["_AddCustomModule"] = Instance.new("TextButton");
 	["_UICorner4"] = Instance.new("UICorner");
-	["_UIPadding2"] = Instance.new("UIPadding");
+	["_UIPadding3"] = Instance.new("UIPadding");
 	["_UIStroke3"] = Instance.new("UIStroke");
 	["_LocalScript1"] = Instance.new("LocalScript");
 	["_UIScale"] = Instance.new("UIScale");
@@ -46,7 +47,7 @@ local Converted = {
 	["_FUNCTIONS"] = Instance.new("ModuleScript");
 	["_Notifications"] = Instance.new("Frame");
 	["_UIListLayout1"] = Instance.new("UIListLayout");
-	["_UIPadding3"] = Instance.new("UIPadding");
+	["_UIPadding4"] = Instance.new("UIPadding");
 	["_Placeholder"] = Instance.new("Frame");
 	["_UICorner6"] = Instance.new("UICorner");
 	["_TextLabel2"] = Instance.new("TextLabel");
@@ -56,11 +57,11 @@ local Converted = {
 	["_UIListLayout2"] = Instance.new("UIListLayout");
 	["_TextButton"] = Instance.new("TextButton");
 	["_UICorner7"] = Instance.new("UICorner");
-	["_UIPadding4"] = Instance.new("UIPadding");
+	["_UIPadding5"] = Instance.new("UIPadding");
 	["_TextBox"] = Instance.new("TextBox");
 	["_UICorner8"] = Instance.new("UICorner");
 	["_FloatingButton"] = Instance.new("TextButton");
-	["_UIPadding5"] = Instance.new("UIPadding");
+	["_UIPadding6"] = Instance.new("UIPadding");
 	["_UICorner9"] = Instance.new("UICorner");
 	["_Keybinding"] = Instance.new("LocalScript");
 	["_FloatingButtons"] = Instance.new("Frame");
@@ -77,16 +78,16 @@ local Converted = {
 	["_TextLabel4"] = Instance.new("TextLabel");
 	["_TextBox1"] = Instance.new("TextBox");
 	["_UICorner11"] = Instance.new("UICorner");
-	["_UIPadding6"] = Instance.new("UIPadding");
+	["_UIPadding7"] = Instance.new("UIPadding");
 	["_TextLabel5"] = Instance.new("TextLabel");
 	["_Add"] = Instance.new("TextButton");
 	["_UICorner12"] = Instance.new("UICorner");
-	["_UIPadding7"] = Instance.new("UIPadding");
+	["_UIPadding8"] = Instance.new("UIPadding");
 	["_UIStroke6"] = Instance.new("UIStroke");
 	["_LocalScript2"] = Instance.new("LocalScript");
 	["_Cancel"] = Instance.new("TextButton");
 	["_UICorner13"] = Instance.new("UICorner");
-	["_UIPadding8"] = Instance.new("UIPadding");
+	["_UIPadding9"] = Instance.new("UIPadding");
 	["_UIStroke7"] = Instance.new("UIStroke");
 	["_LocalScript3"] = Instance.new("LocalScript");
 	["_MurdererBGUI"] = Instance.new("BillboardGui");
@@ -107,7 +108,10 @@ Converted["_YARHM"].Parent = game:GetService("CoreGui")
 Converted["_Open"].Font = Enum.Font.Gotham
 Converted["_Open"].Text = "Triple-click this region to open YARHM."
 Converted["_Open"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Open"].TextScaled = true
 Converted["_Open"].TextSize = 14
+Converted["_Open"].TextTransparency = 1
+Converted["_Open"].TextWrapped = true
 Converted["_Open"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_Open"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Open"].BackgroundTransparency = 1
@@ -119,6 +123,12 @@ Converted["_Open"].Name = "Open"
 Converted["_Open"].Parent = Converted["_YARHM"]
 
 Converted["_UICorner"].Parent = Converted["_Open"]
+
+Converted["_UIPadding"].PaddingBottom = UDim.new(0, 10)
+Converted["_UIPadding"].PaddingLeft = UDim.new(0, 20)
+Converted["_UIPadding"].PaddingRight = UDim.new(0, 20)
+Converted["_UIPadding"].PaddingTop = UDim.new(0, 10)
+Converted["_UIPadding"].Parent = Converted["_Open"]
 
 Converted["_Menu"].AnchorPoint = Vector2.new(0.5, 0)
 Converted["_Menu"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -193,14 +203,14 @@ Converted["_UIListLayout"].HorizontalAlignment = Enum.HorizontalAlignment.Center
 Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout"].Parent = Converted["_ScrollingFrame"]
 
-Converted["_UIPadding"].PaddingLeft = UDim.new(0, 4)
-Converted["_UIPadding"].Parent = Converted["_ScrollingFrame"]
+Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 4)
+Converted["_UIPadding1"].Parent = Converted["_ScrollingFrame"]
 
-Converted["_UIPadding1"].PaddingBottom = UDim.new(0, 10)
-Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 10)
-Converted["_UIPadding1"].PaddingRight = UDim.new(0, 10)
-Converted["_UIPadding1"].PaddingTop = UDim.new(0, 10)
-Converted["_UIPadding1"].Parent = Converted["_List"]
+Converted["_UIPadding2"].PaddingBottom = UDim.new(0, 10)
+Converted["_UIPadding2"].PaddingLeft = UDim.new(0, 10)
+Converted["_UIPadding2"].PaddingRight = UDim.new(0, 10)
+Converted["_UIPadding2"].PaddingTop = UDim.new(0, 10)
+Converted["_UIPadding2"].Parent = Converted["_List"]
 
 Converted["_UIGradient"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)),
@@ -339,11 +349,11 @@ Converted["_AddCustomModule"].Parent = Converted["_Menu"]
 
 Converted["_UICorner4"].Parent = Converted["_AddCustomModule"]
 
-Converted["_UIPadding2"].PaddingBottom = UDim.new(0, 5)
-Converted["_UIPadding2"].PaddingLeft = UDim.new(0, 5)
-Converted["_UIPadding2"].PaddingRight = UDim.new(0, 5)
-Converted["_UIPadding2"].PaddingTop = UDim.new(0, 5)
-Converted["_UIPadding2"].Parent = Converted["_AddCustomModule"]
+Converted["_UIPadding3"].PaddingBottom = UDim.new(0, 5)
+Converted["_UIPadding3"].PaddingLeft = UDim.new(0, 5)
+Converted["_UIPadding3"].PaddingRight = UDim.new(0, 5)
+Converted["_UIPadding3"].PaddingTop = UDim.new(0, 5)
+Converted["_UIPadding3"].Parent = Converted["_AddCustomModule"]
 
 Converted["_UIStroke3"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 Converted["_UIStroke3"].Color = Color3.fromRGB(255, 255, 255)
@@ -384,9 +394,9 @@ Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout1"].VerticalAlignment = Enum.VerticalAlignment.Bottom
 Converted["_UIListLayout1"].Parent = Converted["_Notifications"]
 
-Converted["_UIPadding3"].PaddingBottom = UDim.new(0, 10)
-Converted["_UIPadding3"].PaddingLeft = UDim.new(0, 10)
-Converted["_UIPadding3"].Parent = Converted["_Notifications"]
+Converted["_UIPadding4"].PaddingBottom = UDim.new(0, 10)
+Converted["_UIPadding4"].PaddingLeft = UDim.new(0, 10)
+Converted["_UIPadding4"].Parent = Converted["_Notifications"]
 
 Converted["_Placeholder"].AnchorPoint = Vector2.new(0.5, 0)
 Converted["_Placeholder"].BackgroundColor3 = Color3.fromRGB(31.000001952052116, 31.000001952052116, 31.000001952052116)
@@ -442,11 +452,11 @@ Converted["_TextButton"].Parent = Converted["_TextBoxPlaceholder"]
 
 Converted["_UICorner7"].Parent = Converted["_TextButton"]
 
-Converted["_UIPadding4"].PaddingBottom = UDim.new(0, 5)
-Converted["_UIPadding4"].PaddingLeft = UDim.new(0, 5)
-Converted["_UIPadding4"].PaddingRight = UDim.new(0, 5)
-Converted["_UIPadding4"].PaddingTop = UDim.new(0, 5)
-Converted["_UIPadding4"].Parent = Converted["_TextButton"]
+Converted["_UIPadding5"].PaddingBottom = UDim.new(0, 5)
+Converted["_UIPadding5"].PaddingLeft = UDim.new(0, 5)
+Converted["_UIPadding5"].PaddingRight = UDim.new(0, 5)
+Converted["_UIPadding5"].PaddingTop = UDim.new(0, 5)
+Converted["_UIPadding5"].Parent = Converted["_TextButton"]
 
 Converted["_TextBox"].Font = Enum.Font.Gotham
 Converted["_TextBox"].PlaceholderText = "Placeholder"
@@ -477,11 +487,11 @@ Converted["_FloatingButton"].Visible = false
 Converted["_FloatingButton"].Name = "FloatingButton"
 Converted["_FloatingButton"].Parent = Converted["_YARHM"]
 
-Converted["_UIPadding5"].PaddingBottom = UDim.new(0, 5)
-Converted["_UIPadding5"].PaddingLeft = UDim.new(0, 5)
-Converted["_UIPadding5"].PaddingRight = UDim.new(0, 5)
-Converted["_UIPadding5"].PaddingTop = UDim.new(0, 5)
-Converted["_UIPadding5"].Parent = Converted["_FloatingButton"]
+Converted["_UIPadding6"].PaddingBottom = UDim.new(0, 5)
+Converted["_UIPadding6"].PaddingLeft = UDim.new(0, 5)
+Converted["_UIPadding6"].PaddingRight = UDim.new(0, 5)
+Converted["_UIPadding6"].PaddingTop = UDim.new(0, 5)
+Converted["_UIPadding6"].Parent = Converted["_FloatingButton"]
 
 Converted["_UICorner9"].Parent = Converted["_FloatingButton"]
 
@@ -590,11 +600,11 @@ Converted["_TextBox1"].Parent = Converted["_AddCustomModule1"]
 
 Converted["_UICorner11"].Parent = Converted["_TextBox1"]
 
-Converted["_UIPadding6"].PaddingBottom = UDim.new(0, 10)
-Converted["_UIPadding6"].PaddingLeft = UDim.new(0, 10)
-Converted["_UIPadding6"].PaddingRight = UDim.new(0, 10)
-Converted["_UIPadding6"].PaddingTop = UDim.new(0, 10)
-Converted["_UIPadding6"].Parent = Converted["_TextBox1"]
+Converted["_UIPadding7"].PaddingBottom = UDim.new(0, 10)
+Converted["_UIPadding7"].PaddingLeft = UDim.new(0, 10)
+Converted["_UIPadding7"].PaddingRight = UDim.new(0, 10)
+Converted["_UIPadding7"].PaddingTop = UDim.new(0, 10)
+Converted["_UIPadding7"].Parent = Converted["_TextBox1"]
 
 Converted["_TextLabel5"].Font = Enum.Font.Gotham
 Converted["_TextLabel5"].Text = "Only add modules you trust!"
@@ -628,11 +638,11 @@ Converted["_Add"].Parent = Converted["_AddCustomModule1"]
 
 Converted["_UICorner12"].Parent = Converted["_Add"]
 
-Converted["_UIPadding7"].PaddingBottom = UDim.new(0, 5)
-Converted["_UIPadding7"].PaddingLeft = UDim.new(0, 5)
-Converted["_UIPadding7"].PaddingRight = UDim.new(0, 5)
-Converted["_UIPadding7"].PaddingTop = UDim.new(0, 5)
-Converted["_UIPadding7"].Parent = Converted["_Add"]
+Converted["_UIPadding8"].PaddingBottom = UDim.new(0, 5)
+Converted["_UIPadding8"].PaddingLeft = UDim.new(0, 5)
+Converted["_UIPadding8"].PaddingRight = UDim.new(0, 5)
+Converted["_UIPadding8"].PaddingTop = UDim.new(0, 5)
+Converted["_UIPadding8"].Parent = Converted["_Add"]
 
 Converted["_UIStroke6"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 Converted["_UIStroke6"].Color = Color3.fromRGB(255, 255, 255)
@@ -655,11 +665,11 @@ Converted["_Cancel"].Parent = Converted["_AddCustomModule1"]
 
 Converted["_UICorner13"].Parent = Converted["_Cancel"]
 
-Converted["_UIPadding8"].PaddingBottom = UDim.new(0, 5)
-Converted["_UIPadding8"].PaddingLeft = UDim.new(0, 5)
-Converted["_UIPadding8"].PaddingRight = UDim.new(0, 5)
-Converted["_UIPadding8"].PaddingTop = UDim.new(0, 5)
-Converted["_UIPadding8"].Parent = Converted["_Cancel"]
+Converted["_UIPadding9"].PaddingBottom = UDim.new(0, 5)
+Converted["_UIPadding9"].PaddingLeft = UDim.new(0, 5)
+Converted["_UIPadding9"].PaddingRight = UDim.new(0, 5)
+Converted["_UIPadding9"].PaddingTop = UDim.new(0, 5)
+Converted["_UIPadding9"].Parent = Converted["_Cancel"]
 
 Converted["_UIStroke7"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 Converted["_UIStroke7"].Color = Color3.fromRGB(255, 0, 0)
@@ -1059,7 +1069,7 @@ end
 
 -- Fake Local Scripts:
 
-local function NMWU_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function UDFECT_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1095,7 +1105,7 @@ local function NMWU_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
 		Transparency = 1
 	}):Play()
 end
-local function BNCM_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function LZLDXO_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1143,7 +1153,7 @@ local function BNCM_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function GHCRRAY_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function GZCG_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1165,6 +1175,10 @@ local function GHCRRAY_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resiz
 	local initialMousePosition = nil
 	local initialSize = nil
 	
+	-- Define the minimum width (50 pixels) and maximum width (initial width)
+	local MIN_WIDTH = 50
+	local MAX_WIDTH = guiObject.Size.X.Offset
+	
 	local function onInputBegan(input, gameProcessed)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 			resizing = true
@@ -1174,30 +1188,33 @@ local function GHCRRAY_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resiz
 	end
 	
 	local function onInputEnded(input, gameProcessed)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then		
 			resizing = false
 			initialMousePosition = nil
 			initialSize = nil
+			ts:Create(guiObject.UIStroke, TweenInfo.new(1.2, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+				Transparency = 1
+			}):Play()
 		end
 	end
 	
 	local function onInputChanged(input, gameProcessed)
 		if resizing and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
 			local delta = input.Position - initialMousePosition
-			local newSize = UDim2.new(
-				initialSize.X.Scale,
-				initialSize.X.Offset + delta.X,
-				initialSize.Y.Scale,
-				initialSize.Y.Offset
-			)
-			ts:Create(guiObject, TweenInfo.new(0.8, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-				Size = newSize
-			}):Play()
-			guiObject.UIStroke.Transparency = 0
-			ts:Create(guiObject.UIStroke, TweenInfo.new(1.2, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-				Transparency = 1
-			}):Play()
-	
+			if math.abs(delta.X) > 50 then
+				local newWidth = math.clamp(initialSize.X.Offset + delta.X, MIN_WIDTH, MAX_WIDTH)
+				local newSize = UDim2.new(
+					initialSize.X.Scale,
+					newWidth,
+					initialSize.Y.Scale,
+					initialSize.Y.Offset
+				)
+				ts:Create(guiObject, TweenInfo.new(0.8, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+					Size = newSize
+				}):Play()
+				guiObject.UIStroke.Transparency = 0
+				
+			end
 		end
 	end
 	
@@ -1206,7 +1223,7 @@ local function GHCRRAY_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resiz
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function XZUBS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function KUXCY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1254,7 +1271,7 @@ local function XZUBS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 	task.wait(1) -- magic number to wait modules to load lmao
 	require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
 end
-local function UNYPIL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function VWKJB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1275,7 +1292,7 @@ local function UNYPIL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.
 		):Play()
 	end)
 end
-local function MBQCUY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function ZVFMG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1299,7 +1316,7 @@ local function MBQCUY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCus
 		}):Play()
 	end)
 end
-local function CCGICN_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function AOME_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1330,7 +1347,7 @@ local function CCGICN_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("v1.10\n- God mode\n- Customizable trigger area sizing\n- Auto-shooting improved\n- Fix coins magnet\n- Keybinding of floating buttons is possible, right-click to set one")
 	
 end
-local function FDIVM_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function VQEO_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1640,7 +1657,7 @@ local function FDIVM_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fac
 	
 	_G.Modules[2] = module
 end
-local function EZIDCV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function IZEKTJN_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1734,7 +1751,7 @@ local function EZIDCV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function BUZHNMP_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+local function CTKXTBX_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -1749,7 +1766,7 @@ local function BUZHNMP_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBu
 
 	
 end
-local function JZKAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function KNGXRIO_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -2103,29 +2120,6 @@ local function JZKAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 		Args = {"Tools"}
 	})
 	
-	table.insert(module, {
-		Type = "Button",
-		Args = {"God mode (Very, VERY UNSTABLE)", function(Self) -- Credits to EdgeIY, Infinite Yield
-			local Cam = workspace.CurrentCamera
-			local Pos, Char = Cam.CFrame, game.Players.LocalPlayer.Character
-			local Human = Char and Char.FindFirstChildWhichIsA(Char, "Humanoid")
-			local nHuman = Human.Clone(Human)
-			nHuman.Parent, game.Players.LocalPlayer.Character = Char, nil
-			nHuman.SetStateEnabled(nHuman, 15, false)
-			nHuman.SetStateEnabled(nHuman, 1, false)
-			nHuman.SetStateEnabled(nHuman, 0, false)
-			nHuman.BreakJointsOnDeath, Human = true, Human.Destroy(Human)
-			game.Players.LocalPlayer.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
-			nHuman.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
-			local Script = Char.FindFirstChild(Char, "Animate")
-			if Script then
-				Script.Disabled = true
-				wait()
-				Script.Disabled = false
-			end
-			nHuman.Health = nHuman.MaxHealth
-		end,}
-	})
 	
 	table.insert(module, {
 		Type = "Button",
@@ -2170,6 +2164,29 @@ local function JZKAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 		end,}
 	})
 	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"God mode (Very, VERY UNSTABLE)", function(Self) -- Credits to EdgeIY, Infinite Yield
+			local Cam = workspace.CurrentCamera
+			local Pos, Char = Cam.CFrame, game.Players.LocalPlayer.Character
+			local Human = Char and Char.FindFirstChildWhichIsA(Char, "Humanoid")
+			local nHuman = Human.Clone(Human)
+			nHuman.Parent, game.Players.LocalPlayer.Character = Char, nil
+			nHuman.SetStateEnabled(nHuman, 15, false)
+			nHuman.SetStateEnabled(nHuman, 1, false)
+			nHuman.SetStateEnabled(nHuman, 0, false)
+			nHuman.BreakJointsOnDeath, Human = true, Human.Destroy(Human)
+			game.Players.LocalPlayer.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
+			nHuman.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+			local Script = Char.FindFirstChild(Char, "Animate")
+			if Script then
+				Script.Disabled = true
+				wait()
+				Script.Disabled = false
+			end
+			nHuman.Health = nHuman.MaxHealth
+		end,}
+	})
 	
 	
 	table.insert(module, {
@@ -2398,7 +2415,7 @@ local function JZKAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function JXBM_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function QDMNZI_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2439,7 +2456,7 @@ local function JXBM_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 		end
 	end)
 end
-local function VIAO_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function LWSD_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2464,16 +2481,16 @@ local function VIAO_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 	end)
 end
 
-coroutine.wrap(NMWU_fake_script)()
-coroutine.wrap(BNCM_fake_script)()
-coroutine.wrap(GHCRRAY_fake_script)()
-coroutine.wrap(XZUBS_fake_script)()
-coroutine.wrap(UNYPIL_fake_script)()
-coroutine.wrap(MBQCUY_fake_script)()
-coroutine.wrap(CCGICN_fake_script)()
-coroutine.wrap(FDIVM_fake_script)()
-coroutine.wrap(EZIDCV_fake_script)()
-coroutine.wrap(BUZHNMP_fake_script)()
-coroutine.wrap(JZKAA_fake_script)()
-coroutine.wrap(JXBM_fake_script)()
-coroutine.wrap(VIAO_fake_script)()
+coroutine.wrap(UDFECT_fake_script)()
+coroutine.wrap(LZLDXO_fake_script)()
+coroutine.wrap(GZCG_fake_script)()
+coroutine.wrap(KUXCY_fake_script)()
+coroutine.wrap(VWKJB_fake_script)()
+coroutine.wrap(ZVFMG_fake_script)()
+coroutine.wrap(AOME_fake_script)()
+coroutine.wrap(VQEO_fake_script)()
+coroutine.wrap(IZEKTJN_fake_script)()
+coroutine.wrap(CTKXTBX_fake_script)()
+coroutine.wrap(KNGXRIO_fake_script)()
+coroutine.wrap(QDMNZI_fake_script)()
+coroutine.wrap(LWSD_fake_script)()
