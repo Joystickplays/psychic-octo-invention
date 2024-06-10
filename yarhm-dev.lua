@@ -2231,7 +2231,7 @@ local function BBHC_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	
 			local murdererVelocity = murdererHRP.AssemblyLinearVelocity
 			local predictedPosition = murdererHRP.Position + ((murdererVelocity * Vector3.new(0, 0.5, 0))) * (shootOffset / 15) + murderer.Humanoid.MoveDirection * shootOffset
-	
+			fu.notification(predictionPosition)
 			local args = {
 				[1] = 1,
 				[2] = predictedPosition,
