@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.11.4
+-- YARHM by Imperial, v1.11.6
 
 -- Instances:
 
@@ -66,33 +66,33 @@ local Converted = {
 	["_Keybinding"] = Instance.new("LocalScript");
 	["_FloatingButtons"] = Instance.new("Frame");
 	["_Murder Mystery 2"] = Instance.new("LocalScript");
-	["_DroppedGunBGUI"] = Instance.new("BillboardGui");
-	["_TextLabel3"] = Instance.new("TextLabel");
-	["_UIStroke4"] = Instance.new("UIStroke");
-	["_MurdererBGUI"] = Instance.new("BillboardGui");
-	["_TextLabel4"] = Instance.new("TextLabel");
-	["_UIStroke5"] = Instance.new("UIStroke");
 	["_AddCustomModule1"] = Instance.new("Frame");
 	["_UICorner10"] = Instance.new("UICorner");
-	["_UIStroke6"] = Instance.new("UIStroke");
+	["_UIStroke4"] = Instance.new("UIStroke");
 	["_UIGradient4"] = Instance.new("UIGradient");
 	["_UIGradient5"] = Instance.new("UIGradient");
 	["_UIScale1"] = Instance.new("UIScale");
-	["_TextLabel5"] = Instance.new("TextLabel");
+	["_TextLabel3"] = Instance.new("TextLabel");
 	["_TextBox1"] = Instance.new("TextBox");
 	["_UICorner11"] = Instance.new("UICorner");
 	["_UIPadding7"] = Instance.new("UIPadding");
-	["_TextLabel6"] = Instance.new("TextLabel");
+	["_TextLabel4"] = Instance.new("TextLabel");
 	["_Add"] = Instance.new("TextButton");
 	["_UICorner12"] = Instance.new("UICorner");
 	["_UIPadding8"] = Instance.new("UIPadding");
-	["_UIStroke7"] = Instance.new("UIStroke");
+	["_UIStroke5"] = Instance.new("UIStroke");
 	["_LocalScript2"] = Instance.new("LocalScript");
 	["_Cancel"] = Instance.new("TextButton");
 	["_UICorner13"] = Instance.new("UICorner");
 	["_UIPadding9"] = Instance.new("UIPadding");
-	["_UIStroke8"] = Instance.new("UIStroke");
+	["_UIStroke6"] = Instance.new("UIStroke");
 	["_LocalScript3"] = Instance.new("LocalScript");
+	["_DroppedGunBGUI"] = Instance.new("BillboardGui");
+	["_TextLabel5"] = Instance.new("TextLabel");
+	["_UIStroke7"] = Instance.new("UIStroke");
+	["_MurdererBGUI"] = Instance.new("BillboardGui");
+	["_TextLabel6"] = Instance.new("TextLabel");
+	["_UIStroke8"] = Instance.new("UIStroke");
 }
 
 -- Properties:
@@ -103,7 +103,7 @@ Converted["_YARHM"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 Converted["_YARHM"].ResetOnSpawn = false
 Converted["_YARHM"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_YARHM"].Name = "YARHM"
-Converted["_YARHM"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Converted["_YARHM"].Parent = game.ServerStorage
 
 Converted["_Open"].Font = Enum.Font.Gotham
 Converted["_Open"].Text = "Triple-click this region to open YARHM."
@@ -650,6 +650,59 @@ Converted["_UIStroke6"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 Converted["_UIStroke6"].Color = Color3.fromRGB(255, 0, 0)
 Converted["_UIStroke6"].Parent = Converted["_Cancel"]
 
+Converted["_DroppedGunBGUI"].Active = true
+Converted["_DroppedGunBGUI"].AlwaysOnTop = true
+Converted["_DroppedGunBGUI"].ClipsDescendants = true
+Converted["_DroppedGunBGUI"].Size = UDim2.new(0, 70, 0, 70)
+Converted["_DroppedGunBGUI"].Enabled = false
+Converted["_DroppedGunBGUI"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_DroppedGunBGUI"].Name = "DroppedGunBGUI"
+Converted["_DroppedGunBGUI"].Parent = Converted["_YARHM"]
+
+Converted["_TextLabel5"].Font = Enum.Font.SourceSansBold
+Converted["_TextLabel5"].Text = "Dropped Gun!"
+Converted["_TextLabel5"].TextColor3 = Color3.fromRGB(255, 225.00001698732376, 0)
+Converted["_TextLabel5"].TextScaled = true
+Converted["_TextLabel5"].TextSize = 14
+Converted["_TextLabel5"].TextWrapped = true
+Converted["_TextLabel5"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_TextLabel5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel5"].BackgroundTransparency = 1
+Converted["_TextLabel5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel5"].BorderSizePixel = 0
+Converted["_TextLabel5"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_TextLabel5"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_TextLabel5"].Parent = Converted["_DroppedGunBGUI"]
+
+Converted["_UIStroke7"].Parent = Converted["_TextLabel5"]
+
+Converted["_MurdererBGUI"].Active = true
+Converted["_MurdererBGUI"].AlwaysOnTop = true
+Converted["_MurdererBGUI"].ClipsDescendants = true
+Converted["_MurdererBGUI"].Size = UDim2.new(0, 70, 0, 70)
+Converted["_MurdererBGUI"].StudsOffset = Vector3.new(0, 2, 2)
+Converted["_MurdererBGUI"].Enabled = false
+Converted["_MurdererBGUI"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_MurdererBGUI"].Name = "MurdererBGUI"
+Converted["_MurdererBGUI"].Parent = Converted["_YARHM"]
+
+Converted["_TextLabel6"].Font = Enum.Font.SourceSansBold
+Converted["_TextLabel6"].Text = "Murderer"
+Converted["_TextLabel6"].TextColor3 = Color3.fromRGB(255, 0, 4.000000236555934)
+Converted["_TextLabel6"].TextScaled = true
+Converted["_TextLabel6"].TextSize = 14
+Converted["_TextLabel6"].TextWrapped = true
+Converted["_TextLabel6"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_TextLabel6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel6"].BackgroundTransparency = 1
+Converted["_TextLabel6"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel6"].BorderSizePixel = 0
+Converted["_TextLabel6"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_TextLabel6"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_TextLabel6"].Parent = Converted["_MurdererBGUI"]
+
+Converted["_UIStroke8"].Parent = Converted["_TextLabel6"]
+
 -- Fake Module Scripts:
 
 local fake_module_scripts = {}
@@ -1017,7 +1070,7 @@ end
 
 -- Fake Local Scripts:
 
-local function QGNS_fake_script() -- Fake Script: ServerStorage.YARHM.Open.InitOpen
+local function TAMMX_fake_script() -- Fake Script: ServerStorage.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1053,7 +1106,7 @@ local function QGNS_fake_script() -- Fake Script: ServerStorage.YARHM.Open.InitO
 	--	Transparency = 1
 	--}):Play()
 end
-local function ZTCXV_fake_script() -- Fake Script: ServerStorage.YARHM.Open.OnClick
+local function TSLUAH_fake_script() -- Fake Script: ServerStorage.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1101,7 +1154,7 @@ local function ZTCXV_fake_script() -- Fake Script: ServerStorage.YARHM.Open.OnCl
 	end)
 	
 end
-local function SQUS_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Resizer
+local function NXBQ_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1187,7 +1240,7 @@ local function SQUS_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Resiz
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function RCOWOGA_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.List.AutoSetup
+local function SCVQWW_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1241,7 +1294,7 @@ local function RCOWOGA_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Li
 		end
 	end)
 end
-local function BLXTM_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Close.LocalScript
+local function WHNI_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1262,7 +1315,7 @@ local function BLXTM_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Clos
 		):Play()
 	end)
 end
-local function DTPWO_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.AddCustomModule.LocalScript
+local function XDEGYM_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1286,7 +1339,7 @@ local function DTPWO_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.AddC
 		}):Play()
 	end)
 end
-local function BORKR_fake_script() -- Fake Script: ServerStorage.YARHM.Init
+local function GEEVP_fake_script() -- Fake Script: ServerStorage.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1317,7 +1370,7 @@ local function BORKR_fake_script() -- Fake Script: ServerStorage.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("v1.11\n- Bugfixes and improvements to systems")
 	
 end
-local function NLXCYX_fake_script() -- Fake Script: ServerStorage.YARHM.Flee the Facility
+local function WVVKA_fake_script() -- Fake Script: ServerStorage.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1627,7 +1680,7 @@ local function NLXCYX_fake_script() -- Fake Script: ServerStorage.YARHM.Flee the
 	
 	_G.Modules[2] = module
 end
-local function AALLK_fake_script() -- Fake Script: ServerStorage.YARHM.Universal
+local function PNZWBZF_fake_script() -- Fake Script: ServerStorage.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1721,7 +1774,7 @@ local function AALLK_fake_script() -- Fake Script: ServerStorage.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function ROXU_fake_script() -- Fake Script: ServerStorage.YARHM.FloatingButton.Keybinding
+local function SAAKNZ_fake_script() -- Fake Script: ServerStorage.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -1736,7 +1789,7 @@ local function ROXU_fake_script() -- Fake Script: ServerStorage.YARHM.FloatingBu
 
 	
 end
-local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder Mystery 2
+local function NNLTJ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1766,7 +1819,7 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 	
 	local fu = require(_G.YARHM.FUNCTIONS)
 	
-	local fadeEvent = game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("Fade", 5)
+	local fadeEvent = game.ReplicatedStorage:WaitForChild("Gameplay"):WaitForChild("Fade", 5)
 	if fadeEvent then
 		fadeEvent.OnClientEvent:Connect(function(data)
 			playerData = data
@@ -1917,7 +1970,7 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 						a.FillColor = Color3.fromRGB(255, 255, 255)
 						task.spawn(function()
 							if player == findMurderer() then
-								local mbgui = script.MurdererBGUI:Clone()
+								local mbgui = script.Parent.MurdererBGUI:Clone()
 								mbgui.Name = "AppliedMurdererBGUI"
 								mbgui.Parent = _G.YARHM
 								mbgui.Adornee = a
@@ -1954,7 +2007,7 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 		if script.Parent:FindFirstChild("GunESP") and ch.Name == "GunDrop" then
 			script.Parent:FindFirstChild("GunESP").Adornee = ch
 			script.Parent:FindFirstChild("GunESP").Enabled = true
-			local bguiclone = script.DroppedGunBGUI:Clone()
+			local bguiclone = script.Parent.DroppedGunBGUI:Clone()
 			bguiclone.Parent = script.Parent
 			bguiclone.Adornee = workspace:FindFirstChild("GunDrop")
 			bguiclone.Enabled = true
@@ -2035,9 +2088,18 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 								return
 							end
 						end
+						local murdererHRP = murderer.Character:FindFirstChild("HumanoidRootPart")
+						if not murdererHRP then
+							fu.notification("Could not find the murderer's HumanoidRootPart.")
+							return
+						end
+	
+						local murdererVelocity = murdererHRP.AssemblyLinearVelocity
+						local predictedPosition = murdererHRP.Position + ((murdererVelocity * Vector3.new(0, 0.5, 0))) * (shootOffset / 15) + murderer.Humanoid.MoveDirection * shootOffset
+	
 						local args = {
 							[1] = 1,
-							[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position + findMurderer().Character:FindFirstChild("Humanoid").MoveDirection * shootOffset,
+							[2] = predictedPosition,
 							[3] = "AH"
 						}
 	
@@ -2108,7 +2170,7 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 					if workspace:FindFirstChild("GunDrop") then
 						gunesp.Adornee = workspace:FindFirstChild("GunDrop")
 						gunesp.Enabled = true
-						local bguiclone = script.DroppedGunBGUI:Clone()
+						local bguiclone = script.Parent.DroppedGunBGUI:Clone()
 						bguiclone.Parent = script.Parent
 						bguiclone.Adornee = workspace:FindFirstChild("GunDrop")
 						bguiclone.Enabled = true
@@ -2167,7 +2229,7 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 			end
 	
 			local murdererVelocity = murdererHRP.AssemblyLinearVelocity
-			local predictedPosition = murdererHRP.Position + ((murdererVelocity * Vector3.new(0, 0.5, 0)) + murderer.Humanoid.MoveDirection) * (shootOffset / 15)
+			local predictedPosition = murdererHRP.Position + ((murdererVelocity * Vector3.new(0, 0.5, 0))) * (shootOffset / 15) + murderer.Humanoid.MoveDirection * shootOffset
 	
 			local args = {
 				[1] = 1,
@@ -2252,7 +2314,7 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 			end
 	
 			local murdererVelocity = murdererHRP.AssemblyLinearVelocity
-			local predictedPosition = murdererHRP.Position + ((murdererVelocity * Vector3.new(0, 0.5, 0)) + Murderer.Humanoid.MoveDirection) * (shootOffset / 15)
+			local predictedPosition = murdererHRP.Position + ((murdererVelocity * Vector3.new(0, 0.5, 0))) * (shootOffset / 15) + Murderer.Humanoid.MoveDirection * shootOffset
 	
 			local args = {
 				[1] = 1,
@@ -2435,7 +2497,7 @@ local function FXPXLZ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder M
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function GSQP_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Add.LocalScript
+local function YIXWR_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2476,7 +2538,7 @@ local function GSQP_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomM
 		end
 	end)
 end
-local function LTOUCX_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Cancel.LocalScript
+local function BOJSIB_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2501,16 +2563,16 @@ local function LTOUCX_fake_script() -- Fake Script: ServerStorage.YARHM.AddCusto
 	end)
 end
 
-coroutine.wrap(QGNS_fake_script)()
-coroutine.wrap(ZTCXV_fake_script)()
-coroutine.wrap(SQUS_fake_script)()
-coroutine.wrap(RCOWOGA_fake_script)()
-coroutine.wrap(BLXTM_fake_script)()
-coroutine.wrap(DTPWO_fake_script)()
-coroutine.wrap(BORKR_fake_script)()
-coroutine.wrap(NLXCYX_fake_script)()
-coroutine.wrap(AALLK_fake_script)()
-coroutine.wrap(ROXU_fake_script)()
-coroutine.wrap(FXPXLZ_fake_script)()
-coroutine.wrap(GSQP_fake_script)()
-coroutine.wrap(LTOUCX_fake_script)()
+coroutine.wrap(TAMMX_fake_script)()
+coroutine.wrap(TSLUAH_fake_script)()
+coroutine.wrap(NXBQ_fake_script)()
+coroutine.wrap(SCVQWW_fake_script)()
+coroutine.wrap(WHNI_fake_script)()
+coroutine.wrap(XDEGYM_fake_script)()
+coroutine.wrap(GEEVP_fake_script)()
+coroutine.wrap(WVVKA_fake_script)()
+coroutine.wrap(PNZWBZF_fake_script)()
+coroutine.wrap(SAAKNZ_fake_script)()
+coroutine.wrap(NNLTJ_fake_script)()
+coroutine.wrap(YIXWR_fake_script)()
+coroutine.wrap(BOJSIB_fake_script)()
