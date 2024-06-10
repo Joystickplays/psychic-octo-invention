@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.10.0
+-- YARHM by Imperial, v1.10.1
 
 -- Instances:
 
@@ -1059,7 +1059,7 @@ end
 
 -- Fake Local Scripts:
 
-local function EOMOGDY_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function NMWU_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1095,7 +1095,7 @@ local function EOMOGDY_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitO
 		Transparency = 1
 	}):Play()
 end
-local function WJOK_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function BNCM_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1143,7 +1143,7 @@ local function WJOK_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function PQPLQKA_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function GHCRRAY_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1206,7 +1206,7 @@ local function PQPLQKA_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resiz
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function PYNPAEN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function XZUBS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1254,7 +1254,7 @@ local function PYNPAEN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.
 	task.wait(1) -- magic number to wait modules to load lmao
 	require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
 end
-local function YRHOYR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function UNYPIL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1275,7 +1275,7 @@ local function YRHOYR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.
 		):Play()
 	end)
 end
-local function HNDJR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function MBQCUY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1299,7 +1299,7 @@ local function HNDJR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCust
 		}):Play()
 	end)
 end
-local function SHSI_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function CCGICN_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1327,51 +1327,10 @@ local function SHSI_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.9\n- A Discord server! Join now.\n- YARHM now opens on its own on startup\n- Added Kill murderer and kill closest player")
-	
-	local RunService = game:GetService("RunService")
-	local murderer = game.Players:WaitForChild("joystick135")
-	local shootOffset = 0.2 -- Adjust this value as needed
-	
-	if murderer then
-		local murdererHRP = murderer.Character:FindFirstChild("HumanoidRootPart")
-		if not murdererHRP then
-			warn("Could not find the murderer's HumanoidRootPart.")
-			return
-		end
-	
-		local function createBeam()
-			local attachment0 = Instance.new("Attachment", murdererHRP)
-			local attachment1 = Instance.new("Attachment", murdererHRP)
-	
-			local beam = Instance.new("Beam")
-			beam.Attachment0 = attachment0
-			beam.Attachment1 = attachment1
-			beam.Color = ColorSequence.new(Color3.new(1, 0, 0)) -- Red color
-			beam.FaceCamera = true
-			beam.Width0 = 1
-			beam.Width1 = 1
-			beam.Parent = murdererHRP
-	
-			return attachment1
-		end
-	
-		local beamAttachment = createBeam()
-	
-		RunService.RenderStepped:Connect(function()
-			if murderer and murdererHRP then
-				local murdererVelocity = murdererHRP.AssemblyLinearVelocity
-				local predictedPosition = murdererHRP.Position + (murdererVelocity * Vector3.new(1, 0.5, 1)) * shootOffset
-	
-				beamAttachment.Position = murdererHRP.CFrame:pointToObjectSpace(predictedPosition)
-			end
-		end)
-	else
-		warn("No murderer found.")
-	end
+	require(script.Parent.FUNCTIONS).notification("v1.10\n- God mode\n- Customizable trigger area sizing\n- Auto-shooting improved\n- Fix coins magnet\n- Keybinding of floating buttons is possible, right-click to set one")
 	
 end
-local function YQHDDFM_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function FDIVM_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1681,7 +1640,7 @@ local function YQHDDFM_fake_script() -- Fake Script: StarterGui.YARHM.Flee the F
 	
 	_G.Modules[2] = module
 end
-local function MRWCMPR_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function EZIDCV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1775,7 +1734,7 @@ local function MRWCMPR_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function IOUPGV_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+local function BUZHNMP_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -1790,7 +1749,7 @@ local function IOUPGV_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBut
 
 	
 end
-local function HZYD_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function JZKAA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -2439,7 +2398,7 @@ local function HZYD_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function CKIKLYQ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function JXBM_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2480,7 +2439,7 @@ local function CKIKLYQ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomM
 		end
 	end)
 end
-local function FYMFCL_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function VIAO_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2505,16 +2464,16 @@ local function FYMFCL_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 	end)
 end
 
-coroutine.wrap(EOMOGDY_fake_script)()
-coroutine.wrap(WJOK_fake_script)()
-coroutine.wrap(PQPLQKA_fake_script)()
-coroutine.wrap(PYNPAEN_fake_script)()
-coroutine.wrap(YRHOYR_fake_script)()
-coroutine.wrap(HNDJR_fake_script)()
-coroutine.wrap(SHSI_fake_script)()
-coroutine.wrap(YQHDDFM_fake_script)()
-coroutine.wrap(MRWCMPR_fake_script)()
-coroutine.wrap(IOUPGV_fake_script)()
-coroutine.wrap(HZYD_fake_script)()
-coroutine.wrap(CKIKLYQ_fake_script)()
-coroutine.wrap(FYMFCL_fake_script)()
+coroutine.wrap(NMWU_fake_script)()
+coroutine.wrap(BNCM_fake_script)()
+coroutine.wrap(GHCRRAY_fake_script)()
+coroutine.wrap(XZUBS_fake_script)()
+coroutine.wrap(UNYPIL_fake_script)()
+coroutine.wrap(MBQCUY_fake_script)()
+coroutine.wrap(CCGICN_fake_script)()
+coroutine.wrap(FDIVM_fake_script)()
+coroutine.wrap(EZIDCV_fake_script)()
+coroutine.wrap(BUZHNMP_fake_script)()
+coroutine.wrap(JZKAA_fake_script)()
+coroutine.wrap(JXBM_fake_script)()
+coroutine.wrap(VIAO_fake_script)()
