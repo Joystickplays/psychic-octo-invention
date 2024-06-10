@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.11.6
+-- YARHM by Imperial, v1.11.7
 
 -- Instances:
 
@@ -42,6 +42,7 @@ local Converted = {
 	["_LocalScript1"] = Instance.new("LocalScript");
 	["_UIScale"] = Instance.new("UIScale");
 	["_Init"] = Instance.new("LocalScript");
+	["_BoxHandleAdornment"] = Instance.new("BoxHandleAdornment");
 	["_ListButton"] = Instance.new("TextButton");
 	["_UICorner5"] = Instance.new("UICorner");
 	["_FUNCTIONS"] = Instance.new("ModuleScript");
@@ -1070,7 +1071,7 @@ end
 
 -- Fake Local Scripts:
 
-local function TAMMX_fake_script() -- Fake Script: ServerStorage.YARHM.Open.InitOpen
+local function KYRC_fake_script() -- Fake Script: ServerStorage.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1106,7 +1107,7 @@ local function TAMMX_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Init
 	--	Transparency = 1
 	--}):Play()
 end
-local function TSLUAH_fake_script() -- Fake Script: ServerStorage.YARHM.Open.OnClick
+local function JYQKVM_fake_script() -- Fake Script: ServerStorage.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1154,7 +1155,7 @@ local function TSLUAH_fake_script() -- Fake Script: ServerStorage.YARHM.Open.OnC
 	end)
 	
 end
-local function NXBQ_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Resizer
+local function BOZGMLW_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1240,7 +1241,7 @@ local function NXBQ_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Resiz
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function SCVQWW_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.List.AutoSetup
+local function WNALXOW_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -1294,7 +1295,7 @@ local function SCVQWW_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Lis
 		end
 	end)
 end
-local function WHNI_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Close.LocalScript
+local function KZUBT_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -1315,7 +1316,7 @@ local function WHNI_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Close
 		):Play()
 	end)
 end
-local function XDEGYM_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.AddCustomModule.LocalScript
+local function WOVPAP_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule"]
@@ -1339,7 +1340,7 @@ local function XDEGYM_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Add
 		}):Play()
 	end)
 end
-local function GEEVP_fake_script() -- Fake Script: ServerStorage.YARHM.Init
+local function DPNJWNB_fake_script() -- Fake Script: ServerStorage.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1370,7 +1371,7 @@ local function GEEVP_fake_script() -- Fake Script: ServerStorage.YARHM.Init
 	require(script.Parent.FUNCTIONS).notification("v1.11\n- Bugfixes and improvements to systems")
 	
 end
-local function WVVKA_fake_script() -- Fake Script: ServerStorage.YARHM.Flee the Facility
+local function AGDRWI_fake_script() -- Fake Script: ServerStorage.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -1680,7 +1681,7 @@ local function WVVKA_fake_script() -- Fake Script: ServerStorage.YARHM.Flee the 
 	
 	_G.Modules[2] = module
 end
-local function PNZWBZF_fake_script() -- Fake Script: ServerStorage.YARHM.Universal
+local function DZQOXB_fake_script() -- Fake Script: ServerStorage.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -1774,7 +1775,7 @@ local function PNZWBZF_fake_script() -- Fake Script: ServerStorage.YARHM.Univers
 	
 	_G.Modules[1] = module
 end
-local function SAAKNZ_fake_script() -- Fake Script: ServerStorage.YARHM.FloatingButton.Keybinding
+local function EFYCD_fake_script() -- Fake Script: ServerStorage.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -1789,7 +1790,7 @@ local function SAAKNZ_fake_script() -- Fake Script: ServerStorage.YARHM.Floating
 
 	
 end
-local function NNLTJ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder Mystery 2
+local function VSEQXIW_fake_script() -- Fake Script: ServerStorage.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -1819,7 +1820,7 @@ local function NNLTJ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 	
 	local fu = require(_G.YARHM.FUNCTIONS)
 	
-	local fadeEvent = game.ReplicatedStorage:WaitForChild("Gameplay"):WaitForChild("Fade", 5)
+	local fadeEvent = game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("Fade", 5)
 	if fadeEvent then
 		fadeEvent.OnClientEvent:Connect(function(data)
 			playerData = data
@@ -2497,7 +2498,7 @@ local function NNLTJ_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function YIXWR_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Add.LocalScript
+local function WDXVJ_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2538,7 +2539,7 @@ local function YIXWR_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustom
 		end
 	end)
 end
-local function BOJSIB_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Cancel.LocalScript
+local function IBMOT_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2563,16 +2564,16 @@ local function BOJSIB_fake_script() -- Fake Script: ServerStorage.YARHM.AddCusto
 	end)
 end
 
-coroutine.wrap(TAMMX_fake_script)()
-coroutine.wrap(TSLUAH_fake_script)()
-coroutine.wrap(NXBQ_fake_script)()
-coroutine.wrap(SCVQWW_fake_script)()
-coroutine.wrap(WHNI_fake_script)()
-coroutine.wrap(XDEGYM_fake_script)()
-coroutine.wrap(GEEVP_fake_script)()
-coroutine.wrap(WVVKA_fake_script)()
-coroutine.wrap(PNZWBZF_fake_script)()
-coroutine.wrap(SAAKNZ_fake_script)()
-coroutine.wrap(NNLTJ_fake_script)()
-coroutine.wrap(YIXWR_fake_script)()
-coroutine.wrap(BOJSIB_fake_script)()
+coroutine.wrap(KYRC_fake_script)()
+coroutine.wrap(JYQKVM_fake_script)()
+coroutine.wrap(BOZGMLW_fake_script)()
+coroutine.wrap(WNALXOW_fake_script)()
+coroutine.wrap(KZUBT_fake_script)()
+coroutine.wrap(WOVPAP_fake_script)()
+coroutine.wrap(DPNJWNB_fake_script)()
+coroutine.wrap(AGDRWI_fake_script)()
+coroutine.wrap(DZQOXB_fake_script)()
+coroutine.wrap(EFYCD_fake_script)()
+coroutine.wrap(VSEQXIW_fake_script)()
+coroutine.wrap(WDXVJ_fake_script)()
+coroutine.wrap(IBMOT_fake_script)()
