@@ -134,7 +134,7 @@ Converted["_YARHM"].Enabled = true
 Converted["_YARHM"].ResetOnSpawn = false
 Converted["_YARHM"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_YARHM"].Name = "YARHM"
-Converted["_YARHM"].Parent = script.Parent
+Converted["_YARHM"].Parent = game:GetService("CoreGui")
 
 Converted["_Open"].Font = Enum.Font.Gotham
 Converted["_Open"].Text = "Triple-click this region to open YARHM."
