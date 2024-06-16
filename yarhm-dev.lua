@@ -2556,6 +2556,7 @@ local function OROGD_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 		end
 	
 		for _, i in ipairs(game.Players:GetPlayers()) do
+			if not i.Character then continue end
 			if i.Character:FindFirstChild("Knife") then
 				return i
 			end
@@ -2584,6 +2585,7 @@ local function OROGD_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 		end
 	
 		for _, i in ipairs(game.Players:GetPlayers()) do
+			if not i.Character then continue end
 			if i.Character:FindFirstChild("Gun") then
 				return i
 			end
