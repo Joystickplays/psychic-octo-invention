@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.12.7
+-- YARHM by Imperial, v1.12.8
 
 -- Instances:
 
@@ -785,7 +785,6 @@ Converted["_TextLabel6"].Size = UDim2.new(0, 135, 0, 33)
 Converted["_TextLabel6"].Parent = Converted["_Area1"]
 
 Converted["_Dialog"].AnchorPoint = Vector2.new(0.5, 1)
-Converted["_Dialog"].AutomaticSize = Enum.AutomaticSize.X
 Converted["_Dialog"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Dialog"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Dialog"].BorderSizePixel = 0
@@ -863,8 +862,8 @@ Converted["_Options"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Options"].BackgroundTransparency = 1
 Converted["_Options"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Options"].BorderSizePixel = 0
-Converted["_Options"].Position = UDim2.new(0, 0, 0, 120)
-Converted["_Options"].Size = UDim2.new(1, 0, 0, 28)
+Converted["_Options"].Position = UDim2.new(0, 0, 0.82045126, 0)
+Converted["_Options"].Size = UDim2.new(0.997436285, 0, 0.241758227, 0)
 Converted["_Options"].Name = "Options"
 Converted["_Options"].Parent = Converted["_Dialog"]
 
@@ -875,20 +874,24 @@ Converted["_UIListLayout4"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout4"].Parent = Converted["_Options"]
 
 Converted["_OptionPlaceholder"].Font = Enum.Font.GothamBold
+Converted["_OptionPlaceholder"].RichText = true
+Converted["_OptionPlaceholder"].Text = "aaaaaaaaaaa"
 Converted["_OptionPlaceholder"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_OptionPlaceholder"].TextSize = 14
+Converted["_OptionPlaceholder"].TextScaled = true
+Converted["_OptionPlaceholder"].TextSize = 100
+Converted["_OptionPlaceholder"].TextWrapped = true
 Converted["_OptionPlaceholder"].BackgroundColor3 = Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)
 Converted["_OptionPlaceholder"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_OptionPlaceholder"].BorderSizePixel = 0
-Converted["_OptionPlaceholder"].Size = UDim2.new(0, 136, 0, 28)
+Converted["_OptionPlaceholder"].Size = UDim2.new(0.532000005, -5, 1.00899994, 0)
 Converted["_OptionPlaceholder"].Visible = false
 Converted["_OptionPlaceholder"].Name = "OptionPlaceholder"
 Converted["_OptionPlaceholder"].Parent = Converted["_Options"]
 
-Converted["_UIPadding11"].PaddingBottom = UDim.new(0, 15)
+Converted["_UIPadding11"].PaddingBottom = UDim.new(0, 1)
 Converted["_UIPadding11"].PaddingLeft = UDim.new(0, 15)
 Converted["_UIPadding11"].PaddingRight = UDim.new(0, 15)
-Converted["_UIPadding11"].PaddingTop = UDim.new(0, 15)
+Converted["_UIPadding11"].PaddingTop = UDim.new(0, 1)
 Converted["_UIPadding11"].Parent = Converted["_OptionPlaceholder"]
 
 Converted["_UICorner16"].Parent = Converted["_OptionPlaceholder"]
@@ -954,38 +957,49 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 		end
 		
 		
-		--[[
-			@Author: Spynaz
-			@Description: Enables dragging on GuiObjects. Supports both mouse and touch.
-			
-			For instructions on how to use this module, go to this link:
-			https://devforum.roblox.com/t/simple-module-for-creating-draggable-gui-elements/230678
-		--]]
+		local function isUDim2OffScreen(position, size, screenGui)
+			-- Get the absolute size of the ScreenGui
+			local parentSize = screenGui.AbsoluteSize
+		
+			-- Calculate the absolute position and size using UDim2 and parent size
+			local absPosX = position.X.Scale * parentSize.X + position.X.Offset
+			local absPosY = position.Y.Scale * parentSize.Y + position.Y.Offset
+			local absSizeX = size.X.Scale * parentSize.X + size.X.Offset
+			local absSizeY = size.Y.Scale * parentSize.Y + size.Y.Offset
+		
+			-- Check if the GUI element defined by the UDim2 is off the screen
+			local isOffLeft = absPosX + absSizeX <= 0
+			local isOffRight = absPosX >= parentSize.X
+			local isOffTop = absPosY + absSizeY <= 0
+			local isOffBottom = absPosY >= parentSize.Y
+		
+			return isOffLeft or isOffRight or isOffTop or isOffBottom
+		end
 		
 		local UDim2_new = UDim2.new
 		
 		local UserInputService = game:GetService("UserInputService")
 		local TweenService = game:GetService("TweenService")	
 		
-		-- Variable to store the number of fingers on the screen
-		local fingersOnScreen = 0
+		---- Variable to store the number of fingers on the screen
+		--local fingersOnScreen = 0
 		
-		-- Event listener for when a touch starts
-		UserInputService.TouchStarted:Connect(function(touch, processedByUI)
-			if not processedByUI then
-				fingersOnScreen = fingersOnScreen + 1
-			end
-		end)
+		---- Event listener for when a touch starts
+		--UserInputService.TouchStarted:Connect(function(touch, processedByUI)
+		--	if not processedByUI then
+		--		fingersOnScreen = fingersOnScreen + 1
+		--	end
+		--end)
 		
-		-- Event listener for when a touch ends
-		UserInputService.TouchEnded:Connect(function(touch, processedByUI)
-			if not processedByUI then
-				fingersOnScreen = fingersOnScreen - 1
-			end
-		end)
+		---- Event listener for when a touch ends
+		--UserInputService.TouchEnded:Connect(function(touch, processedByUI)
+		--	if not processedByUI then
+		--		fingersOnScreen = fingersOnScreen - 1
+		--	end
+		--end)
 		
-		-- Initial count (in case there are touches already when the script starts)
-		fingersOnScreen = 0
+		---- Initial count (in case there are touches already when the script starts)
+		--fingersOnScreen = 0
 		
 		
 		local DraggableObject 		= {}
@@ -1019,6 +1033,10 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 			local function update(input)
 				local delta 		= input.Position - dragStart
 				local newPosition	= UDim2_new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+				if isUDim2OffScreen(newPosition, object.Size, object:FindFirstAncestorWhichIsA("ScreenGui")) then
+					warn("UDim2 is offscreen.")
+					return newPosition
+				end
 				local tween = TweenService:Create(toMove and toMove or object, TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
 					Position = newPosition
 				}):Play()
@@ -1082,7 +1100,7 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 					end
 				end
 		
-				if input == dragInput and self.Dragging and fingersOnScreen < 2 then
+				if input == dragInput and self.Dragging then
 					local newPosition = update(input)
 		
 					if self.Dragged then
@@ -1540,30 +1558,49 @@ do -- Fake Module: StarterGui.YARHM.DraggableObject
 			https://devforum.roblox.com/t/simple-module-for-creating-draggable-gui-elements/230678
 		--]]
 		
+		local function isUDim2OffScreen(position, size, screenGui)
+			-- Get the absolute size of the ScreenGui
+			local parentSize = screenGui.AbsoluteSize
+		
+			-- Calculate the absolute position and size using UDim2 and parent size
+			local absPosX = position.X.Scale * parentSize.X + position.X.Offset
+			local absPosY = position.Y.Scale * parentSize.Y + position.Y.Offset
+			local absSizeX = size.X.Scale * parentSize.X + size.X.Offset
+			local absSizeY = size.Y.Scale * parentSize.Y + size.Y.Offset
+		
+			-- Check if the GUI element defined by the UDim2 is off the screen
+			local isOffLeft = absPosX + absSizeX <= 0
+			local isOffRight = absPosX >= parentSize.X
+			local isOffTop = absPosY + absSizeY <= 0
+			local isOffBottom = absPosY >= parentSize.Y
+		
+			return isOffLeft or isOffRight or isOffTop or isOffBottom
+		end
+		
 		local UDim2_new = UDim2.new
 		
 		local UserInputService = game:GetService("UserInputService")
 		local TweenService = game:GetService("TweenService")	
 		
-		-- Variable to store the number of fingers on the screen
-		local fingersOnScreen = 0
+		---- Variable to store the number of fingers on the screen
+		--local fingersOnScreen = 0
 		
-		-- Event listener for when a touch starts
-		UserInputService.TouchStarted:Connect(function(touch, processedByUI)
-			if not processedByUI then
-				fingersOnScreen = fingersOnScreen + 1
-			end
-		end)
+		---- Event listener for when a touch starts
+		--UserInputService.TouchStarted:Connect(function(touch, processedByUI)
+		--	if not processedByUI then
+		--		fingersOnScreen = fingersOnScreen + 1
+		--	end
+		--end)
 		
-		-- Event listener for when a touch ends
-		UserInputService.TouchEnded:Connect(function(touch, processedByUI)
-			if not processedByUI then
-				fingersOnScreen = fingersOnScreen - 1
-			end
-		end)
+		---- Event listener for when a touch ends
+		--UserInputService.TouchEnded:Connect(function(touch, processedByUI)
+		--	if not processedByUI then
+		--		fingersOnScreen = fingersOnScreen - 1
+		--	end
+		--end)
 		
-		-- Initial count (in case there are touches already when the script starts)
-		fingersOnScreen = 0
+		---- Initial count (in case there are touches already when the script starts)
+		--fingersOnScreen = 0
 		
 		
 		local DraggableObject 		= {}
@@ -1597,6 +1634,10 @@ do -- Fake Module: StarterGui.YARHM.DraggableObject
 			local function update(input)
 				local delta 		= input.Position - dragStart
 				local newPosition	= UDim2_new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+				if isUDim2OffScreen(newPosition, object.Size, object:FindFirstAncestorWhichIsA("ScreenGui")) then
+					warn("UDim2 is offscreen.")
+					return newPosition
+				end
 				local tween = TweenService:Create(toMove and toMove or object, TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
 					Position = newPosition
 				}):Play()
@@ -1660,7 +1701,7 @@ do -- Fake Module: StarterGui.YARHM.DraggableObject
 					end
 				end
 				
-				if input == dragInput and self.Dragging and fingersOnScreen < 2 then
+				if input == dragInput and self.Dragging then
 					local newPosition = update(input)
 					
 					if self.Dragged then
@@ -1698,6 +1739,8 @@ do -- Fake Module: StarterGui.YARHM.ClickAndHold
 		local ClickAndHold = {}
 		ClickAndHold.__index = ClickAndHold
 		
+		local UIS = game:GetService("UserInputService")
+		
 		function ClickAndHold.new(textButton, holdTime)
 			local self = setmetatable({}, ClickAndHold)
 			self.textButton = textButton
@@ -1714,12 +1757,21 @@ do -- Fake Module: StarterGui.YARHM.ClickAndHold
 				end)
 			end)
 		
-			self.textButton.MouseButton1Up:Connect(function()
-				if self.holdTask then
-					coroutine.close(self.holdTask) -- Cancel the task if the button is released
-					self.holdTask = nil
+		
+			UIS.InputEnded:Connect(function(inp, _)
+				if inp.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch then
+					if self.holdTask then
+						coroutine.close(self.holdTask) -- Cancel the task if the button is released
+						self.holdTask = nil
+					end
 				end
 			end)
+			--self.textButton.MouseButton1Up:Connect(function()
+			--	if self.holdTask then
+			--		coroutine.close(self.holdTask) -- Cancel the task if the button is released
+			--		self.holdTask = nil
+			--	end
+			--end)
 		
 			return self
 		end
@@ -1732,7 +1784,7 @@ end
 
 -- Fake Local Scripts:
 
-local function MCJW_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function QQKKYC_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1768,7 +1820,7 @@ local function MCJW_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
 	--	Transparency = 1
 	--}):Play()
 end
-local function TGEPGY_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function THFV_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1816,7 +1868,7 @@ local function TGEPGY_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClic
 	end)
 	
 end
-local function UJXX_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function DNIIRU_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1902,7 +1954,7 @@ local function UJXX_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function YSXF_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function ZIBGTY_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1936,7 +1988,7 @@ local function YSXF_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	--require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.11\n- Bugfixes and improvements to systems")
+	require(script.Parent.FUNCTIONS).notification("v1.12\n- Hub GUI redesign\n- New features (dragging menu, make invisible buttons, etc)\n- Hiding the GUI\n- Better (or not) auto-shooting\n- Knife throw silent aim (INACCURATE)\n- Universal changes\n- Bugfixes and improvements to systems")
 	
 	
 	local menudrag = require(script.Parent.DraggableObject).new(script.Parent.Menu)
@@ -1966,7 +2018,7 @@ local function YSXF_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	
 	require(script.Parent.DraggableObject).new(script.Parent.Menu.CanvasGroup.Opener, script.Parent.Menu):Enable()
 end
-local function QOWDOZU_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function ZHYW_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -2276,7 +2328,7 @@ local function QOWDOZU_fake_script() -- Fake Script: StarterGui.YARHM.Flee the F
 	
 	_G.Modules[2] = module
 end
-local function JITRGX_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function FLBAQMP_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -2328,6 +2380,44 @@ local function JITRGX_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 		Type = "Text",
 		Args = {"---"}
 	})
+	
+	table.insert(module, {
+		Type = "Input",
+		Args = {"Hitbox expander", "Expand everyone's hitbox", function(Self, ToExpand)
+			local players = game:GetService("Players"):GetPlayers()
+			for i,v in ipairs(players) do
+				if v ~= game.Players.LocalPlayer and v.Character:FindFirstChild('HumanoidRootPart') then
+					local sizeArg = tonumber(ToExpand)
+					local Size = Vector3.new(sizeArg,sizeArg,sizeArg)
+					local Root = v.Character:FindFirstChild('HumanoidRootPart')
+					if Root:IsA("BasePart") then
+						if not ToExpand or sizeArg == 1 then
+							Root.Size = Vector3.new(2,1,1)
+							Root.Transparency = 0.2
+						else
+							Root.Size = Size
+							Root.Transparency = 0.2
+						end
+					end
+				end
+			end
+			fu.notification("Hitboxes expanded.")
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Input",
+		Args = {"Walkspeed", "Set speed", function(Self, speed)
+			local lp = game:GetService("Players").LocalPlayer
+			local char = lp.Character
+			if not char then fu.notification("No character!") return end
+			local hu = char:FindFirstChildOfClass("Humanoid")
+			if not hu then fu.notification("No humanoid on your character..?") return end
+			hu.WalkSpeed = tonumber(speed) or 16
+			fu.notification("Walkspeed set.")
+		end,}
+	})
+	
 	table.insert(module, {
 		Type = "Button",
 		Args = {"Hide YARHM", function(Self)
@@ -2415,6 +2505,16 @@ local function JITRGX_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 		end}
 	}
 	)
+	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"SELF-DESTRUCT", function(Self)
+			fu.notification("See you later!")
+			task.wait(1.5)
+			script.Parent:Destroy() -- Scary!
+		end}
+	}
+	)
 	--	Type = "Button",
 	--	Args = {"Move YARHM trigger to the top", function(Self)
 	--		_G.YARHM.Open.UIStroke.Transparency = 0
@@ -2434,7 +2534,7 @@ local function JITRGX_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function PZGQPZ_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+local function ZAPW_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -2449,7 +2549,7 @@ local function PZGQPZ_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBut
 
 	
 end
-local function TNMLFS_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
+local function BOVFNL_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
     local script = Instance.new("LocalScript")
     script.Name = "Invisible"
     script.Parent = Converted["_FloatingButton"]
@@ -2499,7 +2599,7 @@ local function TNMLFS_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBut
 	--	holding = false
 	--end)
 end
-local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function BIYV_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -2520,6 +2620,8 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	local coinAutoCollect = false
 	local autoShooting = false
 	local shootOffset = 2
+	
+	local localplayer = game:GetService("Players").LocalPlayer
 	
 	local playerData = {}
 	
@@ -2755,18 +2857,18 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 							if claimedCoins[coin] then continue end
 							if not coin then continue end
 							local coinPosition = coin.Position
-							--if (coinPosition - game.Players.LocalPlayer.Character:GetPivot().Position).Magnitude > 30 then return end
-							--local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+							--if (coinPosition - localplayer.Character:GetPivot().Position).Magnitude > 30 then return end
+							--local characterRootPart = localplayer.Character.HumanoidRootPart
 							--local rayDirection = coinPosition * 3
 	
 							--local raycastParams = RaycastParams.new()
 							--raycastParams.FilterType = Enum.RaycastFilterType.Exclude
-							--raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+							--raycastParams.FilterDescendantsInstances = {localplayer.Character}
 	
 							--local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
 	
 							--if not hit or hit.Instance == coin then -- Check if nothing collides or if it collides with the coin
-							game.Players.LocalPlayer.Character:MoveTo(Vector3.new(coin:GetPivot().X, coin:GetPivot().Y, coin:GetPivot().Z))
+							localplayer.Character:MoveTo(Vector3.new(coin:GetPivot().X, coin:GetPivot().Y, coin:GetPivot().Z))
 							claimedCoins[coin] = true
 							--end
 	
@@ -2813,24 +2915,29 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 		return total / #velocityHistory
 	end
 	
-	local function getPredictedPosition(npc, shootOffset)
+	local function getPredictedPosition(player, shootOffset, murd)
 		pcall(function()
-			npc = npc.Character
-			if not npc.Character then fu.notification("No murderer to predict position.") return end
+			player = player.Character
+			if not player.Character then fu.notification("No murderer to predict position.") return end
 		end)
-		local npcHRP = npc:FindFirstChild("HumanoidRootPart")
-		if not npcHRP then
-			return Vector3.new(0,0,0), "Could not find the NPC's HumanoidRootPart."
+		local playerHRP = player:FindFirstChild("HumanoidRootPart")
+		if not playerHRP then
+			return Vector3.new(0,0,0), "Could not find the player's HumanoidRootPart."
 		end
 	
-		local npcPosition = npcHRP.Position
-		local avgVelocity = averageVelocity()
-		local npcMoveDirection = npc.Humanoid.MoveDirection
+		local playerPosition = playerHRP.Position
+		local velocity = Vector3.new()
+		if murd then
+			velocity = averageVelocity()
+		else
+			velocity = playerHRP.AssemblyLinearVelocity
+		end
+		local playerMoveDirection = player.Humanoid.MoveDirection
 	
 		-- Predict future position considering average velocity and move direction with strengths
-		local predictedPosition = npcPosition 
-			+ (avgVelocity * Vector3.new(1, 1, 1)) * (shootOffset / 15) * 1
-			+ npcMoveDirection * shootOffset * 1
+		local predictedPosition = playerPosition 
+			+ (velocity * Vector3.new(1, 1, 1)) * (shootOffset / 15) * 1
+			+ playerMoveDirection * shootOffset * 1
 	
 		return predictedPosition
 	end
@@ -2849,27 +2956,27 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	
 	task.spawn(function()
 		while task.wait(1) do
-			if findSheriff() == game.Players.LocalPlayer and autoShooting then
+			if findSheriff() == localplayer and autoShooting then
 				fu.notification("Auto-shooting started.")
 				repeat
 					task.wait(0.1)
 					local murderer = findMurderer()
 					if not murderer then fu.notification("No murderer.") continue end
 					local murdererPosition = murderer.Character.HumanoidRootPart.Position
-					local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+					local characterRootPart = localplayer.Character.HumanoidRootPart
 					local rayDirection = murdererPosition - characterRootPart.Position
 	
 					local raycastParams = RaycastParams.new()
 					raycastParams.FilterType = Enum.RaycastFilterType.Exclude
-					raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+					raycastParams.FilterDescendantsInstances = {localplayer.Character}
 	
 					local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
 					if not hit or hit.Instance.Parent == murderer.Character then -- Check if nothing collides or if it collides with the murderer
 						fu.notification("Auto-shooting!")
-						if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
-							local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
-							if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
-								game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+						if not localplayer.Character:FindFirstChild("Gun") then
+							local hum = localplayer.Character:FindFirstChild("Humanoid")
+							if localplayer.Backpack:FindFirstChild("Gun") then
+								localplayer.Character:FindFirstChild("Humanoid"):EquipTool(localplayer.Backpack:FindFirstChild("Gun"))
 							else
 								fu.notification("You don't have the gun..?")
 								return
@@ -2889,9 +2996,9 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 							[3] = "AH"
 						}
 	
-						game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+						localplayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 					end
-				until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
+				until findSheriff() ~= localplayer or not autoShooting
 			end
 		end
 	end)
@@ -2998,7 +3105,7 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	table.insert(module, {
 		Type = "Button",
 		Args = {"Shoot murderer", function(Self)
-			if findSheriff() ~= game.Players.LocalPlayer then 
+			if findSheriff() ~= localplayer then 
 				fu.notification("You're not sheriff/hero.") 
 				return 
 			end
@@ -3009,10 +3116,10 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 				return
 			end
 	
-			if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
-				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
-				if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
-					hum:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+			if not localplayer.Character:FindFirstChild("Gun") then
+				local hum = localplayer.Character:FindFirstChild("Humanoid")
+				if localplayer.Backpack:FindFirstChild("Gun") then
+					hum:EquipTool(localplayer.Backpack:FindFirstChild("Gun"))
 				else
 					fu.notification("You don't have the gun..?")
 					return
@@ -3032,10 +3139,52 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 				[2] = predictedPosition,
 				[3] = "AH"
 			}
-			game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+			localplayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 		end,}
 	})
 	
+	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"Throw knife to closest player", function(Self)
+			if findMurderer() ~= localplayer then 
+				fu.notification("You're not murderer.") 
+				return 
+			end
+	
+			if not localplayer.Character:FindFirstChild("Knife") then
+				local hum = localplayer.Character:FindFirstChild("Humanoid")
+				if localplayer.Backpack:FindFirstChild("Knife") then
+					hum:EquipTool(localplayer.Backpack:FindFirstChild("Knife"))
+				else
+					fu.notification("You don't have the knife..?")
+					return
+				end
+			end
+			
+			local closestPlayer = findNearestPlayer()
+			if not closestPlayer then
+				fu.notification("No player found to throw at.")
+			end
+			
+			fu.notification("This'll only work when your knife is ready to throw!")
+	
+			local closestPlayerHRP = closestPlayer.Character:FindFirstChild("HumanoidRootPart")
+			if not closestPlayerHRP then
+				fu.notification("Could not find the closest player's HumanoidRootPart.")
+				return
+			end
+	
+			local predictedPosition = getPredictedPosition(closestPlayer, shootOffset * 2.5)
+	
+			local args = {
+				[1] = CFrame.new(localplayer.Character:FindFirstChild("HumanoidRootPart").Position), 
+				[2] = predictedPosition
+			}
+	
+			localplayer.Character.Knife.Throw:FireServer(unpack(args))
+		end,}
+	})
 	
 	
 	table.insert(module, {
@@ -3043,8 +3192,8 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 		Args = {"Shoot position offset", "Set", function(Self, text)
 			if not tonumber(text) then fu.notification("Not a valid number.") return end
 	
-			if tonumber(text) > 10 then
-				fu.notification("An offset with a multiplier of 10 might not at all shoot the murderer!")
+			if tonumber(text) > 5 then
+				fu.notification("An offset with a multiplier of 5 might not at all shoot the murderer!")
 			end
 			if tonumber(text) < 0 then
 				fu.notification("An offset with a negative multiplier will make a shot BEHIND the murderer's walk direction.")
@@ -3056,7 +3205,7 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	
 	table.insert(module, {
 		Type = "Text",
-		Args = {"The automatic murderer's shots can miss when the murderer moves. Shoot offset adjusts for the murderer's movement. Recommended is 3."}
+		Args = {"Shoot offset re-aims the gun/knife shoot/throw to the character's predicted position. Recommended is 2."}
 	})
 	
 	table.insert(module, {
@@ -3071,27 +3220,27 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 			end,
 			Auto_Shoot_murderer = function()
 				autoShooting = not autoShooting
-				if findSheriff() == game.Players.LocalPlayer and autoShooting then
+				if findSheriff() == localplayer and autoShooting then
 					fu.notification("Auto-shooting started.")
 					repeat
 						task.wait(0.1)
 						local murderer = findMurderer()
 						if not murderer then fu.notification("No murderer.") continue end
 						local murdererPosition = murderer.Character.HumanoidRootPart.Position
-						local characterRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+						local characterRootPart = localplayer.Character.HumanoidRootPart
 						local rayDirection = (murdererPosition - characterRootPart.Position).Unit * 50
 	
 						local raycastParams = RaycastParams.new()
 						raycastParams.FilterType = Enum.RaycastFilterType.Exclude
-						raycastParams.FilterDescendantsInstances = {game.Players.LocalPlayer.Character}
+						raycastParams.FilterDescendantsInstances = {localplayer.Character}
 	
 						local hit = workspace:Raycast(characterRootPart.Position, rayDirection, raycastParams)
 						if not hit or hit.Instance.Parent == murderer.Character then -- Check if nothing collides or if it collides with the murderer
 							fu.notification("Auto-shooting!")
-							if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
-								local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
-								if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
-									game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+							if not localplayer.Character:FindFirstChild("Gun") then
+								local hum = localplayer.Character:FindFirstChild("Humanoid")
+								if localplayer.Backpack:FindFirstChild("Gun") then
+									localplayer.Character:FindFirstChild("Humanoid"):EquipTool(localplayer.Backpack:FindFirstChild("Gun"))
 								else
 									fu.notification("You don't have the gun..?")
 									return
@@ -3111,9 +3260,9 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 								[3] = "AH"
 							}
 	
-							game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+							localplayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 						end
-					until findSheriff() ~= game.Players.LocalPlayer or not autoShooting
+					until findSheriff() ~= localplayer or not autoShooting
 				end
 			end,
 		}}
@@ -3131,26 +3280,26 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 		Type = "Button",
 		Args = {"Teleport to dropped gun", function(Self)
 			if not workspace:FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") return end
-			local previousPosition = game.Players.LocalPlayer.Character:GetPivot().Position
-			game.Players.LocalPlayer.Character:MoveTo(workspace:FindFirstChild("GunDrop").Position)
+			local previousPosition = localplayer.Character:GetPivot().Position
+			localplayer.Character:MoveTo(workspace:FindFirstChild("GunDrop").Position)
 			task.wait(.1)
-			game.Players.LocalPlayer.Character:MoveTo(previousPosition)
+			localplayer.Character:MoveTo(previousPosition)
 			--fu.notification("Attempting a pathfind to gun..")
 	
 			--local pathToGun = phs:CreatePath({
 			--	AgentRadius = 3,
-			--	AgentHeight = game.Players.LocalPlayer.Character:GetExtentsSize().Y,
+			--	AgentHeight = localplayer.Character:GetExtentsSize().Y,
 			--	AgentCanJump = true
 			--})
 			--local completed, err = pcall(function()
-			--	pathToGun:ComputeAsync(game.Players.LocalPlayer.Character.PrimaryPart.Position, Vector3.new(workspace:FindFirstChild("GunDrop"):GetPivot().X, workspace:FindFirstChild("GunDrop"):GetPivot().Y, workspace:FindFirstChild("GunDrop"):GetPivot().Z))
+			--	pathToGun:ComputeAsync(localplayer.Character.PrimaryPart.Position, Vector3.new(workspace:FindFirstChild("GunDrop"):GetPivot().X, workspace:FindFirstChild("GunDrop"):GetPivot().Y, workspace:FindFirstChild("GunDrop"):GetPivot().Z))
 			--end)
 	
 			--if completed and pathToGun.Status == Enum.PathStatus.Success then
 			--	fu.notification("Found a path. Moving.")
 			--	for _, waypoint in pathToGun:GetWaypoints() do
 			--		task.wait(0.05)
-			--		game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), TweenInfo.new(0.05, Enum.EasingStyle.Linear), {
+			--		game:GetService("TweenService"):Create(localplayer.Character:WaitForChild("HumanoidRootPart"), TweenInfo.new(0.05, Enum.EasingStyle.Linear), {
 			--			CFrame = CFrame.new(waypoint.Position + Vector3.new(0, 3, 0))	
 			--		}):Play()
 			--	end
@@ -3164,15 +3313,15 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 		Type = "Button",
 		Args = {"God mode (Very, VERY UNSTABLE)", function(Self) -- Credits to EdgeIY, Infinite Yield
 			local Cam = workspace.CurrentCamera
-			local Pos, Char = Cam.CFrame, game.Players.LocalPlayer.Character
+			local Pos, Char = Cam.CFrame, localplayer.Character
 			local Human = Char and Char.FindFirstChildWhichIsA(Char, "Humanoid")
 			local nHuman = Human.Clone(Human)
-			nHuman.Parent, game.Players.LocalPlayer.Character = Char, nil
+			nHuman.Parent, localplayer.Character = Char, nil
 			nHuman.SetStateEnabled(nHuman, 15, false)
 			nHuman.SetStateEnabled(nHuman, 1, false)
 			nHuman.SetStateEnabled(nHuman, 0, false)
 			nHuman.BreakJointsOnDeath, Human = true, Human.Destroy(Human)
-			game.Players.LocalPlayer.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
+			localplayer.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
 			nHuman.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
 			local Script = Char.FindFirstChild(Char, "Animate")
 			if Script then
@@ -3188,16 +3337,16 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	table.insert(module, {
 		Type = "Button",
 		Args = {"Kill murderer immediately (DETECTABLE)", function()
-			if findSheriff() ~= game.Players.LocalPlayer then fu.notification("You're not sheriff/hero.") return end
+			if findSheriff() ~= localplayer then fu.notification("You're not sheriff/hero.") return end
 			if not findMurderer() then
 				fu.notification("No murderer to shoot.")
 				return
 			end
 	
-			if not game.Players.LocalPlayer.Character:FindFirstChild("Gun") then
-				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
-				if game.Players.LocalPlayer.Backpack:FindFirstChild("Gun") then
-					game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Gun"))
+			if not localplayer.Character:FindFirstChild("Gun") then
+				local hum = localplayer.Character:FindFirstChild("Humanoid")
+				if localplayer.Backpack:FindFirstChild("Gun") then
+					localplayer.Character:FindFirstChild("Humanoid"):EquipTool(localplayer.Backpack:FindFirstChild("Gun"))
 				else
 					fu.notification("You don't have the gun..?")
 					return
@@ -3209,7 +3358,7 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 			if Murderer and Murderer.Character then
 	
 				-- Get the HumanoidRootParts
-				local localRootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+				local localRootPart = localplayer.Character:FindFirstChild("HumanoidRootPart")
 				local nearestRootPart = Murderer.Character:FindFirstChild("HumanoidRootPart")
 	
 				if localRootPart and nearestRootPart then
@@ -3240,19 +3389,19 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 				[3] = "AH"
 			}
 	
-			game:GetService("Players").LocalPlayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+			localplayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
 		end,}
 	})
 	
 	table.insert(module, {
 		Type = "Button",
 		Args = {"Kill closest player as murderer (DETECTABLE)", function()
-			if findMurderer() ~= game.Players.LocalPlayer then fu.notification("You're not murderer.") return end
+			if findMurderer() ~= localplayer then fu.notification("You're not murderer.") return end
 	
-			if not game.Players.LocalPlayer.Character:FindFirstChild("Knife") then
-				local hum = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
-				if game.Players.LocalPlayer.Backpack:FindFirstChild("Knife") then
-					game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Knife"))
+			if not localplayer.Character:FindFirstChild("Knife") then
+				local hum = localplayer.Character:FindFirstChild("Humanoid")
+				if localplayer.Backpack:FindFirstChild("Knife") then
+					localplayer.Character:FindFirstChild("Humanoid"):EquipTool(localplayer.Backpack:FindFirstChild("Knife"))
 				else
 					fu.notification("You don't have the knife..?")
 					return
@@ -3264,7 +3413,7 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 			if NearestPlayer and NearestPlayer.Character then
 	
 				-- Get the HumanoidRootParts
-				local localRootPart = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+				local localRootPart = localplayer.Character:FindFirstChild("HumanoidRootPart")
 				local nearestRootPart = NearestPlayer.Character:FindFirstChild("HumanoidRootPart")
 	
 				if localRootPart and nearestRootPart then
@@ -3284,7 +3433,7 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 				[1] = "Slash"
 			}
 	
-			game:GetService("Players").LocalPlayer.Character.Knife.Stab:FireServer(unpack(args))
+			localplayer.Character.Knife.Stab:FireServer(unpack(args))
 	
 		end,}
 	})
@@ -3292,7 +3441,7 @@ local function NEGQDA_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function CTOZ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function QGGHC_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -3333,7 +3482,7 @@ local function CTOZ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 		end
 	end)
 end
-local function AXNXK_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function BDKL_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -3357,7 +3506,7 @@ local function AXNXK_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMod
 		}):Play()
 	end)
 end
-local function LEMD_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
+local function XPMXO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
     local script = Instance.new("LocalScript")
     script.Name = "Animator"
     script.Parent = Converted["_UIGradient3"]
@@ -3378,7 +3527,7 @@ local function LEMD_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke
 			Rotation = -180
 		}):Play()
 end
-local function UAQN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function NFDHV_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -3432,7 +3581,7 @@ local function UAQN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 		end
 	end)
 end
-local function XVDWLQ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function UNKFBZA_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule1"]
@@ -3456,7 +3605,7 @@ local function XVDWLQ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCus
 		}):Play()
 	end)
 end
-local function SBCPYB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function WRJO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -3483,7 +3632,7 @@ local function SBCPYB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.
 		}):Play()
 	end)
 end
-local function FOVVJH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
+local function MNMNF_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Opener"]
@@ -3517,19 +3666,19 @@ local function FOVVJH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Canvas
 	end)
 end
 
-coroutine.wrap(MCJW_fake_script)()
-coroutine.wrap(TGEPGY_fake_script)()
-coroutine.wrap(UJXX_fake_script)()
-coroutine.wrap(YSXF_fake_script)()
-coroutine.wrap(QOWDOZU_fake_script)()
-coroutine.wrap(JITRGX_fake_script)()
-coroutine.wrap(PZGQPZ_fake_script)()
-coroutine.wrap(TNMLFS_fake_script)()
-coroutine.wrap(NEGQDA_fake_script)()
-coroutine.wrap(CTOZ_fake_script)()
-coroutine.wrap(AXNXK_fake_script)()
-coroutine.wrap(LEMD_fake_script)()
-coroutine.wrap(UAQN_fake_script)()
-coroutine.wrap(XVDWLQ_fake_script)()
-coroutine.wrap(SBCPYB_fake_script)()
-coroutine.wrap(FOVVJH_fake_script)()
+coroutine.wrap(QQKKYC_fake_script)()
+coroutine.wrap(THFV_fake_script)()
+coroutine.wrap(DNIIRU_fake_script)()
+coroutine.wrap(ZIBGTY_fake_script)()
+coroutine.wrap(ZHYW_fake_script)()
+coroutine.wrap(FLBAQMP_fake_script)()
+coroutine.wrap(ZAPW_fake_script)()
+coroutine.wrap(BOVFNL_fake_script)()
+coroutine.wrap(BIYV_fake_script)()
+coroutine.wrap(QGGHC_fake_script)()
+coroutine.wrap(BDKL_fake_script)()
+coroutine.wrap(XPMXO_fake_script)()
+coroutine.wrap(NFDHV_fake_script)()
+coroutine.wrap(UNKFBZA_fake_script)()
+coroutine.wrap(WRJO_fake_script)()
+coroutine.wrap(MNMNF_fake_script)()
