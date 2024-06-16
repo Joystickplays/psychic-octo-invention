@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.12.2
+-- YARHM by Imperial. v1.12.4
 
 -- Instances:
 
@@ -130,11 +130,11 @@ local Converted = {
 Converted["_YARHM"].DisplayOrder = 999999999
 Converted["_YARHM"].IgnoreGuiInset = true
 Converted["_YARHM"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-Converted["_YARHM"].Enabled = false
+Converted["_YARHM"].Enabled = true
 Converted["_YARHM"].ResetOnSpawn = false
 Converted["_YARHM"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_YARHM"].Name = "YARHM"
-Converted["_YARHM"].Parent = game:GetService("CoreGui")
+Converted["_YARHM"].Parent = script.Parent
 
 Converted["_Open"].Font = Enum.Font.Gotham
 Converted["_Open"].Text = "Triple-click this region to open YARHM."
@@ -925,6 +925,191 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 		
 		local ts = game:GetService("TweenService")
 		
+		local ClickAndHold = {}
+		ClickAndHold.__index = ClickAndHold
+		
+		function ClickAndHold.new(textButton, holdTime)
+			local self = setmetatable({}, ClickAndHold)
+			self.textButton = textButton
+			self.holdTime = holdTime or 0.5 -- Default to 0.5 seconds
+			self.holdTask = nil -- Store the task for later cancellation
+			self.Holded = Instance.new("BindableEvent")
+		
+			self.textButton.MouseButton1Down:Connect(function()
+				self.holdTask = task.spawn(function()
+					task.wait(self.holdTime) -- Wait for the specified holdTime
+					if self.holdTask then -- Check if task was cancelled
+						self.Holded:Fire()
+					end
+				end)
+			end)
+		
+			self.textButton.MouseButton1Up:Connect(function()
+				if self.holdTask then
+					coroutine.close(self.holdTask) -- Cancel the task if the button is released
+					self.holdTask = nil
+				end
+			end)
+		
+			return self
+		end
+		
+		
+		--[[
+			@Author: Spynaz
+			@Description: Enables dragging on GuiObjects. Supports both mouse and touch.
+			
+			For instructions on how to use this module, go to this link:
+			https://devforum.roblox.com/t/simple-module-for-creating-draggable-gui-elements/230678
+		--]]
+		
+		local UDim2_new = UDim2.new
+		
+		local UserInputService = game:GetService("UserInputService")
+		local TweenService = game:GetService("TweenService")	
+		
+		-- Variable to store the number of fingers on the screen
+		local fingersOnScreen = 0
+		
+		-- Event listener for when a touch starts
+		UserInputService.TouchStarted:Connect(function(touch, processedByUI)
+			if not processedByUI then
+				fingersOnScreen = fingersOnScreen + 1
+			end
+		end)
+		
+		-- Event listener for when a touch ends
+		UserInputService.TouchEnded:Connect(function(touch, processedByUI)
+			if not processedByUI then
+				fingersOnScreen = fingersOnScreen - 1
+			end
+		end)
+		
+		-- Initial count (in case there are touches already when the script starts)
+		fingersOnScreen = 0
+		
+		
+		local DraggableObject 		= {}
+		DraggableObject.__index 	= DraggableObject
+		
+		-- Sets up a new draggable object
+		function DraggableObject.new(Object, ToMove)
+			local self 			= {}
+			self.Object			= Object
+			self.ToMove         = ToMove
+			self.DragStarted	= nil
+			self.DragEnded		= nil
+			self.Dragged		= nil
+			self.Dragging		= false
+		
+			setmetatable(self, DraggableObject)
+		
+			return self
+		end
+		
+		-- Enables dragging
+		function DraggableObject:Enable()
+			local object			= self.Object
+			local toMove            = self.ToMove
+			local dragInput			= nil
+			local dragStart			= nil
+			local startPos			= nil
+			local preparingToDrag	= false
+		
+			-- Updates the element
+			local function update(input)
+				local delta 		= input.Position - dragStart
+				local newPosition	= UDim2_new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+				local tween = TweenService:Create(toMove and toMove or object, TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+					Position = newPosition
+				}):Play()
+		
+				return newPosition
+			end
+		
+			self.InputBegan = object.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					preparingToDrag = true
+					--[[if self.DragStarted then
+						self.DragStarted()
+					end
+					
+					dragging	 	= true
+					dragStart 		= input.Position
+					startPos 		= Element.Position
+					--]]
+		
+					local connection 
+					connection = input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End and (self.Dragging or preparingToDrag) then
+							self.Dragging = false
+							connection:Disconnect()
+		
+							if self.DragEnded and not preparingToDrag then
+								self.DragEnded()
+							end
+		
+							preparingToDrag = false
+						end
+					end)
+				end
+			end)
+		
+			self.InputChanged = object.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+		
+			self.InputChanged2 = UserInputService.InputChanged:Connect(function(input)
+				if object.Parent == nil then
+					self:Disable()
+					return
+				end
+		
+				if preparingToDrag then
+					preparingToDrag = false
+		
+					if self.DragStarted then
+						self.DragStarted()
+					end
+		
+					self.Dragging	= true
+					dragStart 		= input.Position
+					if toMove then
+						startPos 	= toMove.Position
+					else
+						startPos 	= object.Position
+					end
+				end
+		
+				if input == dragInput and self.Dragging then
+					local newPosition = update(input)
+		
+					if self.Dragged then
+						self.Dragged(newPosition)
+					end
+				end
+			end)
+		end
+		
+		-- Disables dragging
+		function DraggableObject:Disable()
+			self.InputBegan:Disconnect()
+			self.InputChanged:Disconnect()
+			self.InputChanged2:Disconnect()
+		
+			if self.Dragging then
+				self.Dragging = false
+		
+				if self.DragEnded then
+					self.DragEnded()
+				end
+			end
+		end
+		
+		
+		
 		local States = {}
 		AREA = script.Parent.Menu.Area.Area
 		AREACONTAINER = script.Parent.Menu.Area
@@ -1050,10 +1235,10 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 									Size = UDim2.fromOffset(200, 50)
 								}):Play()
 								
-								floatingButtonDraggers[item["Args"][1]] = require(script.Parent.DraggableObject).new(newFloatingButton)
+								floatingButtonDraggers[item["Args"][1]] = DraggableObject.new(newFloatingButton)
 								floatingButtonDraggers[item["Args"][1]]:Enable()
 								
-								local holder = require(script.Parent.ClickAndHold).new(newFloatingButton)
+								local holder = ClickAndHold.new(newFloatingButton)
 								holder.Holded.Event:Connect(function()
 									if floatingButtonDraggers[item["Args"][1]].Dragging then return end
 									if not floatingButtonInvisibility[item["Args"][1]] then 
@@ -1548,7 +1733,7 @@ end
 
 -- Fake Local Scripts:
 
-local function PIQLCWS_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function RXMEE_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1584,7 +1769,7 @@ local function PIQLCWS_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitO
 	--	Transparency = 1
 	--}):Play()
 end
-local function QPIXR_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function MTGX_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1632,7 +1817,7 @@ local function QPIXR_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function ODCS_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function JVIRB_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1718,7 +1903,7 @@ local function ODCS_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function EQUFLMV_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function OVLQGSE_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1782,7 +1967,7 @@ local function EQUFLMV_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	
 	require(script.Parent.DraggableObject).new(script.Parent.Menu.CanvasGroup.Opener, script.Parent.Menu):Enable()
 end
-local function DZGFLM_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function IZRGUR_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -2092,7 +2277,7 @@ local function DZGFLM_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fa
 	
 	_G.Modules[2] = module
 end
-local function CDFQV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function UJURPWQ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -2250,7 +2435,7 @@ local function CDFQV_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function VEIZO_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+local function TVUUD_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -2265,7 +2450,7 @@ local function VEIZO_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButt
 
 	
 end
-local function VDISET_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
+local function DFWEUHL_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
     local script = Instance.new("LocalScript")
     script.Name = "Invisible"
     script.Parent = Converted["_FloatingButton"]
@@ -2315,7 +2500,7 @@ local function VDISET_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBut
 	--	holding = false
 	--end)
 end
-local function MQUKDK_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function OROGD_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -3102,7 +3287,7 @@ local function MQUKDK_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function UGCQXCR_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function OTETV_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -3143,7 +3328,7 @@ local function UGCQXCR_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomM
 		end
 	end)
 end
-local function WZOVUV_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function BBYDY_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -3167,7 +3352,7 @@ local function WZOVUV_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		}):Play()
 	end)
 end
-local function FKUWG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
+local function KFEJJ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
     local script = Instance.new("LocalScript")
     script.Name = "Animator"
     script.Parent = Converted["_UIGradient3"]
@@ -3188,7 +3373,7 @@ local function FKUWG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStrok
 			Rotation = -180
 		}):Play()
 end
-local function RRSOEZU_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function RHHD_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -3242,7 +3427,7 @@ local function RRSOEZU_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.
 		end
 	end)
 end
-local function SILFWD_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function TTKC_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule1"]
@@ -3266,7 +3451,7 @@ local function SILFWD_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCus
 		}):Play()
 	end)
 end
-local function JGHJIPB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function AMEL_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -3293,7 +3478,7 @@ local function JGHJIPB_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close
 		}):Play()
 	end)
 end
-local function ZSMQAY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
+local function UWLD_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Opener"]
@@ -3327,19 +3512,19 @@ local function ZSMQAY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Canvas
 	end)
 end
 
-coroutine.wrap(PIQLCWS_fake_script)()
-coroutine.wrap(QPIXR_fake_script)()
-coroutine.wrap(ODCS_fake_script)()
-coroutine.wrap(EQUFLMV_fake_script)()
-coroutine.wrap(DZGFLM_fake_script)()
-coroutine.wrap(CDFQV_fake_script)()
-coroutine.wrap(VEIZO_fake_script)()
-coroutine.wrap(VDISET_fake_script)()
-coroutine.wrap(MQUKDK_fake_script)()
-coroutine.wrap(UGCQXCR_fake_script)()
-coroutine.wrap(WZOVUV_fake_script)()
-coroutine.wrap(FKUWG_fake_script)()
-coroutine.wrap(RRSOEZU_fake_script)()
-coroutine.wrap(SILFWD_fake_script)()
-coroutine.wrap(JGHJIPB_fake_script)()
-coroutine.wrap(ZSMQAY_fake_script)()
+coroutine.wrap(RXMEE_fake_script)()
+coroutine.wrap(MTGX_fake_script)()
+coroutine.wrap(JVIRB_fake_script)()
+coroutine.wrap(OVLQGSE_fake_script)()
+coroutine.wrap(IZRGUR_fake_script)()
+coroutine.wrap(UJURPWQ_fake_script)()
+coroutine.wrap(TVUUD_fake_script)()
+coroutine.wrap(DFWEUHL_fake_script)()
+coroutine.wrap(OROGD_fake_script)()
+coroutine.wrap(OTETV_fake_script)()
+coroutine.wrap(BBYDY_fake_script)()
+coroutine.wrap(KFEJJ_fake_script)()
+coroutine.wrap(RHHD_fake_script)()
+coroutine.wrap(TTKC_fake_script)()
+coroutine.wrap(AMEL_fake_script)()
+coroutine.wrap(UWLD_fake_script)()
