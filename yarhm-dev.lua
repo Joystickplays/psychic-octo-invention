@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.12.0
+-- YARHM by Imperial, v1.12.1
 
 -- Instances:
 
@@ -282,7 +282,7 @@ Converted["_FloatingButton"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_FloatingButton"].BackgroundColor3 = Color3.fromRGB(31.000001952052116, 31.000001952052116, 31.000001952052116)
 Converted["_FloatingButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_FloatingButton"].BorderSizePixel = 0
-Converted["_FloatingButton"].Position = UDim2.new(0, 400, 0, 348)
+Converted["_FloatingButton"].Position = UDim2.new(0, 400, 0, 200)
 Converted["_FloatingButton"].Size = UDim2.new(0, 200, 0, 50)
 Converted["_FloatingButton"].Visible = false
 Converted["_FloatingButton"].Name = "FloatingButton"
@@ -1475,7 +1475,7 @@ do -- Fake Module: StarterGui.YARHM.DraggableObject
 					end
 				end
 				
-				if input == dragInput and self.Dragging and fingersOnScreen < 2 then
+				if input == dragInput and self.Dragging then
 					local newPosition = update(input)
 					
 					if self.Dragged then
@@ -1547,7 +1547,7 @@ end
 
 -- Fake Local Scripts:
 
-local function BVOWXJQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function KFRASYH_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1583,7 +1583,7 @@ local function BVOWXJQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitO
 	--	Transparency = 1
 	--}):Play()
 end
-local function MZIOO_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function GEMYBBR_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1631,7 +1631,7 @@ local function MZIOO_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function YTKVGJP_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function KHNXW_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1717,7 +1717,7 @@ local function YTKVGJP_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resiz
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function NZMEER_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function LXACBUP_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -1781,7 +1781,7 @@ local function NZMEER_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	
 	require(script.Parent.DraggableObject).new(script.Parent.Menu.CanvasGroup.Opener, script.Parent.Menu):Enable()
 end
-local function MLNRC_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function SQLI_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -2091,7 +2091,7 @@ local function MLNRC_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fac
 	
 	_G.Modules[2] = module
 end
-local function BJDE_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function XPNNIC_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -2249,7 +2249,7 @@ local function BJDE_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function DHASTM_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+local function XHELSI_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -2264,7 +2264,7 @@ local function DHASTM_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBut
 
 	
 end
-local function IGENYVT_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
+local function HFPAJTY_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
     local script = Instance.new("LocalScript")
     script.Name = "Invisible"
     script.Parent = Converted["_FloatingButton"]
@@ -2314,7 +2314,7 @@ local function IGENYVT_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBu
 	--	holding = false
 	--end)
 end
-local function ZKYXER_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function DQBSHS_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -2601,6 +2601,7 @@ local function ZKYXER_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	end
 	
 	local function updateHistory(character)
+		if not character then return end
 		local hrp = character:FindFirstChild("HumanoidRootPart")
 		if not hrp then return end
 	
@@ -2637,8 +2638,8 @@ local function ZKYXER_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	
 		-- Predict future position considering average velocity and move direction
 		local predictedPosition = murdererPosition 
-			+ (avgVelocity * Vector3.new(1, 1, 1)) * (shootOffset / 15)  -- Consider Y velocity for vertical movements
-			+ murdererMoveDirection * shootOffset
+			+ (avgVelocity * Vector3.new(1, 0.2, 1)) * (shootOffset / 15)  -- Consider Y velocity for vertical movements
+			+ murdererMoveDirection * (shootOffset / 2)
 	
 		return predictedPosition
 	end
@@ -3105,7 +3106,7 @@ local function ZKYXER_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function ZVUVGK_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function YSPOJ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -3146,7 +3147,7 @@ local function ZVUVGK_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		end
 	end)
 end
-local function IVXSSG_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function CFQZNWD_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -3170,7 +3171,7 @@ local function IVXSSG_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		}):Play()
 	end)
 end
-local function PAGTX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
+local function XTQIFBX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
     local script = Instance.new("LocalScript")
     script.Name = "Animator"
     script.Parent = Converted["_UIGradient3"]
@@ -3191,7 +3192,7 @@ local function PAGTX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStrok
 			Rotation = -180
 		}):Play()
 end
-local function NJSWZ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function UVHCLN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -3245,7 +3246,7 @@ local function NJSWZ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Au
 		end
 	end)
 end
-local function XFREBN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function VMLX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule1"]
@@ -3269,7 +3270,7 @@ local function XFREBN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCus
 		}):Play()
 	end)
 end
-local function MKVG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function RPZV_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -3296,7 +3297,7 @@ local function MKVG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.Lo
 		}):Play()
 	end)
 end
-local function BJNYUH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
+local function FERX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Opener"]
@@ -3330,19 +3331,19 @@ local function BJNYUH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Canvas
 	end)
 end
 
-coroutine.wrap(BVOWXJQ_fake_script)()
-coroutine.wrap(MZIOO_fake_script)()
-coroutine.wrap(YTKVGJP_fake_script)()
-coroutine.wrap(NZMEER_fake_script)()
-coroutine.wrap(MLNRC_fake_script)()
-coroutine.wrap(BJDE_fake_script)()
-coroutine.wrap(DHASTM_fake_script)()
-coroutine.wrap(IGENYVT_fake_script)()
-coroutine.wrap(ZKYXER_fake_script)()
-coroutine.wrap(ZVUVGK_fake_script)()
-coroutine.wrap(IVXSSG_fake_script)()
-coroutine.wrap(PAGTX_fake_script)()
-coroutine.wrap(NJSWZ_fake_script)()
-coroutine.wrap(XFREBN_fake_script)()
-coroutine.wrap(MKVG_fake_script)()
-coroutine.wrap(BJNYUH_fake_script)()
+coroutine.wrap(KFRASYH_fake_script)()
+coroutine.wrap(GEMYBBR_fake_script)()
+coroutine.wrap(KHNXW_fake_script)()
+coroutine.wrap(LXACBUP_fake_script)()
+coroutine.wrap(SQLI_fake_script)()
+coroutine.wrap(XPNNIC_fake_script)()
+coroutine.wrap(XHELSI_fake_script)()
+coroutine.wrap(HFPAJTY_fake_script)()
+coroutine.wrap(DQBSHS_fake_script)()
+coroutine.wrap(YSPOJ_fake_script)()
+coroutine.wrap(CFQZNWD_fake_script)()
+coroutine.wrap(XTQIFBX_fake_script)()
+coroutine.wrap(UVHCLN_fake_script)()
+coroutine.wrap(VMLX_fake_script)()
+coroutine.wrap(RPZV_fake_script)()
+coroutine.wrap(FERX_fake_script)()
