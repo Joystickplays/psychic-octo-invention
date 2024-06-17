@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.12.10
+-- YARHM by Imperial, v1.13.0
 
 -- Instances:
 
@@ -99,7 +99,7 @@ local Converted = {
 	["_ImageLabel"] = Instance.new("ImageLabel");
 	["_Opener"] = Instance.new("TextButton");
 	["_LocalScript4"] = Instance.new("LocalScript");
-	["_Area"] = Instance.new("CanvasGroup");
+	["_Area"] = Instance.new("Frame");
 	["_Area1"] = Instance.new("ScrollingFrame");
 	["_TextLabel5"] = Instance.new("TextLabel");
 	["_TextLabel6"] = Instance.new("TextLabel");
@@ -123,6 +123,16 @@ local Converted = {
 	["_UIGradient8"] = Instance.new("UIGradient");
 	["_OnSelect"] = Instance.new("BindableEvent");
 	["_UIScale2"] = Instance.new("UIScale");
+	["_Toggle"] = Instance.new("Frame");
+	["_TextLabel7"] = Instance.new("TextLabel");
+	["_UIListLayout5"] = Instance.new("UIListLayout");
+	["_Frame"] = Instance.new("Frame");
+	["_Frame1"] = Instance.new("Frame");
+	["_UICorner17"] = Instance.new("UICorner");
+	["_Toggler"] = Instance.new("TextButton");
+	["_UICorner18"] = Instance.new("UICorner");
+	["_ImageLabel1"] = Instance.new("ImageLabel");
+	["_UIPadding12"] = Instance.new("UIPadding");
 }
 
 -- Properties:
@@ -631,7 +641,6 @@ Converted["_Close"].Font = Enum.Font.GothamBold
 Converted["_Close"].Text = "Close"
 Converted["_Close"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Close"].TextSize = 14
-Converted["_Close"].Modal = true
 Converted["_Close"].AnchorPoint = Vector2.new(0.5, 0.5)
 Converted["_Close"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Close"].BackgroundTransparency = 0.30000001192092896
@@ -736,6 +745,7 @@ Converted["_Area"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Area"].BackgroundTransparency = 1
 Converted["_Area"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Area"].BorderSizePixel = 0
+Converted["_Area"].ClipsDescendants = true
 Converted["_Area"].Position = UDim2.new(0.659600496, 0, 0.60637325, 0)
 Converted["_Area"].Size = UDim2.new(0.643815279, 0, 0.783582091, 0)
 Converted["_Area"].Name = "Area"
@@ -913,6 +923,83 @@ Converted["_OnSelect"].Name = "OnSelect"
 Converted["_OnSelect"].Parent = Converted["_Dialog"]
 
 Converted["_UIScale2"].Parent = Converted["_Dialog"]
+
+Converted["_Toggle"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle"].BackgroundTransparency = 1
+Converted["_Toggle"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle"].BorderSizePixel = 0
+Converted["_Toggle"].Size = UDim2.new(1, 0, 0, 35)
+Converted["_Toggle"].Visible = false
+Converted["_Toggle"].Name = "Toggle"
+Converted["_Toggle"].Parent = Converted["_YARHM"]
+
+Converted["_TextLabel7"].Font = Enum.Font.Unknown
+Converted["_TextLabel7"].Text = "Loop walkspeed and FOV"
+Converted["_TextLabel7"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel7"].TextScaled = true
+Converted["_TextLabel7"].TextSize = 14
+Converted["_TextLabel7"].TextWrapped = true
+Converted["_TextLabel7"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_TextLabel7"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel7"].BackgroundTransparency = 1
+Converted["_TextLabel7"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel7"].BorderSizePixel = 0
+Converted["_TextLabel7"].Size = UDim2.new(0.699999988, 0, 1, 0)
+Converted["_TextLabel7"].Parent = Converted["_Toggle"]
+
+Converted["_UIListLayout5"].Padding = UDim.new(0, 25)
+Converted["_UIListLayout5"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout5"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout5"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout5"].Parent = Converted["_Toggle"]
+
+Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Frame"].BackgroundTransparency = 1
+Converted["_Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame"].BorderSizePixel = 0
+Converted["_Frame"].Size = UDim2.new(0.200000003, 0, 1, 0)
+Converted["_Frame"].Parent = Converted["_Toggle"]
+
+Converted["_Frame1"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_Frame1"].BackgroundColor3 = Color3.fromRGB(46.000001057982445, 46.000001057982445, 46.000001057982445)
+Converted["_Frame1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame1"].BorderSizePixel = 0
+Converted["_Frame1"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_Frame1"].Size = UDim2.new(0, 89, 1, 0)
+Converted["_Frame1"].Parent = Converted["_Frame"]
+
+Converted["_UICorner17"].CornerRadius = UDim.new(1, 0)
+Converted["_UICorner17"].Parent = Converted["_Frame1"]
+
+Converted["_Toggler"].Font = Enum.Font.SourceSans
+Converted["_Toggler"].Text = ""
+Converted["_Toggler"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggler"].TextSize = 14
+Converted["_Toggler"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_Toggler"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggler"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggler"].BorderSizePixel = 0
+Converted["_Toggler"].Position = UDim2.new(0.300000012, 0, 0.5, 0)
+Converted["_Toggler"].Size = UDim2.new(0.449438214, 0, 0.800000012, 0)
+Converted["_Toggler"].Name = "Toggler"
+Converted["_Toggler"].Parent = Converted["_Frame1"]
+
+Converted["_UICorner18"].CornerRadius = UDim.new(1, 0)
+Converted["_UICorner18"].Parent = Converted["_Toggler"]
+
+Converted["_ImageLabel1"].Image = "rbxassetid://10002373478"
+Converted["_ImageLabel1"].ImageColor3 = Color3.fromRGB(255, 0, 4.000000236555934)
+Converted["_ImageLabel1"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ImageLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel1"].BackgroundTransparency = 1
+Converted["_ImageLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel1"].BorderSizePixel = 0
+Converted["_ImageLabel1"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_ImageLabel1"].Size = UDim2.new(0, 20, 0, 20)
+Converted["_ImageLabel1"].Parent = Converted["_Toggler"]
+
+Converted["_UIPadding12"].PaddingRight = UDim.new(0.0700000003, 0)
+Converted["_UIPadding12"].Parent = Converted["_Toggle"]
 
 -- Fake Module Scripts:
 
@@ -1140,6 +1227,7 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 		
 		
 		local States = {}
+		local toggleStates = {}
 		AREA = script.Parent.Menu.Area.Area
 		AREACONTAINER = script.Parent.Menu.Area
 		local function calculateWidth(n)
@@ -1435,6 +1523,35 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 					cloneinput.TextButton.MouseButton1Click:Connect(function()
 						item["Args"][3](cloneinput.TextButton, cloneinput.TextBox.Text)
 					end)
+				elseif item["Type"] == "Toggle" then
+					local clonetoggle = _G.YARHM.Toggle:Clone()
+					clonetoggle.Parent = AREA
+					clonetoggle.Visible = true
+					
+					clonetoggle.TextLabel.Text = item["Args"][1]
+					
+					local clonetoggletoggler = clonetoggle.Frame.Frame.Toggler
+					if toggleStates[item["Args"][1] .. module.Name] then
+						clonetoggletoggler.Position = UDim2.fromScale(0.7, 0.5)
+						clonetoggletoggler.ImageLabel.Image = "rbxassetid://5959696880"
+					end
+					
+					clonetoggletoggler.MouseButton1Click:Connect(function()
+						if toggleStates[item["Args"][1] .. module.Name] then
+							toggleStates[item["Args"][1] .. module.Name] = false
+							ts:Create(clonetoggletoggler, TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+								Position = UDim2.fromScale(0.3, 0.5)
+							}):Play()
+							clonetoggletoggler.ImageLabel.Image = "rbxassetid://10002373478"
+						else
+							toggleStates[item["Args"][1] .. module.Name] = true
+							ts:Create(clonetoggletoggler, TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+								Position = UDim2.fromScale(0.7, 0.5)
+							}):Play()
+							clonetoggletoggler.ImageLabel.Image = "rbxassetid://5959696880"
+						end
+						item["Args"][2](clonetoggletoggler, toggleStates[item["Args"][1] .. module.Name])
+					end)
 				end
 			end
 			AREACONTAINER.Position = UDim2.fromScale(0.76, 0.606)
@@ -1528,7 +1645,7 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 				end)
 			end
 			
-			ts:Create(dialog, TweenInfo.new(1.1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out),{
+			ts:Create(dialog, TweenInfo.new(1.1, Enum.EasingStyle.Back, Enum.EasingDirection.Out),{
 				Size = UDim2.fromOffset(313, 147)
 			}):Play()
 			
@@ -1796,7 +1913,7 @@ end
 
 -- Fake Local Scripts:
 
-local function IFCIG_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function IYZNC_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1832,7 +1949,7 @@ local function IFCIG_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpe
 	--	Transparency = 1
 	--}):Play()
 end
-local function HHXHJDN_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function VTCPJCE_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -1880,7 +1997,7 @@ local function HHXHJDN_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnCli
 	end)
 	
 end
-local function BWHXI_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function EVNVY_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -1966,7 +2083,7 @@ local function BWHXI_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function HQJY_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function RRLK_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -2030,7 +2147,7 @@ local function HQJY_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	
 	require(script.Parent.DraggableObject).new(script.Parent.Menu.CanvasGroup.Opener, script.Parent.Menu):Enable()
 end
-local function MXJGMO_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function ZQMFNJ_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -2340,7 +2457,7 @@ local function MXJGMO_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Fa
 	
 	_G.Modules[2] = module
 end
-local function GSQOCQJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function VPRJWSR_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -2363,15 +2480,46 @@ local function GSQOCQJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	local uis = game:GetService("UserInputService")
 	local fu = require(script.Parent.FUNCTIONS)
 	
+	local loopfovandws = false
+	local ws = 16
+	local fov = 70
+	
+	local hidden = false
+	
+	task.spawn(function()
+		game:GetService("RunService").RenderStepped:Connect(function()
+			if loopfovandws then
+				workspace.CurrentCamera.FieldOfView = fov
+				if game.Players.LocalPlayer.Character then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+					end
+				end
+			end
+		end)
+	end)
+	
 	uis.InputBegan:Connect(function(inp, proc)
 		if proc then return end
 		
-		if uis:IsKeyDown(Enum.KeyCode.LeftControl) and inp.KeyCode == Enum.KeyCode.Y then
+		if uis:IsKeyDown(Enum.KeyCode.LeftControl) and inp.KeyCode == Enum.KeyCode.Y and hidden then
+			hidden = false
 			ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
 				Scale = 1
 			}):Play()
 		end
 	end)
+	
+	if uis.AccelerometerEnabled then
+		uis.DeviceAccelerationChanged:Connect(function(acc)
+			if hidden and acc.Position.Magnitude > 50 then
+				hidden = false
+				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+					Scale = 1
+				}):Play()
+			end 
+		end)
+	end
 	
 	module["Name"] = "Universal"
 	
@@ -2410,6 +2558,7 @@ local function GSQOCQJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 							Root.Size = Size
 							Root.Transparency = 0.2
 						end
+						Root.CanCollide = false
 					end
 				end
 			end
@@ -2427,6 +2576,25 @@ local function GSQOCQJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 			if not hu then fu.notification("No humanoid on your character..?") return end
 			hu.WalkSpeed = tonumber(speed) or 16
 			fu.notification("Walkspeed set.")
+			ws = tonumber(speed) or 16
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Input",
+		Args = {"FOV change", "Set FOV", function(Self, tofov)
+			if not tonumber(tofov) then fu.notification("Not a number. Setting to default.") end
+			ts:Create(workspace.CurrentCamera, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+				FieldOfView = tonumber(tofov) or 70
+			}):Play()
+			fov = tonumber(tofov) or 70
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Toggle",
+		Args = {"Loop walkspeed and FOV", function(Self, state)
+			loopfovandws = state
 		end,}
 	})
 	
@@ -2437,9 +2605,16 @@ local function GSQOCQJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
 					Scale = 0
 				}):Play()
+				hidden=true
 				fu.notification("Press CTRL+Y to bring back the menu.")
+			elseif uis.AccelerometerEnabled then
+				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+					Scale = 0
+				}):Play()
+				hidden=true
+				fu.notification("Shake your device to bring back the menu.")
 			else
-				fu.notification("Can't hide YARHM on a mobile device!") -- how else are you gonna open???
+				fu.notification("Can't hide YARHM!") -- how else are you gonna open???
 			end
 		end,}
 	}
@@ -2546,7 +2721,7 @@ local function GSQOCQJ_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function KCKC_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+local function KWGZIM_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -2561,7 +2736,7 @@ local function KCKC_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButto
 
 	
 end
-local function WBSA_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
+local function GBKZNJA_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
     local script = Instance.new("LocalScript")
     script.Name = "Invisible"
     script.Parent = Converted["_FloatingButton"]
@@ -2611,7 +2786,7 @@ local function WBSA_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButto
 	--	holding = false
 	--end)
 end
-local function PXTLP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function JFABAU_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -3453,7 +3628,7 @@ local function PXTLP_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myste
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function TPWEQ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function SNFDSE_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -3494,7 +3669,7 @@ local function TPWEQ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMod
 		end
 	end)
 end
-local function DVIEZV_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function CTLYMYG_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -3518,7 +3693,7 @@ local function DVIEZV_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomMo
 		}):Play()
 	end)
 end
-local function JBARY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
+local function NNIQC_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
     local script = Instance.new("LocalScript")
     script.Name = "Animator"
     script.Parent = Converted["_UIGradient3"]
@@ -3539,7 +3714,7 @@ local function JBARY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStrok
 			Rotation = -180
 		}):Play()
 end
-local function KKFHESK_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function DHXVQ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -3593,7 +3768,7 @@ local function KKFHESK_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.
 		end
 	end)
 end
-local function UNZFLN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function BIISYS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule1"]
@@ -3617,7 +3792,7 @@ local function UNZFLN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCus
 		}):Play()
 	end)
 end
-local function RAVM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function WVQS_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -3644,7 +3819,7 @@ local function RAVM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.Lo
 		}):Play()
 	end)
 end
-local function HGNMM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
+local function QILIXAR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Opener"]
@@ -3678,19 +3853,19 @@ local function HGNMM_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasG
 	end)
 end
 
-coroutine.wrap(IFCIG_fake_script)()
-coroutine.wrap(HHXHJDN_fake_script)()
-coroutine.wrap(BWHXI_fake_script)()
-coroutine.wrap(HQJY_fake_script)()
-coroutine.wrap(MXJGMO_fake_script)()
-coroutine.wrap(GSQOCQJ_fake_script)()
-coroutine.wrap(KCKC_fake_script)()
-coroutine.wrap(WBSA_fake_script)()
-coroutine.wrap(PXTLP_fake_script)()
-coroutine.wrap(TPWEQ_fake_script)()
-coroutine.wrap(DVIEZV_fake_script)()
-coroutine.wrap(JBARY_fake_script)()
-coroutine.wrap(KKFHESK_fake_script)()
-coroutine.wrap(UNZFLN_fake_script)()
-coroutine.wrap(RAVM_fake_script)()
-coroutine.wrap(HGNMM_fake_script)()
+coroutine.wrap(IYZNC_fake_script)()
+coroutine.wrap(VTCPJCE_fake_script)()
+coroutine.wrap(EVNVY_fake_script)()
+coroutine.wrap(RRLK_fake_script)()
+coroutine.wrap(ZQMFNJ_fake_script)()
+coroutine.wrap(VPRJWSR_fake_script)()
+coroutine.wrap(KWGZIM_fake_script)()
+coroutine.wrap(GBKZNJA_fake_script)()
+coroutine.wrap(JFABAU_fake_script)()
+coroutine.wrap(SNFDSE_fake_script)()
+coroutine.wrap(CTLYMYG_fake_script)()
+coroutine.wrap(NNIQC_fake_script)()
+coroutine.wrap(DHXVQ_fake_script)()
+coroutine.wrap(BIISYS_fake_script)()
+coroutine.wrap(WVQS_fake_script)()
+coroutine.wrap(QILIXAR_fake_script)()
