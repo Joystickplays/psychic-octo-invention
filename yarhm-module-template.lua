@@ -37,4 +37,12 @@ module[4] = {
   }
 }
 
-_G.Modules[2] = module -- Yes you need to put the module on order on your own. Sorry for the weird design choice uwu
+module[5] = {
+  Type = "Toggle", -- A switch that has two states, on (true) or off (false)
+  Args = {"The toggle's text next to the switch", function(Self, state) -- state is the Toggle's state
+      print(state)
+    end
+  }
+}
+
+_G.Modules[#_G.Modules + 1] = module 
