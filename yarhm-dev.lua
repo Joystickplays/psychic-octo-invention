@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.13.6
+-- YARHM by Imperial, v1.13.7
 
 -- Instances:
 
@@ -1928,7 +1928,7 @@ end
 
 -- Fake Local Scripts:
 
-local function EACWZV_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function YUTRIA_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1964,7 +1964,7 @@ local function EACWZV_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOp
 	--	Transparency = 1
 	--}):Play()
 end
-local function UZOMP_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function IZJYOJH_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -2012,7 +2012,7 @@ local function UZOMP_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
 	end)
 	
 end
-local function VOTH_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function FIBO_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -2098,7 +2098,7 @@ local function VOTH_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function RIWCN_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function WOERRWY_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -2142,6 +2142,8 @@ local function RIWCN_fake_script() -- Fake Script: StarterGui.YARHM.Init
 			warn("[YARHM] - Using CoreGui as anti-detection. This is the most basic coverage and can still be detected.")
 		end
 	end)
+	
+	print("[YARHM] - YARHM is now in " .. tostring(script.Parent:GetFullName()))
 	if not s then
 		warn("[YARHM] - Attempts at anti-detection failed. Using CoreGui as anti-detection.")
 		warn(e)	
@@ -2191,7 +2193,7 @@ local function RIWCN_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	
 	--require(script.Parent.DraggableObject).new(script.Parent.Menu.CanvasGroup.Opener, script.Parent.Menu):Enable()
 end
-local function VAJI_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function JBNS_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -2501,7 +2503,7 @@ local function VAJI_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Faci
 	
 	_G.Modules[2] = module
 end
-local function LVHPFVC_fake_script() -- Fake Script: StarterGui.YARHM.Universal
+local function XARDNE_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -2819,7 +2821,7 @@ local function LVHPFVC_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	
 	_G.Modules[1] = module
 end
-local function DMSTIF_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+local function ZADMQYO_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -2834,7 +2836,7 @@ local function DMSTIF_fake_script() -- Fake Script: StarterGui.YARHM.FloatingBut
 
 	
 end
-local function YAVIJ_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
+local function XYYW_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
     local script = Instance.new("LocalScript")
     script.Name = "Invisible"
     script.Parent = Converted["_FloatingButton"]
@@ -2884,7 +2886,7 @@ local function YAVIJ_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButt
 	--	holding = false
 	--end)
 end
-local function LEHJ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function OQDVNLI_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -3817,7 +3819,7 @@ local function LEHJ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 			end
 			
 			for _, player in ipairs(game.Players:GetPlayers()) do
-				if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player ~= localplayer then
 					player.Character:FindFirstChild("HumanoidRootPart").Anchored = true
 					player.Character:FindFirstChild("HumanoidRootPart").CFrame = localplayer.Character:FindFirstChild("HumanoidRootPart").CFrame + localplayer.Character:FindFirstChild("HumanoidRootPart").CFrame.LookVector * 2
 					
@@ -3842,7 +3844,7 @@ local function LEHJ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 			if findMurderer() ~= localplayer then fu.notification("You're not murderer. This'll only be useful if you're the murderer.") return end
 	
 			for _, player in ipairs(game.Players:GetPlayers()) do
-				if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player ~= localplayer then
 					player.Character:FindFirstChild("HumanoidRootPart").Anchored = true
 					player.Character:FindFirstChild("HumanoidRootPart").CFrame = localplayer.Character:FindFirstChild("HumanoidRootPart").CFrame + localplayer.Character:FindFirstChild("HumanoidRootPart").CFrame.LookVector * 5
 				end	
@@ -3855,7 +3857,7 @@ local function LEHJ_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myster
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function UYOC_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function XJPZVCJ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -3896,7 +3898,7 @@ local function UYOC_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 		end
 	end)
 end
-local function NYPV_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+local function JNCB_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -3920,7 +3922,7 @@ local function NYPV_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModu
 		}):Play()
 	end)
 end
-local function XGZLRLO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
+local function XCJFXQ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
     local script = Instance.new("LocalScript")
     script.Name = "Animator"
     script.Parent = Converted["_UIGradient3"]
@@ -3941,7 +3943,7 @@ local function XGZLRLO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStr
 			Rotation = -180
 		}):Play()
 end
-local function GJUW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+local function IANBMN_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -3995,7 +3997,7 @@ local function GJUW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.Aut
 		end
 	end)
 end
-local function OIIFC_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+local function QEVKZWY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule1"]
@@ -4019,7 +4021,7 @@ local function OIIFC_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCust
 		}):Play()
 	end)
 end
-local function OECHOJ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+local function GZKETF_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -4046,7 +4048,7 @@ local function OECHOJ_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.
 		}):Play()
 	end)
 end
-local function ZVBW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
+local function VFMHUR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Opener"]
@@ -4080,19 +4082,19 @@ local function ZVBW_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGr
 	end)
 end
 
-coroutine.wrap(EACWZV_fake_script)()
-coroutine.wrap(UZOMP_fake_script)()
-coroutine.wrap(VOTH_fake_script)()
-coroutine.wrap(RIWCN_fake_script)()
-coroutine.wrap(VAJI_fake_script)()
-coroutine.wrap(LVHPFVC_fake_script)()
-coroutine.wrap(DMSTIF_fake_script)()
-coroutine.wrap(YAVIJ_fake_script)()
-coroutine.wrap(LEHJ_fake_script)()
-coroutine.wrap(UYOC_fake_script)()
-coroutine.wrap(NYPV_fake_script)()
-coroutine.wrap(XGZLRLO_fake_script)()
-coroutine.wrap(GJUW_fake_script)()
-coroutine.wrap(OIIFC_fake_script)()
-coroutine.wrap(OECHOJ_fake_script)()
-coroutine.wrap(ZVBW_fake_script)()
+coroutine.wrap(YUTRIA_fake_script)()
+coroutine.wrap(IZJYOJH_fake_script)()
+coroutine.wrap(FIBO_fake_script)()
+coroutine.wrap(WOERRWY_fake_script)()
+coroutine.wrap(JBNS_fake_script)()
+coroutine.wrap(XARDNE_fake_script)()
+coroutine.wrap(ZADMQYO_fake_script)()
+coroutine.wrap(XYYW_fake_script)()
+coroutine.wrap(OQDVNLI_fake_script)()
+coroutine.wrap(XJPZVCJ_fake_script)()
+coroutine.wrap(JNCB_fake_script)()
+coroutine.wrap(XCJFXQ_fake_script)()
+coroutine.wrap(IANBMN_fake_script)()
+coroutine.wrap(QEVKZWY_fake_script)()
+coroutine.wrap(GZKETF_fake_script)()
+coroutine.wrap(VFMHUR_fake_script)()
