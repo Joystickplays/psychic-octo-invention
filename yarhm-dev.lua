@@ -1,4 +1,4 @@
--- YARHM by Imperial, v1.13.11
+-- YARHM by Imperial, v1.13.12
 
 -- Instances:
 
@@ -20,8 +20,6 @@ local Converted = {
 	["_Placeholder"] = Instance.new("Frame");
 	["_UICorner2"] = Instance.new("UICorner");
 	["_TextLabel"] = Instance.new("TextLabel");
-	["_Flee the Facility"] = Instance.new("LocalScript");
-	["_Universal"] = Instance.new("LocalScript");
 	["_TextBoxPlaceholder"] = Instance.new("Frame");
 	["_UIListLayout1"] = Instance.new("UIListLayout");
 	["_TextButton"] = Instance.new("TextButton");
@@ -36,7 +34,6 @@ local Converted = {
 	["_UIStroke"] = Instance.new("UIStroke");
 	["_Invisible"] = Instance.new("LocalScript");
 	["_FloatingButtons"] = Instance.new("Frame");
-	["_Murder Mystery 2"] = Instance.new("LocalScript");
 	["_AddCustomModule"] = Instance.new("Frame");
 	["_UICorner6"] = Instance.new("UICorner");
 	["_UIStroke1"] = Instance.new("UIStroke");
@@ -133,6 +130,28 @@ local Converted = {
 	["_UICorner18"] = Instance.new("UICorner");
 	["_ImageLabel1"] = Instance.new("ImageLabel");
 	["_UIPadding12"] = Instance.new("UIPadding");
+	["_Modules"] = Instance.new("Folder");
+	["_Flee the Facility"] = Instance.new("LocalScript");
+	["_Murder Mystery 2"] = Instance.new("LocalScript");
+	["_Universal"] = Instance.new("LocalScript");
+	["_DropdownFrameSample"] = Instance.new("Frame");
+	["_UICorner19"] = Instance.new("UICorner");
+	["_UIGradient9"] = Instance.new("UIGradient");
+	["_UIStroke12"] = Instance.new("UIStroke");
+	["_UIGradient10"] = Instance.new("UIGradient");
+	["_ScrollingFrame1"] = Instance.new("ScrollingFrame");
+	["_UIListLayout6"] = Instance.new("UIListLayout");
+	["_Sample"] = Instance.new("TextButton");
+	["_UIPadding13"] = Instance.new("UIPadding");
+	["_UICorner20"] = Instance.new("UICorner");
+	["_UIPadding14"] = Instance.new("UIPadding");
+	["_Dropdown"] = Instance.new("Frame");
+	["_TextLabel8"] = Instance.new("TextLabel");
+	["_UIListLayout7"] = Instance.new("UIListLayout");
+	["_UIPadding15"] = Instance.new("UIPadding");
+	["_Frame2"] = Instance.new("TextButton");
+	["_UIPadding16"] = Instance.new("UIPadding");
+	["_UICorner21"] = Instance.new("UICorner");
 }
 
 -- Properties:
@@ -274,6 +293,7 @@ Converted["_TextBox"].PlaceholderText = "Placeholder"
 Converted["_TextBox"].Text = ""
 Converted["_TextBox"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_TextBox"].TextSize = 14
+Converted["_TextBox"].TextWrapped = true
 Converted["_TextBox"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
 Converted["_TextBox"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_TextBox"].BorderSizePixel = 0
@@ -715,6 +735,7 @@ Converted["_CanvasGroup"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_CanvasGroup"].BorderSizePixel = 0
 Converted["_CanvasGroup"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_CanvasGroup"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_CanvasGroup"].Visible = false
 Converted["_CanvasGroup"].ZIndex = 999999999
 Converted["_CanvasGroup"].Parent = Converted["_Menu"]
 
@@ -1001,6 +1022,138 @@ Converted["_ImageLabel1"].Parent = Converted["_Toggler"]
 
 Converted["_UIPadding12"].PaddingRight = UDim.new(0.0700000003, 0)
 Converted["_UIPadding12"].Parent = Converted["_Toggle"]
+
+Converted["_Modules"].Name = "Modules"
+Converted["_Modules"].Parent = Converted["_YARHM"]
+
+Converted["_DropdownFrameSample"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_DropdownFrameSample"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DropdownFrameSample"].BorderSizePixel = 0
+Converted["_DropdownFrameSample"].Size = UDim2.new(0, 108, 0, 239)
+Converted["_DropdownFrameSample"].Visible = false
+Converted["_DropdownFrameSample"].Name = "DropdownFrameSample"
+Converted["_DropdownFrameSample"].Parent = Converted["_YARHM"]
+
+Converted["_UICorner19"].Parent = Converted["_DropdownFrameSample"]
+
+Converted["_UIGradient9"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(68.00000354647636, 68.00000354647636, 68.00000354647636))
+}
+Converted["_UIGradient9"].Rotation = 68
+Converted["_UIGradient9"].Parent = Converted["_DropdownFrameSample"]
+
+Converted["_UIStroke12"].Color = Color3.fromRGB(255, 255, 255)
+Converted["_UIStroke12"].Thickness = 2
+Converted["_UIStroke12"].Parent = Converted["_DropdownFrameSample"]
+
+Converted["_UIGradient10"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(111.00000098347664, 111.00000098347664, 111.00000098347664)),
+	ColorSequenceKeypoint.new(0.6401384472846985, Color3.fromRGB(114.23875719308853, 114.23875719308853, 114.23875719308853)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))
+}
+Converted["_UIGradient10"].Rotation = -107
+Converted["_UIGradient10"].Parent = Converted["_UIStroke12"]
+
+Converted["_ScrollingFrame1"].AutomaticCanvasSize = Enum.AutomaticSize.XY
+Converted["_ScrollingFrame1"].CanvasSize = UDim2.new(0, 0, 0, 0)
+Converted["_ScrollingFrame1"].ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ScrollingFrame1"].ScrollBarThickness = 0
+Converted["_ScrollingFrame1"].Active = true
+Converted["_ScrollingFrame1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ScrollingFrame1"].BackgroundTransparency = 1
+Converted["_ScrollingFrame1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ScrollingFrame1"].BorderSizePixel = 0
+Converted["_ScrollingFrame1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_ScrollingFrame1"].Parent = Converted["_DropdownFrameSample"]
+
+Converted["_UIListLayout6"].Padding = UDim.new(0, 5)
+Converted["_UIListLayout6"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout6"].Parent = Converted["_ScrollingFrame1"]
+
+Converted["_Sample"].Font = Enum.Font.Unknown
+Converted["_Sample"].Text = "This can fit a lot of text, probably."
+Converted["_Sample"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Sample"].TextScaled = true
+Converted["_Sample"].TextSize = 14
+Converted["_Sample"].TextWrapped = true
+Converted["_Sample"].BackgroundColor3 = Color3.fromRGB(22.000000588595867, 22.000000588595867, 22.000000588595867)
+Converted["_Sample"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Sample"].BorderSizePixel = 0
+Converted["_Sample"].Size = UDim2.new(1, 0, 0, 35)
+Converted["_Sample"].Visible = false
+Converted["_Sample"].Name = "Sample"
+Converted["_Sample"].Parent = Converted["_ScrollingFrame1"]
+
+Converted["_UIPadding13"].PaddingBottom = UDim.new(0, 7)
+Converted["_UIPadding13"].PaddingLeft = UDim.new(0, 7)
+Converted["_UIPadding13"].PaddingRight = UDim.new(0, 7)
+Converted["_UIPadding13"].PaddingTop = UDim.new(0, 7)
+Converted["_UIPadding13"].Parent = Converted["_Sample"]
+
+Converted["_UICorner20"].Parent = Converted["_Sample"]
+
+Converted["_UIPadding14"].PaddingBottom = UDim.new(0, 7)
+Converted["_UIPadding14"].PaddingLeft = UDim.new(0, 7)
+Converted["_UIPadding14"].PaddingRight = UDim.new(0, 7)
+Converted["_UIPadding14"].PaddingTop = UDim.new(0, 7)
+Converted["_UIPadding14"].Parent = Converted["_DropdownFrameSample"]
+
+Converted["_Dropdown"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Dropdown"].BackgroundTransparency = 1
+Converted["_Dropdown"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Dropdown"].BorderSizePixel = 0
+Converted["_Dropdown"].Size = UDim2.new(1, 0, 0, 35)
+Converted["_Dropdown"].Visible = false
+Converted["_Dropdown"].Name = "Dropdown"
+Converted["_Dropdown"].Parent = Converted["_YARHM"]
+
+Converted["_TextLabel8"].Font = Enum.Font.Unknown
+Converted["_TextLabel8"].Text = "Loop walkspeed and FOV"
+Converted["_TextLabel8"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel8"].TextScaled = true
+Converted["_TextLabel8"].TextSize = 14
+Converted["_TextLabel8"].TextWrapped = true
+Converted["_TextLabel8"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_TextLabel8"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel8"].BackgroundTransparency = 1
+Converted["_TextLabel8"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel8"].BorderSizePixel = 0
+Converted["_TextLabel8"].Size = UDim2.new(0.699999988, 0, 1, 0)
+Converted["_TextLabel8"].Parent = Converted["_Dropdown"]
+
+Converted["_UIListLayout7"].Padding = UDim.new(0, 15)
+Converted["_UIListLayout7"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout7"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout7"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout7"].Parent = Converted["_Dropdown"]
+
+Converted["_UIPadding15"].PaddingLeft = UDim.new(0.0700000003, 0)
+Converted["_UIPadding15"].PaddingRight = UDim.new(0.0700000003, 0)
+Converted["_UIPadding15"].Parent = Converted["_Dropdown"]
+
+Converted["_Frame2"].Font = Enum.Font.Gotham
+Converted["_Frame2"].Text = "Select..."
+Converted["_Frame2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Frame2"].TextScaled = true
+Converted["_Frame2"].TextWrapped = true
+Converted["_Frame2"].Active = false
+Converted["_Frame2"].BackgroundColor3 = Color3.fromRGB(31.000001952052116, 31.000001952052116, 31.000001952052116)
+Converted["_Frame2"].BackgroundTransparency = -0.03999999910593033
+Converted["_Frame2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame2"].BorderSizePixel = 0
+Converted["_Frame2"].Selectable = false
+Converted["_Frame2"].Size = UDim2.new(0.400000006, 0, 1, 0)
+Converted["_Frame2"].Name = "Frame"
+Converted["_Frame2"].Parent = Converted["_Dropdown"]
+
+Converted["_UIPadding16"].PaddingBottom = UDim.new(0, 7)
+Converted["_UIPadding16"].PaddingLeft = UDim.new(0, 7)
+Converted["_UIPadding16"].PaddingRight = UDim.new(0, 7)
+Converted["_UIPadding16"].PaddingTop = UDim.new(0, 7)
+Converted["_UIPadding16"].Parent = Converted["_Frame2"]
+
+Converted["_UICorner21"].Parent = Converted["_Frame2"]
 
 -- Fake Module Scripts:
 
@@ -1567,7 +1720,52 @@ do -- Fake Module: StarterGui.YARHM.FUNCTIONS
 						end
 						item["Args"][2](clonetoggletoggler, toggleStates[item["Args"][1] .. module.Name])
 					end)
+				elseif item["Type"] == "Dropdown" then	
+					local clonedropdown = _G.YARHM.Dropdown:Clone()
+					local dropdownFrame = _G.YARHM.DropdownFrameSample
+					clonedropdown.Parent = AREA
+					clonedropdown.Visible = true
+		
+					clonedropdown.TextLabel.Text = item["Args"][1]
+					clonedropdown.Frame.MouseButton1Click:Connect(function()
+						for _, v in ipairs(dropdownFrame.ScrollingFrame:GetChildren()) do if v:IsA("TextButton") and v.Name ~= "Sample" then v:Destroy() end end
+						dropdownFrame.Position = UDim2.fromOffset(clonedropdown.Frame.AbsolutePosition.X - 2, clonedropdown.Frame.AbsolutePosition.Y + 98)
+						dropdownFrame.Size = UDim2.new(0,108,0,0)
+						dropdownFrame.Visible = true
+						ts:Create(dropdownFrame, TweenInfo.new(0.6, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), {
+							Size = UDim2.fromOffset(108, 239)
+						}):Play()
+						
+						local items
+						if typeof(item["Args"][2]) == "function" then
+							items = item["Args"][2]()
+						else
+							items = item["Args"][2]
+						end
+						
+						for _, v in ipairs(items) do
+							local clonedropdownbutton = dropdownFrame.ScrollingFrame.Sample:Clone()
+							clonedropdownbutton.Parent = dropdownFrame.ScrollingFrame
+							clonedropdownbutton.Name = v
+							clonedropdownbutton.Visible = true
+							clonedropdownbutton.Text = v
+							clonedropdownbutton.MouseButton1Click:Connect(function()
+								--dropdownFrame.Visible = false
+								clonedropdown.Frame.Text = v
+								item["Args"][3](clonedropdown.Frame, v)
+								local after = ts:Create(dropdownFrame, TweenInfo.new(0.1, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), {
+									Size = UDim2.fromOffset(108, 0)
+								})
+								after:Play()
+								after.Completed:Once(function()
+									dropdownFrame.Visible = false
+								end)
+							end)
+						end
+					end)
 				end
+				
+				
 			end
 			AREACONTAINER.Position = UDim2.fromScale(0.76, 0.606)
 			ts:Create(AREACONTAINER, TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
@@ -1928,7 +2126,7 @@ end
 
 -- Fake Local Scripts:
 
-local function WZBR_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
+local function PNVQ_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1964,7 +2162,7 @@ local function WZBR_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
 	--	Transparency = 1
 	--}):Play()
 end
-local function OCUTUCX_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
+local function EJRDRZ_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -2012,7 +2210,7 @@ local function OCUTUCX_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnCli
 	end)
 	
 end
-local function GRTSDHP_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
+local function TMTWQO_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -2098,7 +2296,7 @@ local function GRTSDHP_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resiz
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function WNSX_fake_script() -- Fake Script: StarterGui.YARHM.Init
+local function UDBIIMT_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -2163,7 +2361,7 @@ local function WNSX_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	_G.Modules = {}
 	
 	--require(script.Parent.FUNCTIONS).notification("Thanks for using YARHM! To use this hub, triple-click/tap the top region of your screen.")
-	require(script.Parent.FUNCTIONS).notification("v1.12\n- Hub GUI redesign\n- New features (dragging menu, make invisible buttons, etc)\n- Hiding the GUI\n- Better (or not) auto-shooting\n- Knife throw silent aim (INACCURATE)\n- Universal changes\n- Bugfixes and improvements to systems")
+	require(script.Parent.FUNCTIONS).notification("Welcome to YARHM v1.13!")
 	
 	
 	local menudrag = require(script.Parent.DraggableObject).new(script.Parent.Menu)
@@ -2193,7 +2391,296 @@ local function WNSX_fake_script() -- Fake Script: StarterGui.YARHM.Init
 	
 	--require(script.Parent.DraggableObject).new(script.Parent.Menu.CanvasGroup.Opener, script.Parent.Menu):Enable()
 end
-local function MPSKJKA_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
+local function LLZB_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
+    local script = Instance.new("LocalScript")
+    script.Name = "Keybinding"
+    script.Parent = Converted["_FloatingButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	
+end
+local function FKGFV_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
+    local script = Instance.new("LocalScript")
+    script.Name = "Invisible"
+    script.Parent = Converted["_FloatingButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	--local ts = game:GetService("TweenService")
+	
+	--local holding = false
+	--local invisible = false
+	
+	
+	
+	--script.Parent.MouseButton1Down:Connect(function()
+	--	holding = true
+	--	task.wait(0.5)
+	--	if holding then
+	--		if not invisible then 
+	--			invisible = true
+	--			ts:Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+	--				BackgroundTransparency = 1,
+	--				TextTransparency = 1
+	--			}):Play()
+	--			ts:Create(script.Parent.UIStroke, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+	--				Transparency = 0.7
+	--			}):Play()
+	--		else
+	--			invisible = false
+	--			ts:Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+	--				BackgroundTransparency = 0,
+	--				TextTransparency = 0
+	--			}):Play()
+	--			ts:Create(script.Parent.UIStroke, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+	--				Transparency = 0
+	--			}):Play()
+	--		end
+	--	end
+	--end)
+	
+	--script.Parent.MouseButton1Up:Connect(function()
+	--	holding = false
+	--end)
+end
+local function OXVEGC_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Add"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local ts = game:GetService("TweenService")
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.TextBox.Text == "" then return end
+		ts:Create(script.Parent.Parent.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Scale = 1
+		}):Play()
+		ts:Create(script.Parent.Parent, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Position = UDim2.fromScale(0.5, -0.5)
+		}):Play()
+		
+		
+		local lastmodule = _G.Modules[#_G.Modules]
+		require(script.Parent.Parent.Parent.FUNCTIONS).notification("Module is loading...")
+		local newmodule = loadstring(game:HttpGet(script.Parent.Parent.TextBox.Text))()
+		if newmodule["BG_TASK"] then
+			coroutine.wrap(newmodule["BG_TASK"])()
+		end
+		if _G.Modules[#_G.Modules] ~= lastmodule then
+			local newmodule = _G.Modules[#_G.Modules]
+			require(script.Parent.Parent.Parent.FUNCTIONS).notification("New module added: " .. newmodule["Name"])
+			require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
+		else
+			require(script.Parent.Parent.Parent.FUNCTIONS).notification("Module failed to load after 5 seconds.")
+		end
+	end)
+end
+local function UYJY_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Cancel"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local ts = game:GetService("TweenService")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		ts:Create(script.Parent.Parent.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Scale = 1
+		}):Play()
+		ts:Create(script.Parent.Parent, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Position = UDim2.fromScale(0.5, -0.5)
+		}):Play()
+	end)
+end
+local function KQVDVC_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
+    local script = Instance.new("LocalScript")
+    script.Name = "Animator"
+    script.Parent = Converted["_UIGradient3"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local ts = game:GetService("TweenService")
+	
+	ts:Create(script.Parent, TweenInfo.new(
+		10, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut,
+		math.huge, false), {
+			Rotation = -180
+		}):Play()
+end
+local function OTIP_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
+    local script = Instance.new("LocalScript")
+    script.Name = "AutoSetup"
+    script.Parent = Converted["_List"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local ts = game:GetService("TweenService")
+	
+	
+	local States = {}
+	
+	local FloatingButtonConnectionsMouse = {}
+	local FloatingButtonConnectionsTouch = {}
+	
+	task.wait(0.1)
+	
+	AREA = script.Parent.Parent.Area
+	
+	local function calculateWidth(n)
+		if n <= 3 then
+			return 30
+		else
+			local base = 30
+			local additional = math.floor((n - 3) / 3) * 30
+			return base + additional
+		end
+	end
+	
+	local listlayout = Instance.new("UIListLayout")
+	listlayout.Parent = AREA
+	listlayout.Padding = UDim.new(0, 10)
+	listlayout.FillDirection = Enum.FillDirection.Vertical
+	listlayout.SortOrder = Enum.SortOrder.LayoutOrder
+	listlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	
+	
+	
+	
+	task.wait(.5) -- magic number to wait modules to load lmao
+	task.spawn(function()
+		require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
+		for i = 1, 10 do
+			task.wait(.1)
+			require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
+		end
+	end)
+end
+local function VYSG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_AddCustomModule1"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local ts = game:GetService("TweenService")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		ts:Create(script.Parent.Parent.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Scale = 0.9
+		}):Play()
+		ts:Create(script.Parent.Parent.Parent.AddCustomModule, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Position = UDim2.fromScale(0.5, 0.5)
+		}):Play()
+	end)
+end
+local function RQHGPMY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Close"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local ts = game:GetService("TweenService")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		print("-")
+		ts:Create(_G.YARHM.Menu, TweenInfo.new(0.4, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), 
+			{Size = UDim2.fromOffset(55, 55)}
+		):Play()
+		
+		script.Parent.Parent.CanvasGroup.Visible = true
+		ts:Create(script.Parent.Parent.CanvasGroup, TweenInfo.new(0.6, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), {
+			GroupTransparency = 0
+		}):Play()
+	end)
+end
+local function CEILOEX_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Opener"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local ts = game:GetService("TweenService")
+	local ready = true
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not ready then return end
+		ready = false
+		ts:Create(_G.YARHM.Menu, TweenInfo.new(0.4, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), 
+			{Size = UDim2.fromOffset(441, 268)}
+		):Play()
+	
+		
+		ts:Create(script.Parent.Parent, TweenInfo.new(0.6, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), {
+			GroupTransparency = 1
+		}):Play()
+		task.wait(0.6)
+		script.Parent.Parent.Visible = false
+		ready = true
+	end)
+end
+local function VGAW_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -2503,390 +2990,7 @@ local function MPSKJKA_fake_script() -- Fake Script: StarterGui.YARHM.Flee the F
 	
 	_G.Modules[2] = module
 end
-local function IPUXEGP_fake_script() -- Fake Script: StarterGui.YARHM.Universal
-    local script = Instance.new("LocalScript")
-    script.Name = "Universal"
-    script.Parent = Converted["_YARHM"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local module = {}
-	module["gameId"] = 0 -- Restrict module to a certain game ID only. 0 allows all games.
-	if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
-		script.Enabled = true
-	end
-	
-	local ts = game:GetService("TweenService")
-	local uis = game:GetService("UserInputService")
-	local fu = require(script.Parent.FUNCTIONS)
-	
-	local loopfovandws = false
-	local ctrlclicktp = false
-	local ws = 16
-	local fov = 70
-	
-	local hidden = false
-	
-	task.spawn(function()
-		game:GetService("RunService").RenderStepped:Connect(function()
-			if loopfovandws then
-				workspace.CurrentCamera.FieldOfView = fov
-				if game.Players.LocalPlayer.Character then
-					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
-						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
-					end
-				end
-			end
-		end)
-	end)
-	
-	uis.InputBegan:Connect(function(inp, proc)
-		if proc then return end
-		
-		if uis:IsKeyDown(Enum.KeyCode.LeftControl) and inp.KeyCode == Enum.KeyCode.Y and hidden then
-			hidden = false
-			ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-				Scale = 1
-			}):Play()
-		end
-	end)
-	
-	local function getPlayerMouse()
-		local player = game:GetService("Players").LocalPlayer
-		if player then
-			return player:GetMouse()
-		end
-		return nil
-	end
-	
-	-- Function to cast a ray from the cursor to the furthest object
-	local function getRayHitPosition()
-		local mouse = getPlayerMouse()
-		if not mouse then
-			return nil
-		end
-	
-		local camera = workspace.CurrentCamera
-		local unitRay = camera:ScreenPointToRay(mouse.X, mouse.Y)
-		local ray = Ray.new(unitRay.Origin, unitRay.Direction * 1000) -- Adjust the range as needed
-	
-		local part, position = workspace:FindPartOnRay(ray, game:GetService("Players").LocalPlayer.Character)
-	
-		if part then
-			return position
-		else
-			return nil
-		end
-	end
-	
-	uis.InputBegan:Connect(function(inp, proc)
-		if proc then return end
-	
-		if uis:IsKeyDown(Enum.KeyCode.LeftControl) and inp.UserInputType == Enum.UserInputType.MouseButton1 and ctrlclicktp then
-			local ray = getRayHitPosition()
-			if not ray then fu.notification("Couldn't find a place to teleport to.") return end
-			game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(ray)
-		end
-	end)
-	
-	if uis.AccelerometerEnabled then
-		uis.DeviceAccelerationChanged:Connect(function(acc)
-			if hidden and acc.Position.Magnitude > 50 then
-				hidden = false
-				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-					Scale = 1
-				}):Play()
-			end 
-		end)
-	end
-	
-	module["Name"] = "Universal"
-	
-	local ts = game:GetService("TweenService")
-	
-	table.insert(module, {
-		Type = "Text",
-		Args = {"Welcome to YARHM! The open, free script hub."}
-	})
-	table.insert(module, {
-		Type = "Button",
-		Args = {"Join our Discord", function(Self)
-			if setclipboard then setclipboard("https://discord.gg/2jbYxvDkxr") end
-			fu.notification('Discord link has been copied to clipboard!')
-		end,}
-	})
-	table.insert(module, {
-		Type = "Text",
-		Args = {"---"}
-	})
-	
-	table.insert(module, {
-		Type = "Input",
-		Args = {"Hitbox expander", "Expand everyone's hitbox", function(Self, ToExpand)
-			local players = game:GetService("Players"):GetPlayers()
-			for i,v in ipairs(players) do
-				if v ~= game.Players.LocalPlayer and v.Character:FindFirstChild('HumanoidRootPart') then
-					local sizeArg = tonumber(ToExpand)
-					local Size = Vector3.new(sizeArg,sizeArg,sizeArg)
-					local Root = v.Character:FindFirstChild('HumanoidRootPart')
-					if Root:IsA("BasePart") then
-						if not ToExpand or sizeArg == 1 then
-							Root.Size = Vector3.new(2,1,1)
-							Root.Transparency = 0.2
-						else
-							Root.Size = Size
-							Root.Transparency = 0.2
-						end
-						Root.CanCollide = false
-					end
-				end
-			end
-			fu.notification("Hitboxes expanded.")
-		end,}
-	})
-	
-	table.insert(module, {
-		Type = "Input",
-		Args = {"Walkspeed", "Set speed", function(Self, speed)
-			local lp = game:GetService("Players").LocalPlayer
-			local char = lp.Character
-			if not char then fu.notification("No character!") return end
-			local hu = char:FindFirstChildOfClass("Humanoid")
-			if not hu then fu.notification("No humanoid on your character..?") return end
-			hu.WalkSpeed = tonumber(speed) or 16
-			fu.notification("Walkspeed set.")
-			ws = tonumber(speed) or 16
-		end,}
-	})
-	
-	table.insert(module, {
-		Type = "Input",
-		Args = {"FOV change", "Set FOV", function(Self, tofov)
-			if not tonumber(tofov) then fu.notification("Not a number. Setting to default.") end
-			ts:Create(workspace.CurrentCamera, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-				FieldOfView = tonumber(tofov) or 70
-			}):Play()
-			fov = tonumber(tofov) or 70
-		end,}
-	})
-	
-	table.insert(module, {
-		Type = "Toggle",
-		Args = {"Loop walkspeed and FOV", function(Self, state)
-			loopfovandws = state
-		end,}
-	})
-	
-	
-	if uis.KeyboardEnabled and uis.MouseEnabled then
-		table.insert(module, {
-			Type = "Toggle",
-			Args = {"CTRL+Click Teleport", function(Self, state)
-				ctrlclicktp = state
-			end,}
-		})
-	end
-	
-	table.insert(module, {
-		Type = "Text",
-		Args = {"Miscellaneous"}
-	})
-	
-	table.insert(module, {
-		Type = "Button",
-		Args = {"Hide YARHM", function(Self)
-			if uis.KeyboardEnabled then
-				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-					Scale = 0
-				}):Play()
-				hidden=true
-				fu.notification("Press CTRL+Y to bring back the menu.")
-			elseif uis.AccelerometerEnabled then
-				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-					Scale = 0
-				}):Play()
-				hidden=true
-				fu.notification("Shake your device to bring back the menu.")
-			else
-				fu.notification("Can't hide YARHM!") -- how else are you gonna open???
-			end
-		end,}
-	}
-	)
-	
-	table.insert(module, {
-		Type = "Button",
-		Args = {"FPS Boost", function(Self)
-			fu.dialog("FPS boosting", "FPS boosting can have unpredictable effects. You may instead lag more using this!", {"FPS boost anyway", "Nevermind"})
-			local result = fu.waitfordialog()
-			fu.closedialog()
-			if result == "FPS boost anyway" then
-				local Terrain = workspace:FindFirstChildOfClass('Terrain')
-				Terrain.WaterWaveSize = 0
-				Terrain.WaterWaveSpeed = 0
-				Terrain.WaterReflectance = 0
-				Terrain.WaterTransparency = 0
-				game.Lighting.GlobalShadows = false
-				game.Lighting.FogEnd = 9e9
-				pcall(function()
-					settings().Rendering.QualityLevel = 1
-				end)
-				for i,v in pairs(game:GetDescendants()) do
-					if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
-						v.Material = "Plastic"
-						v.Reflectance = 0
-					elseif v:IsA("Decal") then
-						v.Transparency = 1
-					elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-						v.Lifetime = NumberRange.new(0)
-					elseif v:IsA("Explosion") then
-						v.BlastPressure = 1
-						v.BlastRadius = 1
-					end
-				end
-				for i,v in pairs(game.Lighting:GetDescendants()) do
-					if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
-						v.Enabled = false
-					end
-				end
-				workspace.DescendantAdded:Connect(function(child)
-					task.spawn(function()
-						if child:IsA('ForceField') then
-							game:GetService("RunService").Heartbeat:Wait()
-							child:Destroy()
-						elseif child:IsA('Sparkles') then
-							game:GetService("RunService").Heartbeat:Wait()
-							child:Destroy()
-						elseif child:IsA('Smoke') or child:IsA('Fire') then
-							game:GetService("RunService").Heartbeat:Wait()
-							child:Destroy()
-						end
-					end)
-				end)
-			end
-		end,}
-	})
-	
-	table.insert(module, {
-		Type = "Button",
-		Args = {"Open developer console (debugging)", function(Self)
-			game.StarterGui:SetCore("DevConsoleVisible", true)
-			--_G.YARHM.Open.UIStroke.Transparency = 0
-			--_G.YARHM.Open.TextTransparency = 0
-			--ts:Create(_G.YARHM.Open, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-			--	Position = UDim2.fromScale(0.5, 0.903)
-			--}):Play()
-	
-			--ts:Create(_G.YARHM.Open.UIStroke, TweenInfo.new(1), {
-			--	Transparency = 1
-			--}):Play()
-			--ts:Create(_G.YARHM.Open, TweenInfo.new(1), {
-			--	TextTransparency = 1
-			--}):Play()
-		end}
-	}
-	)
-	
-	table.insert(module, {
-		Type = "Button",
-		Args = {"SELF-DESTRUCT", function(Self)
-			fu.notification("See you later!")
-			task.wait(1.5)
-			script.Parent:Destroy() -- Scary!
-		end}
-	}
-	)
-	--	Type = "Button",
-	--	Args = {"Move YARHM trigger to the top", function(Self)
-	--		_G.YARHM.Open.UIStroke.Transparency = 0
-	--		_G.YARHM.Open.TextTransparency = 0
-	--		ts:Create(_G.YARHM.Open, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-	--			Position = UDim2.fromScale(0.5, 0.063)
-	--		}):Play()
-	
-	--		ts:Create(_G.YARHM.Open.UIStroke, TweenInfo.new(1), {
-	--			Transparency = 1
-	--		}):Play()
-	--		ts:Create(_G.YARHM.Open, TweenInfo.new(1), {
-	--			TextTransparency = 1
-	--		}):Play()
-	--	end}
-	--}
-	
-	_G.Modules[1] = module
-end
-local function CZTTHG_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
-    local script = Instance.new("LocalScript")
-    script.Name = "Keybinding"
-    script.Parent = Converted["_FloatingButton"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	
-end
-local function XCKY_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
-    local script = Instance.new("LocalScript")
-    script.Name = "Invisible"
-    script.Parent = Converted["_FloatingButton"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	--local ts = game:GetService("TweenService")
-	
-	--local holding = false
-	--local invisible = false
-	
-	
-	
-	--script.Parent.MouseButton1Down:Connect(function()
-	--	holding = true
-	--	task.wait(0.5)
-	--	if holding then
-	--		if not invisible then 
-	--			invisible = true
-	--			ts:Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
-	--				BackgroundTransparency = 1,
-	--				TextTransparency = 1
-	--			}):Play()
-	--			ts:Create(script.Parent.UIStroke, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
-	--				Transparency = 0.7
-	--			}):Play()
-	--		else
-	--			invisible = false
-	--			ts:Create(script.Parent, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
-	--				BackgroundTransparency = 0,
-	--				TextTransparency = 0
-	--			}):Play()
-	--			ts:Create(script.Parent.UIStroke, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
-	--				Transparency = 0
-	--			}):Play()
-	--		end
-	--	end
-	--end)
-	
-	--script.Parent.MouseButton1Up:Connect(function()
-	--	holding = false
-	--end)
-end
-local function NFRPHY_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
+local function SGUVHQM_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -3034,23 +3138,23 @@ local function NFRPHY_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	--task.spawn(function() 
 	--	if game:GetService("RunService"):IsStudio() then return end -- :)
 	
-	--	local OldNameCall = nil
+		--local OldNameCall = nil
 	
-	--	OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
-	--		local Args = {...}
-	--		local NamecallMethod = getnamecallmethod()
+		--OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
+		--	local Args = {...}
+		--	local NamecallMethod = getnamecallmethod()
 	
-	--		if NamecallMethod == "InvokeServer" and Args[1] == 1 and sheriffAimbot then
-	--			if not findMurderer() then
-	--				print("No murderer to be shot!")
-	--			else
-	--				print("Shot - Intercepting shot to murderer")
-	--				Args[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position
-	--			end
-	--		end
+		--	if NamecallMethod == "InvokeServer" and Args[1] == 1 and sheriffAimbot then
+		--		if not findMurderer() then
+		--			print("No murderer to be shot!")
+		--		else
+		--			print("Shot - Intercepting shot to murderer")
+		--			Args[2] = findMurderer().Character:FindFirstChild("HumanoidRootPart").Position
+		--		end
+		--	end
 	
-	--		return OldNameCall(Self, unpack(Args))
-	--	end)
+		--	return OldNameCall(Self, unpack(Args))
+		--end)
 	
 	--end)
 	
@@ -3157,7 +3261,14 @@ local function NFRPHY_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 			end
 		end
 	
-		return closestModel
+		local returningResult = {closestModel, closestDistance}
+		setmetatable(returningResult, {
+			__tostring = function(t)
+				return closestModel
+			end,
+		})
+	
+		return returningResult
 	end
 	
 	-- Coin autocollect
@@ -3281,13 +3392,18 @@ local function NFRPHY_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	
 		-- this took some big brain math
 		-- skid this if you want lmfao (like anyones going to anyways)
-		local predictedPosition = playerPosition
-			+ Vector3.new(0, 1, 0) * shootOffset
-			+ (velocity * Vector3.new(1, yVelFactor, 1)) * (shootOffset / 15)
-			+ playerMoveDirection * shootOffset
-			- playerHRP.CFrame.LookVector * shootOffset * math.clamp(playerMoveDirection.Magnitude, 0, 1.5)
+		--local predictedPosition = playerPosition
+		--	+ Vector3.new(0, 1, 0) * shootOffset
+		--	+ (velocity * Vector3.new(1, yVelFactor, 1)) * (shootOffset / 15)
+		--	+ playerMoveDirection * shootOffset
+		--	- playerHRP.CFrame.LookVector * shootOffset * math.clamp(playerMoveDirection.Magnitude, 0, 1.5)
 		
-		predictedPosition = Vector3.new(predictedPosition.X, math.clamp(predictedPosition.Y, playerPosition.Y - 2, playerPosition.Y + 2), predictedPosition.Z)
+		
+		
+		local predictedPosition = playerHRP.Position + ((velocity * Vector3.new(0, 0.5, 0))) * (shootOffset / 15) +playerMoveDirection * shootOffset
+		-- failed so hard i had to revert back to v1.11 :sob:
+		
+		--predictedPosition = Vector3.new(predictedPositiomurdererHRP.Position + ((murdererVelocity * Vector3.new(0, 0.5, 0))) * (shootOffset / 15) + murderer.Character.Humanoid.MoveDirection * shootOffsetn.X, math.clamp(predictedPosition.Y, playerPosition.Y - 2, playerPosition.Y + 2), predictedPosition.Z)
 	
 	
 		return predictedPosition
@@ -3628,6 +3744,8 @@ local function NFRPHY_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 		}}
 	})
 	
+	
+	
 	table.insert(module, {Type="Text", Args={""}})
 	
 	table.insert(module, {
@@ -3701,64 +3819,64 @@ local function NFRPHY_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	})
 	
 	
-	table.insert(module, {
-		Type = "Button",
-		Args = {"Kill murderer immediately", function()
-			if findSheriff() ~= localplayer then fu.notification("You're not sheriff/hero.") return end
-			if not findMurderer() then
-				fu.notification("No murderer to shoot.")
-				return
-			end
+	--table.insert(module, {
+	--	Type = "Button",
+	--	Args = {"Kill murderer immediately", function()
+	--		if findSheriff() ~= localplayer then fu.notification("You're not sheriff/hero.") return end
+	--		if not findMurderer() then
+	--			fu.notification("No murderer to shoot.")
+	--			return
+	--		end
 	
-			if not localplayer.Character:FindFirstChild("Gun") then
-				local hum = localplayer.Character:FindFirstChild("Humanoid")
-				if localplayer.Backpack:FindFirstChild("Gun") then
-					localplayer.Character:FindFirstChild("Humanoid"):EquipTool(localplayer.Backpack:FindFirstChild("Gun"))
-				else
-					fu.notification("You don't have the gun..?")
-					return
-				end
-			end
+	--		if not localplayer.Character:FindFirstChild("Gun") then
+	--			local hum = localplayer.Character:FindFirstChild("Humanoid")
+	--			if localplayer.Backpack:FindFirstChild("Gun") then
+	--				localplayer.Character:FindFirstChild("Humanoid"):EquipTool(localplayer.Backpack:FindFirstChild("Gun"))
+	--			else
+	--				fu.notification("You don't have the gun..?")
+	--				return
+	--			end
+	--		end
 	
-			local Murderer = findMurderer()
+	--		local Murderer = findMurderer()
 	
-			if Murderer and Murderer.Character then
+	--		if Murderer and Murderer.Character then
 	
-				-- Get the HumanoidRootParts
-				local localRootPart = localplayer.Character:FindFirstChild("HumanoidRootPart")
-				local nearestRootPart = Murderer.Character:FindFirstChild("HumanoidRootPart")
+	--			-- Get the HumanoidRootParts
+	--			local localRootPart = localplayer.Character:FindFirstChild("HumanoidRootPart")
+	--			local nearestRootPart = Murderer.Character:FindFirstChild("HumanoidRootPart")
 	
-				if localRootPart and nearestRootPart then
-					-- Calculate the look vector of the nearest player
-					local lookVector = nearestRootPart.CFrame.LookVector
+	--			if localRootPart and nearestRootPart then
+	--				-- Calculate the look vector of the nearest player
+	--				local lookVector = nearestRootPart.CFrame.LookVector
 	
-					-- Calculate the offset position behind the nearest player
-					local offsetPosition = nearestRootPart.Position - (lookVector * 5) -- 7 studs behind
+	--				-- Calculate the offset position behind the nearest player
+	--				local offsetPosition = nearestRootPart.Position - (lookVector * 5) -- 7 studs behind
 	
-					-- Teleport the local player to the offset position
-					localRootPart.CFrame = CFrame.new(offsetPosition) * CFrame.Angles(0, nearestRootPart.CFrame.Y, 0)
-				end
-			else
-				fu.notification("Can't find a murderer!?")
-			end
-			task.wait(0.1)
-			local murdererHRP = Murderer.Character:FindFirstChild("HumanoidRootPart")
-			if not murdererHRP then
-				fu.notification("Could not find the murderer's HumanoidRootPart.")
-				return
-			end
+	--				-- Teleport the local player to the offset position
+	--				localRootPart.CFrame = CFrame.new(offsetPosition) * CFrame.Angles(0, nearestRootPart.CFrame.Y, 0)
+	--			end
+	--		else
+	--			fu.notification("Can't find a murderer!?")
+	--		end
+	--		task.wait(0.1)
+	--		local murdererHRP = Murderer.Character:FindFirstChild("HumanoidRootPart")
+	--		if not murdererHRP then
+	--			fu.notification("Could not find the murderer's HumanoidRootPart.")
+	--			return
+	--		end
 	
-			--local predictedPosition = getPredictedPosition(Murderer, shootOffset)
+	--		--local predictedPosition = getPredictedPosition(Murderer, shootOffset)
 	
-			local args = {
-				[1] = 1,
-				[2] = murdererHRP.Position,
-				[3] = "AH"
-			}
+	--		local args = {
+	--			[1] = 1,
+	--			[2] = murdererHRP.Position,
+	--			[3] = "AH"
+	--		}
 	
-			localplayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
-		end,}
-	})
+	--		localplayer.Character.Gun.KnifeServer.ShootGun:InvokeServer(unpack(args))
+	--	end,}
+	--})
 	
 	table.insert(module, {
 		Type = "Button",
@@ -3862,7 +3980,7 @@ local function NFRPHY_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 			for _, player in ipairs(game.Players:GetPlayers()) do
 				if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player ~= localplayer then
 					player.Character:FindFirstChild("HumanoidRootPart").Anchored = true
-					player.Character:FindFirstChild("HumanoidRootPart").CFrame = localplayer.Character:FindFirstChild("HumanoidRootPart").CFrame + localplayer.Character:FindFirstChild("HumanoidRootPart").CFrame.LookVector * 2
+					player.Character:FindFirstChild("HumanoidRootPart").CFrame = localplayer.Character:FindFirstChild("HumanoidRootPart").CFrame + localplayer.Character:FindFirstChild("HumanoidRootPart").CFrame.LookVector * 1 
 					
 				end	
 			end
@@ -3898,10 +4016,10 @@ local function NFRPHY_fake_script() -- Fake Script: StarterGui.YARHM.Murder Myst
 	_G.Modules[#_G.Modules + 1] = module
 	
 end
-local function IGKOEXX_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
+local function BOMR_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Add"]
+    script.Name = "Universal"
+    script.Parent = Converted["_YARHM"]
     local req = require
     local require = function(obj)
         local fake = fake_module_scripts[obj]
@@ -3911,231 +4029,440 @@ local function IGKOEXX_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomM
         return req(obj)
     end
 
+	local module = {}
+	module["gameId"] = 0 -- Restrict module to a certain game ID only. 0 allows all games.
+	if (module["gameId"] ~= game.GameId) and module["gameId"] ~= 0 then
+		script.Enabled = true
+	end
+	
 	local ts = game:GetService("TweenService")
+	local uis = game:GetService("UserInputService")
+	local rs = game:GetService("RunService")
+	local fu = require(script.Parent.FUNCTIONS)
 	
+	local loopfovandws = false
+	local ctrlclicktp = false
+	local ws = 16
+	local fov = 70
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.TextBox.Text == "" then return end
-		ts:Create(script.Parent.Parent.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Scale = 1
-		}):Play()
-		ts:Create(script.Parent.Parent, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Position = UDim2.fromScale(0.5, -0.5)
-		}):Play()
+	local hidden = false
+	
+	task.spawn(function()
+		rs.RenderStepped:Connect(function()
+			if loopfovandws then
+				workspace.CurrentCamera.FieldOfView = fov
+				if game.Players.LocalPlayer.Character then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = ws
+					end
+				end
+			end
+		end)
+	end)
+	
+	uis.InputBegan:Connect(function(inp, proc)
+		if proc then return end
 		
-		
-		local lastmodule = _G.Modules[#_G.Modules]
-		require(script.Parent.Parent.Parent.FUNCTIONS).notification("Module is loading...")
-		local newmodule = loadstring(game:HttpGet(script.Parent.Parent.TextBox.Text))()
-		if newmodule["BG_TASK"] then
-			coroutine.wrap(newmodule["BG_TASK"])()
-		end
-		if _G.Modules[#_G.Modules] ~= lastmodule then
-			local newmodule = _G.Modules[#_G.Modules]
-			require(script.Parent.Parent.Parent.FUNCTIONS).notification("New module added: " .. newmodule["Name"])
-			require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
-		else
-			require(script.Parent.Parent.Parent.FUNCTIONS).notification("Module failed to load after 5 seconds.")
+		if uis:IsKeyDown(Enum.KeyCode.LeftControl) and inp.KeyCode == Enum.KeyCode.Y and hidden then
+			hidden = false
+			ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+				Scale = 1
+			}):Play()
 		end
 	end)
-end
-local function ASNRQ_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Cancel"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local ts = game:GetService("TweenService")
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		ts:Create(script.Parent.Parent.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Scale = 1
-		}):Play()
-		ts:Create(script.Parent.Parent, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Position = UDim2.fromScale(0.5, -0.5)
-		}):Play()
-	end)
-end
-local function KQUWG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
-    local script = Instance.new("LocalScript")
-    script.Name = "Animator"
-    script.Parent = Converted["_UIGradient3"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local ts = game:GetService("TweenService")
+	local function getPlayerMouse()
+		local player = game:GetService("Players").LocalPlayer
+		if player then
+			return player:GetMouse()
+		end
+		return nil
+	end
 	
-	ts:Create(script.Parent, TweenInfo.new(
-		10, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut,
-		math.huge, false), {
-			Rotation = -180
-		}):Play()
-end
-local function LPFU_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
-    local script = Instance.new("LocalScript")
-    script.Name = "AutoSetup"
-    script.Parent = Converted["_List"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local ts = game:GetService("TweenService")
+	-- Function to cast a ray from the cursor to the furthest object
+	local function getRayHitPosition()
+		local mouse = getPlayerMouse()
+		if not mouse then
+			return nil
+		end
 	
+		local camera = workspace.CurrentCamera
+		local unitRay = camera:ScreenPointToRay(mouse.X, mouse.Y)
+		local ray = Ray.new(unitRay.Origin, unitRay.Direction * 1000) -- Adjust the range as needed
 	
-	local States = {}
+		local part, position = workspace:FindPartOnRay(ray, game:GetService("Players").LocalPlayer.Character)
 	
-	local FloatingButtonConnectionsMouse = {}
-	local FloatingButtonConnectionsTouch = {}
-	
-	task.wait(0.1)
-	
-	AREA = script.Parent.Parent.Area
-	
-	local function calculateWidth(n)
-		if n <= 3 then
-			return 30
+		if part then
+			return position
 		else
-			local base = 30
-			local additional = math.floor((n - 3) / 3) * 30
-			return base + additional
+			return nil
 		end
 	end
 	
-	local listlayout = Instance.new("UIListLayout")
-	listlayout.Parent = AREA
-	listlayout.Padding = UDim.new(0, 10)
-	listlayout.FillDirection = Enum.FillDirection.Vertical
-	listlayout.SortOrder = Enum.SortOrder.LayoutOrder
-	listlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	uis.InputBegan:Connect(function(inp, proc)
+		if proc then return end
 	
-	
-	
-	
-	task.wait(.5) -- magic number to wait modules to load lmao
-	task.spawn(function()
-		require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
-		for i = 1, 10 do
-			task.wait(.1)
-			require(script.Parent.Parent.Parent.FUNCTIONS).refreshlist()
+		if uis:IsKeyDown(Enum.KeyCode.LeftControl) and inp.UserInputType == Enum.UserInputType.MouseButton1 and ctrlclicktp then
+			local ray = getRayHitPosition()
+			if not ray then fu.notification("Couldn't find a place to teleport to.") return end
+			game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(ray)
 		end
 	end)
-end
-local function LNKR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.AddCustomModule.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_AddCustomModule1"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
+	
+	if uis.AccelerometerEnabled then
+		uis.DeviceAccelerationChanged:Connect(function(acc)
+			if hidden and acc.Position.Magnitude > 50 then
+				hidden = false
+				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+					Scale = 1
+				}):Play()
+			end 
+		end)
+	end
+	
+	module["Name"] = "Universal"
+	
 	local ts = game:GetService("TweenService")
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		ts:Create(script.Parent.Parent.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Scale = 0.9
-		}):Play()
-		ts:Create(script.Parent.Parent.Parent.AddCustomModule, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Position = UDim2.fromScale(0.5, 0.5)
-		}):Play()
-	end)
-end
-local function PZPK_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Close"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
-
-	local ts = game:GetService("TweenService")
+	table.insert(module, {
+		Type = "Text",
+		Args = {"Welcome to YARHM! The open, free script hub."}
+	})
+	table.insert(module, {
+		Type = "Button",
+		Args = {"Join our Discord", function(Self)
+			if setclipboard then setclipboard("https://discord.gg/2jbYxvDkxr") end
+			fu.notification('Discord link has been copied to clipboard!')
+		end,}
+	})
+	table.insert(module, {
+		Type = "Text",
+		Args = {"---"}
+	})
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		print("-")
-		ts:Create(_G.YARHM.Menu, TweenInfo.new(0.4, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), 
-			{Size = UDim2.fromOffset(55, 55)}
-		):Play()
+	table.insert(module, {
+		Type = "Input",
+		Args = {"Hitbox expander", "Expand everyone's hitbox", function(Self, ToExpand)
+			local players = game:GetService("Players"):GetPlayers()
+			for i,v in ipairs(players) do
+				if v ~= game.Players.LocalPlayer and v.Character:FindFirstChild('HumanoidRootPart') then
+					local sizeArg = tonumber(ToExpand)
+					local Size = Vector3.new(sizeArg,sizeArg,sizeArg)
+					local Root = v.Character:FindFirstChild('HumanoidRootPart')
+					if Root:IsA("BasePart") then
+						if not ToExpand or sizeArg == 1 then
+							Root.Size = Vector3.new(2,1,1)
+							Root.Transparency = 0.2
+						else
+							Root.Size = Size
+							Root.Transparency = 0.2
+						end
+						Root.CanCollide = false
+					end
+				end
+			end
+			fu.notification("Hitboxes expanded.")
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Input",
+		Args = {"Walkspeed", "Set speed", function(Self, speed)
+			local lp = game:GetService("Players").LocalPlayer
+			local char = lp.Character
+			if not char then fu.notification("No character!") return end
+			local hu = char:FindFirstChildOfClass("Humanoid")
+			if not hu then fu.notification("No humanoid on your character..?") return end
+			hu.WalkSpeed = tonumber(speed) or 16
+			fu.notification("Walkspeed set.")
+			ws = tonumber(speed) or 16
+		end,}
+	})
+	
+	
+	local walkspeedInDeCrement = 3
+	table.insert(module, {
+		Type = "Button",
+		Args = {"Increase walkspeed", function(Self)
+			local lp = game:GetService("Players").LocalPlayer
+			local char = lp.Character
+			if not char then fu.notification("No character!") return end
+			local hu = char:FindFirstChildOfClass("Humanoid")
+			if not hu then fu.notification("No humanoid on your character..?") return end
+			ws = ws + walkspeedInDeCrement
+			hu.WalkSpeed = hu.WalkSpeed + walkspeedInDeCrement
+			fu.notification("Walkspeed is now ".. hu.WalkSpeed)
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"Decrease walkspeed", function(Self)
+			local lp = game:GetService("Players").LocalPlayer
+			local char = lp.Character
+			if not char then fu.notification("No character!") return end
+			local hu = char:FindFirstChildOfClass("Humanoid")
+			if not hu then fu.notification("No humanoid on your character..?") return end
+			ws = ws - walkspeedInDeCrement
+			hu.WalkSpeed = hu.WalkSpeed - walkspeedInDeCrement
+			fu.notification("Walkspeed is now ".. hu.WalkSpeed)
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Input",
+		Args = {"Walkspeed increment (How big each increase/decrease is)", "Set", function(Self, input)
+			walkspeedInDeCrement = tonumber(input) or 3
+			if not tonumber(input) then fu.notification("Not a number. Setting to default.") end
+			fu.notification("Set walkspeed increment to ".. walkspeedInDeCrement)
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Input",
+		Args = {"FOV change", "Set FOV", function(Self, tofov)
+			if not tonumber(tofov) then fu.notification("Not a number. Setting to default.") end
+			ts:Create(workspace.CurrentCamera, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+				FieldOfView = tonumber(tofov) or 70
+			}):Play()
+			fov = tonumber(tofov) or 70
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Toggle",
+		Args = {"Loop walkspeed and FOV", function(Self, state)
+			loopfovandws = state
+		end,}
+	})
+	
+	
+	if uis.KeyboardEnabled and uis.MouseEnabled then
+		table.insert(module, {
+			Type = "Toggle",
+			Args = {"CTRL+Click Teleport", function(Self, state)
+				ctrlclicktp = state
+			end,}
+		})
+	end
+	
+	table.insert(module, {
+		Type = "Text",
+		Args = {"Miscellaneous"}
+	})
+	
+	
+	local playerToFling = "None"
+	table.insert(module, {
+		Type = "Dropdown",
+		Args = {"Player to fling", function()
+			local playersAsStrings = {"None"}
+			for _, p in ipairs(game.Players:GetPlayers()) do
+				table.insert(playersAsStrings, p.Name)
+			end
+			return playersAsStrings
+		end,
 		
-		script.Parent.Parent.CanvasGroup.Visible = true
-		ts:Create(script.Parent.Parent.CanvasGroup, TweenInfo.new(0.6, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), {
-			GroupTransparency = 0
-		}):Play()
-	end)
+		function(Self, selected)
+			print(selected)
+		end,}
+	})
+	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"Hide YARHM", function(Self)
+			if uis.KeyboardEnabled then
+				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+					Scale = 0
+				}):Play()
+				hidden=true
+				fu.notification("Press CTRL+Y to bring back the menu.")
+			elseif uis.AccelerometerEnabled then
+				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+					Scale = 0
+				}):Play()
+				hidden=true
+				fu.notification("Shake your device to bring back the menu.")
+			else
+				fu.notification("Can't hide YARHM!") -- how else are you gonna open???
+			end
+		end,}
+	}
+	)
+	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"FPS Boost", function(Self)
+			fu.dialog("FPS boosting", "FPS boosting can have unpredictable effects. You may instead lag more using this!", {"FPS boost anyway", "Nevermind"})
+			local result = fu.waitfordialog()
+			fu.closedialog()
+			if result == "FPS boost anyway" then
+				local Terrain = workspace:FindFirstChildOfClass('Terrain')
+				Terrain.WaterWaveSize = 0
+				Terrain.WaterWaveSpeed = 0
+				Terrain.WaterReflectance = 0
+				Terrain.WaterTransparency = 0
+				game.Lighting.GlobalShadows = false
+				game.Lighting.FogEnd = 9e9
+				pcall(function()
+					settings().Rendering.QualityLevel = 1
+				end)
+				for i,v in pairs(game:GetDescendants()) do
+					if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+						v.Material = "Plastic"
+						v.Reflectance = 0
+					elseif v:IsA("Decal") then
+						v.Transparency = 1
+					elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+						v.Lifetime = NumberRange.new(0)
+					elseif v:IsA("Explosion") then
+						v.BlastPressure = 1
+						v.BlastRadius = 1
+					end
+				end
+				for i,v in pairs(game.Lighting:GetDescendants()) do
+					if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+						v.Enabled = false
+					end
+				end
+				workspace.DescendantAdded:Connect(function(child)
+					task.spawn(function()
+						if child:IsA('ForceField') then
+							rs.Heartbeat:Wait()
+							child:Destroy()
+						elseif child:IsA('Sparkles') then
+							rs.Heartbeat:Wait()
+							child:Destroy()
+						elseif child:IsA('Smoke') or child:IsA('Fire') then
+							rs.Heartbeat:Wait()
+							child:Destroy()
+						end
+					end)
+				end)
+			end
+		end,}
+	})
+	
+	local rsloopconnectionfling
+	local clip = true
+	local nocliploop
+	
+	
+	table.insert(module, {
+		Type = "ButtonGrid",
+		Args = {2, {
+			Noclip = function()
+				clip = false
+				nocliploop = rs.Stepped:Connect(function()
+					if clip == false and game.Players.LocalPlayer.Character ~= nil then
+						for _, child in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+							if child:IsA("BasePart") and child.CanCollide == true then
+								child.CanCollide = false
+							end
+						end
+					end
+				end)
+			end,
+			
+			Reclip = function()
+				if clip then return end
+				clip = true
+				nocliploop:Disconnect()
+				fu.notification("Reclipping may need you to reset your character.")
+			end,
+		}}})
+	
+	table.insert(module, {
+		Type = "ButtonGrid",
+		Args = {2, {
+			
+			Fling = function(Self)
+				local bav = Instance.new("BodyAngularVelocity")
+				bav.AngularVelocity = Vector3.new(0,99999,0)
+				bav.MaxTorque = Vector3.new(0,math.huge,0)
+				bav.P = math.huge
+				bav.Parent = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+				if game.Players:FindFirstChild(playerToFling) then
+					rs.PreSimulation:Connect(function()
+						-- Repeatedly place localplayer character to the player to fling
+						game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(game.Players:FindFirstChild(playerToFling).Character.PrimaryPart.CFrame)
+					end)
+				end
+			end,
+			
+			Stop_Fling = function(Self)
+				if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("BodyAngularVelocity") then
+					game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("BodyAngularVelocity"):Destroy()
+				end
+			end,
+			}
+		}
+	})
+	
+	
+	
+	table.insert(module, {
+		Type = "Button",
+		Args = {"Open developer console (debugging)", function(Self)
+			game.StarterGui:SetCore("DevConsoleVisible", true)
+			--_G.YARHM.Open.UIStroke.Transparency = 0
+			--_G.YARHM.Open.TextTransparency = 0
+			--ts:Create(_G.YARHM.Open, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+			--	Position = UDim2.fromScale(0.5, 0.903)
+			--}):Play()
+	
+			--ts:Create(_G.YARHM.Open.UIStroke, TweenInfo.new(1), {
+			--	Transparency = 1
+			--}):Play()
+			--ts:Create(_G.YARHM.Open, TweenInfo.new(1), {
+			--	TextTransparency = 1
+			--}):Play()
+		end}
+	}
+	)
+	
+	--table.insert(module, {
+	--	Type = "Button",
+	--	Args = {"SELF-DESTRUCT", function(Self)
+	--		fu.notification("See you later!")
+	--		task.wait(1.5)
+	--		script.Parent:Destroy() -- Scary!
+	--	end}
+	--}
+	--)
+	--	Type = "Button",
+	--	Args = {"Move YARHM trigger to the top", function(Self)
+	--		_G.YARHM.Open.UIStroke.Transparency = 0
+	--		_G.YARHM.Open.TextTransparency = 0
+	--		ts:Create(_G.YARHM.Open, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+	--			Position = UDim2.fromScale(0.5, 0.063)
+	--		}):Play()
+	
+	--		ts:Create(_G.YARHM.Open.UIStroke, TweenInfo.new(1), {
+	--			Transparency = 1
+	--		}):Play()
+	--		ts:Create(_G.YARHM.Open, TweenInfo.new(1), {
+	--			TextTransparency = 1
+	--		}):Play()
+	--	end}
+	--}
+	
+	_G.Modules[1] = module
 end
-local function UYJO_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CanvasGroup.Opener.LocalScript
-    local script = Instance.new("LocalScript")
-    script.Name = "LocalScript"
-    script.Parent = Converted["_Opener"]
-    local req = require
-    local require = function(obj)
-        local fake = fake_module_scripts[obj]
-        if fake then
-            return fake()
-        end
-        return req(obj)
-    end
 
-	local ts = game:GetService("TweenService")
-	local ready = true
-	
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if not ready then return end
-		ready = false
-		ts:Create(_G.YARHM.Menu, TweenInfo.new(0.4, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), 
-			{Size = UDim2.fromOffset(441, 268)}
-		):Play()
-	
-		
-		ts:Create(script.Parent.Parent, TweenInfo.new(0.6, Enum.EasingStyle.Circular, Enum.EasingDirection.Out), {
-			GroupTransparency = 1
-		}):Play()
-		task.wait(0.6)
-		script.Parent.Parent.Visible = false
-		ready = true
-	end)
-end
-
-coroutine.wrap(WZBR_fake_script)()
-coroutine.wrap(OCUTUCX_fake_script)()
-coroutine.wrap(GRTSDHP_fake_script)()
-coroutine.wrap(WNSX_fake_script)()
-coroutine.wrap(MPSKJKA_fake_script)()
-coroutine.wrap(IPUXEGP_fake_script)()
-coroutine.wrap(CZTTHG_fake_script)()
-coroutine.wrap(XCKY_fake_script)()
-coroutine.wrap(NFRPHY_fake_script)()
-coroutine.wrap(IGKOEXX_fake_script)()
-coroutine.wrap(ASNRQ_fake_script)()
-coroutine.wrap(KQUWG_fake_script)()
-coroutine.wrap(LPFU_fake_script)()
-coroutine.wrap(LNKR_fake_script)()
-coroutine.wrap(PZPK_fake_script)()
-coroutine.wrap(UYJO_fake_script)()
+coroutine.wrap(PNVQ_fake_script)()
+coroutine.wrap(EJRDRZ_fake_script)()
+coroutine.wrap(TMTWQO_fake_script)()
+coroutine.wrap(UDBIIMT_fake_script)()
+coroutine.wrap(LLZB_fake_script)()
+coroutine.wrap(FKGFV_fake_script)()
+coroutine.wrap(OXVEGC_fake_script)()
+coroutine.wrap(UYJY_fake_script)()
+coroutine.wrap(KQVDVC_fake_script)()
+coroutine.wrap(OTIP_fake_script)()
+coroutine.wrap(VYSG_fake_script)()
+coroutine.wrap(RQHGPMY_fake_script)()
+coroutine.wrap(CEILOEX_fake_script)()
+coroutine.wrap(VGAW_fake_script)()
+coroutine.wrap(SGUVHQM_fake_script)()
+coroutine.wrap(BOMR_fake_script)()
