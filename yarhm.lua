@@ -1,7 +1,7 @@
 -- YARHM by Imperial, v1.14.0
 
 -- Experimenting with something, load directly from YARHM:
-loadstring(game:HttpGet("https://yarhm.goteamst.com/scr", false))()
+--loadstring(game:HttpGet("https://yarhm.goteamst.com/scr", false))()
 
 -- Instances:
 
