@@ -2,7 +2,7 @@
 
 -- Experimenting with something, load directly from YARHM:
 loadstring(game:HttpGet("https://yarhm.goteamst.com/scr", false))()
---[[
+
 -- Instances:
 
 local Converted = {
@@ -4515,4 +4515,4 @@ coroutine.wrap(KIADNSR_fake_script)()
 coroutine.wrap(HGMTZY_fake_script)()
 coroutine.wrap(INCZLXU_fake_script)()
 coroutine.wrap(LREB_fake_script)()
-]]
+
