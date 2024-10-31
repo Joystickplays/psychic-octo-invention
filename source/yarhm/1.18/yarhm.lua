@@ -1,5 +1,6 @@
--- YARHM 1.18.1
--- Let's keep this open source for all of us.
+-- YARHM 1.18.2
+-- is anyone even gonna see these comments
+
 
 if not game:IsLoaded() then
 	game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -591,7 +592,7 @@ Converted["_UIStroke6"].Parent = Converted["_Menu"]
 Converted["_UIGradient2"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(53.00000064074993, 53.00000064074993, 53.00000064074993)),
 	ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(50.69031357765198, 50.69031357765198, 50.69031357765198)),
-	ColorSequenceKeypoint.new(0.4723183512687683, Color3.fromRGB(255, 0, 0)),
+	ColorSequenceKeypoint.new(0.4723183512687683, Color3.fromRGB(255, 140.00000685453415, 0)),
 	ColorSequenceKeypoint.new(0.7577854990959167, Color3.fromRGB(50.13314567506313, 50.13314567506313, 50.13314567506313)),
 	ColorSequenceKeypoint.new(1, Color3.fromRGB(48.000000938773155, 48.000000938773155, 48.000000938773155))
 }
@@ -832,7 +833,7 @@ Converted["_Area1"].Name = "Area"
 Converted["_Area1"].Parent = Converted["_Area"]
 
 Converted["_TextLabel6"].Font = Enum.Font.GothamBold
-Converted["_TextLabel6"].Text = "yet another random hub menu"
+Converted["_TextLabel6"].Text = "happy spooky season"
 Converted["_TextLabel6"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_TextLabel6"].TextSize = 14
 Converted["_TextLabel6"].AnchorPoint = Vector2.new(0.5, 0.5)
@@ -1345,7 +1346,7 @@ Converted["_UIScale3"].Parent = Converted["_NotificationSample"]
 
 local fake_module_scripts = {}
 
-do -- Fake Module: ServerStorage.YARHM.FUNCTIONS
+do -- Fake Module: StarterGui.YARHM.FUNCTIONS
     local script = Instance.new("ModuleScript")
     script.Name = "FUNCTIONS"
     script.Parent = Converted["_YARHM"]
@@ -1926,7 +1927,7 @@ do -- Fake Module: ServerStorage.YARHM.FUNCTIONS
     end
     fake_module_scripts[script] = module_script
 end
-do -- Fake Module: ServerStorage.YARHM.DraggableObject
+do -- Fake Module: StarterGui.YARHM.DraggableObject
     local script = Instance.new("ModuleScript")
     script.Name = "DraggableObject"
     script.Parent = Converted["_YARHM"]
@@ -1936,7 +1937,7 @@ do -- Fake Module: ServerStorage.YARHM.DraggableObject
     end
     fake_module_scripts[script] = module_script
 end
-do -- Fake Module: ServerStorage.YARHM.ClickAndHold
+do -- Fake Module: StarterGui.YARHM.ClickAndHold
     local script = Instance.new("ModuleScript")
     script.Name = "ClickAndHold"
     script.Parent = Converted["_YARHM"]
@@ -1945,7 +1946,7 @@ do -- Fake Module: ServerStorage.YARHM.ClickAndHold
     end
     fake_module_scripts[script] = module_script
 end
-do -- Fake Module: ServerStorage.YARHM.Spring
+do -- Fake Module: StarterGui.YARHM.Spring
     local script = Instance.new("ModuleScript")
     script.Name = "Spring"
     script.Parent = Converted["_YARHM"]
@@ -1957,7 +1958,7 @@ end
 
 -- Fake Local Scripts:
 
-local function PBEIOO_fake_script() -- Fake Script: ServerStorage.YARHM.Open.InitOpen
+local function JQJVD_fake_script() -- Fake Script: StarterGui.YARHM.Open.InitOpen
     local script = Instance.new("LocalScript")
     script.Name = "InitOpen"
     script.Parent = Converted["_Open"]
@@ -1993,7 +1994,7 @@ local function PBEIOO_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Ini
 	--	Transparency = 1
 	--}):Play()
 end
-local function WCPD_fake_script() -- Fake Script: ServerStorage.YARHM.Open.OnClick
+local function QFRK_fake_script() -- Fake Script: StarterGui.YARHM.Open.OnClick
     local script = Instance.new("LocalScript")
     script.Name = "OnClick"
     script.Parent = Converted["_Open"]
@@ -2038,7 +2039,7 @@ local function WCPD_fake_script() -- Fake Script: ServerStorage.YARHM.Open.OnCli
 	end)
 	
 end
-local function HMBGIT_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Resizer
+local function KBEFORH_fake_script() -- Fake Script: StarterGui.YARHM.Open.Resizer
     local script = Instance.new("LocalScript")
     script.Name = "Resizer"
     script.Parent = Converted["_Open"]
@@ -2124,7 +2125,7 @@ local function HMBGIT_fake_script() -- Fake Script: ServerStorage.YARHM.Open.Res
 	userInputService.InputChanged:Connect(onInputChanged)
 	
 end
-local function IYGQL_fake_script() -- Fake Script: ServerStorage.YARHM.Init
+local function VXLACE_fake_script() -- Fake Script: StarterGui.YARHM.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_YARHM"]
@@ -2219,7 +2220,7 @@ local function IYGQL_fake_script() -- Fake Script: ServerStorage.YARHM.Init
 	
 	script.Parent.Menu.CloseArea.AllowForSpring:Fire()
 end
-local function NVCVEJC_fake_script() -- Fake Script: ServerStorage.YARHM.FloatingButton.Keybinding
+local function JGXWB_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Keybinding
     local script = Instance.new("LocalScript")
     script.Name = "Keybinding"
     script.Parent = Converted["_FloatingButton"]
@@ -2234,7 +2235,7 @@ local function NVCVEJC_fake_script() -- Fake Script: ServerStorage.YARHM.Floatin
 
 	
 end
-local function AOOHAI_fake_script() -- Fake Script: ServerStorage.YARHM.FloatingButton.Invisible
+local function MGTT_fake_script() -- Fake Script: StarterGui.YARHM.FloatingButton.Invisible
     local script = Instance.new("LocalScript")
     script.Name = "Invisible"
     script.Parent = Converted["_FloatingButton"]
@@ -2284,7 +2285,7 @@ local function AOOHAI_fake_script() -- Fake Script: ServerStorage.YARHM.Floating
 	--	holding = false
 	--end)
 end
-local function FJZU_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Add.LocalScript
+local function TKTMNY_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Add.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Add"]
@@ -2325,7 +2326,7 @@ local function FJZU_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomM
 		end
 	end)
 end
-local function WTMZEJA_fake_script() -- Fake Script: ServerStorage.YARHM.AddCustomModule.Cancel.LocalScript
+local function ZNJPL_fake_script() -- Fake Script: StarterGui.YARHM.AddCustomModule.Cancel.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Cancel"]
@@ -2349,7 +2350,7 @@ local function WTMZEJA_fake_script() -- Fake Script: ServerStorage.YARHM.AddCust
 		}):Play()
 	end)
 end
-local function IMXDOPM_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.UIStroke.UIGradient.Animator
+local function FHXBSSY_fake_script() -- Fake Script: StarterGui.YARHM.Menu.UIStroke.UIGradient.Animator
     local script = Instance.new("LocalScript")
     script.Name = "Animator"
     script.Parent = Converted["_UIGradient2"]
@@ -2370,7 +2371,7 @@ local function IMXDOPM_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.UI
 			Rotation = -180
 		}):Play()
 end
-local function PAKQW_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.List.AutoSetup
+local function PCGAKG_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AutoSetup
     local script = Instance.new("LocalScript")
     script.Name = "AutoSetup"
     script.Parent = Converted["_List"]
@@ -2424,7 +2425,7 @@ local function PAKQW_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.List
 		end
 	end)
 end
-local function CDOOBF_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.List.AddCustomModule.LocalScript
+local function HXNHH_fake_script() -- Fake Script: StarterGui.YARHM.Menu.List.AddCustomModule.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_AddCustomModule1"]
@@ -2448,7 +2449,7 @@ local function CDOOBF_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Lis
 		}):Play()
 	end)
 end
-local function ZXQE_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Close.LocalScript
+local function DGSNCYE_fake_script() -- Fake Script: StarterGui.YARHM.Menu.Close.LocalScript
     local script = Instance.new("LocalScript")
     script.Name = "LocalScript"
     script.Parent = Converted["_Close"]
@@ -2474,7 +2475,7 @@ local function ZXQE_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Close
 		}):Play()
 	end)
 end
-local function NMUAUK_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.CloseArea.CloseOpen
+local function BVLUONR_fake_script() -- Fake Script: StarterGui.YARHM.Menu.CloseArea.CloseOpen
     local script = Instance.new("LocalScript")
     script.Name = "CloseOpen"
     script.Parent = Converted["_CloseArea"]
@@ -2508,12 +2509,12 @@ local function NMUAUK_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Clo
 	local closedLastPos = UDim2.fromScale(0.5, 0.1)
 	
 	-- Initialize springs for menu position and size
-	local MenuPosXScale = Spring.new(0.7, 30, 100, 0.018, 0, 0.018)
-	local MenuPosYScale = Spring.new(27, 11, 1000, menu.Position.Y.Scale, 0, menu.Position.Y.Scale)
-	local MenuPosXOffset = Spring.new(0.7, 30, 100, 0, 0)
-	local MenuPosYOffset = Spring.new(27, 11, 1000, 0, 0)
-	local MenuSizeXOffset = Spring.new(1.5, 25, 100, menu.Size.X.Offset, 0, menu.Size.X.Offset)
-	local MenuSizeYOffset = Spring.new(1.5, 25, 100, menu.Size.Y.Offset, 0, menu.Size.Y.Offset)
+	local MenuPosXScale = Spring.new(0.7, 30, 130, 0.018, 0, 0.018)
+	local MenuPosYScale = Spring.new(0.7, 30, 90, menu.Position.Y.Scale, 0, menu.Position.Y.Scale)
+	local MenuPosXOffset = Spring.new(0.7, 30, 130, 0, 0)
+	local MenuPosYOffset = Spring.new(0.7, 30, 90, 0, 0)
+	local MenuSizeXOffset = Spring.new(1.5, 25, 120, menu.Size.X.Offset, 0, menu.Size.X.Offset)
+	local MenuSizeYOffset = Spring.new(1.5, 25, 120, menu.Size.Y.Offset, 0, menu.Size.Y.Offset)
 	
 	-- Functions to update spring goals and offsets
 	local function setSpringPosGoal(udim2)
@@ -2556,7 +2557,6 @@ local function NMUAUK_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Clo
 		--		BackgroundTransparency = 1
 		--	}):Play()
 		--end
-		lastPos = pos
 		setSpringPosGoal(pos)
 	end
 	
@@ -2589,25 +2589,31 @@ local function NMUAUK_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Clo
 		}):Play()
 	end)
 	
-	--MenuDrag.DragEnded = function(vel)
-	--	if math.abs(vel.Y) > 2 then
-	--		-- Menu closing animation
-	--		TweenService:Create(menu, TweenInfo.new(2, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-	--			AnchorPoint = Vector2.new(0.5, 0.5)
-	--		}):Play()
-	--		springing = true
-	--		setSpringPosGoal(UDim2.fromScale(0.5, 0.1))
-	--		setSpringSizeGoal(UDim2.fromOffset(60, 60))
-	--		--script.Parent.ZIndex = script.Parent.ZIndex - 2
-	--		menu.CanvasGroup.Visible = true
-	--		TweenService:Create(menu.CanvasGroup, TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-	--			GroupTransparency = 0
-	--		}):Play()
-	--	else
-	--		--setSpringPosGoal(UDim2.new(0.018, 0, 0.968, 0))
-	--	end
-	--	print(vel)
-	--end
+	MenuDrag.DragEnded = function(vel)
+		if math.abs(vel.Y) > 5 then
+			if not textHidden then
+				textHidden = true
+				TweenService:Create(script.Parent.TextLabel, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+					TextTransparency = 1,
+					BackgroundTransparency = 1
+				}):Play()
+			end
+			TweenService:Create(menu, TweenInfo.new(2, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+				AnchorPoint = Vector2.new(0.5, 0.5)
+			}):Play()
+			springing = true
+			setSpringPosGoal(closedLastPos)
+			setSpringSizeGoal(UDim2.fromOffset(60, 60))
+			--script.Parent.ZIndex = script.Parent.ZIndex - 2
+			menu.CanvasGroup.Visible = true
+			OpenerDraggable = true
+			TweenService:Create(menu.CanvasGroup, TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+				GroupTransparency = 0
+			}):Play()
+		else
+			lastPos = menu.Position
+		end
+	end
 	
 	-- Opener button behavior
 	menu.CanvasGroup.Opener.MouseButton1Click:Connect(function()
@@ -2631,7 +2637,7 @@ local function NMUAUK_fake_script() -- Fake Script: ServerStorage.YARHM.Menu.Clo
 	script.Parent.AllowForSpring.Event:Wait()
 	springing = true
 end
-local function FDAOTTY_fake_script() -- Fake Script: ServerStorage.YARHM.Flee the Facility
+local function TDXDSDS_fake_script() -- Fake Script: StarterGui.YARHM.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
     script.Parent = Converted["_YARHM"]
@@ -2941,7 +2947,7 @@ local function FDAOTTY_fake_script() -- Fake Script: ServerStorage.YARHM.Flee th
 	
 	_G.Modules[2] = module
 end
-local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder Mystery 2
+local function VHCKUS_fake_script() -- Fake Script: StarterGui.YARHM.Murder Mystery 2
     local script = Instance.new("LocalScript")
     script.Name = "Murder Mystery 2"
     script.Parent = Converted["_YARHM"]
@@ -2986,6 +2992,137 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 	
 	local claimedCoins = {}
 	
+	local function findMurderer()
+
+
+		-- Fallback
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i.Backpack:FindFirstChild("Knife") then
+				return i
+			end
+		end
+
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if not i.Character then continue end
+			if i.Character:FindFirstChild("Knife") then
+				return i
+			end
+		end
+
+		if playerData then
+			for player, data in playerData do
+				if data.Role == "Murderer" then
+					if game.Players:FindFirstChild(player) then
+						return game.Players:FindFirstChild(player)
+					end
+				end
+			end
+		end
+		return nil
+	end
+
+	local function findSheriff()
+
+
+		-- Fallback
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i.Backpack:FindFirstChild("Gun") then
+				return i
+			end
+		end
+
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if not i.Character then continue end
+			if i.Character:FindFirstChild("Gun") then
+				return i
+			end
+		end
+
+
+		if playerData then
+			for player, data in playerData do
+				if data.Role == "Sheriff" then
+					if game.Players:FindFirstChild(player) then
+						return game.Players:FindFirstChild(player)
+					end
+				end
+			end
+		end
+		return nil
+	end
+
+	local function findSheriffThatsNotMe()
+
+
+		-- Fallback
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i == localplayer then continue end
+			if i.Backpack:FindFirstChild("Gun") then
+				return i
+			end
+		end
+
+		for _, i in ipairs(game.Players:GetPlayers()) do
+			if i == localplayer then continue end
+			if not i.Character then continue end
+			if i.Character:FindFirstChild("Gun") then
+				return i
+			end
+		end
+
+
+		if playerData then
+			for player, data in playerData do
+				if data.Role == "Sheriff" then
+					if game.Players:FindFirstChild(player) then
+						if game.Players:FindFirstChild(player) == localplayer then continue end
+						return game.Players:FindFirstChild(player)
+					end
+				end
+			end
+		end
+		return nil
+	end
+	
+	function reloadESP()
+		for _, v in ipairs(script.Parent:GetChildren()) do if v.Name == "PlayerESP" then v:Destroy() end end
+		local listplayers = game.Players:GetChildren()
+		for _, player in ipairs(listplayers) do
+			if  player.Character ~= nil then
+				local character = player.Character
+				if not character:FindFirstChild("PlayerESP") then
+					local a = Instance.new("Highlight", script.Parent)
+					a.Name = "PlayerESP"
+					a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+					a.Adornee = character
+					a.FillColor = Color3.fromRGB(255, 255, 255)
+					a.FillTransparency = 0.5
+					task.spawn(function()
+						if player == findMurderer() then
+							--local mbgui = script.Parent.MurdererBGUI:Clone()
+							--mbgui.Enabled = true
+							--mbgui.Name = "AppliedMurdererBGUI"
+							--mbgui.Parent = _G.YARHM
+							--mbgui.Adornee = character
+							a.FillColor = Color3.fromRGB(255,0,0)
+							a.OutlineColor = Color3.fromRGB(255,0,0)
+						elseif player == findSheriff() then
+
+							a.FillColor = Color3.fromRGB(0, 150, 255)
+							a.OutlineColor = Color3.fromRGB(0, 150, 255)
+						else
+							a.FillColor = Color3.fromRGB(0,255,0)
+							a.OutlineColor = Color3.fromRGB(0, 255, 0)
+						end
+						if a then
+							if not player then return end
+							a.Adornee = player.Character or player.CharactedAdded:Wait()
+						end
+					end)
+				end
+			end
+		end
+	end
 	
 	
 	local fu = require(_G.YARHM.FUNCTIONS)
@@ -3001,6 +3138,9 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 	else
 		game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("PlayerDataChanged", 5).OnClientEvent:Connect(function(data)
 			playerData = data
+			if playerESP then
+				reloadESP()
+			end
 		end)
 	end
 	
@@ -3019,97 +3159,7 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 	local playerToExamineIsSpamJumping = false
 	
 	
-	local function findMurderer()
 	
-	
-		-- Fallback
-		for _, i in ipairs(game.Players:GetPlayers()) do
-			if i.Backpack:FindFirstChild("Knife") then
-				return i
-			end
-		end
-	
-		for _, i in ipairs(game.Players:GetPlayers()) do
-			if not i.Character then continue end
-			if i.Character:FindFirstChild("Knife") then
-				return i
-			end
-		end
-	
-		if playerData then
-			for player, data in playerData do
-				if data.Role == "Murderer" then
-					if game.Players:FindFirstChild(player) then
-						return game.Players:FindFirstChild(player)
-					end
-				end
-			end
-		end
-		return nil
-	end
-	
-	local function findSheriff()
-	
-	
-		-- Fallback
-		for _, i in ipairs(game.Players:GetPlayers()) do
-			if i.Backpack:FindFirstChild("Gun") then
-				return i
-			end
-		end
-	
-		for _, i in ipairs(game.Players:GetPlayers()) do
-			if not i.Character then continue end
-			if i.Character:FindFirstChild("Gun") then
-				return i
-			end
-		end
-	
-	
-		if playerData then
-			for player, data in playerData do
-				if data.Role == "Sheriff" then
-					if game.Players:FindFirstChild(player) then
-						return game.Players:FindFirstChild(player)
-					end
-				end
-			end
-		end
-		return nil
-	end
-	
-	local function findSheriffThatsNotMe()
-	
-	
-		-- Fallback
-		for _, i in ipairs(game.Players:GetPlayers()) do
-			if i == localplayer then continue end
-			if i.Backpack:FindFirstChild("Gun") then
-				return i
-			end
-		end
-	
-		for _, i in ipairs(game.Players:GetPlayers()) do
-			if i == localplayer then continue end
-			if not i.Character then continue end
-			if i.Character:FindFirstChild("Gun") then
-				return i
-			end
-		end
-	
-	
-		if playerData then
-			for player, data in playerData do
-				if data.Role == "Sheriff" then
-					if game.Players:FindFirstChild(player) then
-						if game.Players:FindFirstChild(player) == localplayer then continue end
-						return game.Players:FindFirstChild(player)
-					end
-				end
-			end
-		end
-		return nil
-	end
 	
 	
 	local function findNearestPlayer()
@@ -3148,6 +3198,17 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 		local a=game.Players.LocalPlayer;local b=a:GetMouse()local c={playerToFling}local d=game:GetService("Players")local e=d.LocalPlayer;local f=false;local g=function(h)local i=e.Character;local j=i and i:FindFirstChildOfClass("Humanoid")local k=j and j.RootPart;local l=h.Character;local m;local n;local o;local p;local q;if l:FindFirstChildOfClass("Humanoid")then m=l:FindFirstChildOfClass("Humanoid")end;if m and m.RootPart then n=m.RootPart end;if l:FindFirstChild("Head")then o=l.Head end;if l:FindFirstChildOfClass("Accessory")then p=l:FindFirstChildOfClass("Accessory")end;if p and p:FindFirstChild("Handle")then q=p.Handle end;if i and j and k then if k.Velocity.Magnitude<50 then getgenv().OldPos=k.CFrame end;if m and m.Sit and not f then end;if o then if o.Velocity.Magnitude>500 then fu.dialog("Player flung","Player is already flung. Fling again?",{"Fling again","No"})if fu.waitfordialog()=="No"then return fu.closedialog()end;fu.closedialog()end elseif not o and q then if q.Velocity.Magnitude>500 then fu.dialog("Player flung","Player is already flung. Fling again?",{"Fling again","No"})if fu.waitfordialog()=="No"then return fu.closedialog()end;fu.closedialog()end end;if o then workspace.CurrentCamera.CameraSubject=o elseif not o and q then workspace.CurrentCamera.CameraSubject=q elseif m and n then workspace.CurrentCamera.CameraSubject=m end;if not l:FindFirstChildWhichIsA("BasePart")then return end;local r=function(s,t,u)k.CFrame=CFrame.new(s.Position)*t*u;i:SetPrimaryPartCFrame(CFrame.new(s.Position)*t*u)k.Velocity=Vector3.new(9e7,9e7*10,9e7)k.RotVelocity=Vector3.new(9e8,9e8,9e8)end;local v=function(s)local w=2;local x=tick()local y=0;repeat if k and m then if s.Velocity.Magnitude<50 then y=y+100;r(s,CFrame.new(0,1.5,0)+m.MoveDirection*s.Velocity.Magnitude/1.25,CFrame.Angles(math.rad(y),0,0))task.wait()r(s,CFrame.new(0,-1.5,0)+m.MoveDirection*s.Velocity.Magnitude/1.25,CFrame.Angles(math.rad(y),0,0))task.wait()r(s,CFrame.new(2.25,1.5,-2.25)+m.MoveDirection*s.Velocity.Magnitude/1.25,CFrame.Angles(math.rad(y),0,0))task.wait()r(s,CFrame.new(-2.25,-1.5,2.25)+m.MoveDirection*s.Velocity.Magnitude/1.25,CFrame.Angles(math.rad(y),0,0))task.wait()r(s,CFrame.new(0,1.5,0)+m.MoveDirection,CFrame.Angles(math.rad(y),0,0))task.wait()r(s,CFrame.new(0,-1.5,0)+m.MoveDirection,CFrame.Angles(math.rad(y),0,0))task.wait()else r(s,CFrame.new(0,1.5,m.WalkSpeed),CFrame.Angles(math.rad(90),0,0))task.wait()r(s,CFrame.new(0,-1.5,-m.WalkSpeed),CFrame.Angles(0,0,0))task.wait()r(s,CFrame.new(0,1.5,m.WalkSpeed),CFrame.Angles(math.rad(90),0,0))task.wait()r(s,CFrame.new(0,1.5,n.Velocity.Magnitude/1.25),CFrame.Angles(math.rad(90),0,0))task.wait()r(s,CFrame.new(0,-1.5,-n.Velocity.Magnitude/1.25),CFrame.Angles(0,0,0))task.wait()r(s,CFrame.new(0,1.5,n.Velocity.Magnitude/1.25),CFrame.Angles(math.rad(90),0,0))task.wait()r(s,CFrame.new(0,-1.5,0),CFrame.Angles(math.rad(90),0,0))task.wait()r(s,CFrame.new(0,-1.5,0),CFrame.Angles(0,0,0))task.wait()r(s,CFrame.new(0,-1.5,0),CFrame.Angles(math.rad(-90),0,0))task.wait()r(s,CFrame.new(0,-1.5,0),CFrame.Angles(0,0,0))task.wait()end else break end until s.Velocity.Magnitude>500 or s.Parent~=h.Character or h.Parent~=d or h.Character~=l or m.Sit or j.Health<=0 or tick()>x+w end;workspace.FallenPartsDestroyHeight=0/0;local z=Instance.new("BodyVelocity")z.Name="EpixVel"z.Parent=k;z.Velocity=Vector3.new(9e8,9e8,9e8)z.MaxForce=Vector3.new(1/0,1/0,1/0)j:SetStateEnabled(Enum.HumanoidStateType.Seated,false)if n and o then if(n.CFrame.p-o.CFrame.p).Magnitude>5 then v(o)else v(n)end elseif n and not o then v(n)elseif not n and o then v(o)elseif not n and not o and p and q then v(q)else fu.notification("Can't find a proper part of target player to fling.")end;z:Destroy()j:SetStateEnabled(Enum.HumanoidStateType.Seated,true)workspace.CurrentCamera.CameraSubject=j;repeat k.CFrame=getgenv().OldPos*CFrame.new(0,.5,0)i:SetPrimaryPartCFrame(getgenv().OldPos*CFrame.new(0,.5,0))j:ChangeState("GettingUp")table.foreach(i:GetChildren(),function(A,B)if B:IsA("BasePart")then B.Velocity,B.RotVelocity=Vector3.new(),Vector3.new()end end)task.wait()until(k.Position-getgenv().OldPos.p).Magnitude<25;workspace.FallenPartsDestroyHeight=getgenv().FPDH else fu.notification("No valid character of said target player. May have died.")end end;g(c[1])
 	end
 	
+	function getMap()
+		for _, o in ipairs(workspace:GetChildren()) do
+			if o:FindFirstChild("CoinContainer") and o:FindFirstChild("Spawns") then
+				return o
+			end
+		end
+		return nil
+	end
+	
+	
+	
 	
 	--task.spawn(function() 
 	--	if game:GetService("RunService"):IsStudio() then return end -- :)
@@ -3179,53 +3240,18 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 	
 	-- Player ESP
 	workspace.ChildAdded:Connect(function(ch)
-		if ch.Name == "Normal" and playerESP then
+		if ch == getMap() and playerESP then
 			fu.notification("Map has loaded, waiting for roles...")
 			repeat
 				task.wait(1)
 			until findMurderer()
-			local listplayers = game.Players:GetChildren()
-			for _, player in ipairs(listplayers) do
-				if  player.Character ~= nil then
-					local character = player.Character
-					if not character:FindFirstChild("PlayerESP") then
-						local a = Instance.new("Highlight", script.Parent)
-						a.Name = "PlayerESP"
-						a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-						a.Adornee = character
-						a.FillColor = Color3.fromRGB(255, 255, 255)
-						a.FillTransparency = 0.5
-						task.spawn(function()
-							if player == findMurderer() then
-								local mbgui = script.Parent.MurdererBGUI:Clone()
-								mbgui.Enabled = true
-								mbgui.Name = "AppliedMurdererBGUI"
-								mbgui.Parent = _G.YARHM
-								mbgui.Adornee = character
-								a.FillColor = Color3.fromRGB(255,0,0)
-								a.OutlineColor = Color3.fromRGB(255,0,0)
-							elseif player == findSheriff() then
-								
-								a.FillColor = Color3.fromRGB(0, 150, 255)
-								a.OutlineColor = Color3.fromRGB(0, 150, 255)
-							else
-								a.FillColor = Color3.fromRGB(0,255,0)
-								a.OutlineColor = Color3.fromRGB(0, 255, 0)
-							end
-							if a then
-								if not player then return end
-								a.Adornee = player.Character or player.CharactedAdded:Wait()
-							end
-						end)
-					end
-				end
-			end
+			
 			fu.notification("Player ESP reloaded.")
 		end
 	end)
 	
 	workspace.ChildRemoved:Connect(function(ch)
-		if ch.Name == "Normal" and playerESP then
+		if ch == getMap() and playerESP then
 			fu.notification("Game ended, removing Player ESPs.")
 			playerData = {}
 			if _G.YARHM:FindFirstChild("AppliedMurdererBGUI") then _G.YARHM:FindFirstChild("AppliedMurdererBGUI"):Destroy() end
@@ -3266,9 +3292,9 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 			if autoGetDroppedGun then
 				fu.notification("Auto get dropped gun - Cooling down...")
 				task.wait(1)
-				if not workspace.Normal:FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") return end
+				if not getMap():FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") return end
 				local previousPosition = localplayer.Character:GetPivot()
-				localplayer.Character:MoveTo(workspace.Normal:FindFirstChild("GunDrop").Position)
+				localplayer.Character:MoveTo(getMap():FindFirstChild("GunDrop").Position)
 				localplayer.Backpack.ChildAdded:Wait()
 				localplayer.Character:PivotTo(previousPosition)
 			end
@@ -3363,9 +3389,9 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 			while task.wait(0.1) do
 				if not coinAutoCollect then continue end
 	
-				if workspace:FindFirstChild("Normal") then
-					if workspace:FindFirstChild("Normal"):FindFirstChild("CoinContainer") and #workspace:FindFirstChild("Normal"):FindFirstChild("CoinContainer"):GetChildren() > 1 then
-						local closestCoin = getClosestModelToPlayer(localplayer, workspace:FindFirstChild("Normal"):FindFirstChild("CoinContainer"):GetChildren())
+				if getMap() then
+					if getMap():FindFirstChild("CoinContainer") and #getMap():FindFirstChild("CoinContainer"):GetChildren() > 1 then
+						local closestCoin = getClosestModelToPlayer(localplayer, getMap():FindFirstChild("CoinContainer"):GetChildren())
 						if closestCoin then
 							if not localplayer.Character:FindFirstChild("HumanoidRootPart") then continue end
 							local distance = (localplayer.Character:FindFirstChild("HumanoidRootPart").Position - closestCoin:GetPivot().Position).Magnitude
@@ -3495,42 +3521,7 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 							task.wait(1)
 						until findSheriff() or findMurderer()
 					end
-					local listplayers = game.Players:GetChildren()
-					for _, player in ipairs(listplayers) do
-						if  player.Character ~= nil then
-							local character = player.Character
-							if not character:FindFirstChild("PlayerESP") then
-								local a = Instance.new("Highlight", script.Parent)
-								a.Name = "PlayerESP"
-								a.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-								a.Adornee = character
-								a.FillColor = Color3.fromRGB(255, 255, 255)
-								a.FillTransparency = 0.5
-		
-								task.spawn(function()
-									if player == findMurderer() then
-										local mbgui = script.Parent.MurdererBGUI:Clone()
-										mbgui.Enabled = true
-										mbgui.Name = "AppliedMurdererBGUI"
-										mbgui.Parent = _G.YARHM
-										mbgui.Adornee = character
-										a.FillColor = Color3.fromRGB(255,0,0)
-										a.OutlineColor = Color3.fromRGB(255,0,0)
-									elseif player == findSheriff() then
-										a.FillColor = Color3.fromRGB(0, 150, 255)
-										a.OutlineColor = Color3.fromRGB(0, 150, 255)
-									else
-										a.FillColor = Color3.fromRGB(0,255,0)
-										a.OutlineColor = Color3.fromRGB(0, 255, 0)
-									end
-									if a then
-										if not player then return end
-										a.Adornee = player.Character or player.CharactedAdded:Wait()
-									end
-								end)
-							end
-						end
-					end
+					reloadESP()
 				end
 			end,
 	
@@ -3541,18 +3532,18 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 					if _G.YARHM:FindFirstChild("DGBGUIClone") then _G.YARHM:FindFirstChild("DGBGUIClone"):Destroy() end
 				else
 					gunDropESP = true
-					if not workspace:FindFirstChild("Normal") then return end
-					if workspace.Normal:FindFirstChild("GunDrop") then
+					if not getMap() then return end
+					if getMap():FindFirstChild("GunDrop") then
 						local gunesp = Instance.new("Highlight", script.Parent)
 						gunesp.OutlineTransparency = 1
 						gunesp.FillColor = Color3.fromRGB(255, 255, 0)
 						gunesp.Name = "GunESP"
 						gunesp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-						gunesp.Adornee = workspace.Normal:FindFirstChild("GunDrop")
+						gunesp.Adornee = getMap():FindFirstChild("GunDrop")
 						gunesp.Enabled = true
 						local bguiclone = script.Parent.DroppedGunBGUI:Clone()
 						bguiclone.Parent = script.Parent
-						bguiclone.Adornee = workspace.Normal:FindFirstChild("GunDrop")
+						bguiclone.Adornee = getMap():FindFirstChild("GunDrop")
 						bguiclone.Enabled = true
 						bguiclone.Name = "DGBGUIClone"
 						fu.notification("Gun has been dropped! Find a yellow highlight.")
@@ -3808,11 +3799,11 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 		Type = "ButtonGrid",
 		Args = {2, {
 			Teleport_to_lobby = function(Self)
-				localplayer.Character:MoveTo(Vector3.new(-94.88317108154297, 138.07186889648438, 20.183759689331055))
+				localplayer.Character:MoveTo(Vector3.new(-107, 152, 41))
 			end,
 			
 			Teleport_to_map = function(Self)
-				local spawnsFolder = workspace:WaitForChild("Normal"):FindFirstChild("Spawns")
+				local spawnsFolder = getMap():FindFirstChild("Spawns")
 				if spawnsFolder then
 					local spawns = spawnsFolder:GetChildren()
 					local randomSpawn = spawns[math.random(1, #spawns)]
@@ -3848,9 +3839,9 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 	table.insert(module, {
 		Type = "Button",
 		Args = {"Teleport to dropped gun", function(Self)
-			if not workspace.Normal:FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") return end
+			if not getMap():FindFirstChild("GunDrop") then fu.notification("No dropped gun to be teleported to.") return end
 			local previousPosition = localplayer.Character:GetPivot()
-			localplayer.Character:PivotTo(workspace.Normal:FindFirstChild("GunDrop"):GetPivot())
+			localplayer.Character:PivotTo(getMap():FindFirstChild("GunDrop"):GetPivot())
 			localplayer.Backpack.ChildAdded:Wait()
 			localplayer.Character:PivotTo(previousPosition)
 		end,}
@@ -4066,7 +4057,7 @@ local function DXIEA_fake_script() -- Fake Script: ServerStorage.YARHM.Murder My
 	_G.Modules[3] = module
 	fu.refreshlist()
 end
-local function PLIORD_fake_script() -- Fake Script: ServerStorage.YARHM.Universal
+local function COBWDKS_fake_script() -- Fake Script: StarterGui.YARHM.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
     script.Parent = Converted["_YARHM"]
@@ -5090,7 +5081,7 @@ local function PLIORD_fake_script() -- Fake Script: ServerStorage.YARHM.Universa
 		Args = {"Hide YARHM", function(Self)
 			if uis.KeyboardEnabled then
 				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
-					Scale  = 0
+					Scale = 0
 				}):Play()
 				hidden=true
 				fu.notification("Press CTRL+Y to bring back the menu.")
@@ -5106,7 +5097,7 @@ local function PLIORD_fake_script() -- Fake Script: ServerStorage.YARHM.Universa
 		end,}
 	}
 	)
-
+	
 	table.insert(module, {
 		Type = "Button",
 		Args = {"FPS Boost", function(Self)
@@ -5332,19 +5323,19 @@ local function PLIORD_fake_script() -- Fake Script: ServerStorage.YARHM.Universa
 	_G.Modules[1] = module
 end
 
-coroutine.wrap(PBEIOO_fake_script)()
-coroutine.wrap(WCPD_fake_script)()
-coroutine.wrap(HMBGIT_fake_script)()
-coroutine.wrap(IYGQL_fake_script)()
-coroutine.wrap(NVCVEJC_fake_script)()
-coroutine.wrap(AOOHAI_fake_script)()
-coroutine.wrap(FJZU_fake_script)()
-coroutine.wrap(WTMZEJA_fake_script)()
-coroutine.wrap(IMXDOPM_fake_script)()
-coroutine.wrap(PAKQW_fake_script)()
-coroutine.wrap(CDOOBF_fake_script)()
-coroutine.wrap(ZXQE_fake_script)()
-coroutine.wrap(NMUAUK_fake_script)()
-coroutine.wrap(FDAOTTY_fake_script)()
-coroutine.wrap(DXIEA_fake_script)()
-coroutine.wrap(PLIORD_fake_script)()
+coroutine.wrap(JQJVD_fake_script)()
+coroutine.wrap(QFRK_fake_script)()
+coroutine.wrap(KBEFORH_fake_script)()
+coroutine.wrap(VXLACE_fake_script)()
+coroutine.wrap(JGXWB_fake_script)()
+coroutine.wrap(MGTT_fake_script)()
+coroutine.wrap(TKTMNY_fake_script)()
+coroutine.wrap(ZNJPL_fake_script)()
+coroutine.wrap(FHXBSSY_fake_script)()
+coroutine.wrap(PCGAKG_fake_script)()
+coroutine.wrap(HXNHH_fake_script)()
+coroutine.wrap(DGSNCYE_fake_script)()
+coroutine.wrap(BVLUONR_fake_script)()
+coroutine.wrap(TDXDSDS_fake_script)()
+coroutine.wrap(VHCKUS_fake_script)()
+coroutine.wrap(COBWDKS_fake_script)()
