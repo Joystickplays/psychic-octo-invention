@@ -4269,7 +4269,7 @@ local function COBWDKS_fake_script() -- Fake Script: StarterGui.YARHM.Universal
 	table.insert(module, {
 		Type = "Button",
 		Args = {"AFEM - A free, FE, simple and easy emotes menu!", function()
-			loadstring(game:HttpGet("https://yarhm.goteamst.com/scr?channel=afem"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/AFEM/refs/heads/main/AFEM.lua"))()
 		end,}
 	})
 	
