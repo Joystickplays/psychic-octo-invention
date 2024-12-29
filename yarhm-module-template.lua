@@ -3,6 +3,11 @@ module["gameId"] = 0 -- Restrict module to a certain game ID only. 0 allows all 
 
 module["Name"] = "Module name"
 
+-- This template uses manual and hardcoded indexing to add components.
+
+-- It's recommended to use table.insert instead, so you can add components
+-- anywhere without having to change the rest of the components' index.
+
 module[1] = { -- Each component is their own object in the module, for this one it's the first component
   Type = "Text",
   Args = ["Shows a simple text"],
@@ -19,7 +24,8 @@ module[2] = {
 
 module[3] = {
   Type = "ButtonGrid", -- A grid of buttons with customizable column count
-  Toggleable = false, -- Recolors buttons for you onclick, you still need to save the state yourself. This isn't on the normal button because god knows why but you can use a column of 1?
+  Toggleable = false, -- Recolors buttons for you onclick, you still need to save the state yourself.
+                      -- This isn't on the normal button because god knows why but you can use a column of 1?
   Args = {3, { -- 3 is the number of columns
       ButtonName = function(Self)
         print("ButtonName is the displayed text for that button, this is it's callback, similar to the normal button")
@@ -47,7 +53,8 @@ module[5] = {
   }
 }
 
--- If you have a function that need to run constantly in the background, use BG_TASK. YARHM will wrap the function in a coroutine and run it for you
+-- If you have a function that need to run constantly in the background, use BG_TASK.
+-- YARHM will wrap the function in a coroutine and run it for you
 module["BG_TASK"] = function()
   print("Heavy computation here!")
 end
