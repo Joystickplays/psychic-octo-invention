@@ -12,6 +12,8 @@ module[2] = {
   Type = "Button",
   Args = {"The button's text", function(Self) -- Self is the button's TextButton object, can be used for effects, changing the text, etc
       print("This is the callback of the button, ran whenever the button is clicked")
+      -- Use the environment variable FUNCTIONS to show a notification, like
+      FUNCTIONS.notification("Hello!")
     end,}
 }
 
@@ -44,5 +46,10 @@ module[5] = {
     end
   }
 }
+
+-- If you have a function that need to run constantly in the background, use BG_TASK. YARHM will wrap the function in a coroutine and run it for you
+module["BG_TASK"] = function()
+  print("Heavy computation here!")
+end
 
 _G.Modules[#_G.Modules + 1] = module 
