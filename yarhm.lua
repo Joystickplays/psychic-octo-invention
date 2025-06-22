@@ -11,6 +11,7 @@ if src == "" then
 	  Duration = 5;
   })
   src = game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/source/yarhm/1.18/yarhm.lua", false)
+end
 
 
 loadstring(src)() 
