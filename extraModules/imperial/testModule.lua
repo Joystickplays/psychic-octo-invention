@@ -18,5 +18,5 @@ module[2] = {
 }
 
 
-_G.Modules[#_G.Modules] = module
+getgenv().Modules[#getgenv().Modules] = module
 return module
