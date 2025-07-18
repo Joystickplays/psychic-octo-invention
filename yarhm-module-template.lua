@@ -53,10 +53,18 @@ module[5] = {
   }
 }
 
+module[6] = {
+  Type = "Range",
+	Args = {"Text range tip", 50, 350, 10, function(Self, val) -- Parameters: text, defaultValue, maxValue, steps, callback(value)
+		print(val)
+	end}
+}
+
 -- If you have a function that need to run constantly in the background, use BG_TASK.
 -- YARHM will wrap the function in a coroutine and run it for you
 module["BG_TASK"] = function()
   print("Heavy computation here!")
 end
 
-_G.Modules[#_G.Modules + 1] = module 
+getgenv().Modules[#getgenv().Modules + 1] = module 
+return module
