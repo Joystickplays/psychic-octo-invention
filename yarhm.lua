@@ -10,7 +10,7 @@ if src == "" then
   	Text = "Scriptblox is currently unavailable! Sorry for the inconvenience. Using YARHM Offline.";
 	  Duration = 5;
   })
-  src = game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/source/yarhm/1.19/yarhm.lua", false)
+  src = game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/source/yarhm/1.20/yarhm.lua", false)
 end
 
 
