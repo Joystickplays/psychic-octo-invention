@@ -209,14 +209,16 @@ Converted["_UIFlexItem1"].Parent = Converted["_ConfirmKey"]
 Converted["_UICorner3"].Parent = Converted["_ConfirmKey"]
 
 Converted["_RunLite"].Font = Enum.Font.GothamBold
-Converted["_RunLite"].Text = "Use FREE AFEM Max Lite! 😍"
+Converted["_RunLite"].RichText = true
+Converted["_RunLite"].Text = "<font size="10">Don't want to do keys?</font>
+Use KEYLESS AFEM Max Lite! 😍"
 Converted["_RunLite"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_RunLite"].TextSize = 18
 Converted["_RunLite"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_RunLite"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_RunLite"].BorderSizePixel = 0
 Converted["_RunLite"].LayoutOrder = 4
-Converted["_RunLite"].Size = UDim2.new(1, 0, 0, 35)
+Converted["_RunLite"].Size = UDim2.new(1, 0, 0, 45)
 Converted["_RunLite"].Name = "RunLite"
 Converted["_RunLite"].Parent = Converted["_Key"]
 
@@ -958,7 +960,7 @@ end
 
 -- Routines:
 
-local function JOAW_routine() -- Routine: StarterGui.AFEMMaxLoader.Init
+local function AWMFSO_routine() -- Routine: StarterGui.AFEMMaxLoader.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_AFEMMaxLoader"]
@@ -1161,4 +1163,4 @@ local function JOAW_routine() -- Routine: StarterGui.AFEMMaxLoader.Init
 	
 end
 
-coroutine.wrap(JOAW_routine)()
+coroutine.wrap(AWMFSO_routine)()
