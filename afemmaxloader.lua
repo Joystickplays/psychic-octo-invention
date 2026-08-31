@@ -210,8 +210,7 @@ Converted["_UICorner3"].Parent = Converted["_ConfirmKey"]
 
 Converted["_RunLite"].Font = Enum.Font.GothamBold
 Converted["_RunLite"].RichText = true
-Converted["_RunLite"].Text = "<font size="10">Don't want to do keys?</font>
-Use KEYLESS AFEM Max Lite! 😍"
+Converted["_RunLite"].Text = "lite"
 Converted["_RunLite"].TextColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_RunLite"].TextSize = 18
 Converted["_RunLite"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -960,7 +959,7 @@ end
 
 -- Routines:
 
-local function AWMFSO_routine() -- Routine: StarterGui.AFEMMaxLoader.Init
+local function PTBILM_routine() -- Routine: StarterGui.AFEMMaxLoader.Init
     local script = Instance.new("LocalScript")
     script.Name = "Init"
     script.Parent = Converted["_AFEMMaxLoader"]
@@ -981,6 +980,9 @@ local function AWMFSO_routine() -- Routine: StarterGui.AFEMMaxLoader.Init
 	local ts = game:GetService("TweenService")
 	
 	local smroot = script.Parent.SizeMonitor
+	
+	smroot.Frame.Key.RunLite.Text = [[<font size="10">Don't want to do keys?</font>
+	Use KEYLESS AFEM Max Lite! 😍]]
 	
 	local fileKey
 	if isfile("AFEMMaxConf/Key") then
@@ -1163,4 +1165,4 @@ local function AWMFSO_routine() -- Routine: StarterGui.AFEMMaxLoader.Init
 	
 end
 
-coroutine.wrap(AWMFSO_routine)()
+coroutine.wrap(PTBILM_routine)()
